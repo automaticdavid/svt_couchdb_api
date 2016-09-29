@@ -2,7 +2,7 @@ name: My First SVT Report
 client: creditsuisse
 collect: 2016-09-12-11-45-45
 reports:
-  block:
+  vipr-block:
     volumes:
         - name
         - project 

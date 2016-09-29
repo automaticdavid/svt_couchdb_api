@@ -45,19 +45,25 @@ for js in os.listdir(ddocsdir):
 
 		# Read the function file
 		with open(path) as f:
-			func = f.readlines()
+			func = f.read()
 
 		# Chech for existence of ddoc
 		try:
-			j = couch.getDesignDoc(ddoc)
-
-
-		except Exception as e:
-			# Create ddoc 
+			r = couch.getDesignDoc(ddoc)
+			j = json.loads(r)
+			if view not in j["views"]:
+				j["views"][view] = { "map": func}
+			data = json.dumps(j)
+			# Put the ddoc
+			couch.putDesignDocString(ddoc, data)
+							
+		# Doc not found, create it 
+		except Errors.svtError as e:
+			
 			if e.code == 404:
 				# Compose the json around the map function
 				schema = { 
-					"_id": ddoc,
+					"_id": '_design/' + ddoc,
 					"views": {
 						view: {
 							"map": func
@@ -67,6 +73,10 @@ for js in os.listdir(ddocsdir):
 				data = json.dumps(schema)
 				# Put the ddoc
 				couch.putDesignDocString(ddoc, data)
+
+		except Exception:
+			raise
+
 				
 
 
