@@ -1,0 +1,14 @@
+name: My First SVT Report
+client: creditsuisse
+collect: 20160101120015
+reports:
+  source:
+    selector:
+        - marker
+        - marker
+  source:
+    selector:
+        - marker
+        - marker
+
+

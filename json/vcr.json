@@ -1,0 +1,7 @@
+{
+	"type":"data",
+	"source":["vcr", "vcenter"],
+	"levels": {"version":"5.5.U3", "build":["3000241"], "patch":[]},
+	"client":"ING",
+	"date":"1467336648"
+}

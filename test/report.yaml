@@ -1,0 +1,12 @@
+name: My First SVT Report
+client: creditsuisse
+collect: 2016-09-12-11-45-45
+reports:
+  edges:
+    loadbalancer:
+        - monitor
+        - version
+    vnics: 
+      - label
+      - addressGroups
+      - type

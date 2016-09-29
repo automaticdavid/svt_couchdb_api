@@ -1,0 +1,7 @@
+ {
+ 	"type":"data",
+	"source":["vra", "vrealize automation"],
+	"levels":{"version":"6.2.1", "build":["2553372"], "patch":[]},
+	"client":"ING",
+	"date":"1467336648"
+}

@@ -1,0 +1,14 @@
+{
+"type":"essm",
+"release":"3.5", 
+"vcr": {
+	"source":["vcr", "vcenter"],
+	"levels":[
+		{"version":"6.0.U1b", "build":["3343019"], "patch":[]}
+	]},
+"vra": {
+	"source":["vra", "vrealize automation"],
+	"levels":[
+		{"version":"6.2.3", "build":["3093004"], "patch":[]}
+	]}
+}
