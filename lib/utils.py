@@ -56,21 +56,31 @@ class Utils:
 
 	# Follow links in a vipr json
 	def expander(self, j, viprsource, links):
+		e = {}
+		print("boo")
 		print(j)
+		print("####")
 		if isinstance(j,dict):
-				if 'link' in j.keys() and 'id' in j.keys():
+			for k,v in j.iteritems():
+				print("===> " + k )
+				if k == 'id':
 					if 'urn' in j['id']:
 						urn = j['id']
-						link = links[viprsource][urn]
-						j.pop('link', None)
-						j.pop('id', None)
-						j['id_tracker'] = urn
-						j['value'] = link
-						print(link.keys())
-						Utils().expander(j, viprsource, links)
+						if urn in links[viprsource]:
+							link = links[viprsource][urn]
+						else:
+							link = "NOT FOUND"
+						e['id_tracker'] = urn
+						e['value'] = link
+				elif isinstance(v,dict):
+					print("TTT")
+					print(v)
+					e[k] = Utils().expander(v, viprsource, links)
 				else:
-					return(j)
-
+					e[k] = v
+		else:
+			e = j
+		return(e)
 
 
 	# Transform the YAML def of a report

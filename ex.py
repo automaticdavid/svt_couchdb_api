@@ -107,7 +107,8 @@ def main(f, action, client):
 					print(it.key)
 					viprsource = it.key[2]
 					r = Utils().expander(it.value, viprsource, links)
-					
+					print("wep ", r)
+					break
 
 
 			else:
