@@ -74,18 +74,45 @@ def main(f, action, client):
 
 		# Call couch for reports
 		for report in reports: 
+			
 			# Extract parameters for the view, the hook and the object
 			[client, collect, source] = report[0]
 			[selector, marker] = report[1]
+			
 			# Key passed to the couch view: will select only given collect & client
 			key = [collect, client, 0]
-			# Execute couch view and map a result object
-			j = couch.getView(source, selector, key)
-			r = json.loads(j, object_hook = Svt(selector=selector, marker=marker).hook)
+			r = couch.getView(source, selector, key)
+			j = json.loads(r, object_hook = Svt(selector=selector, marker=marker).hook)
+			
 			# Deal with the results
 			caller = [client, collect, source, selector, marker]
-			for it in r['rows']: 
-				Utils().tableizer(caller, it)
+			if 'vipr' in source:
+
+				# Get all urns as key
+				rv = couch.getView('vipr-all', 'links', key)
+				jv = json.loads(rv)
+				
+				# Generate a links dict 
+				links = {}
+				for row in jv['rows']:
+					for link, data in row['value'].iteritems():
+						viprsource = data['svt_source']
+						if viprsource not in links:
+							links[viprsource] = {}
+						links[viprsource][link] = data
+
+				# Step the json answer and follow all links
+				for it in j['rows']:
+					print(caller)
+					print(it.key)
+					viprsource = it.key[2]
+					r = Utils().expander(it.value, viprsource, links)
+					
+
+
+			else:
+				for it in j['rows']: 
+					Utils().tableizer(caller, it)
 
 
 

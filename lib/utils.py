@@ -54,6 +54,25 @@ class Utils:
 					pass
 		return(result)
 
+	# Follow links in a vipr json
+	def expander(self, j, viprsource, links):
+		print(j)
+		if isinstance(j,dict):
+				if 'link' in j.keys() and 'id' in j.keys():
+					if 'urn' in j['id']:
+						urn = j['id']
+						link = links[viprsource][urn]
+						j.pop('link', None)
+						j.pop('id', None)
+						j['id_tracker'] = urn
+						j['value'] = link
+						print(link.keys())
+						Utils().expander(j, viprsource, links)
+				else:
+					return(j)
+
+
+
 	# Transform the YAML def of a report
 	# Return a LoL with the elements needed by couch calls 
 	def flatten(self, d):
