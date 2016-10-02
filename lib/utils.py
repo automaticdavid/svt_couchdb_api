@@ -13,7 +13,7 @@ import logging
 from zipfile import ZipFile
 import simplejson as json
 import sys
-
+import os
 
 
 # Module level logger
@@ -56,31 +56,71 @@ class Utils:
 
 	# Follow links in a vipr json
 	def expander(self, j, viprsource, links):
+		
 		e = {}
-		print("boo")
-		print(j)
-		print("####")
+
+		# print(j)
+		# print("")
+
 		if isinstance(j,dict):
+
 			for k,v in j.iteritems():
-				print("===> " + k )
-				if k == 'id':
-					if 'urn' in j['id']:
-						urn = j['id']
-						if urn in links[viprsource]:
-							link = links[viprsource][urn]
-						else:
-							link = "NOT FOUND"
-						e['id_tracker'] = urn
-						e['value'] = link
+
+				print(k)
+
+				if k == 'link' and 'href' in v:
+					href = v['href']
+					urn = os.path.basename(href)
+					if urn in links[viprsource]:
+						link = links[viprsource][urn]
+						if 'link' in link:
+							link.pop('link')
+						e.update(link)
+					else:
+						print(urn, "not found")
+						link = {'svt_not_found':'SVT_NOT_FOUND'}
+						e.update(link)
+						
+
 				elif isinstance(v,dict):
-					print("TTT")
-					print(v)
 					e[k] = Utils().expander(v, viprsource, links)
-				else:
-					e[k] = v
+
+
+
+
 		else:
 			e = j
+		
 		return(e)
+
+
+
+
+		# e = {}
+		# print("boo")
+		# print(j)
+		# print("####")
+		# if isinstance(j,dict):
+		# 	for k,v in j.iteritems():
+		# 		print("===> " + k )
+		# 		if k == 'id':
+		# 			if 'urn' in j['id']:
+		# 				urn = j['id']
+		# 				if urn in links[viprsource]:
+		# 					link = links[viprsource][urn]
+		# 				else:
+		# 					link = "NOT FOUND"
+		# 				e['id_tracker'] = urn
+		# 				e['value'] = link
+		# 		elif isinstance(v,dict):
+		# 			print("TTT")
+		# 			print(v)
+		# 			e[k] = Utils().expander(v, viprsource, links)
+		# 		else:
+		# 			e[k] = v
+		# else:
+		# 	e = j
+		# return(e)
 
 
 	# Transform the YAML def of a report

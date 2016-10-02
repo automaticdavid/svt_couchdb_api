@@ -105,9 +105,17 @@ def main(f, action, client):
 				for it in j['rows']:
 					print(caller)
 					print(it.key)
+					# print(it.value)
 					viprsource = it.key[2]
 					r = Utils().expander(it.value, viprsource, links)
-					print("wep ", r)
+					print(r)
+					print("\n")
+					rr = Utils().expander(r, viprsource, links)
+					print(rr.keys())
+					print("\n")
+					# rrr = Utils().expander(rr, viprsource, links)
+					# print(rrr)
+					print("===============\n")
 					break
 
 
