@@ -61,6 +61,7 @@ class Utils:
 			for k,v in j.iteritems():
 				# First level link
 				if k == 'link' and 'href' in v:
+					print("##### 1", k)
 					href = v['href']
 					urn = os.path.basename(href)
 					# Lookup the linked json inthe links dict
@@ -73,29 +74,45 @@ class Utils:
 						link = {'svt_not_found':'SVT_NOT_FOUND'}
 					# Add the linked json to the result
 					e.update(link)
+					print("##### END 1")
 				# A sub json may contain links
 				elif isinstance(v,dict):
+					print("##### 2", k)
 					e[k] = Utils().expander(v, viprsource, links)
+					print("##### END 2")
 				# Value may be a list of links
 				elif isinstance(v,list):
+					print("##### 3", k)
 					l = []
 					for it in v:
 						r = Utils().expander(it, viprsource, links)
 						l.append(r)
 					e[k] = l
+					print("##### END 3")
 				# String values may be a urn without a link key
 				# Avoid values with non string meaning
 				else:
+					print("##### 4", k)
 					if k != 'id' and isinstance(v,basestring) and v.startswith('urn:'):
-						prin("WOO")
+						print("##### RUN 4")
+						print("WOO")
 						if links[viprsource][v]:
 							e[k] = links[viprsource][v]
 						else:
 							e[k] = 'SVT_NOT_FOUND'
 					e[k] = v
-		# Do nothing for strings
+				print('end case for', k)
+		# Standalone strings might be links
 		else:
-			e = j
+			print("##### 5", j)
+			if j != 'id' and isinstance(j,basestring) and j.startswith('urn:'):
+				if j in links[viprsource]:
+					e = links[viprsource][j]
+				else:
+					e = 'SVT_NOT_FOUND'
+			else:	
+				e = j
+		print("LEAVING RUN")
 		return(e)
 
 

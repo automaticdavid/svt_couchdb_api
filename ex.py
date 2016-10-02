@@ -100,6 +100,9 @@ def main(f, action, client):
 						if viprsource not in links:
 							links[viprsource] = {}
 						links[viprsource][link] = data
+				for aaaa in links['vipr-1'].keys():
+					print(aaaa)
+				sys.exit(0)
 
 				# Step the json answer and follow all links
 				for it in j['rows']:
@@ -108,10 +111,7 @@ def main(f, action, client):
 					viprsource = it.key[2]
 					r = Utils().expander(it.value, viprsource, links)
 					rr = Utils().expander(r, viprsource, links)
-					rrr = Utils().expander(rr, viprsource, links)
-					rrrr = Utils().expander(rrr, viprsource, links)
-					# print(rrr)
-					print(rrrr)
+					print(rr)
 					print("")
 					break
 
