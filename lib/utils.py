@@ -59,20 +59,41 @@ class Utils:
 		e = {}
 		if isinstance(j,dict):
 			for k,v in j.iteritems():
+				# First level link
 				if k == 'link' and 'href' in v:
 					href = v['href']
 					urn = os.path.basename(href)
+					# Lookup the linked json inthe links dict
 					if urn in links[viprsource]:
 						link = links[viprsource][urn]
+						# Remove self link if needed
 						if 'link' in link:
 							link.pop('link')
 					else:
 						link = {'svt_not_found':'SVT_NOT_FOUND'}
+					# Add the linked json to the result
 					e.update(link)
+				# A sub json may contain links
 				elif isinstance(v,dict):
 					e[k] = Utils().expander(v, viprsource, links)
+				# Value may be a list of links
+				elif isinstance(v,list):
+					l = []
+					for it in v:
+						r = Utils().expander(it, viprsource, links)
+						l.append(r)
+					e[k] = l
+				# String values may be a urn without a link key
+				# Avoid values with non string meaning
 				else:
+					if k != 'id' and isinstance(v,basestring) and v.startswith('urn:'):
+						prin("WOO")
+						if links[viprsource][v]:
+							e[k] = links[viprsource][v]
+						else:
+							e[k] = 'SVT_NOT_FOUND'
 					e[k] = v
+		# Do nothing for strings
 		else:
 			e = j
 		return(e)

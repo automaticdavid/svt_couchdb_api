@@ -109,8 +109,11 @@ def main(f, action, client):
 					r = Utils().expander(it.value, viprsource, links)
 					rr = Utils().expander(r, viprsource, links)
 					rrr = Utils().expander(rr, viprsource, links)
-					print(rrr)
+					rrrr = Utils().expander(rrr, viprsource, links)
+					# print(rrr)
+					print(rrrr)
 					print("")
+					break
 
 
 

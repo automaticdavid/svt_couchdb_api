@@ -6,3 +6,5 @@ reports:
     volumes:
         - name
         - project 
+        - allocated_capacity_gb
+        - storage_pool
