@@ -56,18 +56,9 @@ class Utils:
 
 	# Follow links in a vipr json
 	def expander(self, j, viprsource, links):
-		
 		e = {}
-
-		# print(j)
-		# print("")
-
 		if isinstance(j,dict):
-
 			for k,v in j.iteritems():
-
-				print(k)
-
 				if k == 'link' and 'href' in v:
 					href = v['href']
 					urn = os.path.basename(href)
@@ -75,22 +66,15 @@ class Utils:
 						link = links[viprsource][urn]
 						if 'link' in link:
 							link.pop('link')
-						e.update(link)
 					else:
-						print(urn, "not found")
 						link = {'svt_not_found':'SVT_NOT_FOUND'}
-						e.update(link)
-						
-
+					e.update(link)
 				elif isinstance(v,dict):
 					e[k] = Utils().expander(v, viprsource, links)
-
-
-
-
+				else:
+					e[k] = v
 		else:
 			e = j
-		
 		return(e)
 
 
