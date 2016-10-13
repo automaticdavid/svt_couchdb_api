@@ -109,6 +109,8 @@ def main(f, action, client):
 					r = Utils().expander(it.value, viprsource, links)
 					rr = Utils().expander(r, viprsource, links)
 					rrr = Utils().expander(rr, viprsource, links)
+					# 4th level won't work
+					# rrrr = Utils().expander(rrr, viprsource, links)
 					print(rrr)
 					print("")
 

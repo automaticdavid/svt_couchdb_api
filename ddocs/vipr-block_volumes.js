@@ -21,13 +21,6 @@ function(doc) {
         source = doc.svt_source ;
         id = doc.name ;
         
-        // loop the doc and follow links
-        // doc.forEach(function(it) {
-            
-
-        // }) ;
-
-
         // map all volumes   
         key = [collect, client, source, id]  ;
         emit( key,  {"volumes":doc} );

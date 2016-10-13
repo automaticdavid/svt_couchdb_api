@@ -3,12 +3,10 @@ client: creditsuisse
 collect: 2016-09-12-11-45-45
 reports:
   nsx-edge:
-    vnics:
-      - label
-      - addressGroups
-      - type
-      - mtu
-      - enableProxyArp
+    appliances:
+      - hostName
+      - memoryReservation 
+      - hostId
 
 
 

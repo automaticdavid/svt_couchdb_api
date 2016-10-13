@@ -12,7 +12,7 @@ function(doc) {
             && doc.svt_client
             && doc.svt_source
             && doc.svt_source_file
-            && doc.svt_source_file.indexOf("edge") != -1
+            && doc.svt_source_file.indexOf("nsx_edge") != -1
             && doc.vnics.vnics
             && doc.id
         

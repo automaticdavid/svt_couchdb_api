@@ -63,14 +63,14 @@ class Utils:
 				if k == 'link' and 'href' in v:
 					href = v['href']
 					urn = os.path.basename(href)
-					# Lookup the linked json inthe links dict
+					# Lookup the linked json in the links dict
 					if urn in links[viprsource]:
 						link = links[viprsource][urn]
 						# Remove self link if needed
 						if 'link' in link:
 							link.pop('link')
 					else:
-						link = {'svt_not_found':'SVT_NOT_FOUND'}
+						link = {'SVT_LINK_NOT_FOUND':'SVT_LINK_NOT_FOUND'}
 					e.update(link)
 				# A sub json may contain links
 				elif isinstance(v,dict):
@@ -87,7 +87,7 @@ class Utils:
 					if links[viprsource][v]:
 						e[k] = links[viprsource][v]
 					else:
-						e[k] = 'SVT_NOT_FOUND'
+						e[k] = 'SVT_LINK_NOT_FOUND'
 					e[k] = v
 		# Standalone strings might also be links
 		else:
@@ -95,10 +95,9 @@ class Utils:
 				if j in links[viprsource]:
 					e = links[viprsource][j]
 				else:
-					e = 'SVT_NOT_FOUND'
+					e = 'SVT_LINK_NOT_FOUND'
 			else:	
 				e = j
-
 		return(e)
 
 
