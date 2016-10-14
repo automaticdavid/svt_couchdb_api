@@ -21,3 +21,13 @@ class Errors(Exception):
 			self.msg = r.text
 			self.call = r.url
 			self.debug = []
+
+	class genError(Exception):
+
+		def __init__(self, code, msg, call, debug):
+
+			self.code = code
+			self.msg = msg
+			self.call = call
+			self.debug = debug
+		

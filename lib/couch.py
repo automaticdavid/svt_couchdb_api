@@ -95,6 +95,18 @@ class Couch:
 		j = self.couch.get(url)
 		return(json.dumps(j))
 
+	# Call an existing view with Reduce
+	def getReduce(self, ddoc, view = '', key = None, group = None):
+		db = self.db
+		# encoding is handled by the requests module
+		url = '/' + db + '/_design/' + ddoc + '/_view/' + view + '?reduce=true'
+		if key:
+			url += '&key=' + json.dumps(key)
+		if group:
+			url += '&group_level=' + group
+		j = self.couch.get(url)
+		return(json.dumps(j))
+
 	# Call an existing design doc
 	def getDesignDoc(self, ddoc):
 		db = self.db

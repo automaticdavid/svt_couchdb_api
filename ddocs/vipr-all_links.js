@@ -15,7 +15,7 @@ function(doc) {
         
         ) {
         
-        // name the docs
+        // name the fields
         collect = doc.svt_collect_date ;
         client = doc.svt_client ;
         source = doc.svt_source ;

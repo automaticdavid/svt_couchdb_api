@@ -33,6 +33,11 @@ class Utils:
 	# Decorate collected JSONs
 	def decorator(self, f, client):
 		result = {}
+		# Extract collect from zip filename
+		fullname = os.path.basename(f)
+		name = os.path.splitext(fullname)[0]
+		collect = name.replace('output_svt_','')
+		# In memory zip extract
 		rows = Utils().extractor(f)
 		for row in rows:
 			name = row[0]
@@ -40,10 +45,12 @@ class Utils:
 			if name.endswith('.json') and content:
 				# extract information from path
 				path = name.split('/')
-				collect = path[0].replace('output_svt_','')
 				source = path[1]
 				filename = path[2]
-				info = {'svt_source_file':filename, 'svt_source':source, 'svt_collect_date':collect, 'svt_client':client}	
+				info = {'svt_source_file':filename, 
+						'svt_source':source, 
+						'svt_collect_date':collect, 
+						'svt_client':client}	
 				# add information to the json
 				try:	
 					j =json.loads(content)
