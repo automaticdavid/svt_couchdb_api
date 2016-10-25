@@ -97,7 +97,6 @@ class HTTPApi:
                         url = self.host + ':' + self.port + uri
 			print("===", url)
                         r = requests.post(url, headers = headers, params = params, data = data, verify = self.verify)
-			print(r)
                         if r.status_code < 400:
                                 return r.json()
                         else:
