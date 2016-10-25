@@ -66,11 +66,26 @@ class wrapper:
 		#	debug = [key, r, new]
 		#	raise Errors.genError(code, msg, call, debug)
 
-		# Decorate and load
+		# Decorate and create bulk json
+		bulk = {}
+		bulk['docs'] = [] 
+		warnings =  []
 		d = Utils().decorator(f, client)
 		for k,s in d.iteritems():
 			try:
-				couch.putString(s)
-			except :
-				print("Invalid JSON for CouchDB in file: " + k)
-				raise
+				j = json.loads(s)
+				bulk['docs'].append(j)
+			except ValueError:
+				warning.append("Invalid JSON for CouchDB in file: " + k)
+
+		# List the invalid files
+		print("\n".join(warnings))
+	
+		# Bulk load
+		try:
+			data = json.dumps(bulk)
+			couch.postBulk(data)
+		except :
+			print("Error with bulk loader")
+			raise
+

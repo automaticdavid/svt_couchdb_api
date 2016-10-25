@@ -50,5 +50,13 @@ class CouchResponse:
 			print("Error: ", e.code, e.msg, e.call)
 			raise
 
+        def post(self, uri, params = None, data = None):
+                logger.debug('URI : %s', uri)
+                try:
+                        response = self.httpapi.post(uri, params, data)
+                        return response
+                except Errors.svtError as e:
+                        print("Error: ", e.code, e.msg, e.call)
+                        raise
 		
 	

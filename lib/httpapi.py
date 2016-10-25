@@ -90,3 +90,28 @@ class HTTPApi:
 			print(e)
 			if self.debug == False:
 				sys.exit(1)
+
+        def post(self, uri, params = None, data = None):
+                try:
+                        headers = {'Content-type':'application/json', 'Accept':'application/json'}
+                        url = self.host + ':' + self.port + uri
+			print("===", url)
+                        r = requests.post(url, headers = headers, params = params, data = data, verify = self.verify)
+			print(r)
+                        if r.status_code < 400:
+                                return r.json()
+                        else:
+                                raise Errors.svtError(r, url)
+                except requests.exceptions.Timeout as e:
+                        print(e)
+                        if self.debug == False:
+                                sys.exit(1)
+                except requests.exceptions.TooManyRedirects as e:
+                        print(e)
+                        if self.debug == False:
+                                sys.exit(1)
+                except requests.exceptions.RequestException as e:
+                        print(e)
+                        if self.debug == False:
+                                sys.exit(1)
+

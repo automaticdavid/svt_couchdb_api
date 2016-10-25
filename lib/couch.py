@@ -43,8 +43,8 @@ class Couch:
 
 	# Create client DB
 	def putDB(self, dbname):
-		j = self.couch.put('/' + dbname)
-		return(j)
+		r = self.couch.put('/' + dbname)
+		return(r)
 
 	# Put JSON file 
 	def putDoc(self, filename):
@@ -58,8 +58,8 @@ class Couch:
 		j_file = json.load(handle)
 		data = json.dumps(j_file)
 		# put document
-		j = self.couch.put(url, None, data)
-		return(j)
+		r = self.couch.put(url, None, data)
+		return(r)
 	
 	# Put JSON string 
 	def putString(self, s):
@@ -69,8 +69,16 @@ class Couch:
 		uuid = j['uuids'][0]
 		url = '/' + db +'/' + uuid
 		# put document
-		j = self.couch.put(url, None, s)
-		return(j)
+		r = self.couch.put(url, None, s)
+		return(r)
+
+        # Bulk put JSON file
+        def postBulk(self, j):
+                db = self.db
+                url = '/' + db + '/_bulk_docs'
+                # put documents
+                r = self.couch.post(url, None, j)
+                return(r)
 
 	# Delete all docs except _design
 	def delAllDocs(self):
