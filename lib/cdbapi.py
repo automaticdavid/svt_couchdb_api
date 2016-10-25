@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 class CouchResponse:
 
 	def __init__(self, config):
-		self.httpapi = HTTPApi(config.host, config.port, config.username, config.password, config.debug)
+		self.httpapi = HTTPApi(config.host, config.port, config.username, config.password, config.debug, config.verify)
 		
 	def get(self, uri):
 		logger.debug('URI : %s', uri)

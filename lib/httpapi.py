@@ -12,21 +12,24 @@ __status__ = "Concept Code"
 import requests
 import sys
 from lib.errors import Errors
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 	
 class HTTPApi:
 
-	def __init__(self, host, port, username, password, debug):
+	def __init__(self, host, port, username, password, debug, verify):
 		self.host = host
 		self.port = port
 		self.username = username
 		self.password = password
 		self.debug = debug
+		self.verify = verify
 
 	def get(self, uri):
 		try:
 			headers = {'Content-type':'text/json', 'Accept':'application/json'} 
 			url = self.host + ':' + self.port + uri
-			r = requests.get(url, headers = headers)
+			r = requests.get(url, headers = headers, verify = self.verify)
 			if r.status_code == 200:
 				return r.json()
 			else:
@@ -48,7 +51,7 @@ class HTTPApi:
 		try:
 			headers = {'Content-type':'text/json', 'Accept':'application/json'} 
 			url = self.host + ':' + self.port + uri
-			r = requests.put(url, headers = headers, params = params, data = data)
+			r = requests.put(url, headers = headers, params = params, data = data, verify = self.verify)
 			if r.status_code < 400:
 				return r.json()
 			else:
@@ -70,7 +73,7 @@ class HTTPApi:
 		try:
 			headers = {'Content-type':'text/json', 'Accept':'application/json'} 
 			url = self.host + ':' + self.port + uri
-			r = requests.delete(url, headers = headers, params = params, data = data)
+			r = requests.delete(url, headers = headers, params = params, data = data, verify = self.verify)
 			if r.status_code < 400:
 				return r.json()
 			else:
