@@ -95,7 +95,6 @@ class HTTPApi:
                 try:
                         headers = {'Content-type':'application/json', 'Accept':'application/json'}
                         url = self.host + ':' + self.port + uri
-			print("===", url)
                         r = requests.post(url, headers = headers, params = params, data = data, verify = self.verify)
                         if r.status_code < 400:
                                 return r.json()
