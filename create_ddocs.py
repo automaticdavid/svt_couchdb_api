@@ -39,7 +39,7 @@ for js in os.listdir(ddocsdir):
 	if os.path.isfile(path) and js.endswith('js'):
 
 		# Extract info from filename
-		parts = js.replace('.js','').split('_')
+		parts = js.replace('.js','').split('-')
 		ddoc = parts[0]
 		view = parts[1]
 

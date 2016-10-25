@@ -56,14 +56,15 @@ class wrapper:
 		
 		# Check if collect already in Couch using reduce grouping at 2
 		key = [collect, client]
-		r = couch.getReduce('admin', 'isnewcollect', key=key, group='2')
-		new = json.loads(r)
-		if new['rows']:
-			code = 99
-			msg = "Client: " + client + " already has a collect for date: " + collect
-			call = "admin/isnewcollect"
-			debug = [key, r, new]
-			raise Errors.genError(code, msg, call, debug)
+		print("Not checking for collect pre existence")
+		# r = couch.getReduce('admin', 'isnewcollect', key=key, group='2')
+		# new = json.loads(r)
+		# if new['rows']:
+		#	code = 99
+		#	msg = "Client: " + client + " already has a collect for date: " + collect
+		#	call = "admin/isnewcollect"
+		#	debug = [key, r, new]
+		#	raise Errors.genError(code, msg, call, debug)
 
 		# Decorate and load
 		d = Utils().decorator(f, client)

@@ -33,3 +33,6 @@ Thumbs.db
 
 # Old
 old/
+
+# Envs
+config/config.cfg
