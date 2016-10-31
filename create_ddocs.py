@@ -34,12 +34,23 @@ if not couch.hasDB():
 	sys.exit("Missing or wrong SVT database: " + cfg.db)
 	
 # Loop .js files
-for js in os.listdir(ddocsdir):
-	path = ddocsdir + js
-	if os.path.isfile(path) and js.endswith('js'):
+for f in sorted(os.listdir(ddocsdir)):
+	
+	path = ddocsdir + f
+
+	if os.path.isfile(path) and f.endswith('js'):
+
+		print("\nParsing file: " + f)
+		didsomething = False
 
 		# Extract info from filename
-		parts = js.replace('.js','').split('-')
+		if f.startswith('reduce_'):
+			action = 'reduce'
+			js = f.replace('reduce_','')
+		else:
+			action = 'map'
+			js = f 
+		parts = js.replace('.js','').split('_')
 		ddoc = parts[0]
 		view = parts[1]
 
@@ -47,16 +58,24 @@ for js in os.listdir(ddocsdir):
 		with open(path) as f:
 			func = f.read()
 
-		# Chech for existence of ddoc
+		# Chech for existence of ddoc, view and action
 		try:
 			r = couch.getDesignDoc(ddoc)
 			j = json.loads(r)
+			# Check for view
 			if view not in j["views"]:
-				j["views"][view] = { "map": func}
-			data = json.dumps(j)
-			# Put the ddoc
-			couch.putDesignDocString(ddoc, data)
-							
+				j["views"][view] = { action: func}
+				didsomething = True
+			# Check for action
+			elif action not in j["views"][view]:
+				j["views"][view][action] = func
+				didsomething = True
+			if didsomething:
+				data = json.dumps(j)
+				# Put the ddoc
+				couch.putDesignDocString(ddoc, data)
+				print("Update DDOC: " + ddoc + ", action: " + action + ", view: " + view )
+					
 		# Doc not found, create it 
 		except Errors.svtError as e:
 			
@@ -66,50 +85,21 @@ for js in os.listdir(ddocsdir):
 					"_id": '_design/' + ddoc,
 					"views": {
 						view: {
-							"map": func
+							action: func
 						}
 					}
 				}
 				data = json.dumps(schema)
 				# Put the ddoc
 				couch.putDesignDocString(ddoc, data)
+				print("Create DDOC: " + ddoc + ", action: " + action + ", view: " + view )
+				didsomething = True
 
 		except Exception:
 			raise
 
-				
+		finally:
+			if not didsomething:
+				print("Nothing to do")
 
 
-				
-				
-
-				
-			
-
-			# Other couch error
-
-
-
-
-
-
-# 		with open(js) as f:
-#     		func = f.readlines()
-# 		json = { 
-# 				"_id": ddoc_id,  
-# 				"views": {
-
-
-# 				}
-
-# 			}
-
-
-# 				{
-#    "_design/example",
-#   "views" : {
-#     "foo" : {
-#       "map" : "function(doc){ emit(doc._id, doc._rev)}"
-#     }
-#   }
-# }

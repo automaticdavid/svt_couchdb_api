@@ -29,7 +29,7 @@ class CouchResponse:
 			response = self.httpapi.get(uri)
 			return response
 		except Errors.svtError as e:
-			print("Error: ", e.code, e.msg, e.call)
+			# print("Error: ", e.code, e.msg, e.call)
 			raise
 
 	def put(self, uri, params = None, data = None):
@@ -38,7 +38,7 @@ class CouchResponse:
 			response = self.httpapi.put(uri, params, data)
 			return response
 		except Errors.svtError as e:
-			print("Error: ", e.code, e.msg, e.call)
+			# print("Error: ", e.code, e.msg, e.call)
 			raise
 	
 	def delete(self, uri, params = None, data = None):
@@ -47,16 +47,16 @@ class CouchResponse:
 			response = self.httpapi.delete(uri, params, data)
 			return response
 		except Errors.svtError as e:
-			print("Error: ", e.code, e.msg, e.call)
+			# print("Error: ", e.code, e.msg, e.call)
 			raise
 
-        def post(self, uri, params = None, data = None):
-                logger.debug('URI : %s', uri)
-                try:
-                        response = self.httpapi.post(uri, params, data)
-                        return response
-                except Errors.svtError as e:
-                        print("Error: ", e.code, e.msg, e.call)
-                        raise
-		
-	
+	def post(self, uri, params = None, data = None):
+		logger.debug('URI : %s', uri)
+		try:
+			response = self.httpapi.post(uri, params, data)
+			return response
+		except Errors.svtError as e:
+			# print("Error: ", e.code, e.msg, e.call)
+			raise
+
+
