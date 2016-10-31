@@ -12,7 +12,7 @@ __status__ = "Concept Code"
 import logging
 import os
 import simplejson as json
-from lib.cdbapi import CouchResponse
+from svt_couchdb.lib.cdbapi import CouchResponse
 
 # Module level logger
 logger = logging.getLogger(__name__)               

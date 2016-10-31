@@ -13,15 +13,15 @@ import logging
 import os
 import sys
 import simplejson as json
-from lib.utils import Utils
-from lib.config import Readconfig
-from lib.couch import Couch
-from lib.errors import Errors
+from svt_couchdb.lib.utils import Utils
+from svt_couchdb.lib.config import Readconfig
+from svt_couchdb.lib.couch import Couch
+from svt_couchdb.lib.errors import Errors
 
 # Module level logger
 logger = logging.getLogger(__name__)      
 
-class wrapper:
+class Wrapper:
 
 	# Load zip file content into CouchDB
 	def loader(self, settings, f, client):
@@ -76,7 +76,7 @@ class wrapper:
 				j = json.loads(s)
 				bulk['docs'].append(j)
 			except ValueError:
-				warning.append("Invalid JSON for CouchDB in file: " + k)
+				warnings.append("Invalid JSON for CouchDB in file: " + k)
 
 		# List the invalid files
 		print("\n".join(warnings))

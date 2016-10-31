@@ -13,19 +13,19 @@ import logging
 import os
 import sys
 from optparse import OptionParser
-from lib.wrapper import wrapper
-from lib.errors import Errors
+from svt_couchdb.lib.wrapper import Wrapper
+from svt_couchdb.lib.errors import Errors
 
 
 # Globals
-SETTINGS_FILE_NAME = 'cfg/config.cfg' 
+SETTINGS_FILE_NAME = 'svt_couchdb/cfg/config.cfg' 
 OS_PATH =  os.path.dirname(os.path.realpath(__file__))                                           
 settings = OS_PATH + '/' + SETTINGS_FILE_NAME
 
 
 def main(f, client):
 
-	wrapper().loader(settings, f, client)
+	Wrapper().loader(settings, f, client)
 
 
 	

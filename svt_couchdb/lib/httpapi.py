@@ -11,7 +11,7 @@ __status__ = "Concept Code"
 	 
 import requests
 import sys
-from lib.errors import Errors
+from svt_couchdb.lib.errors import Errors
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 	

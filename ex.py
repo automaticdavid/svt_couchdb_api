@@ -15,13 +15,13 @@ import sys
 import simplejson as json
 import yaml
 from optparse import OptionParser
-from lib.utils import Utils
-from lib.config import Readconfig
-from lib.couch import Couch
-from lib.svt import Svt
+from svt_couchdb.lib.utils import Utils
+from svt_couchdb.lib.config import Readconfig
+from svt_couchdb.lib.couch import Couch
+from svt_couchdb.lib.svt import Svt
 
 # Globals
-SETTINGS_FILE_NAME = 'cfg/config.cfg' 
+SETTINGS_FILE_NAME = 'svt_couchdb/cfg/config.cfg' 
 OS_PATH =  os.path.dirname(os.path.realpath(__file__))                                           
 settings = OS_PATH + '/' + SETTINGS_FILE_NAME
 
