@@ -1,9 +1,13 @@
-name: My First SVT Report
-client: test1
+name: Edges and ViPR report 
+client: creditsuisse
 collect: 2016-09-12-11-45-45
 reports:
   nsx-edge:
+    loadbalancer:
+      - monitor
+      - version
     vnics: 
       - label
       - addressGroups
       - type
+

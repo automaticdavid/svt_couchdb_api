@@ -13,14 +13,14 @@ import logging
 import os
 import sys
 import simplejson as json
-from svt_couchdb.lib.utils import Utils
-from svt_couchdb.lib.config import Readconfig
-from svt_couchdb.lib.couch import Couch
-from svt_couchdb.lib.errors import Errors
+from lib.utils import Utils
+from lib.config import Readconfig
+from lib.couch import Couch
+from lib.errors import Errors
 
 # Globals
-SETTINGS_FILE_NAME = 'svt_couchdb/cfg/config.cfg' 
-DDOCS_DIR = 'ddocs/' 
+SETTINGS_FILE_NAME = '../cfg/config.cfg' 
+DDOCS_DIR = '../ddocs/' 
 OS_PATH =  os.path.dirname(os.path.realpath(__file__))                                           
 settings = OS_PATH + '/' + SETTINGS_FILE_NAME
 ddocsdir = OS_PATH + '/' + DDOCS_DIR

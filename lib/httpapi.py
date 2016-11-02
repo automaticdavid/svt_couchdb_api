@@ -11,7 +11,7 @@ __status__ = "Concept Code"
 	 
 import requests
 import sys
-from svt_couchdb.lib.errors import Errors
+from lib.errors import Errors
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 	
@@ -30,6 +30,7 @@ class HTTPApi:
 			headers = {'Content-type':'text/json', 'Accept':'application/json'} 
 			url = self.host + ':' + self.port + uri
 			r = requests.get(url, headers = headers, verify = self.verify)
+			print(r.url)
 			if r.status_code == 200:
 				return r.json()
 			else:

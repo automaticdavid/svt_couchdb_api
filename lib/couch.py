@@ -12,7 +12,7 @@ __status__ = "Concept Code"
 import logging
 import os
 import simplejson as json
-from svt_couchdb.lib.cdbapi import CouchResponse
+from lib.cdbapi import CouchResponse
 
 # Module level logger
 logger = logging.getLogger(__name__)               
@@ -100,6 +100,7 @@ class Couch:
 		if startkey:
 			# encoding is handled by the requests module
 			url += '?startkey=' + json.dumps(startkey)
+		print(url)
 		j = self.couch.get(url)
 		return(json.dumps(j))
 

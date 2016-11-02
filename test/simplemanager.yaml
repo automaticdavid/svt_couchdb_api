@@ -1,0 +1,10 @@
+name: My Second SVT Report
+client: test3
+collect: 2016-09-12-11-45-77
+reports:
+  nsx-appliance:
+    manager:
+        - ipv6Address
+
+
+

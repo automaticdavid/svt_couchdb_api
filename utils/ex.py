@@ -15,13 +15,13 @@ import sys
 import simplejson as json
 import yaml
 from optparse import OptionParser
-from svt_couchdb.lib.utils import Utils
-from svt_couchdb.lib.config import Readconfig
-from svt_couchdb.lib.couch import Couch
-from svt_couchdb.lib.svt import Svt
+from lib.utils import Utils
+from lib.config import Readconfig
+from lib.couch import Couch
+from lib.svt import Svt
 
 # Globals
-SETTINGS_FILE_NAME = 'svt_couchdb/cfg/config.cfg' 
+SETTINGS_FILE_NAME = '../cfg/config.cfg' 
 OS_PATH =  os.path.dirname(os.path.realpath(__file__))                                           
 settings = OS_PATH + '/' + SETTINGS_FILE_NAME
 
@@ -72,15 +72,23 @@ def main(f, action, client):
 
 		reports = Utils().flatten(y)
 
+		print(reports)
+
 		# Call couch for reports
+		res = {}
+
 		for report in reports: 
 			
+
+
 			# Extract parameters for the view, the hook and the object
 			[client, collect, source] = report[0]
 			[selector, marker] = report[1]
 			
 			# Key passed to the couch view: will select only given collect & client
 			key = [collect, client, 0]
+			print(key)
+			print(source, selector)
 			r = couch.getView(source, selector, key)
 			j = json.loads(r, object_hook = Svt(selector=selector, marker=marker).hook)
 			
@@ -115,11 +123,10 @@ def main(f, action, client):
 					print("")
 
 
-			else:
-				for it in j['rows']: 
-					Utils().tableizer(caller, it)
+			else: 
+				res = Utils().jsonify(res, caller, j['rows'])
 
-
+		print(json.dumps(res))
 
 
 if __name__ == '__main__':

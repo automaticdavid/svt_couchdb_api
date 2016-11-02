@@ -13,12 +13,12 @@ import logging
 import os
 import sys
 from optparse import OptionParser
-from svt_couchdb.lib.wrapper import Wrapper
-from svt_couchdb.lib.errors import Errors
+from lib.wrapper import Wrapper
+from lib.errors import Errors
 
 
 # Globals
-SETTINGS_FILE_NAME = 'svt_couchdb/cfg/config.cfg' 
+SETTINGS_FILE_NAME = '../cfg/config.cfg' 
 OS_PATH =  os.path.dirname(os.path.realpath(__file__))                                           
 settings = OS_PATH + '/' + SETTINGS_FILE_NAME
 
@@ -45,16 +45,25 @@ if __name__ == '__main__':
 	loadfile = options.loadfile
 	client = options.client
 
-	# Load if needed
+	# Test arguments
 	if not client:
 		sys.exit("Error: specifiying the client with -c is required")	
 	if not loadfile:
 		sys.exit("Error: specifiying a file to load with -f is required")
+
+	# Test files
+	try: 
+		open(settings)
+	except IOError:
+		sys.exit("Error: can't read settings file: " + settings)
 	try: 
 		open(loadfile)
-		main(loadfile, client)
 	except IOError:
 		sys.exit("Error: can't read collect zip file: " + loadfile)
+	
+	# Load
+	try:
+		main(loadfile, client)
 	except Errors.genError as e:
 		print(e.msg)
 		sys.exit(e.code)

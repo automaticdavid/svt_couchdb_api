@@ -1,5 +1,5 @@
 name: My Second SVT Report
-client: test3
+client: test4
 collect: 2016-09-12-11-45-77
 reports:
   nsx-appliance:

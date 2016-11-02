@@ -6,8 +6,8 @@
 # implied.
 
 import logging
-from svt_couchdb.lib.httpapi import HTTPApi 
-from svt_couchdb.lib.errors import Errors
+from lib.httpapi import HTTPApi 
+from lib.errors import Errors
 
 __author__ = "David CLAUVEL"
 __version__ = "0.1"

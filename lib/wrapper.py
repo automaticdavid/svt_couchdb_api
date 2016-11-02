@@ -12,11 +12,13 @@ __status__ = "Concept Code"
 import logging
 import os
 import sys
+import yaml
 import simplejson as json
-from svt_couchdb.lib.utils import Utils
-from svt_couchdb.lib.config import Readconfig
-from svt_couchdb.lib.couch import Couch
-from svt_couchdb.lib.errors import Errors
+from lib.utils import Utils
+from lib.config import Readconfig
+from lib.couch import Couch
+from lib.errors import Errors
+from lib.svt import Svt
 
 # Module level logger
 logger = logging.getLogger(__name__)      
@@ -66,7 +68,7 @@ class Wrapper:
 			debug = [key, r, new]
 			raise Errors.genError(code, msg, call, debug)
 
-		# Decorate and create bulk json
+		Decorate and create bulk json
 		bulk = {}
 		bulk['docs'] = [] 
 		warnings =  []
@@ -89,3 +91,73 @@ class Wrapper:
 			print("Error with bulk loader")
 			raise
 
+
+	# Generate JSON from CouchDB and report def YAML
+	def generator(self, settings, collect, client, yamldef):
+
+		# Init connections parameters
+		cfg = Readconfig().readconfig(settings)
+
+		# Init couch connection
+		couch = Couch(cfg)
+
+		# Test Welcome
+		j = couch.isAlive()
+		print(j)
+
+		# Check if SVT DB exists
+		if not couch.hasDB():
+			code = 99
+			msg = "Missing or wrong SVT database: " + cfg.db
+			call = cfg.url
+			debug = cfg
+			raise Errors.genError(code, msg, call, debug)
+		
+		# Parsed arguments
+		print('Action: Generate') 
+		print('Collect: ' + collect)
+		print('Client: ' + client)
+
+		# Check if collect already in Couch using reduce grouping at 2
+		# key = [collect, client]
+		# print("Checking for collect existence")
+		# r = couch.getReduce('admin', 'isnewcollect', key=key, group='2')
+		# new = json.loads(r)
+		# if not new['rows']:
+		# 	code = 99
+		# 	msg = "Client: " + client + " does not have a collect for date: " + collect
+		# 	call = "admin/isnewcollect"
+		# 	debug = [key, r, new]
+		# 	raise Errors.genError(code, msg, call, debug)
+
+		# Parse YAML
+		h = open(yamldef)
+		y = yaml.load(h)
+		reports = Utils().flatten(y)
+
+		# Call couch for reports
+		res = {}
+
+		# for report in reports: 
+			
+		# 	# Extract parameters for the view, the hook and the object
+		# 	(source, selector, marker) = report
+			
+		# 	# Key passed to the couch view: will select only given collect & client
+		# 	key = [collect, client, 0]
+		# 	print(source, selector)
+		# 	print(key)
+		# 	r = couch.getView(source, selector, key)
+		# 	exit()
+		# 	j = json.loads(r, object_hook = Svt(selector=selector, marker=marker).hook)
+
+		# 	# Deal with the results
+		# 	caller = [client, collect, source, selector, marker]
+		# 	print(caller)
+		# 	if 'vipr' in source:
+		# 		pass
+		# 	else: 
+		# 		res = Utils().jsonify(res, caller, j['rows'])
+		# 		print(res)
+
+		# print(json.dumps(res))

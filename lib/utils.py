@@ -14,7 +14,7 @@ from zipfile import ZipFile
 import simplejson as json
 import sys
 import os
-
+from lib.errors import Errors
 
 # Module level logger
 logger = logging.getLogger(__name__)
@@ -109,6 +109,17 @@ class Utils:
 
 	# Transform the YAML def of a report
 	# Return a LoL with the elements needed by couch calls 
+	# def flatten(self, d):
+	# 	ddocs = d['reports']
+	# 	result = []
+	# 	for ddoc in ddocs:
+	# 		selectors = ddocs[ddoc]
+	# 		for selector in selectors:
+	# 			markers = selectors[selector]
+	# 			for marker in markers:
+	# 				result.append([ddoc, selector, marker])
+	# 	return(result)
+
 	def flatten(self, d):
 		client = d['client']
 		collect = d['collect']
@@ -122,12 +133,65 @@ class Utils:
 					result.append([[client, collect, report], [source, selector]])
 		return(result)
 
-	# Transform result structures into tables
-	def tableizer(self, caller, struct):
-		print('=' * 80)
-		print(caller)
-		print(struct.key)
-		print(struct.value)
 
 
+	# Enrich a dictionary with the result rows of a view
+	def jsonify(self, res, caller, rows):
 
+		ddoc = caller[2]
+		selector = caller[3]
+		marker = caller[4]
+
+		for row in rows:
+
+			# Get values from the row object
+			collect = row.collect
+			client = row.client
+			source = row.source
+			name = row.name
+			value = row.value
+
+			print(collect)
+			print(client)
+
+			# Keep collect and date in the result and sanity check them
+			if not 'info' in res:
+				res['info'] = {}	
+				res['info']['svt_collect'] = collect
+				res['info']['svt_client'] = client
+			elif res['info']['svt_collect'] != collect and res['info']['svt_client'] != client:
+				code = 99
+				msg = "Different keys found in Generator" 
+				call = (res, caller, row)
+				debug = "" 
+				raise Errors.genError(code, msg, call, debug)
+
+			# Vivify the keys if needed
+			if not 'data' in res:
+				res['data'] = {} 
+
+			if not ddoc in res['data']:
+				res['data'][ddoc] = {}
+
+			if not source in res['data'][ddoc]:
+				res['data'][ddoc][source] = {}
+
+			if not name in res['data'][ddoc][source]:
+				res['data'][ddoc][source][name] = {}
+
+			if not selector in res['data'][ddoc][source][name]:
+				res['data'][ddoc][source][name][selector] = {}
+
+
+			# Build the wanted JSON structure
+			if isinstance(value,dict):
+				for svt_unic in value.keys():
+					if not svt_unic in res['data'][ddoc][source][name][selector]:
+						res['data'][ddoc][source][name][selector][svt_unic] = {}
+					else:
+						res['data'][ddoc][source][name][selector][svt_unic][marker]  = value[svt_unic]
+			else:
+				res['data'][ddoc][source][name][selector][marker] = value
+
+
+		return(res)

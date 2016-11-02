@@ -35,16 +35,22 @@ class Svt:
 		# Is it a list ?
 		# Each item has been dictionarized by the view
 		elif not isinstance(s, basestring):
-			v = []
+			v = {}
 			for i in s:
 				svt_unic = i['svt_unic']
 				marked = i['svt_value'][marker]
-				v.append([svt_unic, marked])
+				v[svt_unic] =  marked
 		else:
 			raise('Guru meditation, call the developper!')
 		# Add the key to the result
-		k = d['key']
-		r = {'key':k, 'value':v}
+		(collect, client, source, name) = d['key']
+		r = {
+				'collect':collect,
+				'client':client,
+				'source':source,
+				'name':name,
+				'value':v
+			}
 		return Svt(**r)
 
 
