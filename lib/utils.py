@@ -167,28 +167,29 @@ class Utils:
 			if not 'data' in res:
 				res['data'] = {} 
 
-			if not ddoc in res['data']:
-				res['data'][ddoc] = {}
+			if not source in res['data']:
+				res['data'][source] = {}
 
-			if not source in res['data'][ddoc]:
-				res['data'][ddoc][source] = {}
+			if not ddoc in res['data'][source]:
+				res['data'][source][ddoc] = {}
 
-			if not name in res['data'][ddoc][source]:
-				res['data'][ddoc][source][name] = {}
+			if not name in res['data'][source][ddoc]:
+				res['data'][source][ddoc][name] = {}
 
-			if not selector in res['data'][ddoc][source][name]:
-				res['data'][ddoc][source][name][selector] = {}
+			if not selector in res['data'][source][ddoc][name]:
+				res['data'][source][ddoc][name][selector] = {}
 
 
 			# Build the wanted JSON structure
-			if isinstance(value,dict):
+			if isinstance(value,dict) and 'svt_marked' in value:
 				for svt_unic in value.keys():
-					if not svt_unic in res['data'][ddoc][source][name][selector]:
-						res['data'][ddoc][source][name][selector][svt_unic] = {}
+					if svt_unic == 'svt_marked':
+						continue
+					if not svt_unic in res['data'][source][ddoc][name][selector]:
+						res['data'][source][ddoc][name][selector][svt_unic] = {}
 					else:
-						res['data'][ddoc][source][name][selector][svt_unic][marker]  = value[svt_unic]
+						res['data'][source][ddoc][name][selector][svt_unic][marker]  = value[svt_unic]
 			else:
-				res['data'][ddoc][source][name][selector][marker] = value
-
+				res['data'][source][ddoc][name][selector][marker] = value
 
 		return(res)

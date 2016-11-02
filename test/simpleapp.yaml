@@ -1,0 +1,5 @@
+reports:
+  nsx-appliance:
+    manager:
+      - cpuInfoDto
+      - versionInfo

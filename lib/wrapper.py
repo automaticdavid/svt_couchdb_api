@@ -80,6 +80,7 @@ class Wrapper:
 				bulk['docs'].append(j)
 			except ValueError:
 				warnings.append("Invalid JSON for CouchDB in file: " + k)
+				raise
 
 		# List the invalid files
 		print("\n".join(warnings))

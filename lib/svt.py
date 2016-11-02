@@ -40,6 +40,7 @@ class Svt:
 				svt_unic = i['svt_unic']
 				marked = i['svt_value'][marker]
 				v[svt_unic] =  marked
+				v['svt_marked'] = True
 		else:
 			raise('Guru meditation, call the developper!')
 		# Add the key to the result
