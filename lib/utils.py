@@ -56,7 +56,7 @@ class Utils:
 					j =json.loads(content)
 					j.update(info)
 					result[name] = json.dumps(j)
-				except AttributeError as err:
+				except:
 					print("Invalid JSON for json.loads in file: " + name)
 					pass
 		return(result)
@@ -119,21 +119,6 @@ class Utils:
 				for marker in markers:
 					result.append([ddoc, selector, marker])
 		return(result)
-
-	# def flatten(self, d):
-	# 	client = d['client']
-	# 	collect = d['collect']
-	# 	reports = d['reports']
-	# 	result = []
-	# 	for report in reports:
-	# 		sources = reports[report]
-	# 		for source in sources:
-	# 			selectors = sources[source]
-	# 			for selector in selectors:
-	# 				result.append([[client, collect, report], [source, selector]])
-	# 	return(result)
-
-
 
 	# Enrich a dictionary with the result rows of a view
 	def jsonify(self, res, caller, rows):
