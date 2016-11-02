@@ -72,13 +72,13 @@ class Couch:
 		r = self.couch.put(url, None, s)
 		return(r)
 
-        # Bulk put JSON file
-        def postBulk(self, j):
-                db = self.db
-                url = '/' + db + '/_bulk_docs'
-                # put documents
-                r = self.couch.post(url, None, j)
-                return(r)
+	# Bulk put JSON file
+	def postBulk(self, j):
+		db = self.db
+		url = '/' + db + '/_bulk_docs'
+		# put documents
+		r = self.couch.post(url, None, j)
+		return(r)
 
 	# Delete all docs except _design
 	def delAllDocs(self):
@@ -94,23 +94,26 @@ class Couch:
 			r = self.couch.delete(url, params)
 
 	# Call an existing view
-	def getView(self, ddoc, view = '', startkey = None):
+	def getView(self, ddoc, view = '', startkey = None, endkey = None):
 		db = self.db
+		# encoding is handled by the requests module
 		url = '/' + db + '/_design/' + ddoc + '/_view/' + view
 		if startkey:
-			# encoding is handled by the requests module
 			url += '?startkey=' + json.dumps(startkey)
-		print(url)
+		if endkey:
+			url += '&endkey=' + json.dumps(endkey)
 		j = self.couch.get(url)
 		return(json.dumps(j))
 
 	# Call an existing view with Reduce
-	def getReduce(self, ddoc, view = '', key = None, group = None):
+	def getReduce(self, ddoc, view = '', startkey = None, endkey = None, group = None):
 		db = self.db
 		# encoding is handled by the requests module
 		url = '/' + db + '/_design/' + ddoc + '/_view/' + view + '?reduce=true'
-		if key:
-			url += '&key=' + json.dumps(key)
+		if startkey:
+			url += '&startkey=' + json.dumps(startkey)
+		if endkey:
+			url += '&endkey=' + json.dumps(endkey)
 		if group:
 			url += '&group_level=' + group
 		j = self.couch.get(url)

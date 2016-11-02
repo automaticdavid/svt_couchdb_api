@@ -30,7 +30,6 @@ class HTTPApi:
 			headers = {'Content-type':'text/json', 'Accept':'application/json'} 
 			url = self.host + ':' + self.port + uri
 			r = requests.get(url, headers = headers, verify = self.verify)
-			print(r.url)
 			if r.status_code == 200:
 				return r.json()
 			else:

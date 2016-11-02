@@ -109,29 +109,29 @@ class Utils:
 
 	# Transform the YAML def of a report
 	# Return a LoL with the elements needed by couch calls 
-	# def flatten(self, d):
-	# 	ddocs = d['reports']
-	# 	result = []
-	# 	for ddoc in ddocs:
-	# 		selectors = ddocs[ddoc]
-	# 		for selector in selectors:
-	# 			markers = selectors[selector]
-	# 			for marker in markers:
-	# 				result.append([ddoc, selector, marker])
-	# 	return(result)
-
 	def flatten(self, d):
-		client = d['client']
-		collect = d['collect']
-		reports = d['reports']
+		ddocs = d['reports']
 		result = []
-		for report in reports:
-			sources = reports[report]
-			for source in sources:
-				selectors = sources[source]
-				for selector in selectors:
-					result.append([[client, collect, report], [source, selector]])
+		for ddoc in ddocs:
+			selectors = ddocs[ddoc]
+			for selector in selectors:
+				markers = selectors[selector]
+				for marker in markers:
+					result.append([ddoc, selector, marker])
 		return(result)
+
+	# def flatten(self, d):
+	# 	client = d['client']
+	# 	collect = d['collect']
+	# 	reports = d['reports']
+	# 	result = []
+	# 	for report in reports:
+	# 		sources = reports[report]
+	# 		for source in sources:
+	# 			selectors = sources[source]
+	# 			for selector in selectors:
+	# 				result.append([[client, collect, report], [source, selector]])
+	# 	return(result)
 
 
 
@@ -150,9 +150,6 @@ class Utils:
 			source = row.source
 			name = row.name
 			value = row.value
-
-			print(collect)
-			print(client)
 
 			# Keep collect and date in the result and sanity check them
 			if not 'info' in res:

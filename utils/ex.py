@@ -87,8 +87,6 @@ def main(f, action, client):
 			
 			# Key passed to the couch view: will select only given collect & client
 			key = [collect, client, 0]
-			print(key)
-			print(source, selector)
 			r = couch.getView(source, selector, key)
 			j = json.loads(r, object_hook = Svt(selector=selector, marker=marker).hook)
 			
