@@ -37,7 +37,10 @@ class Svt:
 			v = {}
 			for i in s:
 				svt_unic = i['svt_unic']
-				marked = i['svt_value'][marker]
+				if marker in i['svt_value']:
+					marked = i['svt_value'][marker]
+				else:
+					marked = 'svt_no_data'
 				v[svt_unic] =  marked
 				v['svt_marked'] = True
 		else:

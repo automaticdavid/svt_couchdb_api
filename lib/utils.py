@@ -158,7 +158,6 @@ class Utils:
 
 			if marker == 'svt_all' and name == 'svt_group' and isinstance(value,dict) and 'svt_marked' in value:
 
-
 				del value['svt_marked']
 				res['data'][source][ddoc][selector] = value
 
@@ -169,6 +168,13 @@ class Utils:
 					if k == 'svt_marked':
 						continue
 					res['data'][source][ddoc][name][selector][k]  = value[k]
+
+			elif isinstance(value,dict) and 'svt_marked' in value:
+
+				for k in value.keys():
+					if k == 'svt_marked':
+						continue
+					res['data'][source][ddoc][name][selector][k][marker] = value[k]
 
 
 			elif marker == 'svt_all' and name == 'svt_group':
