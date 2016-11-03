@@ -138,9 +138,11 @@ class Wrapper:
 		y = yaml.load(h)
 		reports = Utils().flatten(y)
 
-		# Call couch for reports
+		# Structure for result json
+		# res = Utils().hash()
 		res = {}
 
+		# Call couch for reports
 		for report in reports: 
 			
 			# Extract parameters for the view, the hook and the object
@@ -150,7 +152,11 @@ class Wrapper:
 			startkey = [collect, client]
 			endkey = [collect, client, {}]
 			r = couch.getView(source, selector, startkey, endkey)
-			j = json.loads(r, object_hook = Svt(selector=selector, marker=marker).hook)
+
+			if marker == 'svt_all':
+				j = json.loads(r, object_hook = Svt(selector=selector).hook_all)
+			else:	
+				j = json.loads(r, object_hook = Svt(selector=selector, marker=marker).hook_marker)
 
 			# Deal with the results
 			caller = [client, collect, source, selector, marker]
@@ -159,4 +165,5 @@ class Wrapper:
 			else: 
 				res = Utils().jsonify(res, caller, j['rows'])
 
-		print(json.dumps(res))
+		# Result
+		return(json.dumps(res))

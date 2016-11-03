@@ -19,9 +19,9 @@ class Svt:
 	def __init__(self, **kw):
 		self.__dict__.update(kw)	
 
-
 	# Used for json.loads object_hook
-	def hook(self, d):
+	def hook_marker(self, d):
+		print("ZZZ")
 		selector = self.selector
 		marker = self.marker
 		# Outer nest json has 'key', enforced by CouchDB views 
@@ -33,7 +33,7 @@ class Svt:
 		if isinstance(s,dict):
 			v = s[marker]
 		# Is it a list ?
-		# Each item has been dictionarized by the view
+		# Each item has been keyed with 'svt_unic' by the view
 		elif not isinstance(s, basestring):
 			v = {}
 			for i in s:
@@ -55,3 +55,36 @@ class Svt:
 		return Svt(**r)
 
 
+	# Used for json.loads object_hook 
+	# Get all first level markers
+	def hook_all(self, d):
+		selector = self.selector
+		# Outer nest json has 'key', enforced by CouchDB views 
+		if not 'key' in d:
+			return(d)
+		# Get the selected subjson
+		s = d['value'][selector]
+		# Is it a dict ? 
+		if isinstance(s,dict):
+			v = s 
+		# Is it a list ?
+		# Each item has been keyed with 'svt_unic' by the view
+		elif not isinstance(s, basestring):
+			v = {}
+			for i in s:
+				svt_unic = i['svt_unic']
+				marked = i['svt_value']
+				v[svt_unic] = marked
+				v['svt_marked'] = True
+		else:
+			raise('Guru meditation, call the developper!')
+		# Add the key to the result
+		(collect, client, source, name) = d['key']
+		r = {
+				'collect':collect,
+				'client':client,
+				'source':source,
+				'name':name,
+				'value':v
+			}
+		return Svt(**r)

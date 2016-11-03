@@ -14,12 +14,17 @@ from zipfile import ZipFile
 import simplejson as json
 import sys
 import os
+import collections
 from lib.errors import Errors
 
 # Module level logger
 logger = logging.getLogger(__name__)
 	
 class Utils:
+
+	# Autovivifying hash structure
+	# def hash(self):
+	#     return collections.defaultdict(hash)
 
 	# Extract files in memory from zip
 	def extractor(self, f):
@@ -168,12 +173,14 @@ class Utils:
 			# Build the wanted JSON structure
 			if isinstance(value,dict) and 'svt_marked' in value:
 				for svt_unic in value.keys():
-					if svt_unic == 'svt_marked':
+					if svt_unic == 'svt_marked' and svt_unic == 'svt_all':
 						continue
-					if not svt_unic in res['data'][source][ddoc][name][selector]:
+					elif not svt_unic in res['data'][source][ddoc][name][selector]:
 						res['data'][source][ddoc][name][selector][svt_unic] = {}
 					else:
 						res['data'][source][ddoc][name][selector][svt_unic][marker]  = value[svt_unic]
+			if marker == 'svt_all':
+				res['data'][source][ddoc][name][selector].update(value)
 			else:
 				res['data'][source][ddoc][name][selector][marker] = value
 

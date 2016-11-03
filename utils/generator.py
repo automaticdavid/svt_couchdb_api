@@ -25,8 +25,8 @@ settings = OS_PATH + '/' + SETTINGS_FILE_NAME
 
 def main(settings, collect, client):
 
-	Wrapper().generator(settings, collect, client, yamldef)
-
+	res = Wrapper().generator(settings, collect, client, yamldef)
+	print(res)
 
 	
 if __name__ == '__main__':
