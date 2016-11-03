@@ -19,7 +19,7 @@ from lib.errors import Errors
 
 # Globals
 SETTINGS_FILE_NAME = '../cfg/config.cfg' 
-OS_PATH =  os.path.dirname(os.path.realpath(__file__))                                           
+OS_PATH =  os.path.dirname(os.path.realpath(__file__))
 settings = OS_PATH + '/' + SETTINGS_FILE_NAME
 
 

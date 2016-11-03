@@ -13,6 +13,7 @@ import logging
 import os
 import simplejson as json
 from lib.cdbapi import CouchResponse
+from lib.errors import Errors
 
 # Module level logger
 logger = logging.getLogger(__name__)               
@@ -25,9 +26,16 @@ class Couch:
 
 	# Test get
 	def isAlive(self):
-		j = self.couch.get('/')
-		return(j['couchdb'])
-
+		try:
+			j = self.couch.get('/')
+			return(j['couchdb'])
+		except:
+			code = 99
+			msg = "Can't GET CouchDB. Check svt_couchdb config file" 
+			call = ""
+			debug = "" 
+			raise Errors.genError(code, msg, call, debug)
+			
 	# Test if DB is defined
 	def hasDB(self):
 		try:

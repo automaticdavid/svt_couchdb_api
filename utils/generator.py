@@ -50,7 +50,7 @@ if __name__ == '__main__':
 	client = options.client
 	yamldef = options.yamldef
 
-	# Generate
+	# Test input
 	if not client:
 		sys.exit("Error: specifiying the client with -s is required")	
 	if not collect:

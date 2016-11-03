@@ -165,5 +165,43 @@ class Wrapper:
 			else: 
 				res = Utils().jsonify(res, caller, j['rows'])
 
-		# Result
+		# Dump the hash into a json string
 		return(json.dumps(res))
+
+	# List all clients and collects from the Couch
+	def lister(self, settings):
+
+		# Init connections parameters
+		cfg = Readconfig().readconfig(settings)
+
+		# Init couch connection
+		couch = Couch(cfg)
+
+		# Test Welcome
+		j = couch.isAlive()
+		print(j)
+
+		# Check if SVT DB exists
+		if not couch.hasDB():
+			code = 99
+			msg = "Missing or wrong SVT database: " + cfg.db
+			call = cfg.url
+			debug = cfg
+			raise Errors.genError(code, msg, call, debug)
+
+		# Call reduce
+		r = couch.getReduce('admin', 'isnewcollect', startkey=None, endkey=None, group='2')
+		j = json.loads(r)
+
+		# Do some formating 
+		res = {}
+		for row in j['rows']:
+			count = row['value']
+			k = row['key']
+			(date, client) = k
+			if client in res:
+				res[client].append(date)
+			else:
+				res[client] = [date]
+		return res
+
