@@ -23,8 +23,8 @@ logger = logging.getLogger(__name__)
 class Utils:
 
 	# Autovivifying hash structure
-	# def hash(self):
-	#     return collections.defaultdict(hash)
+	def hash(self):
+		return collections.defaultdict(Utils().hash)
 
 	# Extract files in memory from zip
 	def extractor(self, f):
@@ -140,10 +140,9 @@ class Utils:
 			source = row.source
 			name = row.name
 			value = row.value
-
+			
 			# Keep collect and date in the result and sanity check them
 			if not 'info' in res:
-				res['info'] = {}	
 				res['info']['svt_collect'] = collect
 				res['info']['svt_client'] = client
 			elif res['info']['svt_collect'] != collect and res['info']['svt_client'] != client:
@@ -153,35 +152,83 @@ class Utils:
 				debug = "" 
 				raise Errors.genError(code, msg, call, debug)
 
-			# Vivify the keys if needed
-			if not 'data' in res:
-				res['data'] = {} 
-
-			if not source in res['data']:
-				res['data'][source] = {}
-
-			if not ddoc in res['data'][source]:
-				res['data'][source][ddoc] = {}
-
-			if not name in res['data'][source][ddoc]:
-				res['data'][source][ddoc][name] = {}
-
-			if not selector in res['data'][source][ddoc][name]:
-				res['data'][source][ddoc][name][selector] = {}
 
 
 			# Build the wanted JSON structure
-			if isinstance(value,dict) and 'svt_marked' in value:
-				for svt_unic in value.keys():
-					if svt_unic == 'svt_marked' and svt_unic == 'svt_all':
+
+			if marker == 'svt_all' and name == 'svt_group' and isinstance(value,dict) and 'svt_marked' in value:
+
+
+				del value['svt_marked']
+				res['data'][source][ddoc][selector] = value
+
+
+			elif marker == 'svt_all' and isinstance(value,dict) and 'svt_marked' in value:
+
+				for k in value.keys():
+					if k == 'svt_marked':
 						continue
-					elif not svt_unic in res['data'][source][ddoc][name][selector]:
-						res['data'][source][ddoc][name][selector][svt_unic] = {}
-					else:
-						res['data'][source][ddoc][name][selector][svt_unic][marker]  = value[svt_unic]
-			if marker == 'svt_all':
+					res['data'][source][ddoc][name][selector][k]  = value[k]
+
+
+			elif marker == 'svt_all' and name == 'svt_group':
+
+				res['data'][source][ddoc][selector].update(value)
+
+
+			elif marker == 'svt_all':
+
 				res['data'][source][ddoc][name][selector].update(value)
+
+
+			elif name == 'svt_group':
+
+				res['data'][source][ddoc][selector][marker] = value
+
 			else:
 				res['data'][source][ddoc][name][selector][marker] = value
+
+
+
+			# if isinstance(value,dict) and 'svt_marked' in value:
+				
+			# 	for k in value.keys():
+			# 		if k == 'svt_marked':
+			# 			continue
+			# 		elif marker == 'svt_all':
+			# 			res['data'][source][ddoc][name][selector][k]  = value[k]
+			# 		else: 
+			# 			res['data'][source][ddoc][name][selector][k][marker]  = value[k]
+
+			# elif marker == 'svt_all' and name == 'svt_group':
+			# 	res['data'][source][ddoc][name][selector].update(value)
+			
+			# elif name == 'svt_group': 
+			# 	res['data'][source][ddoc][selector][marker] = value
+
+			# else:
+			# 	res['data'][source][ddoc][name][selector][marker] = value
+
+
+			# elif marker == 'svt_all':
+			# 	res['data'][source][ddoc][name][selector].update(value)
+			# else:
+			# 	res['data'][source][ddoc][name][selector][marker] = value
+
+
+
+			# if isinstance(value,dict) and 'svt_marked' in value:
+			# 	for k in value.keys():
+			# 		if k == 'svt_marked':
+			# 			continue
+			# 		elif marker == 'svt_all':
+			# 			res['data'][source][ddoc][name][selector][k]  = value[k]
+
+			# 		else: 
+			# 			res['data'][source][ddoc][name][selector][k][marker]  = value[k]
+			# elif marker == 'svt_all':
+			# 	res['data'][source][ddoc][name][selector].update(value)
+			# else:
+			# 	res['data'][source][ddoc][name][selector][marker] = value
 
 		return(res)

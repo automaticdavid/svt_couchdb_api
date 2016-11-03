@@ -21,7 +21,6 @@ class Svt:
 
 	# Used for json.loads object_hook
 	def hook_marker(self, d):
-		print("ZZZ")
 		selector = self.selector
 		marker = self.marker
 		# Outer nest json has 'key', enforced by CouchDB views 

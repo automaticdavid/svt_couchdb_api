@@ -139,8 +139,8 @@ class Wrapper:
 		reports = Utils().flatten(y)
 
 		# Structure for result json
-		# res = Utils().hash()
-		res = {}
+		res = Utils().hash()
+		# res = {}
 
 		# Call couch for reports
 		for report in reports: 
