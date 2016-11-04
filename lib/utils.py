@@ -152,89 +152,56 @@ class Utils:
 				debug = "" 
 				raise Errors.genError(code, msg, call, debug)
 
-
-
 			# Build the wanted JSON structure
 
-			if marker == 'svt_all' and name == 'svt_group' and isinstance(value,dict) and 'svt_marked' in value:
+			if (name == 'svt_group'
+				and isinstance(value,dict) 
+				and 'svt_marked' in value):
+				raise('CouchDB Map Error: Jsonify found both svt_marked & svt_group')
 
+			elif (marker == 'svt_all' 
+				and isinstance(value,dict) 
+				and 'svt_marked' in value):
+				# Getting svt_all instead of specific marker
+				# Marked values are to be re-keyed
+				# Remove the marked tag
 				del value['svt_marked']
-				res['data'][source][ddoc][selector] = value
-
-
-			elif marker == 'svt_all' and isinstance(value,dict) and 'svt_marked' in value:
-
 				for k in value.keys():
-					if k == 'svt_marked':
-						continue
 					res['data'][source][ddoc][name][selector][k]  = value[k]
 
-			elif isinstance(value,dict) and 'svt_marked' in value:
-
+			elif (isinstance(value,dict) 
+				and 'svt_marked' in value):
+				# Getting specific marker
+				# Marked values are to be re-keyed
+				# Remove the marked tag
+				del value['svt_marked']
 				for k in value.keys():
-					if k == 'svt_marked':
-						continue
 					res['data'][source][ddoc][name][selector][k][marker] = value[k]
 
-
-			elif marker == 'svt_all' and name == 'svt_group':
-
+			elif (marker == 'svt_all' 
+				and name == 'svt_group'):
+				# Getting svt_all for grouped values
+				# Attach them all at the selector level
+				# Cleanup couch doc level info from grouped
+				del value['svt_collect_date']
+				del value['svt_client']
+				del value['svt_source']
+				del value['_id']
+				del value['_rev']
 				res['data'][source][ddoc][selector].update(value)
 
-
 			elif marker == 'svt_all':
-
+				# Getting svt_all for ungrouped value
+				# Attach them all under their name
 				res['data'][source][ddoc][name][selector].update(value)
 
-
 			elif name == 'svt_group':
-
+				# Getting grouped value for a specific marker
+				# Using marker won't select doc level info
 				res['data'][source][ddoc][selector][marker] = value
 
 			else:
+				# Standard attach 
 				res['data'][source][ddoc][name][selector][marker] = value
-
-
-
-			# if isinstance(value,dict) and 'svt_marked' in value:
-				
-			# 	for k in value.keys():
-			# 		if k == 'svt_marked':
-			# 			continue
-			# 		elif marker == 'svt_all':
-			# 			res['data'][source][ddoc][name][selector][k]  = value[k]
-			# 		else: 
-			# 			res['data'][source][ddoc][name][selector][k][marker]  = value[k]
-
-			# elif marker == 'svt_all' and name == 'svt_group':
-			# 	res['data'][source][ddoc][name][selector].update(value)
-			
-			# elif name == 'svt_group': 
-			# 	res['data'][source][ddoc][selector][marker] = value
-
-			# else:
-			# 	res['data'][source][ddoc][name][selector][marker] = value
-
-
-			# elif marker == 'svt_all':
-			# 	res['data'][source][ddoc][name][selector].update(value)
-			# else:
-			# 	res['data'][source][ddoc][name][selector][marker] = value
-
-
-
-			# if isinstance(value,dict) and 'svt_marked' in value:
-			# 	for k in value.keys():
-			# 		if k == 'svt_marked':
-			# 			continue
-			# 		elif marker == 'svt_all':
-			# 			res['data'][source][ddoc][name][selector][k]  = value[k]
-
-			# 		else: 
-			# 			res['data'][source][ddoc][name][selector][k][marker]  = value[k]
-			# elif marker == 'svt_all':
-			# 	res['data'][source][ddoc][name][selector].update(value)
-			# else:
-			# 	res['data'][source][ddoc][name][selector][marker] = value
 
 		return(res)
