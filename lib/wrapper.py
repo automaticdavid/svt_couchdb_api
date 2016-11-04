@@ -148,7 +148,6 @@ class Wrapper:
 			startkey = [collect, client]
 			endkey = [collect, client, {}]
 			r = couch.getView(source, selector, startkey, endkey)
-
 			# Loop over the markers
 			for marker in markers:
 				# Save the Caller

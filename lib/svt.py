@@ -65,6 +65,10 @@ class Svt:
 		if not 'key' in d:
 			return(d)
 		# Get the selected subjson
+		# print("####################################")
+		# print("###" , d['value'])
+		# print("###" + selector)
+		# print("####################################")
 		s = d['value'][selector]
 		# Is it a dict ? 
 		if isinstance(s,dict):
