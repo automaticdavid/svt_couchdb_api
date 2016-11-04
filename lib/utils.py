@@ -158,10 +158,28 @@ class Utils:
 			# Build the wanted JSON structure
 
 			if (name == 'svt_group'
+				and marker == 'svt_all'
 				and isinstance(value,dict) 
 				and 'svt_marked' in value):
-				raise('CouchDB Map Error: Jsonify found both svt_marked & svt_group')
+				# Getting grouped values
+				# Getting svt_all instead of specific marker
+				# Marked values are to be re-keyed
+				# Remove the marked tag
+				del value['svt_marked']
+				for k in value.keys():
+					res['data'][source][ddoc][selector][k]  = value[k]
 
+			elif (name == 'svt_group'
+				and isinstance(value,dict) 
+				and 'svt_marked' in value):
+				# Getting group values
+				# Getting specific marker
+				# Marked values are to be re-keyed
+				# Remove the marked tag
+				del value['svt_marked']
+				for k in value.keys():
+					res['data'][source][ddoc][selector][k][marker]  = value[k]
+				
 			elif (marker == 'svt_all' 
 				and isinstance(value,dict) 
 				and 'svt_marked' in value):
