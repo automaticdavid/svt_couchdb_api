@@ -140,29 +140,28 @@ class Wrapper:
 
 		# Structure for result json
 		res = Utils().hash()
-		# res = {}
 
 		# Call couch for reports
-		for report in reports: 
-			
-			# Extract parameters for the view, the hook and the object
-			(source, selector, marker) = report
+		for (source, selector), markers in reports.iteritems(): 
 			
 			# Key passed to the couch view: will select only given collect & client
 			startkey = [collect, client]
 			endkey = [collect, client, {}]
 			r = couch.getView(source, selector, startkey, endkey)
 
-			if marker == 'svt_all':
-				j = json.loads(r, object_hook = Svt(selector=selector).hook_all)
-			else:	
-				j = json.loads(r, object_hook = Svt(selector=selector, marker=marker).hook_marker)
-
-			# Deal with the results
-			caller = [client, collect, source, selector, marker]
-			if 'vipr' in source:
-				pass
-			else: 
+			# Loop over the markers
+			for marker in markers:
+				# Save the Caller
+				caller = [client, collect, source, selector, marker]
+				# Deal with the catch all special marker
+				if marker == 'svt_all':
+					j = json.loads(r, object_hook = Svt(selector=selector).hook_all)
+				else:	
+					j = json.loads(r, object_hook = Svt(selector=selector, marker=marker).hook_marker)
+				# Special ViPR call
+				if 'vipr' in source:
+					pass
+				# Update hash result 
 				res = Utils().jsonify(res, caller, j['rows'])
 
 		# Dump the hash into a json string

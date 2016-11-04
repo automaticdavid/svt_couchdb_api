@@ -113,16 +113,19 @@ class Utils:
 		return(e)
 
 	# Transform the YAML def of a report
-	# Return a LoL with the elements needed by couch calls 
+	# Return a dict with the markers as a list value of the couch call
 	def flatten(self, d):
 		ddocs = d['reports']
-		result = []
+		result = {}
 		for ddoc in ddocs:
 			selectors = ddocs[ddoc]
 			for selector in selectors:
 				markers = selectors[selector]
 				for marker in markers:
-					result.append([ddoc, selector, marker])
+					if (ddoc, selector) in result:
+						result[(ddoc, selector)].append(marker)
+					else: 
+						result[(ddoc, selector)] = [marker]
 		return(result)
 
 	# Enrich a dictionary with the result rows of a view
