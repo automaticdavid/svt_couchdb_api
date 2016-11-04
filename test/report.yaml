@@ -1,6 +1,4 @@
 name: My First SVT Report
-client: test1
-collect: 2016-09-12-11-45-45
 reports:
   nsx-edge:
     vnics: 

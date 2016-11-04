@@ -1,6 +1,4 @@
 name: My Second SVT Report
-client: creditsuisse
-collect: 2016-09-12-11-45-45
 reports:
   nsx-edge:
     loadbalancer:

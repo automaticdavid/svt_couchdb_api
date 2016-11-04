@@ -1,6 +1,4 @@
 name: Edges and ViPR report 
-client: creditsuisse
-collect: 2016-09-12-11-45-45
 reports:
   nsx-edge:
     appliances:
