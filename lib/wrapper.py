@@ -147,7 +147,9 @@ class Wrapper:
 			# Key passed to the couch view: will select only given collect & client
 			startkey = [collect, client]
 			endkey = [collect, client, {}]
-			r = couch.getView(source, selector, startkey, endkey)
+			c = couch.getView(source, selector, startkey, endkey)
+			r = Utils().cleanKeys(c)
+
 			# Loop over the markers
 			for marker in markers:
 				# Save the Caller
@@ -161,10 +163,11 @@ class Wrapper:
 				if 'vipr' in source:
 					pass
 				# Update hash result 
-				res = Utils().jsonify(res, caller, j['rows'])
+				res = Utils().jsonify(res, caller, j)
 
 		# Dump the hash into a json string
-		return(json.dumps(res))
+		s = json.dumps(res)
+		return(s)
 
 	# List all clients and collects from the Couch
 	def lister(self, settings):

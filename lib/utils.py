@@ -128,6 +128,19 @@ class Utils:
 						result[(ddoc, selector)] = [marker]
 		return(result)
 
+	# Replace the default keys in a CouchDB response
+	# Use cutom keys that won't yield hook errors
+	def cleanKeys(self, r):
+			j = json.loads(r)
+			r = []
+			for row in j['rows']:
+				svt_cdb_value = row['value']
+				svt_cdb_key = row['key']
+				cdb_row = {'svt_cdb_key': svt_cdb_key, 'svt_cdb_value': svt_cdb_value}
+				r.append(cdb_row)
+			d = json.dumps(r)
+			return(d)
+
 	# Enrich a dictionary with the result rows of a view
 	def jsonify(self, res, caller, rows):
 
@@ -143,7 +156,7 @@ class Utils:
 			source = row.source
 			name = row.name
 			value = row.value
-			
+
 			# Keep collect and date in the result and sanity check them
 			if not 'info' in res:
 				res['info']['svt_collect'] = collect
@@ -157,7 +170,26 @@ class Utils:
 
 			# Build the wanted JSON structure
 
-			if (name == 'svt_group'
+			if (marker == 'svt_all'
+				and isinstance(value,dict) 
+				and 'svt_clean' in value):
+				print("HHHHHHHHHHHHHHHHHHH")
+				# Getting svt_all instead of specific marker
+				# Need to clean output from using multifile based name
+				del value[selector]['svt_collect_date']
+				del value[selector]['svt_client']
+				del value[selector]['svt_source']
+				del value[selector]['_id']
+				del value[selector]['_rev']
+				for k in value.keys():
+					res['data'][source][ddoc][selector][k]  = value[k]
+
+			elif (isinstance(value,dict) 
+				and 'svt_clean' in value):
+				# Need to clean output from multifile name
+				pass
+
+			elif (name == 'svt_group'
 				and marker == 'svt_all'
 				and isinstance(value,dict) 
 				and 'svt_marked' in value):

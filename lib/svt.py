@@ -23,11 +23,11 @@ class Svt:
 	def hook_marker(self, d):
 		selector = self.selector
 		marker = self.marker
-		# Outer nest json has 'key', enforced by CouchDB views 
-		if not 'key' in d:
+		# Outer nest json has 'svt_cdb_key', enforced by CouchDB views 
+		if not 'svt_cdb_key' in d:
 			return(d)
 		# Get the selected subjson
-		s = d['value'][selector]
+		s = d['svt_cdb_value'][selector]
 		# Is it a dict ? 
 		if isinstance(s,dict):
 			v = s[marker]
@@ -37,16 +37,22 @@ class Svt:
 			v = {}
 			for i in s:
 				svt_unic = i['svt_unic']
+				# Get the marked value
 				if marker in i['svt_value']:
 					marked = i['svt_value'][marker]
+				# Marker not found
 				else:
 					marked = 'svt_no_data'
-				v[svt_unic] =  marked
-				v['svt_marked'] = True
+				# Gracefully manage errors in map
+				if svt_unic not in v:
+					v[svt_unic] =  marked
+					v['svt_marked'] = True
+				else:
+					raise('Map function for selector: ' + selector + ' keys with non unique key')
 		else:
 			raise('Guru meditation, call the developper!')
 		# Add the key to the result
-		(collect, client, source, name) = d['key']
+		(collect, client, source, name) = d['svt_cdb_key']
 		r = {
 				'collect':collect,
 				'client':client,
@@ -56,20 +62,15 @@ class Svt:
 			}
 		return Svt(**r)
 
-
 	# Used for json.loads object_hook 
 	# Get all first level markers
 	def hook_all(self, d):
 		selector = self.selector
-		# Outer nest json has 'key', enforced by CouchDB views 
-		if not 'key' in d:
+		# Outer nest json has 'svt_cdb_key', enforced by CouchDB views 
+		if not 'svt_cdb_key' in d:
 			return(d)
 		# Get the selected subjson
-		# print("####################################")
-		# print("###" , d['value'])
-		# print("###" + selector)
-		# print("####################################")
-		s = d['value'][selector]
+		s = d['svt_cdb_value'][selector]
 		# Is it a dict ? 
 		if isinstance(s,dict):
 			v = s 
@@ -80,12 +81,16 @@ class Svt:
 			for i in s:
 				svt_unic = i['svt_unic']
 				marked = i['svt_value']
-				v[svt_unic] = marked
-				v['svt_marked'] = True
+				# Gracefully manage errors in map
+				if svt_unic not in v:
+					v[svt_unic] =  marked
+					v['svt_marked'] = True
+				else:
+					raise('Map function for selector: ' + selector + ' keys with non unique key')
 		else:
 			raise('Guru meditation, call the developper!')
 		# Add the key to the result
-		(collect, client, source, name) = d['key']
+		(collect, client, source, name) = d['svt_cdb_key']
 		r = {
 				'collect':collect,
 				'client':client,
