@@ -2,6 +2,10 @@ name: My First SVT Report
 reports:
   nsx:
     securitygroups:
-        - svt_all
-
+        - description 
+        - objectId
+        - dynamicMemberDefinition 
+        - type 
+        - extendedAttributes
+        - vnicNodes
 

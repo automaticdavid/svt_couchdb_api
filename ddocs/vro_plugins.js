@@ -20,22 +20,24 @@ function(doc) {
         collect = doc.svt_collect_date ;
         client = doc.svt_client ;
         source = doc.svt_source ;
-        id = "svt_group" ;
+        id = "svt_single" ;
         plugins = doc.plugin ; 
         total = doc.total ;
         
-        // loop the features & find the correct one
+        // loop the plugins
         plugins.forEach(function(plugin) {
             var v = {} ;
-            v.svt_unic = plugin.moduleName ;
-            var enrich = {"TotalNumberOfPlugins":total} ;
-            v.svt_value = Concat(plugin, enrich) ;
-            normalized_plugins.push(v) ; 
+            if (plugin.moduleName) {
+                v.svt_unic = plugin.moduleName ;
+                var enrich = {"TotalNumberOfPlugins":total} ;
+                v.svt_value = Concat(plugin, enrich) ;
+                normalized_plugins.push(v) ;
+            } 
         }) ;
 
         // map all appliances
         key = [collect, client, source, id]  ;
-        emit( key,  {"plugins":normalized_plugins} );
+        emit( key,  {"plugins":normalized_plugins, "svt_action":"svt_single"} );
 
     }
 }

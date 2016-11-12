@@ -11,6 +11,7 @@ function(doc) {
             && doc.svt_source
             && doc.svt_source_file
             && doc.svt_source_file.indexOf("nsx_edge") != -1
+            && doc.featureConfigs
             && doc.featureConfigs.features
             && doc.id
         
@@ -29,7 +30,7 @@ function(doc) {
                 bgp = feature ;
                 // map only when found    
                 key = [collect, client, source, id]  ;
-                emit( key,  {"bgp":bgp} );
+                emit( key,  {"bgp":bgp, 'svt_action':'svt_standard'} );
             }
         }) ;
 

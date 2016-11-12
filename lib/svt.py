@@ -21,81 +21,118 @@ class Svt:
 
 	# Used for json.loads object_hook
 	def hook_marker(self, d):
+		
 		selector = self.selector
 		marker = self.marker
+		
 		# Outer nest json has 'svt_cdb_key', enforced by CouchDB views 
 		if not 'svt_cdb_key' in d:
 			return(d)
-		# Get the selected subjson
+
+		# Get the selected subjson & action
 		s = d['svt_cdb_value'][selector]
+		action = d['svt_cdb_value']['svt_action']
+		
 		# Is it a dict ? 
-		if isinstance(s,dict):
+		if isinstance(s,dict) and marker in s:
 			v = s[marker]
+
+		# Simple string attach
+		elif isinstance(s, basestring):
+			v = s 
+			print("DEBUG: Got single string attach")
+
 		# Is it a list ?
 		# Each item has been keyed with 'svt_unic' by the view
-		elif not isinstance(s, basestring):
+		elif isinstance(s, list):
 			v = {}
 			for i in s:
-				svt_unic = i['svt_unic']
 				# Get the marked value
-				if marker in i['svt_value']:
-					marked = i['svt_value'][marker]
-				# Marker not found
-				else:
+				if 'svt_unic' not in i or 'svt_value' not in i:
+					raise Exception('Map function for does not re-key lists for selector: ' +  selector)
+				elif marker not in i['svt_value']:
 					marked = 'svt_no_data'
+				else:
+					marked = i['svt_value'][marker]
 				# Gracefully manage errors in map
+				svt_unic = i['svt_unic']
 				if svt_unic not in v:
 					v[svt_unic] =  marked
 					v['svt_marked'] = True
 				else:
-					raise('Map function for selector: ' + selector + ' keys with non unique key')
+					raise Exception('Map function for selector: ' + selector + ' uses non unique key')
+
+		# Selected subjson is empty
 		else:
-			raise('Guru meditation, call the developper!')
+			v = {'svt_no_data':'svt_no_data'}
+
 		# Add the key to the result
 		(collect, client, source, name) = d['svt_cdb_key']
+		
+		# Output object
 		r = {
 				'collect':collect,
 				'client':client,
 				'source':source,
 				'name':name,
+				'action':action,
 				'value':v
 			}
 		return Svt(**r)
 
+
 	# Used for json.loads object_hook 
 	# Get all first level markers
 	def hook_all(self, d):
+
 		selector = self.selector
+
 		# Outer nest json has 'svt_cdb_key', enforced by CouchDB views 
 		if not 'svt_cdb_key' in d:
 			return(d)
-		# Get the selected subjson
+		
+		# Get the selected subjson and action
 		s = d['svt_cdb_value'][selector]
-		# Is it a dict ? 
-		if isinstance(s,dict):
+		action = d['svt_cdb_value']['svt_action']
+		
+		# Simple attach of everything 
+		if isinstance(s,dict) or isinstance(s, basestring):
 			v = s 
+		
 		# Is it a list ?
 		# Each item has been keyed with 'svt_unic' by the view
 		elif not isinstance(s, basestring):
 			v = {}
 			for i in s:
-				svt_unic = i['svt_unic']
-				marked = i['svt_value']
+				# Get the marked value
+				if 'svt_unic' not in i or 'svt_value' not in i:
+					raise Exception('Map function for does not re-key lists for selector: ' +  selector)
+				else:
+					svt_unic = i['svt_unic']
+					marked = i['svt_value']
 				# Gracefully manage errors in map
 				if svt_unic not in v:
 					v[svt_unic] =  marked
 					v['svt_marked'] = True
 				else:
-					raise('Map function for selector: ' + selector + ' keys with non unique key')
+					raise Exception('Map function for selector: ' + selector + ' uses non unique key')
+
+		# Selected subjson is empty
 		else:
-			raise('Guru meditation, call the developper!')
+			v = {'svt_no_data':'svt_no_data'}
+		
 		# Add the key to the result
 		(collect, client, source, name) = d['svt_cdb_key']
+
+		# Output object
 		r = {
 				'collect':collect,
 				'client':client,
 				'source':source,
 				'name':name,
+				'action':action,
 				'value':v
 			}
 		return Svt(**r)
+
+

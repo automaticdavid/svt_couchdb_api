@@ -12,6 +12,7 @@ function(doc) {
             && doc.svt_source
             && doc.svt_source_file
             && doc.svt_source_file.indexOf("nsx_edge") != -1
+            && doc.interfaces
             && doc.interfaces.interfaces
             && doc.id
         
@@ -25,16 +26,18 @@ function(doc) {
         interfaces = doc.interfaces.interfaces ;
         
         // loop the features & find the correct one
-        interfaces.forEach(function(inter_face) {
+        interfaces.forEach(function(iface) {
             var v = {} ;
-            v.svt_unic = inter_face.label ;
-            v.svt_value = inter_face ;
-            normalized_interfaces.push(v) ; 
+            if (iface.label) {
+                v.svt_unic = iface.label ;
+                v.svt_value = iface ;
+                normalized_interfaces.push(v) ; 
+            }
         }) ;
 
         // map all vnics   
         key = [collect, client, source, id]  ;
-        emit( key,  {"interfaces":normalized_interfaces} );
+        emit( key,  {"interfaces":normalized_interfaces, 'svt_action':'svt_standard'} );
         
     }
 }

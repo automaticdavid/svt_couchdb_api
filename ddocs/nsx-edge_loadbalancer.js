@@ -11,6 +11,7 @@ function(doc) {
             && doc.svt_source
             && doc.svt_source_file
             && doc.svt_source_file.indexOf("nsx_edge") != -1
+            && doc.featureConfigs
             && doc.featureConfigs.features
             && doc.id
         
@@ -30,7 +31,7 @@ function(doc) {
                 loadbalancer = feature ;
                 // map only when found    
                 key = [collect, client, source, id]  ;
-                emit( key,  {"loadbalancer":loadbalancer} );
+                emit( key,  {"loadbalancer":loadbalancer, 'svt_action':'svt_standard'} );
             }
         }) ;
 

@@ -20,12 +20,12 @@ function(doc) {
         collect = doc.svt_collect_date ;
         client = doc.svt_client ;
         source = doc.svt_source ;
-        id = "svt_group" ;
+        id = "svt_single" ;
 
         // map all appliances
         key = [collect, client, source, id]  ;
 
-        emit( key,  {"timesettings":doc} );
+        emit( key,  {"timesettings":doc, 'svt_action':'svt_single'} );
 
     }
 }

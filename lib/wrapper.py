@@ -119,6 +119,7 @@ class Wrapper:
 		print('Action: Generate') 
 		print('Collect: ' + collect)
 		print('Client: ' + client)
+		print('YAML: ' + yamldef)
 
 		# Check if collect already in Couch using reduce grouping at 2
 		startkey = [collect, client]
@@ -166,7 +167,10 @@ class Wrapper:
 				res = Utils().jsonify(res, caller, j)
 
 		# Dump the hash into a json string
-		s = json.dumps(res)
+		if not res:
+			s = json.dumps({'svt_no_data':'svt_no_data'})
+		else:
+			s = json.dumps(res)
 		return(s)
 
 	# List all clients and collects from the Couch

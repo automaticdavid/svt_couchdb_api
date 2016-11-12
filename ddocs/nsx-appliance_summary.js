@@ -12,19 +12,18 @@ function(doc) {
             && doc.svt_source_file
             && doc.svt_source_file.indexOf("nsx_appliance-management-summary-system") != -1
 
-
         ) {
 
         // name the properties
         collect = doc.svt_collect_date ;
         client = doc.svt_client ;
         source = doc.svt_source ;
-        id = "svt_group" ;
+        id = "svt_single" ;
 
         // map all appliances
         key = [collect, client, source, id]  ;
 
-        emit( key,  {"summary":doc} );
+        emit( key, {"summary":doc, 'svt_action':'svt_standard'} );
 
     }
 }

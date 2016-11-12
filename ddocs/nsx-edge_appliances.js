@@ -13,6 +13,7 @@ function(doc) {
             && doc.svt_source
             && doc.svt_source_file
             && doc.svt_source_file.indexOf("nsx_edge") != -1
+            && doc.appliances
             && doc.appliances.appliances
             && doc.appliances.applianceSize
             && doc.appliances.deployAppliances
@@ -33,15 +34,17 @@ function(doc) {
         // loop the list
         appliances.forEach(function(appliance) {
             var v = {} ;
-            v.svt_unic = appliance.vmName ;
-            var enrich = {"applianceSize":size, "deployAppliances":deploy} ;
-            v.svt_value =Concat(appliance, enrich) ;
-            normalized.push(v) ; 
+            if (appliance.vmName) {
+                v.svt_unic = appliance.vmName ;
+                var enrich = {"applianceSize":size, "deployAppliances":deploy} ;
+                v.svt_value =Concat(appliance, enrich) ;
+                normalized.push(v) ;
+            } 
         }) ;
 
         // map all appliances   
         key = [collect, client, source, id]  ;
-        emit( key,  {"appliances":normalized} );
+        emit( key,  {"appliances":normalized, 'svt_action':'svt_standard'} );
         
     }
 }

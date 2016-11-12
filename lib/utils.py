@@ -156,6 +156,10 @@ class Utils:
 			source = row.source
 			name = row.name
 			value = row.value
+			action = row.action
+
+			# print(ddoc, selector, marker)
+			# print(source, name, value, action)
 
 			# Keep collect and date in the result and sanity check them
 			if not 'info' in res:
@@ -170,26 +174,42 @@ class Utils:
 
 			# Build the wanted JSON structure
 
-			if (marker == 'svt_all'
-				and isinstance(value,dict) 
-				and 'svt_clean' in value):
-				print("HHHHHHHHHHHHHHHHHHH")
+			if ( action == 'svt_multi' 
+				and marker == 'svt_all'
+				and isinstance(value,dict)):
 				# Getting svt_all instead of specific marker
 				# Need to clean output from using multifile based name
-				del value[selector]['svt_collect_date']
-				del value[selector]['svt_client']
-				del value[selector]['svt_source']
-				del value[selector]['_id']
-				del value[selector]['_rev']
+				# Multiple file values are keyed by name
+				del value['svt_collect_date']
+				del value['svt_client']
+				del value['svt_source']
+				del value['svt_source_file']
+				del value['_id']
+				del value['_rev']
 				for k in value.keys():
-					res['data'][source][ddoc][selector][k]  = value[k]
+					res['data'][source][ddoc][name][k]  = value[k]
 
-			elif (isinstance(value,dict) 
-				and 'svt_clean' in value):
-				# Need to clean output from multifile name
-				pass
+			elif (action == 'svt_multi'
+				and isinstance(value,dict)): 
+				# Getting specific marker
+				# Need to clean output from using multifile based name
+				# Multiple file values are keyed by name
+				for k in value.keys():
+					res['data'][source][ddoc][name][k][marker]  = value[k]
 
-			elif (name == 'svt_group'
+			elif (action == 'svt_multi'
+				and marker == 'svt_all'):
+				# multi and all for non dict value
+				# Multiple file values are keyed by name
+				print("DEBUG: got action and marker non list")
+				res['data'][source][ddoc][name] = value
+			
+			elif (action == 'svt_multi'): 
+				# multi and marker for non dict value
+				# Multiple file values are keyed by name
+				res['data'][source][ddoc][name][marker] = value
+
+			elif (action == 'svt_single'
 				and marker == 'svt_all'
 				and isinstance(value,dict) 
 				and 'svt_marked' in value):
@@ -201,18 +221,29 @@ class Utils:
 				for k in value.keys():
 					res['data'][source][ddoc][selector][k]  = value[k]
 
-			elif (name == 'svt_group'
+			elif (action == 'svt_single'
 				and isinstance(value,dict) 
 				and 'svt_marked' in value):
-				# Getting group values
-				# Getting specific marker
+				# Getting grouped values for marker
 				# Marked values are to be re-keyed
 				# Remove the marked tag
 				del value['svt_marked']
 				for k in value.keys():
 					res['data'][source][ddoc][selector][k][marker]  = value[k]
-				
-			elif (marker == 'svt_all' 
+			
+			elif (action == 'svt_single'
+				and marker == 'svt_all'):
+				# Getting svt_all for grouped values
+				# Attach them all at the selector level
+				res['data'][source][ddoc][selector].update(value)
+	
+			elif action == 'svt_single':
+				# Getting grouped value for a specific marker
+				# Using marker won't select doc level info
+				res['data'][source][ddoc][selector][marker] = value
+
+			elif (action == 'svt_standard'
+				and marker == 'svt_all' 
 				and isinstance(value,dict) 
 				and 'svt_marked' in value):
 				# Getting svt_all instead of specific marker
@@ -222,7 +253,8 @@ class Utils:
 				for k in value.keys():
 					res['data'][source][ddoc][name][selector][k]  = value[k]
 
-			elif (isinstance(value,dict) 
+			elif (action == 'svt_standard'
+				and isinstance(value,dict) 
 				and 'svt_marked' in value):
 				# Getting specific marker
 				# Marked values are to be re-keyed
@@ -230,31 +262,20 @@ class Utils:
 				del value['svt_marked']
 				for k in value.keys():
 					res['data'][source][ddoc][name][selector][k][marker] = value[k]
-
-			elif (marker == 'svt_all' 
-				and name == 'svt_group'):
-				# Getting svt_all for grouped values
-				# Attach them all at the selector level
-				# Cleanup couch doc level info from grouped
-				del value['svt_collect_date']
-				del value['svt_client']
-				del value['svt_source']
-				del value['_id']
-				del value['_rev']
-				res['data'][source][ddoc][selector].update(value)
-
-			elif marker == 'svt_all':
+			
+			elif (action == 'svt_standard'
+				and marker == 'svt_all'):
 				# Getting svt_all for ungrouped value
 				# Attach them all under their name
 				res['data'][source][ddoc][name][selector].update(value)
 
-			elif name == 'svt_group':
-				# Getting grouped value for a specific marker
-				# Using marker won't select doc level info
-				res['data'][source][ddoc][selector][marker] = value
-
-			else:
+			elif action == 'svt_standard':
 				# Standard attach 
 				res['data'][source][ddoc][name][selector][marker] = value
 
+			else:
+				raise Exception("Error: Got unkown action: " + action + " from map: " + ddoc + '/' + selector)
+
 		return(res)
+
+
