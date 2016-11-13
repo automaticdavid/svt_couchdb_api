@@ -1,0 +1,13 @@
+name: My Second SVT Report
+reports:
+  nsx-appliance:
+    components:
+      - componentGroup
+      - enabled
+      - usedBy
+      - uses
+      - description
+
+
+
+
