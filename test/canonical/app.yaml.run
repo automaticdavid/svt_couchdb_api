@@ -1,0 +1,13 @@
+http://localhost:5984/
+Welcome
+http://localhost:5984/svtdev
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: test/yaml/app.yaml
+Checking for collect existence
+http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
+http://localhost:5984/svtdev/_design/nsx-appliance/_view/network?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+http://localhost:5984/svtdev/_design/nsx-appliance/_view/manager?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+http://localhost:5984/svtdev/_design/nsx-appliance/_view/timesettings?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+{"info": {"svt_collect": "2016-09-13-10-35-57", "svt_client": "PGE"}, "data": {"nsx-1": {"nsx-appliance": {"timesettings": {"timezone": "UTC", "ntpServer": ["172.24.13.44", "172.24.14.44"], "datetime": "09/13/2016 17:39:48"}, "manager": {"versionInfo": {"buildNumber": "3102213", "majorVersion": "6", "patchVersion": "5", "minorVersion": "1"}, "cpuInfoDto": {"totalNoOfCPUs": 4, "usedPercentage": 28, "freeCapacity": "2096 MHZ", "capacity": "2900 MHZ", "usedCapacity": "804 MHZ"}}, "network": {"networkIPv4AddressDto": {"interfaceInfo": null, "ipv4Address": "172.24.120.179", "ipv4Gateway": "172.24.120.161", "ipv4NetMask": "255.255.255.224"}, "hostName": "itcldrcnsxmgt01", "dns": {"ipv4Dns": ["172.24.13.44", "172.24.14.44"], "domainList": "utility.pge.com net.pge.com conf.pge.com", "ipv6Dns": null}}}}, "nsx-2": {"nsx-appliance": {"timesettings": {"timezone": "UTC", "ntpServer": ["172.24.14.44", "172.24.13.44"], "datetime": "09/13/2016 17:42:41"}, "manager": {"versionInfo": {"buildNumber": "3102213", "majorVersion": "6", "patchVersion": "5", "minorVersion": "1"}, "cpuInfoDto": {"totalNoOfCPUs": 4, "usedPercentage": 2, "freeCapacity": "2844 MHZ", "capacity": "2900 MHZ", "usedCapacity": "56 MHZ"}}, "network": {"networkIPv4AddressDto": {"interfaceInfo": null, "ipv4Address": "172.24.120.146", "ipv4Gateway": "172.24.120.129", "ipv4NetMask": "255.255.255.224"}, "hostName": "itcldfxnsxmgt01", "dns": {"ipv4Dns": ["10.1.1.1", "172.24.13.44"], "domainList": "utility.pge.com", "ipv6Dns": null}}}}}}

@@ -29,13 +29,19 @@ class Svt:
 		if not 'svt_cdb_key' in d:
 			return(d)
 
+		# print("###DEBUG MASTER KEY ", d['svt_cdb_key'])
+
 		# Get the selected subjson & action
 		s = d['svt_cdb_value'][selector]
 		action = d['svt_cdb_value']['svt_action']
-		
+		# Keep the file for debug 
+		# file = s['svt_source_file']
+
 		# Is it a dict ? 
 		if isinstance(s,dict) and marker in s:
 			v = s[marker]
+			# print("***DEBUG: Got marker " + marker)
+			# print("***DEBUG: Value is:", v)
 
 		# Simple string attach
 		elif isinstance(s, basestring):
@@ -64,7 +70,8 @@ class Svt:
 
 		# Selected subjson is empty
 		else:
-			v = {'svt_no_data':'svt_no_data'}
+			v = 'svt_no_data'
+
 
 		# Add the key to the result
 		(collect, client, source, name) = d['svt_cdb_key']
@@ -76,6 +83,7 @@ class Svt:
 				'source':source,
 				'name':name,
 				'action':action,
+				# 'file':file,
 				'value':v
 			}
 		return Svt(**r)

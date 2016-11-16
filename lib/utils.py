@@ -157,15 +157,16 @@ class Utils:
 			name = row.name
 			value = row.value
 			action = row.action
+			# file = row.file
 
-			# print(ddoc, selector, marker)
-			# print(source, name, value, action)
+			# print("DEBUG -  marker:{}, action:{}, name:{}, file:{}, value:{}, typevalue:{}".format(marker, action, name, file, value, type(value))) 
 
 			# Keep collect and date in the result and sanity check them
 			if not 'info' in res:
 				res['info']['svt_collect'] = collect
 				res['info']['svt_client'] = client
-			elif res['info']['svt_collect'] != collect and res['info']['svt_client'] != client:
+			elif (res['info']['svt_collect'] != collect 
+				and res['info']['svt_client'] != client):
 				code = 99
 				msg = "Different keys found in Generator" 
 				call = (res, caller, row)
@@ -180,35 +181,50 @@ class Utils:
 				# Getting svt_all instead of specific marker
 				# Need to clean output from using multifile based name
 				# Multiple file values are keyed by name
-				del value['svt_collect_date']
-				del value['svt_client']
-				del value['svt_source']
-				del value['svt_source_file']
-				del value['_id']
-				del value['_rev']
+				# print("DEBUG: GENTYPE : multi, all, dict" )
+				try:
+					del value['svt_collect_date']
+					del value['svt_client']
+					del value['svt_source']
+					del value['svt_source_file']
+					del value['_id']
+					del value['_rev']
+				except KeyError:
+					pass
 				for k in value.keys():
-					res['data'][source][ddoc][name][k]  = value[k]
-
-			elif (action == 'svt_multi'
-				and isinstance(value,dict)): 
-				# Getting specific marker
-				# Need to clean output from using multifile based name
-				# Multiple file values are keyed by name
-				for k in value.keys():
-					res['data'][source][ddoc][name][k][marker]  = value[k]
-
+					if k != 'svt_marked':
+						res['data'][source][ddoc][name][k] = value[k]
+					
 			elif (action == 'svt_multi'
 				and marker == 'svt_all'):
 				# multi and all for non dict value
 				# Multiple file values are keyed by name
-				print("DEBUG: got action and marker non list")
+				# print("DEBUG: GENTYPE: multi, all, non dict" )
 				res['data'][source][ddoc][name] = value
 			
 			elif (action == 'svt_multi'): 
 				# multi and marker for non dict value
 				# Multiple file values are keyed by name
-				res['data'][source][ddoc][name][marker] = value
+				# Need to filter svt_no_data from other files
+				# print("DEBUG: GENTYPE: multi, marker, non dict" )
+				leaf = res['data'][source][ddoc][name]
+				# print('DEBUG marker ' + marker)
+				# print('DEBUG name ' + name)
+				# print(leaf.values())
+				# print(value)
+				if marker not in leaf:
+					# print("DEBUG marker not in leaf")
+					res['data'][source][ddoc][name][marker] = value
+					# print('DEBUG >' + res['data'][source][ddoc][name][marker] + '<')
+				elif value != 'svt_no_data' and leaf[marker] == 'svt_no_data':
+					# print("DEBUG Replacing previous no_data")
+					res['data'][source][ddoc][name][marker] = value
+				elif (leaf[marker] != 'svt_no_data'
+					and value != 'svt_no_data'
+					and value != leaf[marker]):
+					raise Exception("ERROR: duplicate value for marker: " + marker)
 
+			
 			elif (action == 'svt_single'
 				and marker == 'svt_all'
 				and isinstance(value,dict) 

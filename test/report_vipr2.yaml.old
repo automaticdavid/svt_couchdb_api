@@ -1,5 +1,0 @@
-name: My First SVT Report
-reports:
-  vipr-block:
-    volumes:
-        - project 

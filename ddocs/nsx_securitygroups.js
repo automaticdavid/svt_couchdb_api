@@ -20,10 +20,10 @@ function(doc) {
         source = doc.svt_source ;
         file =  doc.svt_source_file ; 
         filename = file.split("_")[2] ;
-        name = filename.split(".")[0] ; 
+        id = filename.split(".")[0] ; 
 
-        // map all vnics   
-        key = [collect, client, source, name ]  ;
+        // map all security groups   
+        key = [collect, client, source, id ]  ;
         emit( key, {"securitygroups" : doc, "svt_action":"svt_multi" } );
         
     }

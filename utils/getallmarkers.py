@@ -40,6 +40,8 @@ def main(settings, collect, client):
 	
 if __name__ == '__main__':
 
+	#sys.exit("This script is not ready, do not use yet !")
+
 	# Argument parser
 	parser = OptionParser()
 	parser.add_option("-s", "--solutionid", 
