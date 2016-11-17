@@ -157,9 +157,6 @@ class Utils:
 			name = row.name
 			value = row.value
 			action = row.action
-			# file = row.file
-
-			print("DEBUG -  marker:{}, action:{}, name:{}, file:{}, value:{}, typevalue:{}".format(marker, action, name, file, value, type(value))) 
 
 			# Keep collect and date in the result and sanity check them
 			if not 'info' in res:
@@ -172,10 +169,6 @@ class Utils:
 				call = (res, caller, row)
 				debug = "" 
 				raise Errors.genError(code, msg, call, debug)
-
-			# if not(isinstance(value, dict)):
-			# 	print("WELL")
-			# 	print("DEBUG -  marker:{}, action:{}, name:{}, file:{}, value:{}, typevalue:{}".format(marker, action, name, file, value, type(value))) 
 
 			# Build the wanted JSON structure
 
@@ -258,42 +251,27 @@ class Utils:
 				
 			elif (action == 'svt_group'
 				and marker == 'svt_all'):
-				print("DEBUG: got list or string")
 				res['data'][source][ddoc][name] = value
 
 			elif (action == 'svt_group'
 				and isinstance(value,dict) 
 				and 'svt_marked' in value):
-				print(value)
 				# Marked values are to be re-keyed
 				# Remove the marked tag
-				print("ZZZ")
-				print(name, value)
 				for k in value:
 					if marker not in res['data'][source][ddoc] or k not in res['data'][source][ddoc][marker]:
 						res['data'][source][ddoc][marker][k] = value[k]
-						print("#### 1")
 					elif res['data'][source][ddoc][marker][k] == 'svt_no_data' and value[k] != 'svt_no_data':
 						res['data'][source][ddoc][marker][k] = value[k]
-						print("#### 2")
-
 
 			elif (action == 'svt_group'
 				and isinstance(value,dict)): 
 			# Marked values are to be re-keyed
 			# Remove the marked tag
-				print("YYY3", name)
-				print(value)
 				pass
-			# 	del value['svt_marked']
-			# 	for k in value.keys():
-			# 		res['data'][source][ddoc][name][k][marker] = value[k]
 
 			elif action == 'svt_group':
 			# 	print("DEBUG: got list or string")
-			# 	res['data'][source][ddoc][name] = value
-				print("RRR", name)
-				print(value)
 				pass
 
 			#########################################################################################
