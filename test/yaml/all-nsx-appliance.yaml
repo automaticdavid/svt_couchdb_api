@@ -1,8 +1,8 @@
 name: My Second SVT Report
 reports:
   nsx:
-    appliance:
-      - svt_all
+      appliance-management:
+        - svt_all
 
 
 

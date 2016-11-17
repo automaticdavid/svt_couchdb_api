@@ -12,6 +12,7 @@ __status__ = "Concept Code"
 import logging
 import os
 import sys
+from pprint import pprint
 from optparse import OptionParser
 from lib.wrapper import Wrapper
 from lib.errors import Errors
@@ -26,7 +27,7 @@ settings = OS_PATH + '/' + SETTINGS_FILE_NAME
 def main(settings, collect, client):
 
 	res = Wrapper().generator(settings, collect, client, yamldef)
-	print(res)
+	pprint(res)
 
 	
 if __name__ == '__main__':

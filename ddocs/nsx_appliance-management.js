@@ -39,12 +39,12 @@ function(doc) {
                 
             }) ;
             key = [collect, client, source, id ]  ;
-            emit( key, {"appliance" : normalized_components, "svt_action":"svt_multi" } );
+            emit( key, { "appliance-management" : normalized_components, "svt_action":"svt_group" } );
         
         // map all other 
         } else {
             key = [collect, client, source, id ]  ;
-            emit( key, {"appliance-management" : doc, "svt_action":"svt_multi" } );
+            emit( key, {"appliance-management" : doc, "svt_action":"svt_group" } );
         
         }
     }

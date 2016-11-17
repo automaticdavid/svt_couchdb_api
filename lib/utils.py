@@ -159,7 +159,7 @@ class Utils:
 			action = row.action
 			# file = row.file
 
-			# print("DEBUG -  marker:{}, action:{}, name:{}, file:{}, value:{}, typevalue:{}".format(marker, action, name, file, value, type(value))) 
+			print("DEBUG -  marker:{}, action:{}, name:{}, file:{}, value:{}, typevalue:{}".format(marker, action, name, file, value, type(value))) 
 
 			# Keep collect and date in the result and sanity check them
 			if not 'info' in res:
@@ -172,6 +172,10 @@ class Utils:
 				call = (res, caller, row)
 				debug = "" 
 				raise Errors.genError(code, msg, call, debug)
+
+			# if not(isinstance(value, dict)):
+			# 	print("WELL")
+			# 	print("DEBUG -  marker:{}, action:{}, name:{}, file:{}, value:{}, typevalue:{}".format(marker, action, name, file, value, type(value))) 
 
 			# Build the wanted JSON structure
 
@@ -194,7 +198,11 @@ class Utils:
 				for k in value.keys():
 					if k != 'svt_marked':
 						res['data'][source][ddoc][name][k] = value[k]
-					
+			
+			#########################################################################################
+			# multi
+			#########################################################################################
+
 			elif (action == 'svt_multi'
 				and marker == 'svt_all'):
 				# multi and all for non dict value
@@ -206,30 +214,97 @@ class Utils:
 				# multi and marker for non dict value
 				# Multiple file values are keyed by name
 				# Need to filter svt_no_data from other files
+				# Sanity check for duplicate markers across files
 				# print("DEBUG: GENTYPE: multi, marker, non dict" )
 				leaf = res['data'][source][ddoc][name]
-				# print('DEBUG marker ' + marker)
-				# print('DEBUG name ' + name)
-				# print(leaf.values())
-				# print(value)
 				if marker not in leaf:
-					# print("DEBUG marker not in leaf")
 					res['data'][source][ddoc][name][marker] = value
-					# print('DEBUG >' + res['data'][source][ddoc][name][marker] + '<')
 				elif value != 'svt_no_data' and leaf[marker] == 'svt_no_data':
-					# print("DEBUG Replacing previous no_data")
 					res['data'][source][ddoc][name][marker] = value
 				elif (leaf[marker] != 'svt_no_data'
 					and value != 'svt_no_data'
 					and value != leaf[marker]):
 					raise Exception("ERROR: duplicate value for marker: " + marker)
 
-			
+			#########################################################################################
+			# group
+			#########################################################################################
+
+			elif (action == 'svt_group'
+				and marker == 'svt_all'
+				and isinstance(value,dict) 
+				and 'svt_marked' in value):
+				# Marked values are to be re-keyed
+				# Remove the marked tag
+				del value['svt_marked']
+				for k in value.keys():
+					res['data'][source][ddoc][name][k]  = value[k]
+
+			elif (action == 'svt_group'
+				and marker == 'svt_all'
+				and isinstance(value,dict)):
+				# Need to clean output from using multifile based values
+				# using name instead of selector 
+				try:
+					del value['svt_collect_date']
+					del value['svt_client']
+					del value['svt_source']
+					del value['svt_source_file']
+					del value['_id']
+					del value['_rev']
+				except KeyError:
+					pass
+				res['data'][source][ddoc][name] = value
+				
+			elif (action == 'svt_group'
+				and marker == 'svt_all'):
+				print("DEBUG: got list or string")
+				res['data'][source][ddoc][name] = value
+
+			elif (action == 'svt_group'
+				and isinstance(value,dict) 
+				and 'svt_marked' in value):
+				print(value)
+				# Marked values are to be re-keyed
+				# Remove the marked tag
+				print("ZZZ")
+				print(name, value)
+				for k in value:
+					if marker not in res['data'][source][ddoc] or k not in res['data'][source][ddoc][marker]:
+						res['data'][source][ddoc][marker][k] = value[k]
+						print("#### 1")
+					elif res['data'][source][ddoc][marker][k] == 'svt_no_data' and value[k] != 'svt_no_data':
+						res['data'][source][ddoc][marker][k] = value[k]
+						print("#### 2")
+
+
+			elif (action == 'svt_group'
+				and isinstance(value,dict)): 
+			# Marked values are to be re-keyed
+			# Remove the marked tag
+				print("YYY3", name)
+				print(value)
+				pass
+			# 	del value['svt_marked']
+			# 	for k in value.keys():
+			# 		res['data'][source][ddoc][name][k][marker] = value[k]
+
+			elif action == 'svt_group':
+			# 	print("DEBUG: got list or string")
+			# 	res['data'][source][ddoc][name] = value
+				print("RRR", name)
+				print(value)
+				pass
+
+			#########################################################################################
+			# single
+			#########################################################################################
+
 			elif (action == 'svt_single'
 				and marker == 'svt_all'
 				and isinstance(value,dict) 
 				and 'svt_marked' in value):
-				# Getting grouped values
+				# Getting single file values
 				# Getting svt_all instead of specific marker
 				# Marked values are to be re-keyed
 				# Remove the marked tag
@@ -240,7 +315,7 @@ class Utils:
 			elif (action == 'svt_single'
 				and isinstance(value,dict) 
 				and 'svt_marked' in value):
-				# Getting grouped values for marker
+				# Getting single files values for marker
 				# Marked values are to be re-keyed
 				# Remove the marked tag
 				del value['svt_marked']
@@ -249,14 +324,18 @@ class Utils:
 			
 			elif (action == 'svt_single'
 				and marker == 'svt_all'):
-				# Getting svt_all for grouped values
+				# Getting svt_all for single file values
 				# Attach them all at the selector level
 				res['data'][source][ddoc][selector].update(value)
 	
 			elif action == 'svt_single':
-				# Getting grouped value for a specific marker
+				# Getting single file value for a specific marker
 				# Using marker won't select doc level info
 				res['data'][source][ddoc][selector][marker] = value
+
+			#########################################################################################
+			# standard
+			#########################################################################################
 
 			elif (action == 'svt_standard'
 				and marker == 'svt_all' 

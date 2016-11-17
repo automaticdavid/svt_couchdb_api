@@ -165,6 +165,8 @@ class Wrapper:
 					pass
 				# Update hash result 
 				res = Utils().jsonify(res, caller, j)
+				for i in res:
+					print(i)
 
 		# Dump the hash into a json string
 		if not res:

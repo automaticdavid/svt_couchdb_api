@@ -29,7 +29,8 @@ class Svt:
 		if not 'svt_cdb_key' in d:
 			return(d)
 
-		# print("###DEBUG MASTER KEY ", d['svt_cdb_key'])
+		# print("DEBUG MASTER KEY ", d['svt_cdb_key'])
+		# print("DEBUG", d)
 
 		# Get the selected subjson & action
 		s = d['svt_cdb_value'][selector]
@@ -37,20 +38,24 @@ class Svt:
 		# Keep the file for debug 
 		# file = s['svt_source_file']
 
+		print("=====")
+		print(s)
+		print(action)
+		print("=====")
+
 		# Is it a dict ? 
 		if isinstance(s,dict) and marker in s:
 			v = s[marker]
-			# print("***DEBUG: Got marker " + marker)
-			# print("***DEBUG: Value is:", v)
 
 		# Simple string attach
 		elif isinstance(s, basestring):
 			v = s 
-			print("DEBUG: Got single string attach")
+			print("DEBUG: Got SVT HOOK single string attach")
 
 		# Is it a list ?
 		# Each item has been keyed with 'svt_unic' by the view
 		elif isinstance(s, list):
+			print("YOOOOOOOOOOOOOOOOOOOOOOOOOOO")
 			v = {}
 			for i in s:
 				# Get the marked value
