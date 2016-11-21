@@ -3,7 +3,7 @@ reports:
   nsx:
     appliance-management:
       - components
-
-
+      - backuprestore-backupsettings
+      - system-cpuinfo
 
 

@@ -1,0 +1,2361 @@
+http://localhost:5984/
+Welcome
+http://localhost:5984/svtdev
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: test/yaml/allbgp.yaml
+Checking for collect existence
+http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
+http://localhost:5984/svtdev/_design/nsx-edge/_view/bgp?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+{
+    "data": {
+        "nsx-1": {
+            "nsx-edge": {
+                "edge-19": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": true,
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 30,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": [
+                                    {
+                                        "areaId": 30,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 0,
+                                        "vnic": 2
+                                    },
+                                    {
+                                        "areaId": 30,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 128,
+                                        "vnic": 4
+                                    },
+                                    {
+                                        "areaId": 30,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 0,
+                                        "vnic": 0
+                                    },
+                                    {
+                                        "areaId": 30,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 128,
+                                        "vnic": 3
+                                    },
+                                    {
+                                        "areaId": 30,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 128,
+                                        "vnic": 5
+                                    },
+                                    {
+                                        "areaId": 30,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 128,
+                                        "vnic": 6
+                                    }
+                                ]
+                            },
+                            "redistribution": {
+                                "enabled": true,
+                                "rules": {
+                                    "rules": [
+                                        {
+                                            "action": "permit",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 0
+                                        },
+                                        {
+                                            "action": "permit",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": false,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": true
+                                            },
+                                            "id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": true,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            },
+                            "routerId": "10.31.0.2"
+                        },
+                        "staticRouting": {
+                            "staticRoutes": {
+                                "staticRoutes": [
+                                    {
+                                        "description": "",
+                                        "mtu": 1500,
+                                        "network": "10.31.64.0/18",
+                                        "nextHop": "10.31.1.7",
+                                        "type": "user",
+                                        "vnic": "3"
+                                    },
+                                    {
+                                        "description": "",
+                                        "mtu": 1500,
+                                        "network": "10.31.32.0/19",
+                                        "nextHop": "10.31.1.7",
+                                        "type": "user",
+                                        "vnic": "3"
+                                    },
+                                    {
+                                        "description": "",
+                                        "mtu": 1500,
+                                        "network": "10.31.16.0/20",
+                                        "nextHop": "10.31.1.7",
+                                        "type": "user",
+                                        "vnic": "3"
+                                    },
+                                    {
+                                        "description": "",
+                                        "mtu": 1500,
+                                        "network": "10.31.8.0/21",
+                                        "nextHop": "10.31.1.7",
+                                        "type": "user",
+                                        "vnic": "3"
+                                    },
+                                    {
+                                        "description": "",
+                                        "mtu": 1500,
+                                        "network": "10.31.4.0/22",
+                                        "nextHop": "10.31.1.7",
+                                        "type": "user",
+                                        "vnic": "3"
+                                    },
+                                    {
+                                        "description": "",
+                                        "mtu": 1500,
+                                        "network": "10.31.2.0/23",
+                                        "nextHop": "10.31.1.7",
+                                        "type": "user",
+                                        "vnic": "3"
+                                    }
+                                ]
+                            }
+                        },
+                        "version": 84
+                    }
+                },
+                "edge-20": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": false,
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 51,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    },
+                                    {
+                                        "areaId": 0,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "normal"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": []
+                            },
+                            "redistribution": {
+                                "enabled": false,
+                                "rules": {
+                                    "rules": []
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": false,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            }
+                        },
+                        "staticRouting": {
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 44
+                    }
+                },
+                "edge-21": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": false,
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 51,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    },
+                                    {
+                                        "areaId": 0,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "normal"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": []
+                            },
+                            "redistribution": {
+                                "enabled": false,
+                                "rules": {
+                                    "rules": []
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": false,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            }
+                        },
+                        "staticRouting": {
+                            "defaultRoute": {
+                                "description": "",
+                                "gatewayAddress": "10.31.24.1",
+                                "mtu": 1500,
+                                "vnic": "0"
+                            },
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 26
+                    }
+                },
+                "edge-28": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": false,
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 51,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    },
+                                    {
+                                        "areaId": 0,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "normal"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": []
+                            },
+                            "redistribution": {
+                                "enabled": false,
+                                "rules": {
+                                    "rules": []
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": false,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            }
+                        },
+                        "staticRouting": {
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 7
+                    }
+                },
+                "edge-29": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": false,
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 51,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    },
+                                    {
+                                        "areaId": 0,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "normal"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": []
+                            },
+                            "redistribution": {
+                                "enabled": false,
+                                "rules": {
+                                    "rules": []
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": false,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            }
+                        },
+                        "staticRouting": {
+                            "defaultRoute": {
+                                "gatewayAddress": "10.31.152.1",
+                                "mtu": 1500,
+                                "vnic": "0"
+                            },
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 8
+                    }
+                },
+                "edge-30": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": true,
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 30,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": [
+                                    {
+                                        "areaId": 30,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 0,
+                                        "vnic": 0
+                                    },
+                                    {
+                                        "areaId": 30,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 128,
+                                        "vnic": 1
+                                    },
+                                    {
+                                        "areaId": 30,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 0,
+                                        "vnic": 2
+                                    },
+                                    {
+                                        "areaId": 30,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 128,
+                                        "vnic": 3
+                                    },
+                                    {
+                                        "areaId": 30,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 128,
+                                        "vnic": 4
+                                    },
+                                    {
+                                        "areaId": 30,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 128,
+                                        "vnic": 5
+                                    }
+                                ]
+                            },
+                            "redistribution": {
+                                "enabled": true,
+                                "rules": {
+                                    "rules": [
+                                        {
+                                            "action": "permit",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": false,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": true
+                                            },
+                                            "id": 0
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": true,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            },
+                            "routerId": "10.31.0.18"
+                        },
+                        "staticRouting": {
+                            "staticRoutes": {
+                                "staticRoutes": [
+                                    {
+                                        "description": "",
+                                        "mtu": 1500,
+                                        "network": "10.31.64.0/18",
+                                        "nextHop": "10.31.1.7",
+                                        "type": "user",
+                                        "vnic": "1"
+                                    },
+                                    {
+                                        "description": "",
+                                        "mtu": 1500,
+                                        "network": "10.31.32.0/19",
+                                        "nextHop": "10.31.1.7",
+                                        "type": "user",
+                                        "vnic": "1"
+                                    },
+                                    {
+                                        "description": "",
+                                        "mtu": 1500,
+                                        "network": "10.31.16.0/20",
+                                        "nextHop": "10.31.1.7",
+                                        "type": "user",
+                                        "vnic": "1"
+                                    },
+                                    {
+                                        "description": "",
+                                        "mtu": 1500,
+                                        "network": "10.31.8.0/21",
+                                        "nextHop": "10.31.1.7",
+                                        "type": "user",
+                                        "vnic": "1"
+                                    },
+                                    {
+                                        "description": "",
+                                        "mtu": 1500,
+                                        "network": "10.31.4.0/22",
+                                        "nextHop": "10.31.1.7",
+                                        "type": "user",
+                                        "vnic": "1"
+                                    },
+                                    {
+                                        "description": "",
+                                        "mtu": 1500,
+                                        "network": "10.31.2.0/23",
+                                        "nextHop": "10.31.1.7",
+                                        "type": "user",
+                                        "vnic": "1"
+                                    }
+                                ]
+                            }
+                        },
+                        "version": 40
+                    }
+                },
+                "edge-32": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": false,
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 51,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    },
+                                    {
+                                        "areaId": 0,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "normal"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": []
+                            },
+                            "redistribution": {
+                                "enabled": false,
+                                "rules": {
+                                    "rules": []
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": false,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            }
+                        },
+                        "staticRouting": {
+                            "defaultRoute": {
+                                "gatewayAddress": "10.31.28.1",
+                                "mtu": 1500,
+                                "vnic": "0"
+                            },
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 68
+                    }
+                },
+                "edge-33": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": false,
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 51,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    },
+                                    {
+                                        "areaId": 0,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "normal"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": []
+                            },
+                            "redistribution": {
+                                "enabled": false,
+                                "rules": {
+                                    "rules": []
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": false,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            }
+                        },
+                        "staticRouting": {
+                            "defaultRoute": {
+                                "gatewayAddress": "10.31.26.1",
+                                "mtu": 1500,
+                                "vnic": "0"
+                            },
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 35
+                    }
+                },
+                "edge-36": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": false,
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 51,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    },
+                                    {
+                                        "areaId": 0,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "normal"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": []
+                            },
+                            "redistribution": {
+                                "enabled": false,
+                                "rules": {
+                                    "rules": []
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": false,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            }
+                        },
+                        "staticRouting": {
+                            "defaultRoute": {
+                                "gatewayAddress": "10.31.148.1",
+                                "mtu": 1500,
+                                "vnic": "0"
+                            },
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 2
+                    }
+                },
+                "edge-37": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": true,
+                            "forwardingAddress": "10.31.1.69",
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 30,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": [
+                                    {
+                                        "areaId": 30,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 0,
+                                        "vnic": 2
+                                    }
+                                ]
+                            },
+                            "protocolAddress": "10.31.1.68",
+                            "redistribution": {
+                                "enabled": true,
+                                "rules": {
+                                    "rules": [
+                                        {
+                                            "action": "permit",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 0
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": true,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            },
+                            "routerId": "10.31.1.69"
+                        },
+                        "staticRouting": {
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 8
+                    }
+                },
+                "edge-38": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": true,
+                            "forwardingAddress": "10.31.1.84",
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 30,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": [
+                                    {
+                                        "areaId": 30,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 0,
+                                        "vnic": 2
+                                    }
+                                ]
+                            },
+                            "protocolAddress": "10.31.1.83",
+                            "redistribution": {
+                                "enabled": true,
+                                "rules": {
+                                    "rules": [
+                                        {
+                                            "action": "permit",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 0
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": true,
+                            "logging": {
+                                "enable": true,
+                                "logLevel": "info"
+                            },
+                            "routerId": "10.31.1.84"
+                        },
+                        "staticRouting": {
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 9
+                    }
+                },
+                "edge-6": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": true,
+                            "forwardingAddress": "10.31.1.35",
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 30,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": [
+                                    {
+                                        "areaId": 30,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 0,
+                                        "vnic": 2
+                                    }
+                                ]
+                            },
+                            "protocolAddress": "10.31.1.34",
+                            "redistribution": {
+                                "enabled": true,
+                                "rules": {
+                                    "rules": [
+                                        {
+                                            "action": "permit",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 0,
+                                            "prefixName": "RC-Production-DR"
+                                        },
+                                        {
+                                            "action": "permit",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 1,
+                                            "prefixName": "RC-Production-DR2"
+                                        },
+                                        {
+                                            "action": "permit",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 2,
+                                            "prefixName": "RC-QA-DR"
+                                        },
+                                        {
+                                            "action": "permit",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 3,
+                                            "prefixName": "RC-QA-DR2"
+                                        },
+                                        {
+                                            "action": "permit",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 4,
+                                            "prefixName": "RC-Test-DR"
+                                        },
+                                        {
+                                            "action": "permit",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 5,
+                                            "prefixName": "RC-Test-DR2"
+                                        },
+                                        {
+                                            "action": "permit",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 6,
+                                            "prefixName": "RC-Development-DR"
+                                        },
+                                        {
+                                            "action": "permit",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 7,
+                                            "prefixName": "RC-Development-DR2"
+                                        },
+                                        {
+                                            "action": "permit",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 8,
+                                            "prefixName": "RC-Sandbox-DR"
+                                        },
+                                        {
+                                            "action": "permit",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 9,
+                                            "prefixName": "RC-Production-VIP"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": true,
+                            "ipPrefixes": {
+                                "ipPrefixes": [
+                                    {
+                                        "ipAddress": "10.31.128.0/23",
+                                        "name": "RC-Production-DR"
+                                    },
+                                    {
+                                        "ipAddress": "10.31.130.0/23",
+                                        "name": "RC-Production-DR2"
+                                    },
+                                    {
+                                        "ipAddress": "10.31.132.0/23",
+                                        "name": "RC-QA-DR"
+                                    },
+                                    {
+                                        "ipAddress": "10.31.134.0/23",
+                                        "name": "RC-QA-DR2"
+                                    },
+                                    {
+                                        "ipAddress": "10.31.136.0/23",
+                                        "name": "RC-Test-DR"
+                                    },
+                                    {
+                                        "ipAddress": "10.31.138.0/23",
+                                        "name": "RC-Test-DR2"
+                                    },
+                                    {
+                                        "ipAddress": "10.31.142.0/23",
+                                        "name": "RC-Development-DR"
+                                    },
+                                    {
+                                        "ipAddress": "10.31.144.0/23",
+                                        "name": "RC-Development-DR2"
+                                    },
+                                    {
+                                        "ipAddress": "10.31.146.0/23",
+                                        "name": "RC-Sandbox-DR"
+                                    },
+                                    {
+                                        "ipAddress": "10.31.148.0/23",
+                                        "name": "RC-Production-VIP"
+                                    }
+                                ]
+                            },
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            },
+                            "routerId": "10.31.1.35"
+                        },
+                        "staticRouting": {
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 185
+                    }
+                },
+                "edge-7": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": true,
+                            "forwardingAddress": "10.31.1.7",
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 30,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": [
+                                    {
+                                        "areaId": 30,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 0,
+                                        "vnic": 3
+                                    }
+                                ]
+                            },
+                            "protocolAddress": "10.31.1.6",
+                            "redistribution": {
+                                "enabled": true,
+                                "rules": {
+                                    "rules": [
+                                        {
+                                            "action": "permit",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 0
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": true,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            },
+                            "routerId": "10.31.1.7"
+                        },
+                        "staticRouting": {
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 96
+                    }
+                },
+                "edge-9": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": false,
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 51,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    },
+                                    {
+                                        "areaId": 0,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "normal"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": []
+                            },
+                            "redistribution": {
+                                "enabled": false,
+                                "rules": {
+                                    "rules": []
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": false,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            }
+                        },
+                        "staticRouting": {
+                            "defaultRoute": {
+                                "gatewayAddress": "10.31.253.1",
+                                "mtu": 1500,
+                                "vnic": "0"
+                            },
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 11
+                    }
+                }
+            }
+        },
+        "nsx-2": {
+            "nsx-edge": {
+                "edge-10": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": true,
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 32,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": [
+                                    {
+                                        "areaId": 32,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 0,
+                                        "vnic": 0
+                                    },
+                                    {
+                                        "areaId": 32,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 128,
+                                        "vnic": 3
+                                    },
+                                    {
+                                        "areaId": 32,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 0,
+                                        "vnic": 1
+                                    },
+                                    {
+                                        "areaId": 32,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 128,
+                                        "vnic": 2
+                                    },
+                                    {
+                                        "areaId": 32,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 128,
+                                        "vnic": 4
+                                    },
+                                    {
+                                        "areaId": 32,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 128,
+                                        "vnic": 5
+                                    }
+                                ]
+                            },
+                            "redistribution": {
+                                "enabled": true,
+                                "rules": {
+                                    "rules": [
+                                        {
+                                            "action": "permit",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": false,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": true
+                                            },
+                                            "id": 0
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": true,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            },
+                            "routerId": "10.30.0.2"
+                        },
+                        "staticRouting": {
+                            "staticRoutes": {
+                                "staticRoutes": [
+                                    {
+                                        "description": "Static 10.30.4.0",
+                                        "mtu": 1500,
+                                        "network": "10.30.4.0/22",
+                                        "nextHop": "10.30.1.7",
+                                        "type": "user",
+                                        "vnic": "3"
+                                    },
+                                    {
+                                        "description": "Static 10.30.2.0",
+                                        "mtu": 1500,
+                                        "network": "10.30.2.0/23",
+                                        "nextHop": "10.30.1.7",
+                                        "type": "user",
+                                        "vnic": "3"
+                                    },
+                                    {
+                                        "description": "static 10.30.8.0",
+                                        "mtu": 1500,
+                                        "network": "10.30.8.0/21",
+                                        "nextHop": "10.30.1.7",
+                                        "type": "user",
+                                        "vnic": "3"
+                                    },
+                                    {
+                                        "description": "Static 10.30.16.0",
+                                        "mtu": 1500,
+                                        "network": "10.30.16.0/20",
+                                        "nextHop": "10.30.1.7",
+                                        "type": "user",
+                                        "vnic": "3"
+                                    },
+                                    {
+                                        "description": "Static 10.30.32.0",
+                                        "mtu": 1500,
+                                        "network": "10.30.32.0/19",
+                                        "nextHop": "10.30.1.7",
+                                        "type": "user",
+                                        "vnic": "3"
+                                    },
+                                    {
+                                        "description": "Static 10.30.64.0",
+                                        "mtu": 1500,
+                                        "network": "10.30.64.0/18",
+                                        "nextHop": "10.30.1.7",
+                                        "type": "user",
+                                        "vnic": "3"
+                                    }
+                                ]
+                            }
+                        },
+                        "version": 132
+                    }
+                },
+                "edge-12": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": true,
+                            "forwardingAddress": "10.30.1.7",
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 32,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": [
+                                    {
+                                        "areaId": 32,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 0,
+                                        "vnic": 3
+                                    }
+                                ]
+                            },
+                            "protocolAddress": "10.30.1.6",
+                            "redistribution": {
+                                "enabled": true,
+                                "rules": {
+                                    "rules": [
+                                        {
+                                            "action": "permit",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 0
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": true,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            },
+                            "routerId": "10.30.1.7"
+                        },
+                        "staticRouting": {
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 102
+                    }
+                },
+                "edge-15": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": false,
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 51,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    },
+                                    {
+                                        "areaId": 0,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "normal"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": []
+                            },
+                            "redistribution": {
+                                "enabled": false,
+                                "rules": {
+                                    "rules": []
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": false,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            }
+                        },
+                        "staticRouting": {
+                            "defaultRoute": {
+                                "gatewayAddress": "10.31.253.1",
+                                "mtu": 1500,
+                                "vnic": "0"
+                            },
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 8
+                    }
+                },
+                "edge-27": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": false,
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 51,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    },
+                                    {
+                                        "areaId": 0,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "normal"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": []
+                            },
+                            "redistribution": {
+                                "enabled": false,
+                                "rules": {
+                                    "rules": []
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": false,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            }
+                        },
+                        "staticRouting": {
+                            "defaultRoute": {
+                                "gatewayAddress": "10.30.24.1",
+                                "mtu": 1500,
+                                "vnic": "0"
+                            },
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 14
+                    }
+                },
+                "edge-28": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": false,
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 51,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    },
+                                    {
+                                        "areaId": 0,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "normal"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": []
+                            },
+                            "redistribution": {
+                                "enabled": false,
+                                "rules": {
+                                    "rules": []
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": false,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            }
+                        },
+                        "staticRouting": {
+                            "defaultRoute": {
+                                "gatewayAddress": "10.30.26.1",
+                                "mtu": 1500,
+                                "vnic": "0"
+                            },
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 39
+                    }
+                },
+                "edge-31": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": false,
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 51,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    },
+                                    {
+                                        "areaId": 0,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "normal"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": []
+                            },
+                            "redistribution": {
+                                "enabled": false,
+                                "rules": {
+                                    "rules": []
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": false,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            }
+                        },
+                        "staticRouting": {
+                            "defaultRoute": {
+                                "description": "",
+                                "gatewayAddress": "10.30.28.1",
+                                "mtu": 1500,
+                                "vnic": "0"
+                            },
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 50
+                    }
+                },
+                "edge-32": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": false,
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 51,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    },
+                                    {
+                                        "areaId": 0,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "normal"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": []
+                            },
+                            "redistribution": {
+                                "enabled": false,
+                                "rules": {
+                                    "rules": []
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": false,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            }
+                        },
+                        "staticRouting": {
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 11
+                    }
+                },
+                "edge-33": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": false,
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 51,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    },
+                                    {
+                                        "areaId": 0,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "normal"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": []
+                            },
+                            "redistribution": {
+                                "enabled": false,
+                                "rules": {
+                                    "rules": []
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": false,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            }
+                        },
+                        "staticRouting": {
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 9
+                    }
+                },
+                "edge-36": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": true,
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 32,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": [
+                                    {
+                                        "areaId": 32,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 0,
+                                        "vnic": 0
+                                    },
+                                    {
+                                        "areaId": 32,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 128,
+                                        "vnic": 1
+                                    },
+                                    {
+                                        "areaId": 32,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 0,
+                                        "vnic": 2
+                                    },
+                                    {
+                                        "areaId": 32,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 128,
+                                        "vnic": 3
+                                    },
+                                    {
+                                        "areaId": 32,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 128,
+                                        "vnic": 4
+                                    },
+                                    {
+                                        "areaId": 32,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 128,
+                                        "vnic": 5
+                                    }
+                                ]
+                            },
+                            "redistribution": {
+                                "enabled": true,
+                                "rules": {
+                                    "rules": [
+                                        {
+                                            "action": "permit",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": false,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": true
+                                            },
+                                            "id": 0
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": true,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            },
+                            "routerId": "10.30.0.18"
+                        },
+                        "staticRouting": {
+                            "staticRoutes": {
+                                "staticRoutes": [
+                                    {
+                                        "description": "Static 10.30.2.0",
+                                        "mtu": 1500,
+                                        "network": "10.30.2.0/23",
+                                        "nextHop": "10.30.1.7",
+                                        "type": "user",
+                                        "vnic": "1"
+                                    },
+                                    {
+                                        "description": "Static 10.30.4.0",
+                                        "mtu": 1500,
+                                        "network": "10.30.4.0/22",
+                                        "nextHop": "10.30.1.7",
+                                        "type": "user",
+                                        "vnic": "1"
+                                    },
+                                    {
+                                        "description": "Static 10.30.8.0",
+                                        "mtu": 1500,
+                                        "network": "10.30.8.0/21",
+                                        "nextHop": "10.30.1.7",
+                                        "type": "user",
+                                        "vnic": "1"
+                                    },
+                                    {
+                                        "description": "Static 10.30.16.0",
+                                        "mtu": 1500,
+                                        "network": "10.30.16.0/20",
+                                        "nextHop": "10.30.1.7",
+                                        "type": "user",
+                                        "vnic": "1"
+                                    },
+                                    {
+                                        "description": "Static 10.30.32.0",
+                                        "mtu": 1500,
+                                        "network": "10.30.32.0/19",
+                                        "nextHop": "10.30.1.7",
+                                        "type": "user",
+                                        "vnic": "1"
+                                    },
+                                    {
+                                        "description": "Static 10.30.64.0",
+                                        "mtu": 1500,
+                                        "network": "10.30.64.0/18",
+                                        "nextHop": "10.30.1.7",
+                                        "type": "user",
+                                        "vnic": "1"
+                                    }
+                                ]
+                            }
+                        },
+                        "version": 40
+                    }
+                },
+                "edge-38": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": false,
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 51,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    },
+                                    {
+                                        "areaId": 0,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "normal"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": []
+                            },
+                            "redistribution": {
+                                "enabled": false,
+                                "rules": {
+                                    "rules": []
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": false,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            }
+                        },
+                        "staticRouting": {
+                            "defaultRoute": {
+                                "gatewayAddress": "10.31.148.1",
+                                "mtu": 1500,
+                                "vnic": "0"
+                            },
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 5
+                    }
+                },
+                "edge-39": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": true,
+                            "forwardingAddress": "10.30.1.69",
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 32,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": [
+                                    {
+                                        "areaId": 32,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 0,
+                                        "vnic": 2
+                                    }
+                                ]
+                            },
+                            "protocolAddress": "10.30.1.68",
+                            "redistribution": {
+                                "enabled": true,
+                                "rules": {
+                                    "rules": [
+                                        {
+                                            "action": "deny",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 0
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": true,
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            },
+                            "routerId": "10.30.1.69"
+                        },
+                        "staticRouting": {
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 16
+                    }
+                },
+                "edge-40": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": true,
+                            "forwardingAddress": "10.30.1.84",
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 32,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": [
+                                    {
+                                        "areaId": 32,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 0,
+                                        "vnic": 2
+                                    }
+                                ]
+                            },
+                            "protocolAddress": "10.30.1.83",
+                            "redistribution": {
+                                "enabled": true,
+                                "rules": {
+                                    "rules": [
+                                        {
+                                            "action": "permit",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 0
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": true,
+                            "logging": {
+                                "enable": true,
+                                "logLevel": "info"
+                            },
+                            "routerId": "10.30.1.84"
+                        },
+                        "staticRouting": {
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 6
+                    }
+                },
+                "edge-8": {
+                    "bgp": {
+                        "enabled": true,
+                        "featureType": "routing_4.0",
+                        "ospf": {
+                            "defaultOriginate": false,
+                            "enabled": true,
+                            "forwardingAddress": "10.30.1.35",
+                            "gracefulRestart": true,
+                            "ospfAreas": {
+                                "ospfAreas": [
+                                    {
+                                        "areaId": 32,
+                                        "authentication": {
+                                            "type": "none"
+                                        },
+                                        "type": "nssa"
+                                    }
+                                ]
+                            },
+                            "ospfInterfaces": {
+                                "ospfInterfaces": [
+                                    {
+                                        "areaId": 32,
+                                        "cost": 1,
+                                        "deadInterval": 4,
+                                        "helloInterval": 1,
+                                        "mtuIgnore": false,
+                                        "priority": 0,
+                                        "vnic": 2
+                                    }
+                                ]
+                            },
+                            "protocolAddress": "10.30.1.34",
+                            "redistribution": {
+                                "enabled": true,
+                                "rules": {
+                                    "rules": [
+                                        {
+                                            "action": "deny",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 0,
+                                            "prefixName": "FX-Development-DR"
+                                        },
+                                        {
+                                            "action": "deny",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 1,
+                                            "prefixName": "FX-Development-DR2"
+                                        },
+                                        {
+                                            "action": "deny",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 2,
+                                            "prefixName": "FX-Production-DR"
+                                        },
+                                        {
+                                            "action": "deny",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 3,
+                                            "prefixName": "FX-Production-DR2"
+                                        },
+                                        {
+                                            "action": "deny",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 4,
+                                            "prefixName": "FX-QA-DR"
+                                        },
+                                        {
+                                            "action": "deny",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 5,
+                                            "prefixName": "FX-QA-DR2"
+                                        },
+                                        {
+                                            "action": "deny",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 6,
+                                            "prefixName": "FX-Sandbox-DR"
+                                        },
+                                        {
+                                            "action": "deny",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 7,
+                                            "prefixName": "FX-Test-DR"
+                                        },
+                                        {
+                                            "action": "deny",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 8,
+                                            "prefixName": "FX-Test-DR2"
+                                        },
+                                        {
+                                            "action": "deny",
+                                            "from": {
+                                                "bgp": false,
+                                                "connected": true,
+                                                "isis": false,
+                                                "ospf": false,
+                                                "static": false
+                                            },
+                                            "id": 9,
+                                            "prefixName": "RC-Production-DR-VIP"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "routingGlobalConfig": {
+                            "ecmp": true,
+                            "ipPrefixes": {
+                                "ipPrefixes": [
+                                    {
+                                        "ipAddress": "10.31.142.0/23",
+                                        "name": "FX-Development-DR"
+                                    },
+                                    {
+                                        "ipAddress": "10.31.144.0/23",
+                                        "name": "FX-Development-DR2"
+                                    },
+                                    {
+                                        "ipAddress": "10.31.128.0/23",
+                                        "name": "FX-Production-DR"
+                                    },
+                                    {
+                                        "ipAddress": "10.31.130.0/23",
+                                        "name": "FX-Production-DR2"
+                                    },
+                                    {
+                                        "ipAddress": "10.31.134.0/23",
+                                        "name": "FX-QA-DR"
+                                    },
+                                    {
+                                        "ipAddress": "10.31.132.0/23",
+                                        "name": "FX-QA-DR2"
+                                    },
+                                    {
+                                        "ipAddress": "10.31.146.0/23",
+                                        "name": "FX-Sandbox-DR"
+                                    },
+                                    {
+                                        "ipAddress": "10.31.136.0/23",
+                                        "name": "FX-Test-DR"
+                                    },
+                                    {
+                                        "ipAddress": "10.31.138.0/23",
+                                        "name": "FX-Test-DR2"
+                                    },
+                                    {
+                                        "ipAddress": "10.31.148.0/23",
+                                        "name": "RC-Production-DR-VIP"
+                                    }
+                                ]
+                            },
+                            "logging": {
+                                "enable": false,
+                                "logLevel": "info"
+                            },
+                            "routerId": "10.30.1.35"
+                        },
+                        "staticRouting": {
+                            "staticRoutes": {
+                                "staticRoutes": []
+                            }
+                        },
+                        "version": 163
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

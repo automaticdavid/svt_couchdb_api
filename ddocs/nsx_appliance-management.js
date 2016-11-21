@@ -4,7 +4,8 @@
 
 function(doc) {
     
-    var key ; 
+    var key ;
+    var val = {} ; 
     
     if (doc.svt_collect_date 
             && doc.svt_client
@@ -39,12 +40,14 @@ function(doc) {
                 
             }) ;
             key = [collect, client, source, id ]  ;
-            emit( key, { "appliance-management" : normalized_components, "svt_action":"svt_group" } );
+            val[id] = normalized_components  ; 
+            emit( key, { "appliance-management" : val, "svt_action":"svt_group", "svt_marked": id  } );
         
         // map all other 
         } else {
             key = [collect, client, source, id ]  ;
-            emit( key, {"appliance-management" : doc, "svt_action":"svt_group" } );
+            val[id] = doc ;
+            emit( key, {"appliance-management" : val, "svt_action":"svt_group" } );
         
         }
     }

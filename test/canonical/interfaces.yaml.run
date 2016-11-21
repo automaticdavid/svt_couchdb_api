@@ -8,4 +8,844 @@ YAML: test/yaml/interfaces.yaml
 Checking for collect existence
 http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
 http://localhost:5984/svtdev/_design/nsx-edge/_view/interfaces?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
-'{"info": {"svt_collect": "2016-09-13-10-35-57", "svt_client": "PGE"}, "data": {"nsx-1": {"nsx-edge": {"edge-6": {"interfaces": {"570d455000000011": {"connectedToName": "RC-Development-DR-10.31.144.0/23", "name": "RC-Development-DR-10.31.144.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.144.1", "subnetPrefixLength": "23"}]}}, "570d455000000010": {"connectedToName": "RC-Development-DR-10.31.142.0/23", "name": "RC-Development-DR-10.31.142.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.142.1", "subnetPrefixLength": "23"}]}}, "570d455000000013": {"connectedToName": "RC-Production-DR-VIP-10.31.148.0/23", "name": "RC-Production-DR-10.31.148.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.148.1", "subnetPrefixLength": "23"}]}}, "570d455000000012": {"connectedToName": "RC-Sandbox-DR-10.31.146.0/23", "name": "RC-Sandbox-DR-10.31.146.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.146.1", "subnetPrefixLength": "23"}]}}, "570d45500000000f": {"connectedToName": "RC-Test-DR-10.31.138.0/23", "name": "RC-Test-DR-10.31.138.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.138.1", "subnetPrefixLength": "23"}]}}, "570d45500000000d": {"connectedToName": "RC-QA-DR-10.31.134.0/23", "name": "RC-QA-DR-10.31.134.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.134.1", "subnetPrefixLength": "23"}]}}, "570d45500000000e": {"connectedToName": "RC-Test-DR-10.31.136.0/23", "name": "RC-Test-DR-10.31.136.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.136.1", "subnetPrefixLength": "23"}]}}, "570d45500000000b": {"connectedToName": "RC-Production-DR-10.31.130.0/23", "name": "RC-Production-DR-10.31.130.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.130.1", "subnetPrefixLength": "23"}]}}, "570d45500000000c": {"connectedToName": "RC-QA-DR-10.31.132.0/23", "name": "RC-QA-DR-10.31.132.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.132.1", "subnetPrefixLength": "23"}]}}, "570d45500000000a": {"connectedToName": "RC-Production-DR-10.31.128.0/23", "name": "RC-Production-DR-10.31.128.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.128.1", "subnetPrefixLength": "23"}]}}, "570d455000000002/vNic_2": {"connectedToName": "RC-Tenant Rep Pod-Network-LS", "name": "RC Rep Transit Uplink", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.255.224", "primaryAddress": "10.31.1.35", "subnetPrefixLength": "27"}]}}}}, "edge-37": {"interfaces": {"75649b2a0000000a": {"connectedToName": "RC-Automation-5000-10.31.253.0/24", "name": "RC-Automation-POD", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.255.0", "primaryAddress": "10.31.253.1", "subnetPrefixLength": "24"}]}}, "75649b2a00000002/vNic_2": {"connectedToName": "RC-Automation-Transit-LS", "name": "RC-Automation-Transit", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.255.240", "primaryAddress": "10.31.1.69", "subnetPrefixLength": "28"}]}}}}, "edge-38": {"interfaces": {"75649b2b00000002/vNic_2": {"connectedToName": "RC-VDI-Transit LS", "name": "RC-VDI-Transit", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.255.240", "primaryAddress": "10.31.1.84", "subnetPrefixLength": "28"}]}}, "75649b2b0000000b": {"connectedToName": "RC-Production-VDI-10.31.156.0/23", "name": "RC-VDI-Tenant-10.31.156.0", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.156.1", "subnetPrefixLength": "23"}]}}, "75649b2b0000000a": {"connectedToName": "RC-Production-VDI-10.31.154.0", "name": "RC-VDI-Tenant-10.31.154.0", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.154.1", "subnetPrefixLength": "23"}]}}}}, "edge-7": {"interfaces": {"570d454f0000000f": {"connectedToName": "RC-Test-10.31.14.0/23", "name": "RC-Test-10.31.14.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.14.1", "subnetPrefixLength": "23"}]}}, "570d454f0000000e": {"connectedToName": "RC-Test-10.31.12.0/23", "name": "RC-Test-10.31.12.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.12.1", "subnetPrefixLength": "23"}]}}, "570d454f0000000d": {"connectedToName": "RC-QA-10.31.10.0/23", "name": "RC-QA-10.31.10.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.10.1", "subnetPrefixLength": "23"}]}}, "570d454f0000000c": {"connectedToName": "RC-QA-10.31.8.0/23", "name": "RC-QA-10.31.8.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.8.1", "subnetPrefixLength": "23"}]}}, "570d454f0000000b": {"connectedToName": "RC-Production-10.31.6.0/23", "name": "RC-Production-10.31.6.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.6.1", "subnetPrefixLength": "23"}]}}, "570d454f0000000a": {"connectedToName": "RC-Production-10.31.4.0/23", "name": "RC-Production-10.31.4.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.4.1", "subnetPrefixLength": "23"}]}}, "570d454f00000014": {"connectedToName": "RC-Production-VIP-10.31.24.0/23", "name": "RC-Production-VIP-10.31.24.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.24.1", "subnetPrefixLength": "23"}]}}, "570d454f00000015": {"connectedToName": "RC-QA-VIP-10.31.26.0/23", "name": "RC-QA-VIP-10.31.26.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.26.1", "subnetPrefixLength": "23"}]}}, "570d454f00000016": {"connectedToName": "RC-NonProd-VIP-10.31.28.0/23", "name": "RC-NonProd-VIP-10.31.28.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.28.1", "subnetPrefixLength": "23"}]}}, "570d454f00000017": {"connectedToName": "RC-Development-Citrix-10.31.124.0/23", "name": "RC-Development-Citrix-10.31.124.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.124.1", "subnetPrefixLength": "23"}]}}, "570d454f00000010": {"connectedToName": "RC-Development-10.31.140.0/23", "name": "RC-Development-10.31.140.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.140.1", "subnetPrefixLength": "23"}]}}, "570d454f00000011": {"connectedToName": "RC-Development-10.31.16.0/23", "name": "RC-Development-10.31.16.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.16.1", "subnetPrefixLength": "23"}]}}, "570d454f00000003/vNic_3": {"connectedToName": "RC-Tenant Non Rep Pod-Network-LS", "name": "RC-Enterprise Transit", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.255.224", "primaryAddress": "10.31.1.7", "subnetPrefixLength": "27"}]}}, "570d454f00000013": {"connectedToName": "RC-Sandbox-10.31.22.0/23", "name": "RC-Sandbox-10.31.22.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.22.1", "subnetPrefixLength": "23"}]}}, "570d454f00000018": {"connectedToName": "RC-Production-Citrix-10.31.126.0/23", "name": "RC-Production-Citrix-10.31.126.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.126.1", "subnetPrefixLength": "23"}]}}, "570d454f00000012": {"connectedToName": "RC-Sandbox-10.31.20.0/23", "name": "RC-Sandbox-10.31.20.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.20.1", "subnetPrefixLength": "23"}]}}}}}}, "nsx-2": {"nsx-edge": {"edge-40": {"interfaces": {"75649b420000000a": {"connectedToName": "FX-Production-VDI-10.30.154.0/23", "name": "FX-VDI-10.30.154.0", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.30.154.1", "subnetPrefixLength": "23"}]}}, "75649b4200000002/vNic_2": {"connectedToName": "FX-VDI-Transit-Network", "name": "FX-VDI-Transit-Uplink", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.255.240", "primaryAddress": "10.30.1.84", "subnetPrefixLength": "28"}]}}, "75649b420000000b": {"connectedToName": "FX-Production-VDI-10.30.156.0/23", "name": "FX-VDI-10.30.156.0", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.30.156.1", "subnetPrefixLength": "23"}]}}}}, "edge-8": {"interfaces": {"6486f6400000002/vNic_2": {"connectedToName": "FX-Rep Transit-Network", "name": "FX Rep Pod Transit Uplink", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.255.224", "primaryAddress": "10.30.1.35", "subnetPrefixLength": "27"}]}}, "6486f6400000014": {"connectedToName": "FX-QA-DR-VIP-10.31.150.0/23", "name": "FX-QA-DR-VIP-10.31.150.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.150.1", "subnetPrefixLength": "23"}]}}, "6486f6400000015": {"connectedToName": "FX-NonProd-DR-VIP-10.31.152.0/23", "name": "FX-NonProd-DR-VIP-10.31.152.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.152.1", "subnetPrefixLength": "23"}]}}, "6486f6400000016": {"connectedToName": "FX-Production-DR-10.31.130.0/23", "name": "FX-Production-DR-10.31.130.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.130.1", "subnetPrefixLength": "23"}]}}, "6486f6400000010": {"connectedToName": "FX-Development-DR-10.31.144.0/23", "name": "FX-Development-DR-10.31.144.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.144.1", "subnetPrefixLength": "23"}]}}, "6486f6400000012": {"connectedToName": "FX-Sandbox-DR-10.31.146.0/23", "name": "FX-Sandbox-DR-10.31.146.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.146.1", "subnetPrefixLength": "23"}]}}, "6486f6400000013": {"connectedToName": "FX-Production-DR-VIP-10.31.148.0/23", "name": "FX-Production-DR-VIP-10.31.148.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.148.1", "subnetPrefixLength": "23"}]}}, "6486f640000000f": {"connectedToName": "FX-Development-DR-10.31.142.0/23", "name": "FX-Development-DR-10.31.142.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.142.1", "subnetPrefixLength": "23"}]}}, "6486f640000000e": {"connectedToName": "FX-Test-DR-10.31.138.0/23", "name": "FX-Test-DR-10.31.138.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.138.1", "subnetPrefixLength": "23"}]}}, "6486f640000000d": {"connectedToName": "FX-Test-DR-10.31.136.0/23", "name": "FX-Test-DR-10.31.136.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.136.1", "subnetPrefixLength": "23"}]}}, "6486f640000000c": {"connectedToName": "FX-QA-DR-10.31.134.0/23", "name": "FX-QA-DR-10.31.134.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.134.1", "subnetPrefixLength": "23"}]}}, "6486f640000000b": {"connectedToName": "FX-QA-DR-10.31.132.0/23", "name": "FX-QA-DR-10.31.132.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.132.1", "subnetPrefixLength": "23"}]}}, "6486f640000000a": {"connectedToName": "FX-Production-DR-10.31.128.0/23", "name": "FX-Production-DR-10.31.128.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.31.128.1", "subnetPrefixLength": "23"}]}}}}, "edge-12": {"interfaces": {"393259790000000a": {"connectedToName": "FX-Development-10.30.16.0/23", "name": "FX-Development-10.30.16.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.30.16.1", "subnetPrefixLength": "23"}]}}, "393259790000000c": {"connectedToName": "FX-QA-10.30.8.0/23", "name": "FX-QA-10.30.8.0", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.30.8.1", "subnetPrefixLength": "23"}]}}, "393259790000000b": {"connectedToName": "FX-Production-10.30.4.0/23", "name": "FX-Production-10.30.4.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.30.4.1", "subnetPrefixLength": "23"}]}}, "3932597900000003/vNic_3": {"connectedToName": "FX-Non RepTransit-Network", "name": "Enterprise Transit Switch", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.255.224", "primaryAddress": "10.30.1.7", "subnetPrefixLength": "27"}]}}, "393259790000000d": {"connectedToName": "FX-Sandbox-10.30.20.0/23", "name": "FX-Sandbox-10.30.20.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.30.20.1", "subnetPrefixLength": "23"}]}}, "393259790000000f": {"connectedToName": "FX-Production-VIP-10.30.24.0/23", "name": "FX-Production-VIP-10.30.24.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.30.24.1", "subnetPrefixLength": "23"}]}}, "393259790000000e": {"connectedToName": "FX-Test-10.30.12.0/23", "name": "FX-Test-10.30.12.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.30.12.1", "subnetPrefixLength": "23"}]}}, "3932597900000012": {"connectedToName": "FX-Development-Citrix-10.30.124.0/23", "name": "FX-Development-Citrix-10.30.124.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.30.124.1", "subnetPrefixLength": "23"}]}}, "3932597900000013": {"connectedToName": "FX-Production-Citrix-10.30.126.0/23", "name": "FX-Production-Citrix-10.30.126.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.30.126.1", "subnetPrefixLength": "23"}]}}, "3932597900000010": {"connectedToName": "FX-QA-VIP-10.30.26.0/23", "name": "FX-QA-VIP-10.30.26.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.30.26.1", "subnetPrefixLength": "23"}]}}, "3932597900000011": {"connectedToName": "FX-NonProd-VIP-10.30.28.0/23", "name": "FX-NonProd-VIP-10.30.28.0/23", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.254.0", "primaryAddress": "10.30.28.1", "subnetPrefixLength": "23"}]}}}}, "edge-39": {"interfaces": {"75649b2c0000000a": {"connectedToName": "FX-Automation-LS", "name": "Automation Pod LS", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.255.0", "primaryAddress": "10.31.253.1", "subnetPrefixLength": "24"}]}}, "75649b2c00000002/vNic_2": {"connectedToName": "FX-Automation-Transit-Network", "name": "Transit Uplink", "addressGroups": {"addressGroups": [{"subnetMask": "255.255.255.240", "primaryAddress": "10.30.1.69", "subnetPrefixLength": "28"}]}}}}}}}}'
+{
+    "data": {
+        "nsx-1": {
+            "nsx-edge": {
+                "edge-37": {
+                    "interfaces": {
+                        "75649b2a00000002/vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.1.69",
+                                        "subnetMask": "255.255.255.240",
+                                        "subnetPrefixLength": "28"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Automation-Transit-LS",
+                            "name": "RC-Automation-Transit"
+                        },
+                        "75649b2a0000000a": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.253.1",
+                                        "subnetMask": "255.255.255.0",
+                                        "subnetPrefixLength": "24"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Automation-5000-10.31.253.0/24",
+                            "name": "RC-Automation-POD"
+                        }
+                    }
+                },
+                "edge-38": {
+                    "interfaces": {
+                        "75649b2b00000002/vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.1.84",
+                                        "subnetMask": "255.255.255.240",
+                                        "subnetPrefixLength": "28"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-VDI-Transit LS",
+                            "name": "RC-VDI-Transit"
+                        },
+                        "75649b2b0000000a": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.154.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Production-VDI-10.31.154.0",
+                            "name": "RC-VDI-Tenant-10.31.154.0"
+                        },
+                        "75649b2b0000000b": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.156.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Production-VDI-10.31.156.0/23",
+                            "name": "RC-VDI-Tenant-10.31.156.0"
+                        }
+                    }
+                },
+                "edge-6": {
+                    "interfaces": {
+                        "570d455000000002/vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.1.35",
+                                        "subnetMask": "255.255.255.224",
+                                        "subnetPrefixLength": "27"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Tenant Rep Pod-Network-LS",
+                            "name": "RC Rep Transit Uplink"
+                        },
+                        "570d45500000000a": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.128.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Production-DR-10.31.128.0/23",
+                            "name": "RC-Production-DR-10.31.128.0/23"
+                        },
+                        "570d45500000000b": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.130.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Production-DR-10.31.130.0/23",
+                            "name": "RC-Production-DR-10.31.130.0/23"
+                        },
+                        "570d45500000000c": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.132.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-QA-DR-10.31.132.0/23",
+                            "name": "RC-QA-DR-10.31.132.0/23"
+                        },
+                        "570d45500000000d": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.134.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-QA-DR-10.31.134.0/23",
+                            "name": "RC-QA-DR-10.31.134.0/23"
+                        },
+                        "570d45500000000e": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.136.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Test-DR-10.31.136.0/23",
+                            "name": "RC-Test-DR-10.31.136.0/23"
+                        },
+                        "570d45500000000f": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.138.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Test-DR-10.31.138.0/23",
+                            "name": "RC-Test-DR-10.31.138.0/23"
+                        },
+                        "570d455000000010": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.142.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Development-DR-10.31.142.0/23",
+                            "name": "RC-Development-DR-10.31.142.0/23"
+                        },
+                        "570d455000000011": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.144.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Development-DR-10.31.144.0/23",
+                            "name": "RC-Development-DR-10.31.144.0/23"
+                        },
+                        "570d455000000012": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.146.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Sandbox-DR-10.31.146.0/23",
+                            "name": "RC-Sandbox-DR-10.31.146.0/23"
+                        },
+                        "570d455000000013": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.148.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Production-DR-VIP-10.31.148.0/23",
+                            "name": "RC-Production-DR-10.31.148.0/23"
+                        }
+                    }
+                },
+                "edge-7": {
+                    "interfaces": {
+                        "570d454f00000003/vNic_3": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.1.7",
+                                        "subnetMask": "255.255.255.224",
+                                        "subnetPrefixLength": "27"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Tenant Non Rep Pod-Network-LS",
+                            "name": "RC-Enterprise Transit"
+                        },
+                        "570d454f0000000a": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.4.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Production-10.31.4.0/23",
+                            "name": "RC-Production-10.31.4.0/23"
+                        },
+                        "570d454f0000000b": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.6.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Production-10.31.6.0/23",
+                            "name": "RC-Production-10.31.6.0/23"
+                        },
+                        "570d454f0000000c": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.8.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-QA-10.31.8.0/23",
+                            "name": "RC-QA-10.31.8.0/23"
+                        },
+                        "570d454f0000000d": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.10.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-QA-10.31.10.0/23",
+                            "name": "RC-QA-10.31.10.0/23"
+                        },
+                        "570d454f0000000e": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.12.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Test-10.31.12.0/23",
+                            "name": "RC-Test-10.31.12.0/23"
+                        },
+                        "570d454f0000000f": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.14.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Test-10.31.14.0/23",
+                            "name": "RC-Test-10.31.14.0/23"
+                        },
+                        "570d454f00000010": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.140.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Development-10.31.140.0/23",
+                            "name": "RC-Development-10.31.140.0/23"
+                        },
+                        "570d454f00000011": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.16.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Development-10.31.16.0/23",
+                            "name": "RC-Development-10.31.16.0/23"
+                        },
+                        "570d454f00000012": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.20.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Sandbox-10.31.20.0/23",
+                            "name": "RC-Sandbox-10.31.20.0/23"
+                        },
+                        "570d454f00000013": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.22.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Sandbox-10.31.22.0/23",
+                            "name": "RC-Sandbox-10.31.22.0/23"
+                        },
+                        "570d454f00000014": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.24.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Production-VIP-10.31.24.0/23",
+                            "name": "RC-Production-VIP-10.31.24.0/23"
+                        },
+                        "570d454f00000015": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.26.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-QA-VIP-10.31.26.0/23",
+                            "name": "RC-QA-VIP-10.31.26.0/23"
+                        },
+                        "570d454f00000016": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.28.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-NonProd-VIP-10.31.28.0/23",
+                            "name": "RC-NonProd-VIP-10.31.28.0/23"
+                        },
+                        "570d454f00000017": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.124.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Development-Citrix-10.31.124.0/23",
+                            "name": "RC-Development-Citrix-10.31.124.0/23"
+                        },
+                        "570d454f00000018": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.126.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "RC-Production-Citrix-10.31.126.0/23",
+                            "name": "RC-Production-Citrix-10.31.126.0/23"
+                        }
+                    }
+                }
+            }
+        },
+        "nsx-2": {
+            "nsx-edge": {
+                "edge-12": {
+                    "interfaces": {
+                        "3932597900000003/vNic_3": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.1.7",
+                                        "subnetMask": "255.255.255.224",
+                                        "subnetPrefixLength": "27"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-Non RepTransit-Network",
+                            "name": "Enterprise Transit Switch"
+                        },
+                        "393259790000000a": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.16.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-Development-10.30.16.0/23",
+                            "name": "FX-Development-10.30.16.0/23"
+                        },
+                        "393259790000000b": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.4.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-Production-10.30.4.0/23",
+                            "name": "FX-Production-10.30.4.0/23"
+                        },
+                        "393259790000000c": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.8.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-QA-10.30.8.0/23",
+                            "name": "FX-QA-10.30.8.0"
+                        },
+                        "393259790000000d": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.20.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-Sandbox-10.30.20.0/23",
+                            "name": "FX-Sandbox-10.30.20.0/23"
+                        },
+                        "393259790000000e": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.12.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-Test-10.30.12.0/23",
+                            "name": "FX-Test-10.30.12.0/23"
+                        },
+                        "393259790000000f": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.24.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-Production-VIP-10.30.24.0/23",
+                            "name": "FX-Production-VIP-10.30.24.0/23"
+                        },
+                        "3932597900000010": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.26.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-QA-VIP-10.30.26.0/23",
+                            "name": "FX-QA-VIP-10.30.26.0/23"
+                        },
+                        "3932597900000011": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.28.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-NonProd-VIP-10.30.28.0/23",
+                            "name": "FX-NonProd-VIP-10.30.28.0/23"
+                        },
+                        "3932597900000012": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.124.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-Development-Citrix-10.30.124.0/23",
+                            "name": "FX-Development-Citrix-10.30.124.0/23"
+                        },
+                        "3932597900000013": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.126.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-Production-Citrix-10.30.126.0/23",
+                            "name": "FX-Production-Citrix-10.30.126.0/23"
+                        }
+                    }
+                },
+                "edge-39": {
+                    "interfaces": {
+                        "75649b2c00000002/vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.1.69",
+                                        "subnetMask": "255.255.255.240",
+                                        "subnetPrefixLength": "28"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-Automation-Transit-Network",
+                            "name": "Transit Uplink"
+                        },
+                        "75649b2c0000000a": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.253.1",
+                                        "subnetMask": "255.255.255.0",
+                                        "subnetPrefixLength": "24"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-Automation-LS",
+                            "name": "Automation Pod LS"
+                        }
+                    }
+                },
+                "edge-40": {
+                    "interfaces": {
+                        "75649b4200000002/vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.1.84",
+                                        "subnetMask": "255.255.255.240",
+                                        "subnetPrefixLength": "28"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-VDI-Transit-Network",
+                            "name": "FX-VDI-Transit-Uplink"
+                        },
+                        "75649b420000000a": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.154.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-Production-VDI-10.30.154.0/23",
+                            "name": "FX-VDI-10.30.154.0"
+                        },
+                        "75649b420000000b": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.156.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-Production-VDI-10.30.156.0/23",
+                            "name": "FX-VDI-10.30.156.0"
+                        }
+                    }
+                },
+                "edge-8": {
+                    "interfaces": {
+                        "6486f6400000002/vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.1.35",
+                                        "subnetMask": "255.255.255.224",
+                                        "subnetPrefixLength": "27"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-Rep Transit-Network",
+                            "name": "FX Rep Pod Transit Uplink"
+                        },
+                        "6486f640000000a": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.128.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-Production-DR-10.31.128.0/23",
+                            "name": "FX-Production-DR-10.31.128.0/23"
+                        },
+                        "6486f640000000b": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.132.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-QA-DR-10.31.132.0/23",
+                            "name": "FX-QA-DR-10.31.132.0/23"
+                        },
+                        "6486f640000000c": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.134.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-QA-DR-10.31.134.0/23",
+                            "name": "FX-QA-DR-10.31.134.0/23"
+                        },
+                        "6486f640000000d": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.136.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-Test-DR-10.31.136.0/23",
+                            "name": "FX-Test-DR-10.31.136.0/23"
+                        },
+                        "6486f640000000e": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.138.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-Test-DR-10.31.138.0/23",
+                            "name": "FX-Test-DR-10.31.138.0/23"
+                        },
+                        "6486f640000000f": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.142.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-Development-DR-10.31.142.0/23",
+                            "name": "FX-Development-DR-10.31.142.0/23"
+                        },
+                        "6486f6400000010": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.144.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-Development-DR-10.31.144.0/23",
+                            "name": "FX-Development-DR-10.31.144.0/23"
+                        },
+                        "6486f6400000012": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.146.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-Sandbox-DR-10.31.146.0/23",
+                            "name": "FX-Sandbox-DR-10.31.146.0/23"
+                        },
+                        "6486f6400000013": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.148.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-Production-DR-VIP-10.31.148.0/23",
+                            "name": "FX-Production-DR-VIP-10.31.148.0/23"
+                        },
+                        "6486f6400000014": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.150.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-QA-DR-VIP-10.31.150.0/23",
+                            "name": "FX-QA-DR-VIP-10.31.150.0/23"
+                        },
+                        "6486f6400000015": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.152.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-NonProd-DR-VIP-10.31.152.0/23",
+                            "name": "FX-NonProd-DR-VIP-10.31.152.0/23"
+                        },
+                        "6486f6400000016": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.130.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "connectedToName": "FX-Production-DR-10.31.130.0/23",
+                            "name": "FX-Production-DR-10.31.130.0/23"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

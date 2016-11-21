@@ -7,4 +7,4 @@ for f in test/run/*.run
 do
 diff $f test/canonical/$(basename $f)
 done 
-rm test/run/*.run
+# rm test/run/*.run

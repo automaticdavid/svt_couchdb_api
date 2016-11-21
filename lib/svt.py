@@ -30,10 +30,21 @@ class Svt:
 			return(d)
 
 		# Get the selected subjson & action
-		s = d['svt_cdb_value'][selector]
+		selected = d['svt_cdb_value'][selector]
 		action = d['svt_cdb_value']['svt_action']
 
-		# Is it a dict ? 
+		# Special case for keyed svt_group
+		if (isinstance(selected,dict)
+			and marker in selected 
+			and isinstance(selected[marker], list)
+			and action == 'svt_group'):
+				s = selected[marker]
+				special = True
+		else:
+			s = selected
+			special = False
+
+		# Normal dict
 		if isinstance(s,dict) and marker in s:
 			v = s[marker]
 
@@ -49,6 +60,8 @@ class Svt:
 				# Get the marked value
 				if 'svt_unic' not in i or 'svt_value' not in i:
 					raise Exception('Map function for does not re-key lists for selector: ' +  selector)
+				elif special:
+					marked = i['svt_value']
 				elif marker not in i['svt_value']:
 					marked = 'svt_no_data'
 				else:
@@ -90,10 +103,23 @@ class Svt:
 		if not 'svt_cdb_key' in d:
 			return(d)
 		
-		# Get the selected subjson and action
-		s = d['svt_cdb_value'][selector]
+		# Get the selected subjson, action and marked id
+		selected = d['svt_cdb_value'][selector]
 		action = d['svt_cdb_value']['svt_action']
-		
+		if 'svt_marked' in d['svt_cdb_value']:
+			marked = d['svt_cdb_value']['svt_marked']
+		else:
+			marked = False
+
+		# Special case for keyed svt_group
+		if (isinstance(selected,dict)
+			and marked 
+			and isinstance(selected[marked], list)
+			and action == 'svt_group'):
+				s = selected[marked]
+		else:
+			s = selected
+
 		# Simple attach of everything 
 		if isinstance(s,dict) or isinstance(s, basestring):
 			v = s 

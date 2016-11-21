@@ -158,6 +158,8 @@ class Utils:
 			value = row.value
 			action = row.action
 
+			# print("DEBUG -  marker:{}, action:{}, name:{}, value:{}, typevalue:{}".format(marker, action, name, value, type(value))) 
+
 			# Keep collect and date in the result and sanity check them
 			if not 'info' in res:
 				res['info']['svt_collect'] = collect
@@ -170,7 +172,10 @@ class Utils:
 				debug = "" 
 				raise Errors.genError(code, msg, call, debug)
 
-			# Build the wanted JSON structure
+			
+			#########################################################################################
+			# multi
+			#########################################################################################
 
 			if ( action == 'svt_multi' 
 				and marker == 'svt_all'
@@ -191,10 +196,6 @@ class Utils:
 				for k in value.keys():
 					if k != 'svt_marked':
 						res['data'][source][ddoc][name][k] = value[k]
-			
-			#########################################################################################
-			# multi
-			#########################################################################################
 
 			elif (action == 'svt_multi'
 				and marker == 'svt_all'):
@@ -231,13 +232,39 @@ class Utils:
 				# Remove the marked tag
 				del value['svt_marked']
 				for k in value.keys():
-					res['data'][source][ddoc][name][k]  = value[k]
+					res['data'][source][ddoc][selector][name][k]  = value[k]
 
 			elif (action == 'svt_group'
 				and marker == 'svt_all'
 				and isinstance(value,dict)):
 				# Need to clean output from using multifile based values
 				# using name instead of selector 
+				try:
+					del value[name]['svt_collect_date']
+					del value[name]['svt_client']
+					del value[name]['svt_source']
+					del value[name]['svt_source_file']
+					del value[name]['_id']
+					del value[name]['_rev']
+				except KeyError:
+					pass
+				res['data'][source][ddoc][selector][name] = value[name]
+				
+			elif (action == 'svt_group'
+				and marker == 'svt_all'):
+				res['data'][source][ddoc][selector][name] = value
+
+			elif (action == 'svt_group'
+				and isinstance(value,dict) 
+				and 'svt_marked' in value):
+				# Marked values are to be re-keyed
+				# Remove the marked tag
+				del value['svt_marked']
+				for k in value:
+					res['data'][source][ddoc][selector][name][k]  = value[k]
+
+			elif (action == 'svt_group'
+				and marker == name): 
 				try:
 					del value['svt_collect_date']
 					del value['svt_client']
@@ -247,32 +274,8 @@ class Utils:
 					del value['_rev']
 				except KeyError:
 					pass
-				res['data'][source][ddoc][name] = value
-				
-			elif (action == 'svt_group'
-				and marker == 'svt_all'):
-				res['data'][source][ddoc][name] = value
+				res['data'][source][ddoc][selector][name] = value
 
-			elif (action == 'svt_group'
-				and isinstance(value,dict) 
-				and 'svt_marked' in value):
-				# Marked values are to be re-keyed
-				# Remove the marked tag
-				for k in value:
-					if marker not in res['data'][source][ddoc] or k not in res['data'][source][ddoc][marker]:
-						res['data'][source][ddoc][marker][k] = value[k]
-					elif res['data'][source][ddoc][marker][k] == 'svt_no_data' and value[k] != 'svt_no_data':
-						res['data'][source][ddoc][marker][k] = value[k]
-
-			elif (action == 'svt_group'
-				and isinstance(value,dict)): 
-			# Marked values are to be re-keyed
-			# Remove the marked tag
-				pass
-
-			elif action == 'svt_group':
-			# 	print("DEBUG: got list or string")
-				pass
 
 			#########################################################################################
 			# single
@@ -286,27 +289,32 @@ class Utils:
 				# Getting svt_all instead of specific marker
 				# Marked values are to be re-keyed
 				# Remove the marked tag
+				# print("DEBUG: GENTYPE: single, all, marked, dict" )
+				leaf = res['data'][source][ddoc][name]
 				del value['svt_marked']
 				for k in value.keys():
 					res['data'][source][ddoc][selector][k]  = value[k]
+	
+			elif (action == 'svt_single'
+				and marker == 'svt_all'):
+				# print("DEBUG: GENTYPE: single, all" )
+				# Getting svt_all for single file values
+				# Attach them all at the selector level
+				res['data'][source][ddoc][selector].update(value)
 
 			elif (action == 'svt_single'
 				and isinstance(value,dict) 
 				and 'svt_marked' in value):
+				# print("DEBUG: GENTYPE: single, marked, dict" )
 				# Getting single files values for marker
 				# Marked values are to be re-keyed
 				# Remove the marked tag
 				del value['svt_marked']
 				for k in value.keys():
 					res['data'][source][ddoc][selector][k][marker]  = value[k]
-			
-			elif (action == 'svt_single'
-				and marker == 'svt_all'):
-				# Getting svt_all for single file values
-				# Attach them all at the selector level
-				res['data'][source][ddoc][selector].update(value)
-	
+
 			elif action == 'svt_single':
+				# print("DEBUG: GENTYPE: single, marker" )
 				# Getting single file value for a specific marker
 				# Using marker won't select doc level info
 				res['data'][source][ddoc][selector][marker] = value
@@ -325,6 +333,12 @@ class Utils:
 				del value['svt_marked']
 				for k in value.keys():
 					res['data'][source][ddoc][name][selector][k]  = value[k]
+			
+			elif (action == 'svt_standard'
+				and marker == 'svt_all'):
+				# Getting svt_all for ungrouped value
+				# Attach them all under their name
+				res['data'][source][ddoc][name][selector].update(value)
 
 			elif (action == 'svt_standard'
 				and isinstance(value,dict) 
@@ -335,19 +349,13 @@ class Utils:
 				del value['svt_marked']
 				for k in value.keys():
 					res['data'][source][ddoc][name][selector][k][marker] = value[k]
-			
-			elif (action == 'svt_standard'
-				and marker == 'svt_all'):
-				# Getting svt_all for ungrouped value
-				# Attach them all under their name
-				res['data'][source][ddoc][name][selector].update(value)
 
 			elif action == 'svt_standard':
 				# Standard attach 
 				res['data'][source][ddoc][name][selector][marker] = value
 
-			else:
-				raise Exception("Error: Got unkown action: " + action + " from map: " + ddoc + '/' + selector)
+			# else:
+			# 	raise Exception("Error: Got unkown action: " + action + " from map: " + ddoc + '/' + selector)
 
 		return(res)
 

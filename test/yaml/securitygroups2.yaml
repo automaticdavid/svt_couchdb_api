@@ -3,4 +3,5 @@ reports:
   nsx:
     securitygroups:
         - description
+        - members
 

@@ -13,7 +13,6 @@ function(doc) {
             && doc.svt_source_file
             && doc.svt_source_file.indexOf("vro_plugins") != -1
             && doc.plugin
-            && doc.total
         ) {
 
         // name the properties
@@ -22,7 +21,11 @@ function(doc) {
         source = doc.svt_source ;
         id = "svt_single" ;
         plugins = doc.plugin ; 
-        total = doc.total ;
+        if (doc.total) {
+            total = doc.total ;
+        } else {
+            total = 'svt_no_data';
+        } ;
         
         // loop the plugins
         plugins.forEach(function(plugin) {

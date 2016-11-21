@@ -12,8 +12,8 @@ __status__ = "Concept Code"
 import logging
 import os
 import sys
-from pprint import pprint
 from optparse import OptionParser
+import simplejson as json
 from lib.wrapper import Wrapper
 from lib.errors import Errors
 
@@ -27,7 +27,7 @@ settings = OS_PATH + '/' + SETTINGS_FILE_NAME
 def main(settings, collect, client):
 
 	res = Wrapper().generator(settings, collect, client, yamldef)
-	pprint(res)
+	print(json.dumps(json.loads(res), indent=4, sort_keys=True))
 
 	
 if __name__ == '__main__':

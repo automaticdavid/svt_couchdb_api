@@ -3,3 +3,4 @@ reports:
     loadbalancer:
       - monitor
       - version
+      - tenant
