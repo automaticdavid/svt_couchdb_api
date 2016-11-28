@@ -8,4 +8,49 @@ YAML: test/yaml/simpleapp.yaml
 Checking for collect existence
 http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
 http://localhost:5984/svtdev/_design/nsx-appliance/_view/manager?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
-'{"info": {"svt_collect": "2016-09-13-10-35-57", "svt_client": "PGE"}, "data": {"nsx-1": {"nsx-appliance": {"manager": {"versionInfo": {"buildNumber": "3102213", "majorVersion": "6", "patchVersion": "5", "minorVersion": "1"}, "cpuInfoDto": {"totalNoOfCPUs": 4, "usedPercentage": 28, "freeCapacity": "2096 MHZ", "capacity": "2900 MHZ", "usedCapacity": "804 MHZ"}}}}, "nsx-2": {"nsx-appliance": {"manager": {"versionInfo": {"buildNumber": "3102213", "majorVersion": "6", "patchVersion": "5", "minorVersion": "1"}, "cpuInfoDto": {"totalNoOfCPUs": 4, "usedPercentage": 2, "freeCapacity": "2844 MHZ", "capacity": "2900 MHZ", "usedCapacity": "56 MHZ"}}}}}}'
+{
+    "data": {
+        "nsx-1": {
+            "nsx-appliance": {
+                "manager": {
+                    "cpuInfoDto": {
+                        "capacity": "2900 MHZ",
+                        "freeCapacity": "2096 MHZ",
+                        "totalNoOfCPUs": 4,
+                        "usedCapacity": "804 MHZ",
+                        "usedPercentage": 28
+                    },
+                    "versionInfo": {
+                        "buildNumber": "3102213",
+                        "majorVersion": "6",
+                        "minorVersion": "1",
+                        "patchVersion": "5"
+                    }
+                }
+            }
+        },
+        "nsx-2": {
+            "nsx-appliance": {
+                "manager": {
+                    "cpuInfoDto": {
+                        "capacity": "2900 MHZ",
+                        "freeCapacity": "2844 MHZ",
+                        "totalNoOfCPUs": 4,
+                        "usedCapacity": "56 MHZ",
+                        "usedPercentage": 2
+                    },
+                    "versionInfo": {
+                        "buildNumber": "3102213",
+                        "majorVersion": "6",
+                        "minorVersion": "1",
+                        "patchVersion": "5"
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

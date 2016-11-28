@@ -8,4 +8,154 @@ YAML: test/yaml/bgpNeighbours.yaml
 Checking for collect existence
 http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
 http://localhost:5984/svtdev/_design/nsx-edge/_view/bgpNeighbours?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
-'{"info": {"svt_collect": "2016-09-13-10-35-57", "svt_client": "PGE"}, "data": {"nsx-1": {"nsx-edge": {"edge-29": {"bgpNeighbours": {}}, "edge-28": {"bgpNeighbours": {}}, "edge-19": {"bgpNeighbours": {}}, "edge-9": {"bgpNeighbours": {}}, "edge-21": {"bgpNeighbours": {}}, "edge-20": {"bgpNeighbours": {}}, "edge-6": {"bgpNeighbours": {}}, "edge-36": {"bgpNeighbours": {}}, "edge-37": {"bgpNeighbours": {}}, "edge-32": {"bgpNeighbours": {}}, "edge-33": {"bgpNeighbours": {}}, "edge-30": {"bgpNeighbours": {}}, "edge-7": {"bgpNeighbours": {}}, "edge-38": {"bgpNeighbours": {}}}}, "nsx-2": {"nsx-edge": {"edge-28": {"bgpNeighbours": {}}, "edge-8": {"bgpNeighbours": {}}, "edge-15": {"bgpNeighbours": {}}, "edge-10": {"bgpNeighbours": {}}, "edge-27": {"bgpNeighbours": {}}, "edge-36": {"bgpNeighbours": {}}, "edge-40": {"bgpNeighbours": {}}, "edge-32": {"bgpNeighbours": {}}, "edge-12": {"bgpNeighbours": {}}, "edge-31": {"bgpNeighbours": {}}, "edge-39": {"bgpNeighbours": {}}, "edge-38": {"bgpNeighbours": {}}, "edge-33": {"bgpNeighbours": {}}}}}}'
+{
+    "data": {
+        "nsx-1": {
+            "nsx-edge": {
+                "edge-19": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-20": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-21": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-28": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-29": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-30": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-32": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-33": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-36": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-37": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-38": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-6": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-7": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-9": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                }
+            }
+        },
+        "nsx-2": {
+            "nsx-edge": {
+                "edge-10": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-12": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-15": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-27": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-28": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-31": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-32": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-33": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-36": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-38": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-39": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-40": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-8": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

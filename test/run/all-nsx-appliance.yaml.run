@@ -1,0 +1,492 @@
+http://localhost:5984/
+Welcome
+http://localhost:5984/svtdev
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: test/yaml/all-nsx-appliance.yaml
+Checking for collect existence
+http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
+http://localhost:5984/svtdev/_design/nsx/_view/appliance-management?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+{
+    "data": {
+        "nsx-1": {
+            "nsx": {
+                "appliance-management": {
+                    "backuprestore-backupsettings": {
+                        "backupFrequency": {
+                            "dayOfWeek": null,
+                            "frequency": "DAILY",
+                            "hourOfDay": 23,
+                            "minuteOfHour": 55
+                        },
+                        "excludeTables": null,
+                        "ftpSettings": {
+                            "backupDirectory": "/root/nsx-mgr-backup",
+                            "filenamePrefix": "fehc-",
+                            "hostNameIPAddress": "itvirccldrep01.utility.pge.com",
+                            "passPhrase": null,
+                            "passiveMode": true,
+                            "password": null,
+                            "port": 22,
+                            "transferProtocol": "SFTP",
+                            "useEPRT": false,
+                            "useEPSV": true,
+                            "userName": "root"
+                        }
+                    },
+                    "certificatemanager-certificates-nsx": {
+                        "certificates": [
+                            {
+                                "ca": false,
+                                "dsaPublicKeyG": null,
+                                "dsaPublicKeyP": null,
+                                "dsaPublicKeyQ": null,
+                                "dsaPublicKeyY": null,
+                                "isCa": false,
+                                "isValid": true,
+                                "issuer": "CN=itcldrcnsxmgt01.utility.pge.com,OU=NSX,O=VMware Inc.,L=Palo Alto,ST=CA,C=US",
+                                "issuerCn": "itcldrcnsxmgt01.utility.pge.com",
+                                "md5Hash": "71:80:18:4d:e7:5b:bd:c9:cd:d2:09:30:43:7c:51:c7",
+                                "notAfter": "1743722270000",
+                                "notBefore": "1428362270000",
+                                "publicKeyAlgo": "RSA",
+                                "publicKeyLength": "2048",
+                                "rsaPublicKeyExponent": "10001",
+                                "rsaPublicKeyModulus": "00 b6 48 48 95 a8 f0 95 74 d4 62 4d 38 db cb bb 2e 4a 0f 4b 07 34 6a 4a 05 f3 69 d5 86 24 a6 fb d2 ff 0c 5b a5 4e 48 a5 8c d4 82 ff 63 02 f1 e1 1e fa 88 66 23 30 51 04 53 8c 11 46 d3 41 ef 31 69 a6 f8 d1 0b fd 80 4e b7 c7 75 59 77 57 44 89 7c 52 8a 94 18 66 6c a0 6e 73 ec 7d 57 48 0b c7 95 a1 7e 5c 25 f5 dc b0 fe 6b ef d7 4c c9 c7 71 9e 99 f7 3e 92 9c ec 36 9a 06 ea 26 b1 35 80 c0 f5 a9 f1 98 b4 06 2d d5 8b 5c 84 93 bc 4e 27 0a 8b f2 f0 3d 8e be e3 b8 5e 18 73 e1 a9 e4 01 b1 59 1c 7b c9 f4 3f b8 62 7f 7b 87 5e 14 55 13 d6 0b 27 ab 75 7b d0 2b 72 31 a2 41 08 29 61 4d f0 35 80 a9 8c 9f 5b 22 bf 86 49 f4 b0 d3 f5 33 97 c2 38 61 45 38 26 ae 40 e9 24 42 83 9d 8f 7e 15 ec 98 b0 52 b1 55 aa a3 8b 19 5e 9d 37 76 0f ae a1 f8 86 2f 8a 6c 36 48 53 0d ff d6 af 72 4b d9 4b",
+                                "serialNumber": "4f7dc36f",
+                                "sha1Hash": "39:07:49:72:bd:fb:af:13:a1:44:31:db:74:bd:24:c3:17:34:1a:d2",
+                                "signature": "7f fa f4 90 08 09 0e 3d 53 bc 08 0b de 1b 92 22 75 06 7b be 44 16 51 ca 78 88 32 c3 a1 eb 0f b1 da f0 da 50 64 08 93 08 6b a7 8a f3 50 b8 20 ef 5b ef ef a9 16 8b 61 ea f0 9a bd cd 34 20 2b ac ea 83 3b 21 0f fa 21 8c cf e2 7d 20 38 f4 da dd be b0 5e 85 7b ac 35 ff 0c 24 d3 57 ed bb 5a 89 c9 32 70 27 e8 8e 4f bd 17 43 5f 44 16 e9 d5 8c 63 0f b8 ee 8b 1f bd 95 db 56 b9 3c a0 ae dd b7 c4 b5 18 83 66 9b 51 db 4d 74 ff bc c9 2d 18 54 5a b2 72 49 d4 37 72 26 c6 b7 a1 19 97 a1 4f c5 3a 8b aa 47 cf 82 f2 eb 80 95 93 7f db 79 d1 6e 95 36 99 63 ff b5 a4 64 9b 2a d4 a6 ee 4c 28 9f eb 21 42 df 29 dd be ee 90 cf da f8 7e 70 32 6f fc 8d 01 4b eb 2f c0 d3 14 0b 8c 83 af b4 be 53 d9 d2 07 d6 a5 bc 12 80 80 31 f1 36 eb eb bb 1c c2 97 24 62 24 fc 71 69 02 d1 e0 9b d4 de a4 5d",
+                                "signatureAlgo": "SHA256WITHRSA",
+                                "subject": "CN=itcldrcnsxmgt01.utility.pge.com,OU=NSX,O=VMware Inc.,L=Palo Alto,ST=CA,C=US",
+                                "subjectCn": "itcldrcnsxmgt01.utility.pge.com",
+                                "valid": true,
+                                "version": "3"
+                            }
+                        ]
+                    },
+                    "components": {
+                        "NSX": {
+                            "componentGroup": "NSXGRP",
+                            "componentId": "NSX",
+                            "description": "NSX Manager",
+                            "enabled": true,
+                            "name": "NSX Manager",
+                            "showTechSupportLogs": true,
+                            "status": "RUNNING",
+                            "usedBy": [],
+                            "uses": [
+                                "VPOSTGRES",
+                                "RABBITMQ"
+                            ],
+                            "versionInfo": {
+                                "buildNumber": "3102213",
+                                "majorVersion": "6",
+                                "minorVersion": "1",
+                                "patchVersion": "5"
+                            }
+                        },
+                        "NSXAPIMGMT": {
+                            "componentGroup": "NSXAPIGRP",
+                            "componentId": "NSXAPIMGMT",
+                            "description": "NSX API Manager",
+                            "enabled": true,
+                            "name": "NSX API Manager Service",
+                            "showTechSupportLogs": true,
+                            "status": "STOPPED",
+                            "usedBy": [],
+                            "uses": null,
+                            "versionInfo": null
+                        },
+                        "RABBITMQ": {
+                            "componentGroup": "COMMON",
+                            "componentId": "RABBITMQ",
+                            "description": "RabbitMQ - Messaging service",
+                            "enabled": true,
+                            "name": "RabbitMQ",
+                            "showTechSupportLogs": false,
+                            "status": "RUNNING",
+                            "usedBy": [
+                                "NSX"
+                            ],
+                            "uses": null,
+                            "versionInfo": null
+                        },
+                        "SSH": {
+                            "componentGroup": "SYSTEM",
+                            "componentId": "SSH",
+                            "description": "Secure Shell",
+                            "enabled": true,
+                            "name": "SSH Service",
+                            "showTechSupportLogs": false,
+                            "status": "RUNNING",
+                            "usedBy": [],
+                            "uses": null,
+                            "versionInfo": null
+                        },
+                        "VPOSTGRES": {
+                            "componentGroup": "COMMON",
+                            "componentId": "VPOSTGRES",
+                            "description": "vPostgres - Database service",
+                            "enabled": true,
+                            "name": "vPostgres",
+                            "showTechSupportLogs": false,
+                            "status": "RUNNING",
+                            "usedBy": [
+                                "NSX"
+                            ],
+                            "uses": null,
+                            "versionInfo": null
+                        }
+                    },
+                    "global-info": {
+                        "currentLoggedInUser": "admin",
+                        "versionInfo": {
+                            "buildNumber": "3102213",
+                            "majorVersion": "6",
+                            "minorVersion": "1",
+                            "patchVersion": "5"
+                        }
+                    },
+                    "notifications": {
+                        "notifications": null
+                    },
+                    "summary-system": {
+                        "applianceName": "vShield Virtual Appliance Management",
+                        "cpuInfoDto": {
+                            "capacity": "2900 MHZ",
+                            "freeCapacity": "2096 MHZ",
+                            "totalNoOfCPUs": 4,
+                            "usedCapacity": "804 MHZ",
+                            "usedPercentage": 28
+                        },
+                        "currentSystemDate": "Tuesday, 13 September 2016 05:39:48 PM UTC",
+                        "domainName": "utility.pge.com",
+                        "hostName": "itcldrcnsxmgt01",
+                        "ipv4Address": "172.24.120.179",
+                        "ipv6Address": null,
+                        "memInfoDto": {
+                            "freeMemory": "105 MB",
+                            "totalMemory": "11996 MB",
+                            "usedMemory": "11890 MB",
+                            "usedPercentage": 99
+                        },
+                        "storageInfoDto": {
+                            "freeStorage": "44G",
+                            "totalStorage": "71G",
+                            "usedPercentage": 38,
+                            "usedStorage": "27G"
+                        },
+                        "uptime": "266 days, 14 hours, 10 minutes",
+                        "versionInfo": {
+                            "buildNumber": "3102213",
+                            "majorVersion": "6",
+                            "minorVersion": "1",
+                            "patchVersion": "5"
+                        }
+                    },
+                    "system-cpuinfo": {
+                        "capacity": "2900 MHZ",
+                        "freeCapacity": "1432 MHZ",
+                        "totalNoOfCPUs": 4,
+                        "usedCapacity": "1468 MHZ",
+                        "usedPercentage": 51
+                    },
+                    "system-locale": {
+                        "country": "US",
+                        "language": "en"
+                    },
+                    "system-meminfo": {
+                        "freeMemory": "120 MB",
+                        "totalMemory": "11996 MB",
+                        "usedMemory": "11875 MB",
+                        "usedPercentage": 99
+                    },
+                    "system-network": {
+                        "dns": {
+                            "domainList": "utility.pge.com net.pge.com conf.pge.com",
+                            "ipv4Dns": [
+                                "172.24.13.44",
+                                "172.24.14.44"
+                            ],
+                            "ipv6Dns": null
+                        },
+                        "domainName": "utility.pge.com",
+                        "hostName": "itcldrcnsxmgt01",
+                        "networkIPv4AddressDto": {
+                            "interfaceInfo": null,
+                            "ipv4Address": "172.24.120.179",
+                            "ipv4Gateway": "172.24.120.161",
+                            "ipv4NetMask": "255.255.255.224"
+                        },
+                        "networkIPv6AddressDto": null,
+                        "proxyDto": null
+                    },
+                    "system-storageinfo": {
+                        "freeStorage": "44G",
+                        "totalStorage": "71G",
+                        "usedPercentage": 38,
+                        "usedStorage": "27G"
+                    },
+                    "system-syslogserver": {
+                        "port": "514",
+                        "protocol": "UDP",
+                        "syslogServer": "10.31.253.30"
+                    },
+                    "system-timesettings": {
+                        "datetime": "09/13/2016 17:39:48",
+                        "ntpServer": [
+                            "172.24.13.44",
+                            "172.24.14.44"
+                        ],
+                        "timezone": "UTC"
+                    }
+                }
+            }
+        },
+        "nsx-2": {
+            "nsx": {
+                "appliance-management": {
+                    "backuprestore-backupsettings": {
+                        "backupFrequency": {
+                            "dayOfWeek": null,
+                            "frequency": "DAILY",
+                            "hourOfDay": 1,
+                            "minuteOfHour": 0
+                        },
+                        "excludeTables": null,
+                        "ftpSettings": {
+                            "backupDirectory": "/root/nsx-mgr-backup",
+                            "filenamePrefix": "fehc-",
+                            "hostNameIPAddress": "itviffvbtrep01.utility.pge.com",
+                            "passPhrase": null,
+                            "passiveMode": true,
+                            "password": null,
+                            "port": 22,
+                            "transferProtocol": "SFTP",
+                            "useEPRT": false,
+                            "useEPSV": true,
+                            "userName": "root"
+                        }
+                    },
+                    "certificatemanager-certificates-nsx": {
+                        "certificates": [
+                            {
+                                "ca": false,
+                                "dsaPublicKeyG": null,
+                                "dsaPublicKeyP": null,
+                                "dsaPublicKeyQ": null,
+                                "dsaPublicKeyY": null,
+                                "isCa": false,
+                                "isValid": true,
+                                "issuer": "CN=itcldfxnsxmgt01.utility.pge.com,OU=NSX,O=VMware Inc.,L=Palo Alto,ST=CA,C=US",
+                                "issuerCn": "itcldfxnsxmgt01.utility.pge.com",
+                                "md5Hash": "5f:e4:e8:a5:ca:80:71:02:f4:e4:c2:39:ef:9e:e9:7d",
+                                "notAfter": "1743724247000",
+                                "notBefore": "1428364247000",
+                                "publicKeyAlgo": "RSA",
+                                "publicKeyLength": "2048",
+                                "rsaPublicKeyExponent": "10001",
+                                "rsaPublicKeyModulus": "00 e0 8f 95 3d 92 3a 22 d3 90 b8 84 bb 37 f4 04 c6 c3 b5 44 59 5a b9 3a 6f 0f 07 b1 11 92 85 03 7c 0b a2 56 11 8a ab c7 ee fb 03 f9 66 22 61 a3 19 c7 c7 fb 5d d8 0a 05 6e 50 5c b6 d7 88 7e f0 31 5e 00 96 c7 b1 d4 7d fa c5 97 88 4f b6 b2 34 83 8f ff ac 0f e2 62 67 87 dd e0 e0 5b b6 5b d5 04 ef e7 82 16 2b bf 0b db cf 8c fe be 41 c3 41 9c 84 b5 2b 9e f8 72 3e 3c 61 93 a4 86 d2 57 3f d9 ef 72 c4 34 9f d2 4c 7d 6b 66 f5 c0 9d 5a 18 e9 6b 0a 3b f4 fa ab 96 9e 2c 09 f1 7f 42 34 8e 37 2b 16 9f eb 9d 6e 56 c0 94 eb 94 83 2a c5 e7 1f 9a 14 11 57 1b 24 e2 6e 18 40 78 bf 7f 6b 8a 41 c6 8c 53 1f d0 e9 8e bb f7 65 70 54 fa e2 2b 2e 56 e9 62 b3 54 05 ac aa 83 57 18 b9 c3 87 0a 80 27 14 b4 f8 e5 66 65 75 dd e8 15 23 c7 03 f8 5c 02 95 0e 6d a6 b7 f4 6b ef ec 42 d2 3a ad 39 9d",
+                                "serialNumber": "11fd492f",
+                                "sha1Hash": "79:1e:1e:7d:2e:52:09:46:4b:53:a2:b0:30:79:9e:f5:87:ae:f4:84",
+                                "signature": "52 25 de 17 38 79 9e a8 71 96 9b a9 b5 5c c2 65 b6 14 ba 3a 9a 56 59 59 25 7d 68 a1 cc fd 0d ae 1f 8f 39 36 ce 12 dc 6e 46 c1 3a d8 1c b8 f1 b7 ec dd 9d 1b 46 c0 be 2e 30 2b ef 2c 21 ca b5 71 0a 62 e4 6e 0e e1 52 57 77 f1 39 07 6b e6 fe 8e 6c cf 93 59 b3 09 04 bd 57 22 bc c0 98 45 2d 1d 65 09 3d 6c d5 1c 7a e9 6e 65 a4 9b 33 65 24 40 3e 12 e3 6e 15 17 a9 a1 94 42 13 79 19 bf 79 c1 8e 05 e8 29 fa a9 cf 80 9c 9f 90 b1 2c e4 be fb 72 ce 9c e8 99 81 7a 83 6d 33 e7 c2 1e 2b 2c ff f2 65 94 c7 29 b6 71 d7 81 23 99 4c 24 c8 94 cd 41 4d 95 5a d7 44 0b 8a 25 87 07 5f fb 43 8a 91 ef 4b 87 1b 3d f8 6a f4 7c a6 40 42 02 19 e5 3c 1f 13 f8 31 25 e0 dd c9 ac cd 13 fd 87 ca 6a 19 18 a6 52 4c fa 5e ec d5 4c ef 04 1f 75 d2 5c 14 b5 1c e5 e3 64 ac 96 0e dd 44 fb 13 d3 e5 ec f5",
+                                "signatureAlgo": "SHA256WITHRSA",
+                                "subject": "CN=itcldfxnsxmgt01.utility.pge.com,OU=NSX,O=VMware Inc.,L=Palo Alto,ST=CA,C=US",
+                                "subjectCn": "itcldfxnsxmgt01.utility.pge.com",
+                                "valid": true,
+                                "version": "3"
+                            }
+                        ]
+                    },
+                    "components": {
+                        "NSX": {
+                            "componentGroup": "NSXGRP",
+                            "componentId": "NSX",
+                            "description": "NSX Manager",
+                            "enabled": true,
+                            "name": "NSX Manager",
+                            "showTechSupportLogs": true,
+                            "status": "RUNNING",
+                            "usedBy": [],
+                            "uses": [
+                                "VPOSTGRES",
+                                "RABBITMQ"
+                            ],
+                            "versionInfo": {
+                                "buildNumber": "3102213",
+                                "majorVersion": "6",
+                                "minorVersion": "1",
+                                "patchVersion": "5"
+                            }
+                        },
+                        "NSXAPIMGMT": {
+                            "componentGroup": "NSXAPIGRP",
+                            "componentId": "NSXAPIMGMT",
+                            "description": "NSX API Manager",
+                            "enabled": true,
+                            "name": "NSX API Manager Service",
+                            "showTechSupportLogs": true,
+                            "status": "STOPPED",
+                            "usedBy": [],
+                            "uses": null,
+                            "versionInfo": null
+                        },
+                        "RABBITMQ": {
+                            "componentGroup": "COMMON",
+                            "componentId": "RABBITMQ",
+                            "description": "RabbitMQ - Messaging service",
+                            "enabled": true,
+                            "name": "RabbitMQ",
+                            "showTechSupportLogs": false,
+                            "status": "RUNNING",
+                            "usedBy": [
+                                "NSX"
+                            ],
+                            "uses": null,
+                            "versionInfo": null
+                        },
+                        "SSH": {
+                            "componentGroup": "SYSTEM",
+                            "componentId": "SSH",
+                            "description": "Secure Shell",
+                            "enabled": true,
+                            "name": "SSH Service",
+                            "showTechSupportLogs": false,
+                            "status": "RUNNING",
+                            "usedBy": [],
+                            "uses": null,
+                            "versionInfo": null
+                        },
+                        "VPOSTGRES": {
+                            "componentGroup": "COMMON",
+                            "componentId": "VPOSTGRES",
+                            "description": "vPostgres - Database service",
+                            "enabled": true,
+                            "name": "vPostgres",
+                            "showTechSupportLogs": false,
+                            "status": "RUNNING",
+                            "usedBy": [
+                                "NSX"
+                            ],
+                            "uses": null,
+                            "versionInfo": null
+                        }
+                    },
+                    "global-info": {
+                        "currentLoggedInUser": "admin",
+                        "versionInfo": {
+                            "buildNumber": "3102213",
+                            "majorVersion": "6",
+                            "minorVersion": "1",
+                            "patchVersion": "5"
+                        }
+                    },
+                    "notifications": {
+                        "notifications": [
+                            {
+                                "id": "SYSTEM_REBOOT_NOTIFICATION",
+                                "notification": "System reboot completed.",
+                                "notificationStatus": "COMPLETED"
+                            }
+                        ]
+                    },
+                    "summary-system": {
+                        "applianceName": "vShield Virtual Appliance Management",
+                        "cpuInfoDto": {
+                            "capacity": "2900 MHZ",
+                            "freeCapacity": "2844 MHZ",
+                            "totalNoOfCPUs": 4,
+                            "usedCapacity": "56 MHZ",
+                            "usedPercentage": 2
+                        },
+                        "currentSystemDate": "Tuesday, 13 September 2016 05:42:41 PM UTC",
+                        "domainName": "utility.pge.com",
+                        "hostName": "itcldfxnsxmgt01",
+                        "ipv4Address": "172.24.120.146",
+                        "ipv6Address": null,
+                        "memInfoDto": {
+                            "freeMemory": "5034 MB",
+                            "totalMemory": "11996 MB",
+                            "usedMemory": "6961 MB",
+                            "usedPercentage": 58
+                        },
+                        "storageInfoDto": {
+                            "freeStorage": "48G",
+                            "totalStorage": "71G",
+                            "usedPercentage": 32,
+                            "usedStorage": "23G"
+                        },
+                        "uptime": "1 day, 21 hours, 22 minutes",
+                        "versionInfo": {
+                            "buildNumber": "3102213",
+                            "majorVersion": "6",
+                            "minorVersion": "1",
+                            "patchVersion": "5"
+                        }
+                    },
+                    "system-cpuinfo": {
+                        "capacity": "2900 MHZ",
+                        "freeCapacity": "2155 MHZ",
+                        "totalNoOfCPUs": 4,
+                        "usedCapacity": "745 MHZ",
+                        "usedPercentage": 26
+                    },
+                    "system-locale": {
+                        "country": "US",
+                        "language": "en"
+                    },
+                    "system-meminfo": {
+                        "freeMemory": "5033 MB",
+                        "totalMemory": "11996 MB",
+                        "usedMemory": "6962 MB",
+                        "usedPercentage": 58
+                    },
+                    "system-network": {
+                        "dns": {
+                            "domainList": "utility.pge.com",
+                            "ipv4Dns": [
+                                "10.1.1.1",
+                                "172.24.13.44"
+                            ],
+                            "ipv6Dns": null
+                        },
+                        "domainName": "utility.pge.com",
+                        "hostName": "itcldfxnsxmgt01",
+                        "networkIPv4AddressDto": {
+                            "interfaceInfo": null,
+                            "ipv4Address": "172.24.120.146",
+                            "ipv4Gateway": "172.24.120.129",
+                            "ipv4NetMask": "255.255.255.224"
+                        },
+                        "networkIPv6AddressDto": null,
+                        "proxyDto": null
+                    },
+                    "system-storageinfo": {
+                        "freeStorage": "48G",
+                        "totalStorage": "71G",
+                        "usedPercentage": 32,
+                        "usedStorage": "23G"
+                    },
+                    "system-syslogserver": {
+                        "port": "514",
+                        "protocol": "UDP",
+                        "syslogServer": "10.31.253.30"
+                    },
+                    "system-timesettings": {
+                        "datetime": "09/13/2016 17:42:41",
+                        "ntpServer": [
+                            "172.24.14.44",
+                            "172.24.13.44"
+                        ],
+                        "timezone": "UTC"
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

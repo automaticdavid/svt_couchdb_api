@@ -1,0 +1,7 @@
+name: My Second SVT Report
+reports:
+  vipr-block:
+    consistency-groups:
+      - name
+      - project
+

@@ -300,6 +300,16 @@ class Utils:
 				# print("DEBUG: GENTYPE: single, all" )
 				# Getting svt_all for single file values
 				# Attach them all at the selector level
+				# Need to clean output from using the whole json
+				try:
+					del value['svt_collect_date']
+					del value['svt_client']
+					del value['svt_source']
+					del value['svt_source_file']
+					del value['_id']
+					del value['_rev']
+				except KeyError:
+					pass
 				res['data'][source][ddoc][selector].update(value)
 
 			elif (action == 'svt_single'

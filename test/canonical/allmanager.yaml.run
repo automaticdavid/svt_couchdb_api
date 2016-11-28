@@ -13,8 +13,6 @@ http://localhost:5984/svtdev/_design/nsx-appliance/_view/manager?startkey=["2016
         "nsx-1": {
             "nsx-appliance": {
                 "manager": {
-                    "_id": "6e814398566d99b3f818bb1cba5ca5cd",
-                    "_rev": "1-b297675b82c298589b68d7fae7dfa3b0",
                     "applianceName": "vShield Virtual Appliance Management",
                     "cpuInfoDto": {
                         "capacity": "2900 MHZ",
@@ -40,10 +38,6 @@ http://localhost:5984/svtdev/_design/nsx-appliance/_view/manager?startkey=["2016
                         "usedPercentage": 38,
                         "usedStorage": "27G"
                     },
-                    "svt_client": "PGE",
-                    "svt_collect_date": "2016-09-13-10-35-57",
-                    "svt_source": "nsx-1",
-                    "svt_source_file": "nsx_appliance-management-summary-system.json",
                     "uptime": "266 days, 14 hours, 10 minutes",
                     "versionInfo": {
                         "buildNumber": "3102213",
@@ -57,8 +51,6 @@ http://localhost:5984/svtdev/_design/nsx-appliance/_view/manager?startkey=["2016
         "nsx-2": {
             "nsx-appliance": {
                 "manager": {
-                    "_id": "6e814398566d99b3f818bb1cba3aeef4",
-                    "_rev": "1-d7bd31cd3da39895350ea66ebc363ec8",
                     "applianceName": "vShield Virtual Appliance Management",
                     "cpuInfoDto": {
                         "capacity": "2900 MHZ",
@@ -84,10 +76,6 @@ http://localhost:5984/svtdev/_design/nsx-appliance/_view/manager?startkey=["2016
                         "usedPercentage": 32,
                         "usedStorage": "23G"
                     },
-                    "svt_client": "PGE",
-                    "svt_collect_date": "2016-09-13-10-35-57",
-                    "svt_source": "nsx-2",
-                    "svt_source_file": "nsx_appliance-management-summary-system.json",
                     "uptime": "1 day, 21 hours, 22 minutes",
                     "versionInfo": {
                         "buildNumber": "3102213",

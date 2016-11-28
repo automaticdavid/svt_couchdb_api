@@ -8,4 +8,185 @@ YAML: test/yaml/vro-plugins.yaml
 Checking for collect existence
 http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
 http://localhost:5984/svtdev/_design/vro/_view/plugins?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
-'{"svt_no_data": "svt_no_data"}'
+{
+    "data": {
+        "vro-1": {
+            "vro": {
+                "plugins": {
+                    "AD": {
+                        "buildNumber": 3151865,
+                        "hasValidation": false,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-ad.dar"
+                    },
+                    "AMQP": {
+                        "buildNumber": 1877837,
+                        "hasValidation": false,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-amqp.dar"
+                    },
+                    "Configurator": {
+                        "buildNumber": 1951762,
+                        "hasValidation": false,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-configurator.dar"
+                    },
+                    "DynamicTypes": {
+                        "buildNumber": 1951696,
+                        "hasValidation": false,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-dynamictypes.dar"
+                    },
+                    "EMC ViPR Plugin": {
+                        "buildNumber": 25,
+                        "hasValidation": true,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/EMC-ViPR-vRO-Plugin-2.3.0.0.25.dar"
+                    },
+                    "Enums": {
+                        "buildNumber": 1630902,
+                        "hasValidation": false,
+                        "infoText": "No installation required",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-enums.dar"
+                    },
+                    "F5Networks": {
+                        "buildNumber": 1,
+                        "hasValidation": true,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/F5_VCO_Plugin_2_0_1_1.dar"
+                    },
+                    "InfobloxIPAM": {
+                        "buildNumber": 285856,
+                        "hasValidation": true,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-ipam.dar"
+                    },
+                    "Library": {
+                        "buildNumber": 1630902,
+                        "hasValidation": false,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-library.dar"
+                    },
+                    "Mail": {
+                        "buildNumber": 1630902,
+                        "hasValidation": true,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-mail.dar"
+                    },
+                    "NSX": {
+                        "buildNumber": 2243107,
+                        "hasValidation": false,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-nsx.dar"
+                    },
+                    "Net": {
+                        "buildNumber": 1630902,
+                        "hasValidation": false,
+                        "infoText": "No installation required",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-jakartacommonsnet.dar"
+                    },
+                    "PowerShell": {
+                        "buildNumber": 2442318,
+                        "hasValidation": false,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-powershell.dar"
+                    },
+                    "Puppet": {
+                        "buildNumber": 2437956,
+                        "hasValidation": false,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-puppet.dar"
+                    },
+                    "REST": {
+                        "buildNumber": 337,
+                        "hasValidation": true,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-rest.dar"
+                    },
+                    "SNMP": {
+                        "buildNumber": 1693879,
+                        "hasValidation": false,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-snmp.dar"
+                    },
+                    "SOAP": {
+                        "buildNumber": 357,
+                        "hasValidation": true,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-soap.dar"
+                    },
+                    "SQL": {
+                        "buildNumber": 1888727,
+                        "hasValidation": false,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-database.dar"
+                    },
+                    "SRM": {
+                        "buildNumber": -1,
+                        "hasValidation": false,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/VMware-srm-vcoplugin-5.8.0-2557742 (1).dar"
+                    },
+                    "SSH": {
+                        "buildNumber": 1840932,
+                        "hasValidation": true,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-ssh.dar"
+                    },
+                    "UCSM": {
+                        "buildNumber": 0,
+                        "hasValidation": true,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/ucsmplugin.dar"
+                    },
+                    "VC": {
+                        "buildNumber": 1875635,
+                        "hasValidation": true,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-vsphere.dar"
+                    },
+                    "VCO": {
+                        "buildNumber": 1891984,
+                        "hasValidation": false,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-multi-node.dar"
+                    },
+                    "WebOperator": {
+                        "buildNumber": 534,
+                        "hasValidation": false,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-weboperator.dar"
+                    },
+                    "Workflow documentation": {
+                        "buildNumber": 1630902,
+                        "hasValidation": false,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-wfdocs.dar"
+                    },
+                    "XML": {
+                        "buildNumber": 1630902,
+                        "hasValidation": false,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-xml.dar"
+                    },
+                    "vCAC": {
+                        "buildNumber": 2040915,
+                        "hasValidation": false,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-vcac.dar"
+                    },
+                    "vCACCAFE": {
+                        "buildNumber": 2073620,
+                        "hasValidation": false,
+                        "infoText": "Installation OK",
+                        "url": "/var/lib/vco/app-server/temp/dars/o11nplugin-vcaccafe.dar"
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

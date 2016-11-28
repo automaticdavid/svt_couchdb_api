@@ -1,0 +1,14 @@
+name: My Second SVT Report
+reports:
+  vipr-vdc:
+    storage-systems:
+      - average_port_metrics
+      - compatibility_status 
+      - connected_systems
+      - creation_time
+      - export_masks
+      - firmware_version
+      - name
+      - model
+
+
