@@ -6,5 +6,6 @@ reports:
       - backuprestore-backupsettings
       - system-cpuinfo
       - system-timesettings
-
+    securitygroups:
+      - vsmUuid
 

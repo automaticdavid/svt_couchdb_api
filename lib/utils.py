@@ -195,14 +195,14 @@ class Utils:
 					pass
 				for k in value.keys():
 					if k != 'svt_marked':
-						res['data'][source][ddoc][name][k] = value[k]
+						res['data'][source][ddoc][selector][name][k] = value[k]
 
 			elif (action == 'svt_multi'
 				and marker == 'svt_all'):
 				# multi and all for non dict value
 				# Multiple file values are keyed by name
 				# print("DEBUG: GENTYPE: multi, all, non dict" )
-				res['data'][source][ddoc][name] = value
+				res['data'][source][ddoc][selector][name] = value
 			
 			elif (action == 'svt_multi'): 
 				# multi and marker for non dict value
@@ -210,11 +210,11 @@ class Utils:
 				# Need to filter svt_no_data from other files
 				# Sanity check for duplicate markers across files
 				# print("DEBUG: GENTYPE: multi, marker, non dict" )
-				leaf = res['data'][source][ddoc][name]
+				leaf = res['data'][source][ddoc][selector][name]
 				if marker not in leaf:
-					res['data'][source][ddoc][name][marker] = value
+					res['data'][source][ddoc][selector][name][marker] = value
 				elif value != 'svt_no_data' and leaf[marker] == 'svt_no_data':
-					res['data'][source][ddoc][name][marker] = value
+					res['data'][source][ddoc][selector][name][marker] = value
 				elif (leaf[marker] != 'svt_no_data'
 					and value != 'svt_no_data'
 					and value != leaf[marker]):

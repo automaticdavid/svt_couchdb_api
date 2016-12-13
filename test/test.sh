@@ -6,6 +6,10 @@ done
 for f in test/run/*.run
 do
 echo "diff for $f"
-diff $f test/canonical/$(basename $f)
+diff $f test/canonical/$(basename $f) 2>&1 > /dev/null
+if [ $? != 0 ] 
+then
+   echo "ERROR in $f"
+fi
 done 
 # rm test/run/*.run

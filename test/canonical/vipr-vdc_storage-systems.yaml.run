@@ -12,25 +12,27 @@ http://localhost:5984/svtdev/_design/vipr-vdc/_view/storage-systems?startkey=["2
     "data": {
         "vipr-1": {
             "vipr-vdc": {
-                "10d14f9a-cc42-4286-becc-9a396bafee41.json": {
-                    "average_port_metrics": 3.9558595681043704,
-                    "compatibility_status": "COMPATIBLE",
-                    "connected_systems": [],
-                    "creation_time": 1428533671249,
-                    "export_masks": [],
-                    "firmware_version": "05.33.009.5.155",
-                    "model": "Rack Mounted VNX8000",
-                    "name": "CLARIION+APM00144937724"
-                },
-                "94eff137-6f58-45d3-b6f9-cd12497edbb2.json": {
-                    "average_port_metrics": 4.8770837400713125,
-                    "compatibility_status": "COMPATIBLE",
-                    "connected_systems": [],
-                    "creation_time": 1429028916933,
-                    "export_masks": [],
-                    "firmware_version": "05.33.009.5.155",
-                    "model": "Rack Mounted VNX8000",
-                    "name": "CLARIION+APM00144937726"
+                "storage-systems": {
+                    "10d14f9a-cc42-4286-becc-9a396bafee41.json": {
+                        "average_port_metrics": 3.9558595681043704,
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_systems": [],
+                        "creation_time": 1428533671249,
+                        "export_masks": [],
+                        "firmware_version": "05.33.009.5.155",
+                        "model": "Rack Mounted VNX8000",
+                        "name": "CLARIION+APM00144937724"
+                    },
+                    "94eff137-6f58-45d3-b6f9-cd12497edbb2.json": {
+                        "average_port_metrics": 4.8770837400713125,
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_systems": [],
+                        "creation_time": 1429028916933,
+                        "export_masks": [],
+                        "firmware_version": "05.33.009.5.155",
+                        "model": "Rack Mounted VNX8000",
+                        "name": "CLARIION+APM00144937726"
+                    }
                 }
             }
         }
