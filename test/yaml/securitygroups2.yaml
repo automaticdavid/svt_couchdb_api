@@ -4,4 +4,5 @@ reports:
     securitygroups:
         - description
         - members
-
+        - name
+        - ipNodes

@@ -1,0 +1,6 @@
+name: My Second SVT Report
+reports:
+  vipr-compute:
+    clusters:
+      - svt_all
+

@@ -21,12 +21,12 @@ logger = logging.getLogger(__name__)
 class CouchResponse:
 
 	def __init__(self, config):
-		self.httpapi = HTTPApi(config.host, config.port, config.username, config.password, config.debug, config.verify)
+		self.httpapi = HTTPApi(config.host, config.protocol, config.port, config.username, config.password, config.debug, config.db, config.verify)
 		
-	def get(self, uri):
+	def get(self, uri, cookie):
 		logger.debug('URI : %s', uri)
 		try:
-			response = self.httpapi.get(uri)
+			response = self.httpapi.get(uri,cookie)
 			return response
 		except Errors.svtError as e:
 			# print("Error: ", e.code, e.msg, e.call)
@@ -53,10 +53,21 @@ class CouchResponse:
 	def post(self, uri, params = None, data = None):
 		logger.debug('URI : %s', uri)
 		try:
-			response = self.httpapi.post(uri, params, data)
+			response = self.httpapi.post(uri, params, data, None)
 			return response
 		except Errors.svtError as e:
 			# print("Error: ", e.code, e.msg, e.call)
 			raise
 
-
+	def getCookie(self):
+		try:
+			uri = self.httpapi.protocol + '://' + self.httpapi.username + ':' 
+			uri += self.httpapi.password + '@' + self.httpapi.host + ':' + self.httpapi.port
+			uri  += '/_session'
+			data = {'name':self.httpapi.username, 'password':self.httpapi.password}
+			logger.debug('URI : %s', uri)
+			response = self.httpapi.post(uri, None, data, 'cookie')
+			return(response)
+		except Errors.svtError as e:
+			# print("Error: ", e.code, e.msg, e.call)
+			raise

@@ -21,17 +21,18 @@ logger = logging.getLogger(__name__)
 class Couch:
 
 	def __init__(self, cfg):
-		self.couch = CouchResponse(cfg)
 		self.db = cfg.db
+		self.couch = CouchResponse(cfg)
+		self.cookie = self.couch.getCookie()
 
 	# Test get
 	def isAlive(self):
 		try:
-			j = self.couch.get('/')
+			j = self.couch.get('/', self.cookie)
 			return(j['couchdb'])
 		except:
 			code = 99
-			msg = "Can't GET CouchDB. Check svt_couchdb config file" 
+			msg = "Can't GET CouchDB. Check svt_couchdb config file or Authorization" 
 			call = ""
 			debug = "" 
 			raise Errors.genError(code, msg, call, debug)
@@ -39,7 +40,7 @@ class Couch:
 	# Test if DB is defined
 	def hasDB(self):
 		try:
-			j = self.couch.get('/' + self.db)
+			j = self.couch.get('/' + self.db, self.cookie)
 			if j['db_name']:
 				return True
 			elif j['error']:
@@ -58,7 +59,7 @@ class Couch:
 	def putDoc(self, filename):
 		db = self.db
 		# get new uuid
-		j = self.couch.get('/_uuids')
+		j = self.couch.get('/_uuids', self.cookie)
 		uuid = j['uuids'][0]
 		url = '/' + db +'/' + uuid
 		# open file to load json
@@ -73,7 +74,7 @@ class Couch:
 	def putString(self, s):
 		db = self.db
 		# get new uuid
-		j = self.couch.get('/_uuids')
+		j = self.couch.get('/_uuids', self.cookie)
 		uuid = j['uuids'][0]
 		url = '/' + db +'/' + uuid
 		# put document
@@ -92,7 +93,7 @@ class Couch:
 	def delAllDocs(self):
 		db = self.db
 		url = '/' + db + '/_all_docs?endkey="_design"'
-		j = self.couch.get(url)
+		j = self.couch.get(url, self.cookie)
 		for doc in j['rows']:
 			id = doc['id']
 			rev = doc['value']['rev']
@@ -110,7 +111,7 @@ class Couch:
 			url += '?startkey=' + json.dumps(startkey)
 		if endkey:
 			url += '&endkey=' + json.dumps(endkey)
-		j = self.couch.get(url)
+		j = self.couch.get(url, self.cookie)
 		return(json.dumps(j))
 
 	# Call an existing view with Reduce
@@ -124,14 +125,14 @@ class Couch:
 			url += '&endkey=' + json.dumps(endkey)
 		if group:
 			url += '&group_level=' + group
-		j = self.couch.get(url)
+		j = self.couch.get(url, self.cookie)
 		return(json.dumps(j))
 
 	# Call an existing design doc
 	def getDesignDoc(self, ddoc):
 		db = self.db
 		url = '/' + db + '/_design/' + ddoc 
-		j = self.couch.get(url)
+		j = self.couch.get(url, self.cookie)
 		return(json.dumps(j))
 
 	# Call an existing design doc

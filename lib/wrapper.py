@@ -36,7 +36,7 @@ class Wrapper:
 
 		# Test Welcome
 		j = couch.isAlive()
-		print(j)
+		print('Is Alive ? ' + j)
 
 		# Check if SVT DB exists
 		if not couch.hasDB():
@@ -111,7 +111,7 @@ class Wrapper:
 		if not couch.hasDB():
 			code = 99
 			msg = "Missing or wrong SVT database: " + cfg.db
-			call = cfg.url
+			call = 'hasDB' 
 			debug = cfg
 			raise Errors.genError(code, msg, call, debug)
 		

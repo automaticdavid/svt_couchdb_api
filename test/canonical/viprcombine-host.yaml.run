@@ -1,0 +1,472 @@
+http://localhost:5984/
+Welcome
+http://localhost:5984/svtdev
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: test/yaml/viprcombine-host.yaml
+Checking for collect existence
+http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
+http://localhost:5984/svtdev/_design/vipr-block/_view/clusters-combine?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+{
+    "data": {
+        "vipr-1": {
+            "vipr-block": {
+                "clusters-combine": {
+                    "0a1cabae-3ff5-4165-a2de-bbe34b6c5a07": {
+                        "host": [
+                            {
+                                "id": "urn:storageos:Host:6e6fff18-9089-4a1f-b192-ec58b80b7fb5:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:6e6fff18-9089-4a1f-b192-ec58b80b7fb5:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxtenesx04.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:9645b804-3e49-4652-b995-1c2a978d490e:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:9645b804-3e49-4652-b995-1c2a978d490e:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxtenesx05.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:e2f470f4-79c1-48d4-85c8-027a35750a65:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:e2f470f4-79c1-48d4-85c8-027a35750a65:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxtenesx03.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:934f00d5-3e7d-4dd0-823d-4c5ce0a7471f:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:934f00d5-3e7d-4dd0-823d-4c5ce0a7471f:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxtenesx12.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:32af0f76-3a7f-44ea-9d46-8b6c60f0e6b2:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:32af0f76-3a7f-44ea-9d46-8b6c60f0e6b2:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxtenesx11.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:91af3d90-f0f4-48eb-8079-8e6d0e9f8342:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:91af3d90-f0f4-48eb-8079-8e6d0e9f8342:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxtenesx10.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:348ff699-171c-45a7-b0c6-4f0876cd1116:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:348ff699-171c-45a7-b0c6-4f0876cd1116:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxtenesx09.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:67e7400a-18ff-48ea-a34f-e61d3764bf63:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:67e7400a-18ff-48ea-a34f-e61d3764bf63:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxtenesx06.utility.pge.com"
+                            }
+                        ]
+                    },
+                    "1abc1813-46c9-46e6-a20a-ec2143ce9fcb": {
+                        "host": [
+                            {
+                                "id": "urn:storageos:Host:c83c7054-aed1-4fda-af38-f63fab28a62d:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:c83c7054-aed1-4fda-af38-f63fab28a62d:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxautesx02.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:3f1839f9-8bb6-4066-bbb3-12d61a9552d2:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:3f1839f9-8bb6-4066-bbb3-12d61a9552d2:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxautesx01.utility.pge.com"
+                            }
+                        ]
+                    },
+                    "2147637c-2122-4655-b696-c4775d369a89": {
+                        "host": [
+                            {
+                                "id": "urn:storageos:Host:158dde70-aa3b-4f5a-97af-9a094be251e7:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:158dde70-aa3b-4f5a-97af-9a094be251e7:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxtenesx07.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:ddca4a93-1fb9-4a9b-8eba-bd1e3c7023a9:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:ddca4a93-1fb9-4a9b-8eba-bd1e3c7023a9:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxtenesx02.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:a0777ba3-8bfc-4432-a9f5-fa5ee7745584:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:a0777ba3-8bfc-4432-a9f5-fa5ee7745584:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxtenesx01.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:b2c55fbc-2276-4a71-a20c-7464e6b1834d:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:b2c55fbc-2276-4a71-a20c-7464e6b1834d:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxtenesx08.utility.pge.com"
+                            }
+                        ]
+                    },
+                    "3024a68a-f2d3-4b28-abb8-b803e6feab22": {
+                        "host": [
+                            {
+                                "id": "urn:storageos:Host:e7b7e9e1-f33d-4c28-b1d8-cfe5bdeaa40f:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:e7b7e9e1-f33d-4c28-b1d8-cfe5bdeaa40f:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvircneiesx04.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:35936ef9-eab1-456a-9d70-2e3f949f9c8d:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:35936ef9-eab1-456a-9d70-2e3f949f9c8d:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvircneiesx03.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:38fda2b2-8b81-4643-a79f-66bd7c02c2ee:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:38fda2b2-8b81-4643-a79f-66bd7c02c2ee:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvircneiesx02.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:bfc04287-f047-4d06-bad4-a6a94244fa62:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:bfc04287-f047-4d06-bad4-a6a94244fa62:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvircneiesx01.utility.pge.com"
+                            }
+                        ]
+                    },
+                    "433a214a-a45f-45da-96d4-781093fdbcbf": {
+                        "host": [
+                            {
+                                "id": "urn:storageos:Host:33ae0466-bc56-4310-8629-1b337d28016d:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:33ae0466-bc56-4310-8629-1b337d28016d:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvircautesx02.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:de1e6c1c-65f0-4557-a1e0-feb8a312006d:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:de1e6c1c-65f0-4557-a1e0-feb8a312006d:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvircautesx01.utility.pge.com"
+                            }
+                        ]
+                    },
+                    "57d9cd3d-9f5b-437c-bd4d-7a66e5aceb7c": {
+                        "host": [
+                            {
+                                "id": "urn:storageos:Host:4edcfc68-716d-4499-b558-6771989382ad:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:4edcfc68-716d-4499-b558-6771989382ad:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxlabesx03.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:5eaf1f43-0249-4a21-8cb3-b30c057aa436:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:5eaf1f43-0249-4a21-8cb3-b30c057aa436:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxlabesx01.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:9a88ef5b-787b-4ef5-88ca-1e5337d73b81:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:9a88ef5b-787b-4ef5-88ca-1e5337d73b81:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxlabesx02.utility.pge.com"
+                            }
+                        ]
+                    },
+                    "73af04d6-ffad-4def-808e-98358f0b50ce": {
+                        "host": [
+                            {
+                                "id": "urn:storageos:Host:fb42b32c-a71e-4a1d-8cc2-751ca9c3251b:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:fb42b32c-a71e-4a1d-8cc2-751ca9c3251b:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvirctenesx05.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:b399ee6e-2b5b-4e4f-91c7-c8f5aded80b8:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:b399ee6e-2b5b-4e4f-91c7-c8f5aded80b8:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvirctenesx03.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:7a1138cb-e030-41bc-8280-72bb8ad299bc:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:7a1138cb-e030-41bc-8280-72bb8ad299bc:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvirctenesx12.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:0a840a09-eb37-4dee-a907-2b8beaf3260f:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:0a840a09-eb37-4dee-a907-2b8beaf3260f:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvirctenesx10.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:1d950440-cbc6-481d-bcba-075a64033f5a:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:1d950440-cbc6-481d-bcba-075a64033f5a:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvirctenesx04.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:f167f64a-0075-4f71-83fe-0ced347035f6:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:f167f64a-0075-4f71-83fe-0ced347035f6:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvirctenesx06.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:cf7c2b62-f00c-48e3-acb5-ce56cdf22336:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:cf7c2b62-f00c-48e3-acb5-ce56cdf22336:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvirctenesx11.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:53ac7a7b-9dad-4dab-8206-d108418b3ef8:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:53ac7a7b-9dad-4dab-8206-d108418b3ef8:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvirctenesx09.utility.pge.com"
+                            }
+                        ]
+                    },
+                    "9e64bb04-3d6a-4895-a4b4-b2658647afba": {
+                        "host": [
+                            {
+                                "id": "urn:storageos:Host:4e84082e-9da8-4351-8c28-981d99468f7b:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:4e84082e-9da8-4351-8c28-981d99468f7b:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvircvdiesx04.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:3c735413-28fe-42dc-94a0-b963f255b7ef:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:3c735413-28fe-42dc-94a0-b963f255b7ef:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvircvdiesx02.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:0f73f9ae-ab00-40c7-b75c-35931d917bff:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:0f73f9ae-ab00-40c7-b75c-35931d917bff:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvircvdiesx01.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:3deeb994-d885-41a4-9b19-2abf81ee0b92:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:3deeb994-d885-41a4-9b19-2abf81ee0b92:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvircvdiesx03.utility.pge.com"
+                            }
+                        ]
+                    },
+                    "a4fd48dd-a44a-4b2b-a06f-330f93320077": {
+                        "host": [
+                            {
+                                "id": "urn:storageos:Host:ec1457ca-89e8-486b-8b6f-ed790d2953b7:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:ec1457ca-89e8-486b-8b6f-ed790d2953b7:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvirctenesx08.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:2431bd7c-16fb-498a-84ed-41d0baff38a2:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:2431bd7c-16fb-498a-84ed-41d0baff38a2:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvirctenesx07.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:98de0467-b11c-411b-b573-b6819b37ddee:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:98de0467-b11c-411b-b573-b6819b37ddee:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvirctenesx01.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:61ef8d08-0e02-4827-9262-0e91d0928c19:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:61ef8d08-0e02-4827-9262-0e91d0928c19:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvirctenesx02.utility.pge.com"
+                            }
+                        ]
+                    },
+                    "b0ecb3ed-1103-4b54-bb49-3cbcd6c16142": {
+                        "host": [
+                            {
+                                "id": "urn:storageos:Host:1452b441-b6a2-4475-b6e0-52011bda34f0:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:1452b441-b6a2-4475-b6e0-52011bda34f0:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxvdiesx02.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:148fa4f7-626e-4882-a9e0-935310aaa2f5:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:148fa4f7-626e-4882-a9e0-935310aaa2f5:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxvdiesx04.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:94bb11b9-17f3-4a79-b84a-7bc5cf06fe7e:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:94bb11b9-17f3-4a79-b84a-7bc5cf06fe7e:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxvdiesx01.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:50e89cac-433b-4ba2-991e-60dd9c1199b6:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:50e89cac-433b-4ba2-991e-60dd9c1199b6:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxvdiesx03.utility.pge.com"
+                            }
+                        ]
+                    },
+                    "b48c38bc-bca9-40a5-8204-efe377c34825": {
+                        "host": [
+                            {
+                                "id": "urn:storageos:Host:f7cd383d-d5fb-4a50-bdf6-1b167efc3c44:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:f7cd383d-d5fb-4a50-bdf6-1b167efc3c44:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvirclabesx02.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:02883309-924b-4ec4-8e02-7fb4db529e53:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:02883309-924b-4ec4-8e02-7fb4db529e53:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvirclabesx03.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:dd3c7f64-cc5a-45d7-9c2a-18f2e077ad3e:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:dd3c7f64-cc5a-45d7-9c2a-18f2e077ad3e:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvirclabesx01.utility.pge.com"
+                            }
+                        ]
+                    },
+                    "fd24a6c8-8c94-43b5-81e8-fa21c2ff7210": {
+                        "host": [
+                            {
+                                "id": "urn:storageos:Host:7d2c718f-7cd2-435f-9fea-1e5c82d23cd2:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:7d2c718f-7cd2-435f-9fea-1e5c82d23cd2:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxneiesx03.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:4d0efbec-0ad4-4dd8-af23-abde7081ac31:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:4d0efbec-0ad4-4dd8-af23-abde7081ac31:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxneiesx01.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:d901d6db-ca57-4a37-ab5e-62ddde97365c:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:d901d6db-ca57-4a37-ab5e-62ddde97365c:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxneiesx02.utility.pge.com"
+                            },
+                            {
+                                "id": "urn:storageos:Host:0982cf17-548a-40f8-b93a-4483e789a8e5:vdc1",
+                                "link": {
+                                    "href": "/compute/hosts/urn:storageos:Host:0982cf17-548a-40f8-b93a-4483e789a8e5:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "itvifxneiesx04.utility.pge.com"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

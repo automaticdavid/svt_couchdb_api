@@ -36,3 +36,4 @@ old/
 
 # Envs
 cfg/config.cfg
+*.cfg

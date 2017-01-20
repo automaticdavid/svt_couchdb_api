@@ -13,8 +13,9 @@ import configparser
 
 class Configuration:
 
-	def __init__(self, host, port, username, password, debug, db, verify):
+	def __init__(self, host, protocol, port, username, password, debug, db, verify):
 		self.host = host
+		self.protocol = protocol
 		self.port = port
 		self.username = username
 		self.password = password
@@ -32,6 +33,7 @@ class Readconfig:
 				config.readfp(configfile)
 
 			host = None
+			protocol = None
 			port = None
 			username = None
 			password = None
@@ -44,6 +46,7 @@ class Readconfig:
 				raise 
 			else:
 				host = config.get(envname,'host')
+				protocol = config.get(envname,'protocol')
 				port = config.get(envname,'port')
 				username = config.get(envname,'username')
 				password = config.get(envname,'password')
@@ -57,7 +60,7 @@ class Readconfig:
 		except:
 			raise
 				
-		return Configuration(host, port, username, password, debug, db, verify)
+		return Configuration(host, protocol, port, username, password, debug, db, verify)
 		
 		
 		
