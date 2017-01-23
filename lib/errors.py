@@ -31,3 +31,10 @@ class Errors(Exception):
 			self.call = call
 			self.debug = debug
 		
+
+	class reqError(Exception):
+
+		def __init__(self, url, debug):
+
+			self.call = url
+			self.debug = debug

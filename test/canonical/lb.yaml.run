@@ -1,13 +1,9 @@
-http://localhost:5984/
 Welcome
-http://localhost:5984/svtdev
 Action: Generate
 Collect: 2016-09-13-10-35-57
 Client: PGE
 YAML: test/yaml/lb.yaml
 Checking for collect existence
-http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
-http://localhost:5984/svtdev/_design/nsx-edge/_view/loadbalancer?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
 {
     "data": {
         "nsx-1": {

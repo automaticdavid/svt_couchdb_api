@@ -75,6 +75,11 @@ if __name__ == '__main__':
 	except Errors.genError as e:
 		print(e.msg)
 		sys.exit(e.code)
+	except Errors.svtError as e:
+		print(e.code)
+		print(e.msg)
+		print(e.call)
+		sys.exit(e.code)
 	except:
 		print "Unexpected error:", sys.exc_info()[0]
 		raise

@@ -32,28 +32,28 @@ class CouchResponse:
 			# print("Error: ", e.code, e.msg, e.call)
 			raise
 
-	def put(self, uri, params = None, data = None):
+	def put(self, uri, cookie, params = None, data = None):
 		logger.debug('URI : %s', uri)
 		try:
-			response = self.httpapi.put(uri, params, data)
+			response = self.httpapi.put(uri, cookie, params, data)
 			return response
 		except Errors.svtError as e:
 			# print("Error: ", e.code, e.msg, e.call)
 			raise
 	
-	def delete(self, uri, params = None, data = None):
+	def delete(self, uri, cookie, params = None, data = None):
 		logger.debug('URI : %s', uri)
 		try:
-			response = self.httpapi.delete(uri, params, data)
+			response = self.httpapi.delete(uri, cookie, params, data)
 			return response
 		except Errors.svtError as e:
 			# print("Error: ", e.code, e.msg, e.call)
 			raise
 
-	def post(self, uri, params = None, data = None):
+	def post(self, uri, cookie, params = None, data = None):
 		logger.debug('URI : %s', uri)
 		try:
-			response = self.httpapi.post(uri, params, data, None)
+			response = self.httpapi.post(uri, cookie, params, data)
 			return response
 		except Errors.svtError as e:
 			# print("Error: ", e.code, e.msg, e.call)
@@ -61,12 +61,10 @@ class CouchResponse:
 
 	def getCookie(self):
 		try:
-			uri = self.httpapi.protocol + '://' + self.httpapi.username + ':' 
-			uri += self.httpapi.password + '@' + self.httpapi.host + ':' + self.httpapi.port
-			uri  += '/_session'
+			uri  = '/_session'
 			data = {'name':self.httpapi.username, 'password':self.httpapi.password}
 			logger.debug('URI : %s', uri)
-			response = self.httpapi.post(uri, None, data, 'cookie')
+			response = self.httpapi.post(uri, 'getCookie', None, data)
 			return(response)
 		except Errors.svtError as e:
 			# print("Error: ", e.code, e.msg, e.call)

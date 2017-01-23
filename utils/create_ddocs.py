@@ -19,7 +19,7 @@ from lib.couch import Couch
 from lib.errors import Errors
 
 # Globals
-SETTINGS_FILE_NAME = '../cfg/config.cfg' 
+SETTINGS_FILE_NAME = '../cfg/admin.cfg' 
 DDOCS_DIR = '../ddocs/' 
 OS_PATH =  os.path.dirname(os.path.realpath(__file__))                                           
 settings = OS_PATH + '/' + SETTINGS_FILE_NAME
@@ -91,10 +91,22 @@ for f in sorted(os.listdir(ddocsdir)):
 				}
 				data = json.dumps(schema)
 				# Put the ddoc
-				couch.putDesignDocString(ddoc, data)
-				print("Create DDOC: " + ddoc + ", action: " + action + ", view: " + view )
-				didsomething = True
-
+				try:
+					couch.putDesignDocString(ddoc, data)
+					print("Create DDOC: " + ddoc + ", action: " + action + ", view: " + view )
+					didsomething = True
+				except Errors.svtError as e:
+					print("Code: " + str(e.code))
+					print("Message: " + e.msg)
+					print("Call: " + e.call)
+					sys.exit(e.code)
+	
+			else:
+				print("Code: " + str(e.code))
+				print("Message: " + e.msg)
+				print("Call: " + e.call)
+				sys.exit(e.code)
+	
 		except Exception:
 			raise
 

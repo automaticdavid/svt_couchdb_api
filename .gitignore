@@ -36,4 +36,6 @@ old/
 
 # Envs
 cfg/config.cfg
+cfg/admin.cfg
 *.cfg
+utils/rebuilder.sh

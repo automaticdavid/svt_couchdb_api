@@ -52,7 +52,7 @@ class Couch:
 
 	# Create client DB
 	def putDB(self, dbname):
-		r = self.couch.put('/' + dbname)
+		r = self.couch.put('/' + dbname, self.cookie)
 		return(r)
 
 	# Put JSON file 
@@ -67,7 +67,7 @@ class Couch:
 		j_file = json.load(handle)
 		data = json.dumps(j_file)
 		# put document
-		r = self.couch.put(url, None, data)
+		r = self.couch.put(url, self.cookie, None, data)
 		return(r)
 	
 	# Put JSON string 
@@ -78,7 +78,7 @@ class Couch:
 		uuid = j['uuids'][0]
 		url = '/' + db +'/' + uuid
 		# put document
-		r = self.couch.put(url, None, s)
+		r = self.couch.put(url, self.cookie, None, s)
 		return(r)
 
 	# Bulk put JSON file
@@ -86,7 +86,7 @@ class Couch:
 		db = self.db
 		url = '/' + db + '/_bulk_docs'
 		# put documents
-		r = self.couch.post(url, None, j)
+		r = self.couch.post(url, self.cookie, None, j)
 		return(r)
 
 	# Delete all docs except _design
@@ -100,7 +100,7 @@ class Couch:
 			print(id, rev)
 			url = '/' + db + '/'+ id
 			params = {'rev' : rev } 
-			r = self.couch.delete(url, params)
+			r = self.couch.delete(url, self.cookie, params, None)
 
 	# Call an existing view
 	def getView(self, ddoc, view = '', startkey = None, endkey = None):
@@ -139,7 +139,7 @@ class Couch:
 	def putDesignDocString(self, ddoc, data):
 		db = self.db
 		url = '/' + db + '/_design/' + ddoc 
-		j = self.couch.put(url, None, data)
+		j = self.couch.put(url, self.cookie, None, data)
 		return(json.dumps(j))
 
 

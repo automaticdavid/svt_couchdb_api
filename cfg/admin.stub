@@ -1,0 +1,19 @@
+#####################################################
+# Configuration file for                            #
+# Sample config for a Linux server                  #
+# All entries are mandatory                         #
+#####################################################
+
+[COUCHDB]
+host = localhost
+protocol = http
+port = 5984
+username = CDB_ADMIN
+password = PASSWORD
+path = ~/
+logdir = /tmp
+tempdir = /tmp
+timeout = 600
+debug = True
+db = svtdev
+verify = False

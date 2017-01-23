@@ -8,7 +8,7 @@
 host = localhost
 protocol = http
 port = 5984
-username = CDBADMIN
+username = SVT_DB_ADMIN
 password = PASSWORD
 path = ~/
 logdir = /tmp

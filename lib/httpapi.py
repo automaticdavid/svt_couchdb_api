@@ -42,68 +42,53 @@ class HTTPApi:
 				return r.json()
 			else:
 				raise Errors.svtError(r, url)
-		except requests.exceptions.Timeout as e:
-			if self.debug == False:
-				sys.exit(1)
-		except requests.exceptions.TooManyRedirects as e:
-			if self.debug == False:
-				sys.exit(1)
 		except requests.exceptions.RequestException as e:
-			if self.debug == False:
-				sys.exit(1)
-			
-	def put(self, uri, params = None, data = None):
-		try:
-			headers = {'Content-type':'text/json', 'Accept':'application/json'} 
-			url = self.protocol + '://' + self.host + ':' + self.port + uri
-			r = requests.put(url, headers = headers, params = params, data = data, verify = self.verify)
-			if r.status_code < 400:
-				return r.json()
-			else:
-				raise Errors.svtError(r, url)
-		except requests.exceptions.Timeout as e:
-			if self.debug == False:
-				sys.exit(1)
-		except requests.exceptions.TooManyRedirects as e:
-			if self.debug == False:
-				sys.exit(1)
-		except requests.exceptions.RequestException as e:
-			if self.debug == False:
-				sys.exit(1)
-		
-	def delete(self, uri, params = None, data = None):
-		try:
-			headers = {'Content-type':'text/json', 'Accept':'application/json'} 
-			url = self.protocol + '://' + self.host + ':' + self.port + uri
-			r = requests.delete(url, headers = headers, params = params, data = data, verify = self.verify)
-			if r.status_code < 400:
-				return r.json()
-			else:
-				raise Errors.svtError(r, url)
-		except requests.exceptions.Timeout as e:
-			if self.debug == False:
-				sys.exit(1)
-		except requests.exceptions.TooManyRedirects as e:
-			if self.debug == False:
-				sys.exit(1)
-		except requests.exceptions.RequestException as e:
-			if self.debug == False:
-				sys.exit(1)
+			raise Errors.reqErrors(url, e)
 
-	def post(self, uri, params = None, data = None, header = None ) :
+	def put(self, uri, cookie, params = None, data = None):
 		try:
-			if header == "cookie":
-				headers = {'Content-type':'application/x-www-form-urlencoded'}
+			headers = {'Accept':'application/json',\
+				'X-CouchDB-WWW-Authenticate': 'Cookie', 'Content-Type': 'application/x-www-form-urlencoded'}
+			url = self.protocol + '://' + self.host + ':' + self.port + uri
+			r = requests.put(url, headers = headers, cookies = cookie, params = params, data = data, verify = self.verify)
+			if r.status_code < 400:
+				return r.json()
 			else:
-				headers = {'Content-type':'application/json', 'Accept':'application/json'}
-			r = requests.post(uri, headers = headers, params = params, data = data, verify = self.verify)
-			if r.status_code < 400 and header == "cookie":
+				raise Errors.svtError(r, url)
+		except requests.exceptions.RequestException as e:
+			raise Errors.reqErrors(url, e)
+	
+	def delete(self, uri, cookie, params = None, data = None):
+		try:
+			headers = {'Accept':'application/json',\
+				'X-CouchDB-WWW-Authenticate': 'Cookie', 'Content-Type': 'application/x-www-form-urlencoded'}
+			url = self.protocol + '://' + self.host + ':' + self.port + uri
+			r = requests.delete(url, headers = headers, cookies = cookie, params = params, data = data, verify = self.verify)
+			if r.status_code < 400:
+				return r.json()
+			else:
+				raise Errors.svtError(r, url)
+		except requests.exceptions.RequestException as e:
+			raise Errors.reqErrors(url, e)
+
+	def post(self, uri, cookie = None, params = None, data = None) :
+		try:
+			if cookie == "getCookie":
+				url = self.protocol + '://' + self.username + ':' + self.password + '@' + self.host + ':' + self.port + uri
+				headers = {'Content-type':'application/x-www-form-urlencoded'}
+				r = requests.post(url, headers = headers, params = params, data = data, verify = self.verify)
+			else:
+				url = self.protocol + '://' + self.host + ':' + self.port + uri
+				headers = {'X-CouchDB-WWW-Authenticate': 'Cookie', 'Content-Type': 'application/json'}
+				r = requests.post(url, cookies = cookie, headers = headers, params = params, data = data, verify = self.verify)
+			if r.status_code < 400 and cookie == "getCookie":
 				jar = r.cookies
 				if len(jar) != 1:
 					code = 99
 					msg = "Anormal number of cookies returned"
 					call = "POST: " + url
 					debug = (r, jar)
+					raise Errors.genError(code, msg, call, debug)
 				else:
 					for c in jar:
 						cookie = {c.name: c.value}
@@ -112,16 +97,9 @@ class HTTPApi:
 				return r.json()
 			else:
 				raise Errors.svtError(r, uri)
-		except requests.exceptions.Timeout as e:
-			if self.debug == False:
-				sys.exit(1)
-		except requests.exceptions.TooManyRedirects as e:
-			if self.debug == False:
-				sys.exit(1)
 		except requests.exceptions.RequestException as e:
-			if self.debug == False:
-				sys.exit(1)
-
+			raise Errors.reqErrors(url, e)
+					
 
 
 
