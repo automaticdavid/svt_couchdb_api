@@ -143,6 +143,7 @@ class Wrapper:
 		res = Utils().hash()
 
 		# Call couch for reports
+		# TODO: the use of "source" here is confusing as it is used in the view also
 		for (source, selector), markers in reports.iteritems(): 
 			
 			# Key passed to the couch view: will select only given collect & client
@@ -210,3 +211,69 @@ class Wrapper:
 				res[client] = [date]
 		return res
 
+
+	def deleter(self, settings, collect, client):
+
+		# Init connections parameters
+		cfg = Readconfig().readconfig(settings)
+
+		# Init couch connection
+		couch = Couch(cfg)
+
+		# Test Welcome
+		j = couch.isAlive()
+		print('Is Alive ? ' + j)
+
+		# Check if SVT DB exists
+		if not couch.hasDB():
+			code = 99
+			msg = "Missing or wrong SVT database: " + cfg.db
+			call = cfg.url
+			debug = cfg
+			raise Errors.genError(code, msg, call, debug)
+		
+		# Parsed arguments
+		print('Action: Delete') 
+		print('date: ' + collect)
+		print('Client: ' + client)
+
+		
+		#  Get those docs
+		startkey = [collect, client]
+		endkey = [collect, client, {}]
+		print("Finding collect docs")
+		r = couch.getViewIncludeDocs('admin', 'isnewcollect', startkey=startkey, endkey=endkey)
+		docs = json.loads(r)
+		# Check for existence 
+		if not docs['rows']:
+			code = 99
+			msg = "Collect does not exist"
+			call = [client, collect]
+			debug = r
+			raise Errors.genError(code, msg, call, debug)
+
+		# Build the bulk delete JSON
+		deleted = []
+		for doc in docs['rows']:
+			cid = doc["doc"]["_id"]
+			crev = doc["doc"]["_rev"]
+			ccollect = doc["doc"]["svt_collect_date"]
+			cclient = doc["doc"]["svt_client"]
+			# Sanity check the key filter 
+			if ccollect != collect or cclient != client:
+				code = 99
+				msg = "View result gives different client"
+				call = [client, collect, cclient, ccollect]
+				debug = r
+				raise Errors.genError(code, msg, call, debug)
+			deleted.append({"_id":cid, "_rev":crev, "deleted":"true"})
+			
+		d = { "docs": deleted }
+
+		# Bulk delete
+		try:
+		 	data = json.dumps(d)
+		 	couch.postBulk(data)
+		except :
+		 	print("Error with bulk delete")
+		 	raise

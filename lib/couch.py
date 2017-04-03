@@ -143,6 +143,17 @@ class Couch:
 		return(json.dumps(j))
 
 
+	# Call an existing view
+	def getViewIncludeDocs(self, ddoc, view = '', startkey = None, endkey = None):
+		db = self.db
+		# encoding is handled by the requests module
+		url = '/' + db + '/_design/' + ddoc + '/_view/' + view + '?reduce=false&include_docs=true'
+		if startkey:
+			url += '&startkey=' + json.dumps(startkey)
+		if endkey:
+			url += '&endkey=' + json.dumps(endkey)
+		j = self.couch.get(url, self.cookie)
+		return(json.dumps(j))
 
 
 
