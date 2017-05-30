@@ -2,7 +2,7 @@ declare -A errors
 for y in test/yaml/*.yaml
 do 
 	echo $y  
-	python utils/generator.py -s PGE -c 2016-09-13-10-35-57 -y $y > test/run/$(basename $y).run
+	python3 utils/generator.py -s PGE -c 2016-09-13-10-35-57 -y $y > test/run/$(basename $y).run
 	if [ $? -ne 0 ]; then
 		errors[$(basename $y)]=1
 	fi
