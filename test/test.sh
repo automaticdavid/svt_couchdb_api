@@ -19,6 +19,6 @@ do
 		echo "PASS for $f"
 	fi
 done 
-# rm test/run/*.run
+rm test/run/*.run
 
-# echo ${!errors[@]}
+

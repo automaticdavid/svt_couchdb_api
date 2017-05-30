@@ -37,7 +37,7 @@ class HTTPApi:
 				'X-CouchDB-WWW-Authenticate': 'Cookie', 'Content-Type': 'application/x-www-form-urlencoded'}
 			url = self.protocol + '://' + self.host + ':' + self.port + uri
 			logger.debug('GET : %s', url)
-			print(url)
+			# print(url)
 			r = requests.get(url, headers = headers, verify = self.verify, cookies = cookie)
 			if r.status_code == 200:
 				return r.json()

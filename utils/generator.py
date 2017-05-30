@@ -60,12 +60,14 @@ if __name__ == '__main__':
 		sys.exit("Error: specifiying a YAML file with -y is required")
 
 	# Test files
-	for f in yamldef, settings:
-		try: 
-			open(f)
-		except IOError:
-			sys.exit("Error: can't read file: " + f)
-
+	try: 
+		open(yamldef)
+	except IOError:
+		sys.exit("Error: can't read yaml file: " + yamldef)
+	try: 
+		open(settings)
+	except IOError:
+		sys.exit("Error: can't read settings file: " + settings)
 	
 	# Generate
 	try:
@@ -78,8 +80,6 @@ if __name__ == '__main__':
 		print(e.msg)
 		print(e.call)
 		sys.exit(e.code)
-	except KeyError as e:
-		sys.exit("Error in Key: " + str(e))
 	except:
 		print "Unexpected error:", sys.exc_info()[0]
 		raise

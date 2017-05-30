@@ -41,59 +41,89 @@ for f in sorted(os.listdir(ddocsdir)):
 	if os.path.isfile(path) and f.endswith('js'):
 
 		print("\nParsing file: " + f)
-		didsomething = False
 
 		# Extract info from filename
 		if f.startswith('reduce_'):
 			action = 'reduce'
 			js = f.replace('reduce_','')
+		elif f.startswith('list_'):
+			action = 'list'
+			js = f.replace('list_','')
 		else:
 			action = 'map'
 			js = f 
 		parts = js.replace('.js','').split('_')
 		ddoc = parts[0]
-		view = parts[1]
+		name = parts[1]
 
 		# Read the function file
+		didsomething = False
 		with open(path) as f:
 			func = f.read()
 
-		# Chech for existence of ddoc, view and action
+		# Chech for existence of ddoc, view or list and action
 		try:
 			r = couch.getDesignDoc(ddoc)
 			j = json.loads(r)
 			# Check for view
-			if view not in j["views"]:
-				j["views"][view] = { action: func}
-				didsomething = True
-			# Check for action
-			elif action not in j["views"][view]:
-				j["views"][view][action] = func
-				didsomething = True
+			if action == 'map' or action == 'reduce':
+				if 'views' not in j:
+					j['views'] = { name : { action : func }}
+					didsomething = True
+				elif name not in j['views']:
+					j['views'][name] = { action: func}
+					didsomething = True
+				elif action not in j['views'][name]:
+					j['views'][name][action] = func 
+					didsomething = True
+			elif action == 'list':
+				if 'lists' not in j:
+					j['lists'] = { name : func }
+					didsomething = True
+				elif name not in j['lists']:
+					j['lists'][name] = func
+					didsomething = True
+
 			if didsomething:
 				data = json.dumps(j)
 				# Put the ddoc
 				couch.putDesignDocString(ddoc, data)
-				print("Update DDOC: " + ddoc + ", action: " + action + ", view: " + view )
+				print("Update DDOC: " + ddoc + ", action: " + action + ", name: " + name )
 					
 		# Doc not found, create it 
 		except Errors.svtError as e:
+
+			print("Creating DDOC " + ddoc)
 			
 			if e.code == 404:
-				# Compose the json around the map function
-				schema = { 
-					"_id": '_design/' + ddoc,
-					"views": {
-						view: {
-							action: func
-						}
+				# Compose the json around the view function
+				if action == 'map' or action == 'reduce' :
+					schema = { 
+						"_id": '_design/' + ddoc,
+						"views": {
+							name: {
+								action: func
+							}
+						},
+						"language":"javascript"
 					}
-				}
+				# Compose the json around the list function
+				elif action == 'list' :
+					schema = { 
+						"_id": '_design/' + ddoc,
+						"lists": {
+							name: func
+						},
+						"language":"javascript"
+					}
+				# Unkown action
+				else:
+					sys.exit("Unkown Action" + action)
 				data = json.dumps(schema)
 				# Put the ddoc
 				try:
 					couch.putDesignDocString(ddoc, data)
-					print("Create DDOC: " + ddoc + ", action: " + action + ", view: " + view )
+					print("Create DDOC: " + ddoc + ", action: " + action + ", name: " + name )
 					didsomething = True
 				except Errors.svtError as e:
 					print("Code: " + str(e.code))

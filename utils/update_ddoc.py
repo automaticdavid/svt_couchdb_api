@@ -56,12 +56,15 @@ print("\nParsing file: " + file)
 if filename.startswith('reduce_'):
 	action = 'reduce'
 	js = filename.replace('reduce_','')
+elif filename.startswith('list_'):
+	action = 'list'
+	js = filename.replace('list_','')
 else:
 	action = 'map'
 	js = filename
 parts = js.replace('.js','').split('_')
 ddoc = parts[0]
-view = parts[1]
+name = parts[1]
 
 # Read the function file
 with open(file) as f:
@@ -72,34 +75,62 @@ try:
 	r = couch.getDesignDoc(ddoc)
 	# Doc was found
 	j = json.loads(r)
+
 	# Check for view
-	if view not in j["views"]:
-		j["views"][view] = { action: func}
-	else:
-		j["views"][view][action] = func
+	if action == 'map' or action == 'reduce':
+		if 'views' not in j:
+			j['views'] = { name : { action : func }}
+			didsomething = True
+		elif name not in j['views']:
+			j['views'][name] = { action: func}
+			didsomething = True
+		else:
+			j['views'][name][action] = func 
+			didsomething = True
+	elif action == 'list':
+		if 'lists' not in j:
+			j['lists'] = { name : func }
+			didsomething = True
+		else:
+			j['lists'][name] = func
+			didsomething = True
 	data = json.dumps(j)
 	# Put the ddoc
 	couch.putDesignDocString(ddoc, data)
-	print("Update DDOC: " + ddoc + ", action: " + action + ", view: " + view )
+	print("Update DDOC: " + ddoc + ", action: " + action + ", name: " + name )
 					
 # Doc not found, create it 
 except Errors.svtError as e:
 	
 	if e.code == 404:
-	# Compose the json around the map function
-		schema = { 
-			"_id": '_design/' + ddoc,
-			"views": {
-				view: {
-					action: func
-				}
+		# Compose the json around the view function
+		if action == 'map' or action == 'reduce' :
+			schema = { 
+				"_id": '_design/' + ddoc,
+				"views": {
+					name: {
+						action: func
+					}
+				},
+				"language":"nodejs"
 			}
-		}
+		# Compose the json around the list function
+		elif action == 'list' :
+			schema = { 
+				"_id": '_design/' + ddoc,
+				"lists": {
+					name: func
+				},
+				"language":"nodejs"
+			}
+		# Unkown action
+		else:
+			sys.exit("Unkown Action" + action)
 		data = json.dumps(schema)
 		# Put the ddoc
 		try:
 			couch.putDesignDocString(ddoc, data)
-			print("Create DDOC: " + ddoc + ", action: " + action + ", view: " + view )
+			print("Create DDOC: " + ddoc + ", action: " + action + ", name: " + name )
 		except Errors.svtError as e:
 			print("Code: " + str(e.code))
 			print("Message: " + e.msg)
