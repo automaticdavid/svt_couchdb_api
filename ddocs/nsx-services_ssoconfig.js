@@ -25,7 +25,7 @@ function(doc) {
         // map all appliances
         key = [collect, client, source, id]  ;
 
-        emit( key,  {"ssconfig":doc, "svt_action":"svt_single"} );
+        emit( key,  {"ssoconfig":doc, "svt_action":"svt_single"} );
 
     }
 }

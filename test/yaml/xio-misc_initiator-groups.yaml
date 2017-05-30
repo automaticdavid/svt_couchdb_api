@@ -1,0 +1,5 @@
+name: My Second SVT Report
+reports:
+  xio-misc:
+    initiator-groups:
+      - svt_all

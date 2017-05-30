@@ -1,0 +1,526 @@
+http://localhost:5984/
+Welcome
+http://localhost:5984/svtdev
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: test/yaml/vra-catalog-service_services.yaml
+Checking for collect existence
+http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
+http://localhost:5984/svtdev/_design/vra-catalog-service/_view/services?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+{
+    "data": {
+        "vra-1": {
+            "vra-catalog-service": {
+                "services": {
+                    "service1": {
+                        "@type": "Service",
+                        "changeWindow": null,
+                        "description": "",
+                        "hours": null,
+                        "iconId": "ServiceIcon-1435696574678",
+                        "id": "8c06ba86-2a35-49ab-a689-41eb058e4de8",
+                        "lastUpdatedBy": "C1DbAdmin@utility.pge.com",
+                        "lastUpdatedDate": "2015-09-11T04:02:34.298Z",
+                        "name": "IT Services",
+                        "newDuration": null,
+                        "organization": {
+                            "subtenantLabel": null,
+                            "subtenantRef": null,
+                            "tenantLabel": "PGE",
+                            "tenantRef": "pge"
+                        },
+                        "status": "ACTIVE",
+                        "statusName": "Active",
+                        "version": 2
+                    },
+                    "service10": {
+                        "@type": "Service",
+                        "changeWindow": null,
+                        "description": "",
+                        "hours": null,
+                        "iconId": "ServiceIcon-1441748823581",
+                        "id": "53ef9769-33b3-4f2f-8074-670673ae1bfb",
+                        "lastUpdatedBy": "Jody Lent",
+                        "lastUpdatedDate": "2015-10-08T18:20:07.989Z",
+                        "name": "Advanced Services",
+                        "newDuration": null,
+                        "organization": {
+                            "subtenantLabel": null,
+                            "subtenantRef": null,
+                            "tenantLabel": "PGE",
+                            "tenantRef": "pge"
+                        },
+                        "owner": {
+                            "ref": "C1DbAdmin@utility.pge.com",
+                            "tenantName": "pge",
+                            "type": "USER",
+                            "value": "C1DbAdmin@utility.pge.com"
+                        },
+                        "status": "RETIRED",
+                        "statusName": "Inactive",
+                        "version": 3
+                    },
+                    "service11": {
+                        "@type": "Service",
+                        "changeWindow": null,
+                        "description": "Advanced Services ready for UAT",
+                        "hours": null,
+                        "iconId": "cafe_default_icon_genericService",
+                        "id": "fa2b1257-54cc-4415-a58b-060c72bdde79",
+                        "lastUpdatedBy": "C1DbAdmin@utility.pge.com",
+                        "lastUpdatedDate": "2016-08-02T22:53:32.271Z",
+                        "name": "Adv Services UAT",
+                        "newDuration": null,
+                        "organization": {
+                            "subtenantLabel": null,
+                            "subtenantRef": null,
+                            "tenantLabel": "PGE",
+                            "tenantRef": "pge"
+                        },
+                        "status": "RETIRED",
+                        "statusName": "Inactive",
+                        "version": 19
+                    },
+                    "service12": {
+                        "@type": "Service",
+                        "changeWindow": null,
+                        "description": "",
+                        "hours": null,
+                        "iconId": "ServiceIcon-1445877643596",
+                        "id": "363eb411-21d3-4e69-b972-681807e0fffb",
+                        "lastUpdatedBy": "C1DbAdmin@utility.pge.com",
+                        "lastUpdatedDate": "2015-10-26T16:40:43.869Z",
+                        "name": "Cloud-Development",
+                        "newDuration": null,
+                        "organization": {
+                            "subtenantLabel": null,
+                            "subtenantRef": null,
+                            "tenantLabel": "PGE",
+                            "tenantRef": "pge"
+                        },
+                        "status": "ACTIVE",
+                        "statusName": "Active",
+                        "version": 0
+                    },
+                    "service13": {
+                        "@type": "Service",
+                        "changeWindow": null,
+                        "description": "",
+                        "hours": null,
+                        "iconId": "ServiceIcon-1447007274490",
+                        "id": "cb37b707-1f09-4564-80ff-cec141704eba",
+                        "lastUpdatedBy": "Robert Lawrence",
+                        "lastUpdatedDate": "2015-11-08T18:27:54.864Z",
+                        "name": "Architecture Testing",
+                        "newDuration": null,
+                        "organization": {
+                            "subtenantLabel": null,
+                            "subtenantRef": null,
+                            "tenantLabel": "PGE",
+                            "tenantRef": "pge"
+                        },
+                        "status": "ACTIVE",
+                        "statusName": "Active",
+                        "version": 0
+                    },
+                    "service14": {
+                        "@type": "Service",
+                        "changeWindow": null,
+                        "description": "Provision Cloud Storage with EMC ViPR",
+                        "hours": null,
+                        "iconId": "cafe_default_icon_genericService",
+                        "id": "c8acd6df-e84d-4370-82ad-8bcca6b1edbd",
+                        "lastUpdatedBy": "svcCloudAuto@utility.pge.com",
+                        "lastUpdatedDate": "2015-12-22T22:08:05.887Z",
+                        "name": "12-22--14:8:5-Provision Cloud Storage",
+                        "newDuration": null,
+                        "organization": {
+                            "subtenantLabel": null,
+                            "subtenantRef": null,
+                            "tenantLabel": "PGE",
+                            "tenantRef": "pge"
+                        },
+                        "owner": {
+                            "ref": "svcCloudAuto@utility.pge.com",
+                            "tenantName": "pge",
+                            "type": "USER",
+                            "value": "svcCloudAuto@utility.pge.com"
+                        },
+                        "status": "RETIRED",
+                        "statusName": "Inactive",
+                        "supportTeam": {
+                            "ref": "svcCloudAuto@utility.pge.com",
+                            "tenantName": "pge",
+                            "type": "USER",
+                            "value": "svcCloudAuto@utility.pge.com"
+                        },
+                        "version": 1
+                    },
+                    "service15": {
+                        "@type": "Service",
+                        "changeWindow": null,
+                        "description": "",
+                        "hours": null,
+                        "iconId": "cafe_default_icon_genericService",
+                        "id": "074d3968-86d3-464c-98f4-e42fe50c590b",
+                        "lastUpdatedBy": "svcCloudAuto@utility.pge.com",
+                        "lastUpdatedDate": "2016-01-11T19:19:22.426Z",
+                        "name": "1-11--11:19:22-EHC Cluster Onboarding",
+                        "newDuration": null,
+                        "organization": {
+                            "subtenantLabel": null,
+                            "subtenantRef": null,
+                            "tenantLabel": "PGE",
+                            "tenantRef": "pge"
+                        },
+                        "owner": {
+                            "ref": "svcCloudAuto@utility.pge.com",
+                            "tenantName": "pge",
+                            "type": "USER",
+                            "value": "svcCloudAuto@utility.pge.com"
+                        },
+                        "status": "RETIRED",
+                        "statusName": "Inactive",
+                        "supportTeam": {
+                            "ref": "svcCloudAuto@utility.pge.com",
+                            "tenantName": "pge",
+                            "type": "USER",
+                            "value": "svcCloudAuto@utility.pge.com"
+                        },
+                        "version": 2
+                    },
+                    "service16": {
+                        "@type": "Service",
+                        "changeWindow": null,
+                        "description": "",
+                        "hours": null,
+                        "iconId": "cafe_default_icon_genericService",
+                        "id": "d1b4fe6e-1c31-4667-92bb-5cfcae56fe64",
+                        "lastUpdatedBy": "svcCloudAuto@utility.pge.com",
+                        "lastUpdatedDate": "2016-01-11T19:19:22.520Z",
+                        "name": "EHC Cluster Onboarding",
+                        "newDuration": null,
+                        "organization": {
+                            "subtenantLabel": null,
+                            "subtenantRef": null,
+                            "tenantLabel": "PGE",
+                            "tenantRef": "pge"
+                        },
+                        "owner": {
+                            "ref": "svcCloudAuto@utility.pge.com",
+                            "tenantName": "pge",
+                            "type": "USER",
+                            "value": "svcCloudAuto@utility.pge.com"
+                        },
+                        "status": "ACTIVE",
+                        "statusName": "Active",
+                        "supportTeam": {
+                            "ref": "svcCloudAuto@utility.pge.com",
+                            "tenantName": "pge",
+                            "type": "USER",
+                            "value": "svcCloudAuto@utility.pge.com"
+                        },
+                        "version": 1
+                    },
+                    "service17": {
+                        "@type": "Service",
+                        "changeWindow": null,
+                        "description": "Provision Cloud Storage with EMC ViPR",
+                        "hours": null,
+                        "iconId": "cafe_default_icon_genericService",
+                        "id": "cabda981-3d76-4bfa-bb31-cb012655f39e",
+                        "lastUpdatedBy": "svcCloudAuto@utility.pge.com",
+                        "lastUpdatedDate": "2016-01-11T19:19:22.609Z",
+                        "name": "1-11--11:19:22-Provision Cloud Storage",
+                        "newDuration": null,
+                        "organization": {
+                            "subtenantLabel": null,
+                            "subtenantRef": null,
+                            "tenantLabel": "PGE",
+                            "tenantRef": "pge"
+                        },
+                        "owner": {
+                            "ref": "svcCloudAuto@utility.pge.com",
+                            "tenantName": "pge",
+                            "type": "USER",
+                            "value": "svcCloudAuto@utility.pge.com"
+                        },
+                        "status": "RETIRED",
+                        "statusName": "Inactive",
+                        "supportTeam": {
+                            "ref": "svcCloudAuto@utility.pge.com",
+                            "tenantName": "pge",
+                            "type": "USER",
+                            "value": "svcCloudAuto@utility.pge.com"
+                        },
+                        "version": 1
+                    },
+                    "service18": {
+                        "@type": "Service",
+                        "changeWindow": null,
+                        "description": "Provision Cloud Storage with EMC ViPR",
+                        "hours": null,
+                        "iconId": "cafe_default_icon_genericService",
+                        "id": "a85d7eb8-ff19-4c74-bb71-aead1e875e9a",
+                        "lastUpdatedBy": "svcCloudAuto@utility.pge.com",
+                        "lastUpdatedDate": "2016-01-11T19:19:22.684Z",
+                        "name": "Provision Cloud Storage",
+                        "newDuration": null,
+                        "organization": {
+                            "subtenantLabel": null,
+                            "subtenantRef": null,
+                            "tenantLabel": "PGE",
+                            "tenantRef": "pge"
+                        },
+                        "owner": {
+                            "ref": "svcCloudAuto@utility.pge.com",
+                            "tenantName": "pge",
+                            "type": "USER",
+                            "value": "svcCloudAuto@utility.pge.com"
+                        },
+                        "status": "ACTIVE",
+                        "statusName": "Active",
+                        "supportTeam": {
+                            "ref": "svcCloudAuto@utility.pge.com",
+                            "tenantName": "pge",
+                            "type": "USER",
+                            "value": "svcCloudAuto@utility.pge.com"
+                        },
+                        "version": 0
+                    },
+                    "service19": {
+                        "@type": "Service",
+                        "changeWindow": null,
+                        "description": "",
+                        "hours": null,
+                        "iconId": "cafe_default_icon_genericService",
+                        "id": "557b8875-6c04-4beb-aa33-176eab9c1417",
+                        "lastUpdatedBy": "C1DbAdmin@utility.pge.com",
+                        "lastUpdatedDate": "2016-06-20T19:29:20.165Z",
+                        "name": "Reports",
+                        "newDuration": null,
+                        "organization": {
+                            "subtenantLabel": null,
+                            "subtenantRef": null,
+                            "tenantLabel": "PGE",
+                            "tenantRef": "pge"
+                        },
+                        "status": "ACTIVE",
+                        "statusName": "Active",
+                        "version": 0
+                    },
+                    "service2": {
+                        "@type": "Service",
+                        "changeWindow": null,
+                        "description": "Database, application and web platforms for advanced services.",
+                        "hours": null,
+                        "iconId": "ServiceIcon-1435696209304",
+                        "id": "de910e6f-b10d-43ba-8474-b2d5eb6f2730",
+                        "lastUpdatedBy": "Robert Lawrence",
+                        "lastUpdatedDate": "2015-10-31T20:59:30.134Z",
+                        "name": "Platforms",
+                        "newDuration": null,
+                        "organization": {
+                            "subtenantLabel": null,
+                            "subtenantRef": null,
+                            "tenantLabel": "PGE",
+                            "tenantRef": "pge"
+                        },
+                        "status": "ACTIVE",
+                        "statusName": "Active",
+                        "version": 4
+                    },
+                    "service3": {
+                        "@type": "Service",
+                        "changeWindow": null,
+                        "description": "Templates for Reference only.  do not use.",
+                        "hours": null,
+                        "iconId": "ServiceIcon-1435696456980",
+                        "id": "57fbaea3-aa1e-4bfc-b725-005e8fd3a63b",
+                        "lastUpdatedBy": "Robert Lawrence",
+                        "lastUpdatedDate": "2015-06-30T20:34:17.126Z",
+                        "name": "Reference Only",
+                        "newDuration": null,
+                        "organization": {
+                            "subtenantLabel": null,
+                            "subtenantRef": null,
+                            "tenantLabel": "PGE",
+                            "tenantRef": "pge"
+                        },
+                        "status": "ACTIVE",
+                        "statusName": "Active",
+                        "version": 5
+                    },
+                    "service4": {
+                        "@type": "Service",
+                        "changeWindow": null,
+                        "description": "",
+                        "hours": null,
+                        "iconId": "ServiceIcon-1435673795469",
+                        "id": "d41166bb-8f72-4836-bc13-be5d827c2c42",
+                        "lastUpdatedBy": "Robert Lawrence",
+                        "lastUpdatedDate": "2015-06-30T14:16:35.588Z",
+                        "name": "Infrastructure as a Service",
+                        "newDuration": null,
+                        "organization": {
+                            "subtenantLabel": null,
+                            "subtenantRef": null,
+                            "tenantLabel": "PGE",
+                            "tenantRef": "pge"
+                        },
+                        "status": "ACTIVE",
+                        "statusName": "Active",
+                        "version": 3
+                    },
+                    "service5": {
+                        "@type": "Service",
+                        "changeWindow": null,
+                        "description": "",
+                        "hours": null,
+                        "iconId": "ServiceIcon-1437611377597",
+                        "id": "70cec826-1011-4332-a6a6-3cfb7f725c72",
+                        "lastUpdatedBy": "Zachariah House",
+                        "lastUpdatedDate": "2015-07-23T00:29:37.861Z",
+                        "name": "VMware NSX Services",
+                        "newDuration": null,
+                        "organization": {
+                            "subtenantLabel": null,
+                            "subtenantRef": null,
+                            "tenantLabel": "PGE",
+                            "tenantRef": "pge"
+                        },
+                        "status": "ACTIVE",
+                        "statusName": "Active",
+                        "version": 1
+                    },
+                    "service6": {
+                        "@type": "Service",
+                        "changeWindow": null,
+                        "description": "",
+                        "hours": null,
+                        "iconId": "cafe_default_icon_genericService",
+                        "id": "483981f8-7a6e-4c78-ae2d-297af777a0cc",
+                        "lastUpdatedBy": "svcCloudAuto@utility.pge.com",
+                        "lastUpdatedDate": "2015-09-21T18:49:20.330Z",
+                        "name": "Versions Report Service",
+                        "newDuration": null,
+                        "organization": {
+                            "subtenantLabel": null,
+                            "subtenantRef": null,
+                            "tenantLabel": "PGE",
+                            "tenantRef": "pge"
+                        },
+                        "owner": {
+                            "ref": "svcCloudAuto@utility.pge.com",
+                            "tenantName": "pge",
+                            "type": "USER",
+                            "value": "svcCloudAuto@utility.pge.com"
+                        },
+                        "status": "ACTIVE",
+                        "statusName": "Active",
+                        "supportTeam": {
+                            "ref": "svcCloudAuto@utility.pge.com",
+                            "tenantName": "pge",
+                            "type": "USER",
+                            "value": "svcCloudAuto@utility.pge.com"
+                        },
+                        "version": 0
+                    },
+                    "service7": {
+                        "@type": "Service",
+                        "changeWindow": null,
+                        "description": "",
+                        "hours": null,
+                        "iconId": "cafe_default_icon_genericService",
+                        "id": "99c44054-fbea-48c4-a3e3-3d9411ab5aaa",
+                        "lastUpdatedBy": "Robert Lawrence",
+                        "lastUpdatedDate": "2015-08-28T23:14:15.302Z",
+                        "name": "Deny",
+                        "newDuration": null,
+                        "organization": {
+                            "subtenantLabel": null,
+                            "subtenantRef": null,
+                            "tenantLabel": "PGE",
+                            "tenantRef": "pge"
+                        },
+                        "status": "ACTIVE",
+                        "statusName": "Active",
+                        "version": 0
+                    },
+                    "service8": {
+                        "@type": "Service",
+                        "changeWindow": null,
+                        "description": "",
+                        "hours": null,
+                        "iconId": "cafe_default_icon_genericService",
+                        "id": "b7b02e76-52ff-4ded-b0fc-2cf31e63efb5",
+                        "lastUpdatedBy": "svcCloudAuto@utility.pge.com",
+                        "lastUpdatedDate": "2015-09-24T19:01:53.510Z",
+                        "name": "Data Protection Services",
+                        "newDuration": null,
+                        "organization": {
+                            "subtenantLabel": null,
+                            "subtenantRef": null,
+                            "tenantLabel": "PGE",
+                            "tenantRef": "pge"
+                        },
+                        "owner": {
+                            "ref": "svcCloudAuto@utility.pge.com",
+                            "tenantName": "pge",
+                            "type": "USER",
+                            "value": "svcCloudAuto@utility.pge.com"
+                        },
+                        "status": "ACTIVE",
+                        "statusName": "Active",
+                        "supportTeam": {
+                            "ref": "svcCloudAuto@utility.pge.com",
+                            "tenantName": "pge",
+                            "type": "USER",
+                            "value": "svcCloudAuto@utility.pge.com"
+                        },
+                        "version": 9
+                    },
+                    "service9": {
+                        "@type": "Service",
+                        "changeWindow": null,
+                        "description": "",
+                        "hours": null,
+                        "iconId": "cafe_default_icon_genericService",
+                        "id": "a3619e5b-1062-4eb6-8264-dfcd6fc47f14",
+                        "lastUpdatedBy": "svcCloudAuto@utility.pge.com",
+                        "lastUpdatedDate": "2015-12-22T22:08:05.748Z",
+                        "name": "12-22--14:8:5-EHC Cluster Onboarding",
+                        "newDuration": null,
+                        "organization": {
+                            "subtenantLabel": null,
+                            "subtenantRef": null,
+                            "tenantLabel": "PGE",
+                            "tenantRef": "pge"
+                        },
+                        "owner": {
+                            "ref": "svcCloudAuto@utility.pge.com",
+                            "tenantName": "pge",
+                            "type": "USER",
+                            "value": "svcCloudAuto@utility.pge.com"
+                        },
+                        "status": "RETIRED",
+                        "statusName": "Inactive",
+                        "supportTeam": {
+                            "ref": "svcCloudAuto@utility.pge.com",
+                            "tenantName": "pge",
+                            "type": "USER",
+                            "value": "svcCloudAuto@utility.pge.com"
+                        },
+                        "version": 2
+                    }
+                },
+                "svt_single": {}
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

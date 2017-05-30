@@ -1,0 +1,144 @@
+http://localhost:5984/
+Welcome
+http://localhost:5984/svtdev
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: test/yaml/rpa-account_settings.yaml
+Checking for collect existence
+http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
+http://localhost:5984/svtdev/_design/rpa-account/_view/settings?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+{
+    "data": {
+        "rpa-1": {
+            "rpa-account": {
+                "settings": {
+                    "setting1": {
+                        "JsonSubType": "ClusterLicenseSettings",
+                        "capacity": 270,
+                        "capacityUnit": "TERA_BYTE",
+                        "clusterUID": {
+                            "id": 3802441544150220000
+                        },
+                        "expirationDate": null,
+                        "licenseType": "CL",
+                        "licenseUID": {
+                            "id": "007D 4E70 CE59 CC0C"
+                        },
+                        "localReplicationOnly": true
+                    },
+                    "setting2": {
+                        "JsonSubType": "ClusterLicenseSettings",
+                        "capacity": 270,
+                        "capacityUnit": "TERA_BYTE",
+                        "clusterUID": {
+                            "id": 5939950745093422000
+                        },
+                        "expirationDate": null,
+                        "licenseType": "CL",
+                        "licenseUID": {
+                            "id": "00B0 A421 AEE5 84CE"
+                        },
+                        "localReplicationOnly": false
+                    },
+                    "setting3": {
+                        "JsonSubType": "ClusterLicenseSettings",
+                        "capacity": 270,
+                        "capacityUnit": "TERA_BYTE",
+                        "clusterUID": {
+                            "id": 3802441544150220000
+                        },
+                        "expirationDate": null,
+                        "licenseType": "CL",
+                        "licenseUID": {
+                            "id": "0015 7F75 5629 69DC"
+                        },
+                        "localReplicationOnly": false
+                    },
+                    "setting4": {
+                        "JsonSubType": "ClusterLicenseSettings",
+                        "capacity": 270,
+                        "capacityUnit": "TERA_BYTE",
+                        "clusterUID": {
+                            "id": 5939950745093422000
+                        },
+                        "expirationDate": null,
+                        "licenseType": "CL",
+                        "licenseUID": {
+                            "id": "00EC A6D3 367C 0F4A"
+                        },
+                        "localReplicationOnly": true
+                    }
+                },
+                "svt_single": {}
+            }
+        },
+        "rpa-2": {
+            "rpa-account": {
+                "settings": {
+                    "setting1": {
+                        "JsonSubType": "ClusterLicenseSettings",
+                        "capacity": 270,
+                        "capacityUnit": "TERA_BYTE",
+                        "clusterUID": {
+                            "id": 5939950745093422000
+                        },
+                        "expirationDate": null,
+                        "licenseType": "CL",
+                        "licenseUID": {
+                            "id": "00B0 A421 AEE5 84CE"
+                        },
+                        "localReplicationOnly": false
+                    },
+                    "setting2": {
+                        "JsonSubType": "ClusterLicenseSettings",
+                        "capacity": 270,
+                        "capacityUnit": "TERA_BYTE",
+                        "clusterUID": {
+                            "id": 3802441544150220000
+                        },
+                        "expirationDate": null,
+                        "licenseType": "CL",
+                        "licenseUID": {
+                            "id": "0015 7F75 5629 69DC"
+                        },
+                        "localReplicationOnly": false
+                    },
+                    "setting3": {
+                        "JsonSubType": "ClusterLicenseSettings",
+                        "capacity": 270,
+                        "capacityUnit": "TERA_BYTE",
+                        "clusterUID": {
+                            "id": 5939950745093422000
+                        },
+                        "expirationDate": null,
+                        "licenseType": "CL",
+                        "licenseUID": {
+                            "id": "00EC A6D3 367C 0F4A"
+                        },
+                        "localReplicationOnly": true
+                    },
+                    "setting4": {
+                        "JsonSubType": "ClusterLicenseSettings",
+                        "capacity": 270,
+                        "capacityUnit": "TERA_BYTE",
+                        "clusterUID": {
+                            "id": 3802441544150220000
+                        },
+                        "expirationDate": null,
+                        "licenseType": "CL",
+                        "licenseUID": {
+                            "id": "007D 4E70 CE59 CC0C"
+                        },
+                        "localReplicationOnly": true
+                    }
+                },
+                "svt_single": {}
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

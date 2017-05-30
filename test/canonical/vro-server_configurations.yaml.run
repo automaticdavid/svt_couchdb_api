@@ -1,0 +1,416 @@
+http://localhost:5984/
+Welcome
+http://localhost:5984/svtdev
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: test/yaml/vro-server_configurations.yaml
+Checking for collect existence
+http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
+http://localhost:5984/svtdev/_design/vro-server/_view/configurations?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+{
+    "data": {
+        "vro-1": {
+            "vro-server": {
+                "configurations": {
+                    "config-entry": [
+                        {
+                            "data": "#Tue Sep 13 10:39:37 PDT 2016\nch.dunes.net.jboss-server.port=8230\nserver.bind.address=0.0.0.0\njboss.jmx.address=127.0.0.1\nch.dunes.http-server.port=8280\nch.dunes.https-server.port=8281\n",
+                            "dependencies": "",
+                            "enabled": true,
+                            "name": "network",
+                            "plugin": false,
+                            "remote": false,
+                            "title": "Network",
+                            "tooltip": "[LDAP_DESC]"
+                        },
+                        {
+                            "data": "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b3BlcnRpZXM5EtB6cDY+mAIAAUwACGRlZmF1bHRzcQB+AAJ4cgATamF2YS51dGlsLkhhc2h0YWJsZRO7DyUhSuS4AwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAh3CAAAAAsAAAAIdAAmY29tLnZtd2FyZS5vMTFuLnNzby5hZG1pbi5ncm91cC5kb21haW50AA91dGlsaXR5LnBnZS5jb210ACRjb20udm13YXJlLm8xMW4uc3NvLmFkbWluLmdyb3VwLm5hbWV0AAxBZG1pbkNsZE9yY2h0ACdjb20udm13YXJlLm8xMW4uc3NvLmNsb2NrLnRvbGVyYW5jZS5zZWN0AAMzMDB0ACNjb20udm13YXJlLm8xMW4uc3NvLmFkbWluLnVzZXIubmFtZXQAG2FkbWluaXN0cmF0b3JAdnNwaGVyZS5sb2NhbHQAIWNvbS52bXdhcmUubzExbi5zc28uaW5zdGFsbC5zdGF0ZXQACGFwcHJvdmVkdAAdY29tLnZtd2FyZS5vMTFuLnNzby5hZG1pbi51cmx0AE5odHRwczovL2l0Y2xkcmN0ZW5zc28wMS51dGlsaXR5LnBnZS5jb206NzQ0NC9zc28tYWRtaW5zZXJ2ZXIvc2RrL3ZzcGhlcmUubG9jYWx0ABtjb20udm13YXJlLm8xMW4uc3NvLnN0cy51cmx0AElodHRwczovL2l0Y2xkcmN0ZW5zc28wMS51dGlsaXR5LnBnZS5jb206NzQ0NC9zdHMvU1RTU2VydmljZS92c3BoZXJlLmxvY2FsdAAkY29tLnZtd2FyZS5vMTFuLnNzby5pbnN0YWxsLmFkdmFuY2VkdAAFZmFsc2V4cHNyABdqYXZhLnV0aWwuTGlua2VkSGFzaE1hcDTATlwQbMD7AgABWgALYWNjZXNzT3JkZXJ4cgARamF2YS51dGlsLkhhc2hNYXAFB9rBwxZg0QMAAkYACmxvYWRGYWN0b3JJAAl0aHJlc2hvbGR4cD9AAAAAAAAMdwgAAAAQAAAACHEAfgAVcQB+ABZxAH4AF3EAfgAYcQB+ABNxAH4AFHEAfgAZcQB+ABpxAH4AC3EAfgAMcQB+AA1xAH4ADnEAfgARcQB+ABJxAH4AD3EAfgAQeAA=",
+                            "dependencies": "",
+                            "enabled": true,
+                            "name": "ldap",
+                            "plugin": false,
+                            "remote": false,
+                            "title": "LDAP",
+                            "tooltip": "[LDAP_DESC]"
+                        },
+                        {
+                            "data": "#Tue Sep 13 10:39:37 PDT 2016\ndatabase.hibernate.dialect=org.hibernate.dialect.SQLServerDialect\ndatabase.username=svcCloudOrch\nch.dunes.net.jboss-server.port=8230\ndatabase.url=jdbc\\:jtds\\:sqlserver\\://itcldrctensql01.utility.pge.com\\:1433/RC-VCO;domain\\=PGE;useNTLMv2\\=true\ncom.vmware.js.allow-local-process=true\ncom.vmware.o11n.sso.basic-authentication.enabled=true\nch.dunes.authentication.provider=sso\nch.dunes.vso.client-keep-alive-disable=true\nencoded.vco.db.password=vcoencrypted\\:LzZkak9OtFeFCD+fEEnvuyJQOjMgtgQSOvyV1LRbE0c\\=\nch.dunes.task.max-workflow-tokens=100\nch.dunes.max-log-events=5000\ndatabase.driverClassName=net.sourceforge.jtds.jdbc.Driver\nch.dunes.vso.library.path=../.././Library\n",
+                            "dependencies": "",
+                            "enabled": true,
+                            "name": "database",
+                            "plugin": false,
+                            "remote": false,
+                            "title": "Database",
+                            "tooltip": "[DATABASE_DESC]"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "database",
+                            "enabled": true,
+                            "name": "certificate",
+                            "plugin": false,
+                            "remote": false,
+                            "title": "Server Certificate",
+                            "tooltip": "[CERTIFICATE_DESC]"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "database",
+                            "enabled": true,
+                            "name": "licenses",
+                            "plugin": false,
+                            "remote": false,
+                            "title": "[LICENSE_TITLE]",
+                            "tooltip": "[LICENSE_DESC]"
+                        },
+                        {
+                            "data": "#Tue Sep 13 10:39:37 PDT 2016\nch.dunes.gui.antialiasing=true\norg.apache.tapestry.disable-caching=false\nch.dunes.weboperator.autologin.password=\nencoded.vco.db.password=vcoencrypted\\:LzZkak9OtFeFCD+fEEnvuyJQOjMgtgQSOvyV1LRbE0c\\=\nch.dunes.task.max-workflow-tokens=100\n",
+                            "dependencies": "",
+                            "enabled": true,
+                            "name": "general",
+                            "plugin": false,
+                            "remote": false,
+                            "title": "Miscellaneous",
+                            "tooltip": "[GENERAL_DESC]"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "ldap,database,network,licenses,certificate,plugins,availability,Enums,XML,Workflow documentation,Library,WebOperator,PowerShell,REST,AD,vCACCAFE,Net,SOAP,EMC ViPR Plugin,DynamicTypes,SQL,Mail,NSX,Puppet,Configurator,AMQP,InfobloxIPAM,SRM,SNMP,VCO,F5Networks,vCAC,UCSM,SSH,VC",
+                            "enabled": true,
+                            "name": "server",
+                            "plugin": false,
+                            "remote": false,
+                            "title": "Server",
+                            "tooltip": "[SERVER_DESC]"
+                        },
+                        {
+                            "data": "#Tue Sep 13 10:39:37 PDT 2016\ncom.vmware.o11n.server.mode=standalone\ncom.vmware.o11n.cluster.failover.heartbeats=12\ncom.vmware.o11n.cluster.heartbeat.interval=5000\ncom.vmware.o11n.cluster.active.nodes=1\n",
+                            "dependencies": "database",
+                            "enabled": true,
+                            "name": "availability",
+                            "plugin": false,
+                            "remote": false,
+                            "title": "[AVAILABILITY_TITLE]",
+                            "tooltip": "[AVAILABILITY_DESC]"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "",
+                            "enabled": true,
+                            "name": "log",
+                            "plugin": false,
+                            "remote": false,
+                            "title": "Log",
+                            "tooltip": "[LOG_DESC]"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "database",
+                            "enabled": true,
+                            "name": "troubleshooting",
+                            "plugin": false,
+                            "remote": false,
+                            "title": "Troubleshooting",
+                            "tooltip": "[TROUBLE_DESC]"
+                        },
+                        {
+                            "data": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE properties SYSTEM \"http://java.sun.com/dtd/properties.dtd\">\n<properties>\n<entry key=\"ch.dunes.vso.plugin.install-username\"/>\n<entry key=\"ch.dunes.vso.plugin.install-password\">vcoencrypted:Mw/lnWMcyF2mCLY4fnEOBA==</entry>\n</properties>\n",
+                            "dependencies": "ldap",
+                            "enabled": true,
+                            "name": "plugins",
+                            "plugin": false,
+                            "remote": false,
+                            "title": "Plug-ins General",
+                            "tooltip": "[PLUGIN_DESC]"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "5.5.1",
+                            "enabled": true,
+                            "name": "Enums",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "Common enumerated types"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "5.5.1",
+                            "enabled": true,
+                            "name": "XML",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "XML"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "5.5.1",
+                            "enabled": true,
+                            "name": "Workflow documentation",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "Workflow documentation"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "5.5.1",
+                            "enabled": true,
+                            "name": "Library",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "vCO Library"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "2.2.1",
+                            "enabled": true,
+                            "name": "WebOperator",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "vCO WebOperator"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "1.0.6",
+                            "enabled": true,
+                            "name": "PowerShell",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "PowerShell"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "1.0.3",
+                            "enabled": true,
+                            "name": "REST",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "HTTP-REST"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "2.0.5",
+                            "enabled": true,
+                            "name": "AD",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "Active Directory"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "6.1.0",
+                            "enabled": true,
+                            "name": "vCACCAFE",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "vCloud Automation Center"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "5.5.1",
+                            "enabled": true,
+                            "name": "Net",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "Net"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "1.0.3",
+                            "enabled": true,
+                            "name": "SOAP",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "SOAP"
+                        },
+                        {
+                            "data": "#Tue Sep 13 10:39:37 PDT 2016\nemc.vipr.user.name=root\nemc.vipr.project=pge\nemc.vipr.password=vcoencrypted\\:D//7FMy4ZanSqQYBhGwUdA\\=\\=\nemc.vipr.virtual.storage.array=vArray-VNX7724-RC\nemc.vipr.host.name=10.31.253.31\nemc.vipr.timeout=30\nemc.vipr.port=4443\n",
+                            "dependencies": "plugins",
+                            "description": "2.3.0.0",
+                            "enabled": true,
+                            "name": "EMC ViPR Plugin",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "EMC ViPR Plugin"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "1.0.0",
+                            "enabled": true,
+                            "name": "DynamicTypes",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "Dynamic Types"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "1.1.1",
+                            "enabled": true,
+                            "name": "SQL",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "SQL Plug-in"
+                        },
+                        {
+                            "data": "#Tue Sep 13 10:39:37 PDT 2016\nfrom.name=Cloud Alerts\nsmtp.password=vcoencrypted\\:Mw/lnWMcyF2mCLY4fnEOBA\\=\\=\nsmtp.port=25\nfrom.address=CloudAlerts@pge.com\nsmtp.username=\nsmtp.host=mailhost.comp.pge.com\n",
+                            "dependencies": "plugins",
+                            "description": "5.5.1",
+                            "enabled": true,
+                            "name": "Mail",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "Mail"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "1.0.1",
+                            "enabled": true,
+                            "name": "NSX",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "NSX"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "1.0.0",
+                            "enabled": true,
+                            "name": "Puppet",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "Puppet"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "5.5.2",
+                            "enabled": true,
+                            "name": "Configurator",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "vCO Configuration"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "1.0.3",
+                            "enabled": true,
+                            "name": "AMQP",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "AMQP"
+                        },
+                        {
+                            "data": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<java version=\"1.7.0_55\" class=\"java.beans.XMLDecoder\">\n <object class=\"com.infoblox.ipam.config.xml.InfobloxIpamConnections\">\n  <void property=\"ipamConnections\">\n   <void method=\"add\">\n    <object class=\"com.infoblox.ipam.config.InfobloxIpamConnection\">\n     <void property=\"defaultConnection\">\n      <boolean>true</boolean>\n     </void>\n     <void property=\"defaultDnsView\">\n      <string>default</string>\n     </void>\n     <void property=\"defaultNetworkView\">\n      <string>default</string>\n     </void>\n     <void property=\"id\">\n      <string>1d299d68-f379-4683-bcfc-250e56a81580</string>\n     </void>\n     <void property=\"ipamHostName\">\n      <string>10.210.0.32</string>\n     </void>\n     <void property=\"ipamPassword\">\n      <string>vcoencrypted:RTI2TvmXGYf8Thf2dt9/kQ==</string>\n     </void>\n     <void property=\"ipamUserName\">\n      <string>clouduser</string>\n     </void>\n    </object>\n   </void>\n  </void>\n </object>\n</java>\n",
+                            "dependencies": "plugins",
+                            "description": "3.0.2",
+                            "enabled": true,
+                            "name": "InfobloxIPAM",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "Infoblox IPAM"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "5.8.0",
+                            "enabled": true,
+                            "name": "SRM",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "SRM"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "1.0.2",
+                            "enabled": true,
+                            "name": "SNMP",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "SNMP"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "5.5.2",
+                            "enabled": true,
+                            "name": "VCO",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "vCO Multi-Node"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "2.0.1",
+                            "enabled": true,
+                            "name": "F5Networks",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "F5 Networks"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "6.1.0",
+                            "enabled": true,
+                            "name": "vCAC",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "vCAC Infrastructure Administration"
+                        },
+                        {
+                            "data": "",
+                            "dependencies": "plugins",
+                            "description": "1.0.1",
+                            "enabled": true,
+                            "name": "UCSM",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "UCS Manager Plugin"
+                        },
+                        {
+                            "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<connections xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"http://www.dunes.ch/vs-o/o11nplugin-ssh-config-plugin.xsd\">\n    <connection>\n        <host-name>172.24.124.20</host-name>\n    </connection>\n</connections>\n",
+                            "dependencies": "plugins",
+                            "description": "2.0.0",
+                            "enabled": true,
+                            "name": "SSH",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "SSH"
+                        },
+                        {
+                            "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<virtual-infrastructure-hosts>\n    <guid>3ac5411e-8e49-4a74-a5b2-25de71dde58a</guid>\n    <virtual-infrastructure-host xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"VirtualCenterHost\">\n        <esx>false</esx>\n        <enabled>true</enabled>\n        <url>https://itcldrctenmgt01.utility.pge.com:443/sdk</url>\n        <tunnelPort xsi:nil=\"true\"/>\n        <administrator-username>PGE\\svcCloudOrch</administrator-username>\n        <pattern>%u</pattern>\n    </virtual-infrastructure-host>\n    <virtual-infrastructure-host xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"VirtualCenterHost\">\n        <esx>false</esx>\n        <enabled>true</enabled>\n        <url>https://itcldfxtenmgt01.utility.pge.com:443/sdk</url>\n        <tunnelPort xsi:nil=\"true\"/>\n        <administrator-username>PGE\\svcCloudOrch</administrator-username>\n        <pattern>%u</pattern>\n    </virtual-infrastructure-host>\n</virtual-infrastructure-hosts>\n",
+                            "dependencies": "plugins",
+                            "description": "5.5.2",
+                            "enabled": true,
+                            "name": "VC",
+                            "plugin": true,
+                            "remote": false,
+                            "title": "vCenter Server"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

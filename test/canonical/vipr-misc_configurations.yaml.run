@@ -1,0 +1,956 @@
+http://localhost:5984/
+Welcome
+http://localhost:5984/svtdev
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: test/yaml/vipr-misc_configurations.yaml
+Checking for collect existence
+http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
+http://localhost:5984/svtdev/_design/vipr-project/_view/projects?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+http://localhost:5984/svtdev/_design/vipr-vdc/_view/varrays?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+http://localhost:5984/svtdev/_design/vipr-vdc/_view/storage-systems?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+http://localhost:5984/svtdev/_design/vipr-vdc/_view/smis-providers?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+http://localhost:5984/svtdev/_design/vipr-vdc/_view/varrays-vpools?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+http://localhost:5984/svtdev/_design/vipr-vdc/_view/storage-providers?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+http://localhost:5984/svtdev/_design/vipr-admin/_view/auth-providers?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+http://localhost:5984/svtdev/_design/vipr-tenant/_view/tenants?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+http://localhost:5984/svtdev/_design/vipr-misc/_view/licenses?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+http://localhost:5984/svtdev/_design/vipr-vdc/_view/network-systems?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+http://localhost:5984/svtdev/_design/vipr-compute/_view/vcenters?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+{
+    "data": {
+        "vipr-1": {
+            "vipr-admin": {
+                "auth-providers": {
+                    "316a932b-0b3f-42a2-a79f-1702e274e27b": {
+                        "creation_time": 1429723066172,
+                        "disable": false,
+                        "domains": [
+                            "utility.pge.com",
+                            "pge.com"
+                        ],
+                        "global": true,
+                        "group_attribute": "CN",
+                        "group_member_attributes": [],
+                        "group_object_classes": [],
+                        "group_whitelist_values": [],
+                        "id": "urn:storageos:AuthnProvider:316a932b-0b3f-42a2-a79f-1702e274e27b:global",
+                        "inactive": false,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/admin/authnproviders/urn:storageos:AuthnProvider:316a932b-0b3f-42a2-a79f-1702e274e27b:global",
+                            "rel": "self"
+                        },
+                        "manager_dn": "CN=svcViPRADRead,OU=Service,OU=Accounts,DC=Utility,DC=pge,DC=com",
+                        "mode": "ad",
+                        "name": "Active Directory",
+                        "remote": null,
+                        "search_base": "DC=Utility,DC=pge,DC=com",
+                        "search_filter": "userPrincipalName=%u",
+                        "search_scope": "SUBTREE",
+                        "server_urls": [
+                            "ldap://utility.pge.com"
+                        ],
+                        "tags": [],
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        }
+                    }
+                }
+            },
+            "vipr-compute": {
+                "vcenters": {
+                    "0ec0d70d-8da8-4b27-a121-3417298c4cee": {
+                        "compatibility_status": "COMPATIBLE",
+                        "creation_time": 1443906175521,
+                        "global": false,
+                        "id": "urn:storageos:Vcenter:0ec0d70d-8da8-4b27-a121-3417298c4cee:vdc1",
+                        "inactive": false,
+                        "internal": false,
+                        "ip_address": "xitcldrctnmgt01.lab.pge.com",
+                        "job_discovery_status": "COMPLETE",
+                        "job_metering_status": "CREATED",
+                        "last_discovery_run_time": 1473748305705,
+                        "last_discovery_status_message": "",
+                        "last_metering_run_time": 0,
+                        "link": {
+                            "href": "/compute/vcenters/urn:storageos:Vcenter:0ec0d70d-8da8-4b27-a121-3417298c4cee:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "Lab - RC vCenter",
+                        "native_guid": "648C5F3A-2729-4123-87B9-8D336B0E237D",
+                        "next_discovery_run_time": 1473834702772,
+                        "next_metering_run_time": 0,
+                        "os_version": "5.5.0",
+                        "port_number": 443,
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "success_discovery_time": 1473748305705,
+                        "success_metering_time": 0,
+                        "tags": [],
+                        "tenant": {
+                            "id": "urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                            "link": {
+                                "href": "/tenants/urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                "rel": "self"
+                            }
+                        },
+                        "user_name": "administrator@vsphere.local",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        }
+                    },
+                    "209058c4-559d-40b3-85c7-dc12624b5d07": {
+                        "compatibility_status": "COMPATIBLE",
+                        "creation_time": 1472278393084,
+                        "global": false,
+                        "id": "urn:storageos:Vcenter:209058c4-559d-40b3-85c7-dc12624b5d07:vdc1",
+                        "inactive": false,
+                        "internal": false,
+                        "ip_address": "xitcldfxtnmgt01.lab.pge.com",
+                        "job_discovery_status": "COMPLETE",
+                        "job_metering_status": "CREATED",
+                        "last_discovery_run_time": 1473748306059,
+                        "last_discovery_status_message": "",
+                        "last_metering_run_time": 0,
+                        "link": {
+                            "href": "/compute/vcenters/urn:storageos:Vcenter:209058c4-559d-40b3-85c7-dc12624b5d07:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "Lab - FX vCenter",
+                        "native_guid": "D0D17562-A63C-4245-A752-ED8B23647E13",
+                        "next_discovery_run_time": 1473834702810,
+                        "next_metering_run_time": 0,
+                        "os_version": "5.5.0",
+                        "port_number": 443,
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "success_discovery_time": 1473748306059,
+                        "success_metering_time": 0,
+                        "tags": [],
+                        "tenant": {
+                            "id": "urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                            "link": {
+                                "href": "/tenants/urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                "rel": "self"
+                            }
+                        },
+                        "user_name": "administrator@vsphere.local",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        }
+                    },
+                    "787b1b9d-3747-439d-a061-8a2dc6acb02a": {
+                        "compatibility_status": "COMPATIBLE",
+                        "creation_time": 1429128813328,
+                        "global": false,
+                        "id": "urn:storageos:Vcenter:787b1b9d-3747-439d-a061-8a2dc6acb02a:vdc1",
+                        "inactive": false,
+                        "internal": false,
+                        "ip_address": "172.24.120.141",
+                        "job_discovery_status": "COMPLETE",
+                        "job_metering_status": "CREATED",
+                        "last_discovery_run_time": 1473748314889,
+                        "last_discovery_status_message": "",
+                        "last_metering_run_time": 0,
+                        "link": {
+                            "href": "/compute/vcenters/urn:storageos:Vcenter:787b1b9d-3747-439d-a061-8a2dc6acb02a:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "itcldfxtenmgt01 - Cloud vCenter - FF",
+                        "native_guid": "DD2D95F7-4E5B-411C-967F-56CE390B78EF",
+                        "next_discovery_run_time": 1473834702854,
+                        "next_metering_run_time": 0,
+                        "os_version": "5.5.0",
+                        "port_number": 443,
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "success_discovery_time": 1473748314889,
+                        "success_metering_time": 0,
+                        "tags": [],
+                        "tenant": {
+                            "id": "urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                            "link": {
+                                "href": "/tenants/urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                "rel": "self"
+                            }
+                        },
+                        "user_name": "PGE\\svcViPRAutomation",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        }
+                    },
+                    "95a8ddc8-7479-481c-8e48-07295eec1127": {
+                        "compatibility_status": "COMPATIBLE",
+                        "creation_time": 1429128657585,
+                        "global": false,
+                        "id": "urn:storageos:Vcenter:95a8ddc8-7479-481c-8e48-07295eec1127:vdc1",
+                        "inactive": false,
+                        "internal": false,
+                        "ip_address": "172.24.120.174",
+                        "job_discovery_status": "COMPLETE",
+                        "job_metering_status": "CREATED",
+                        "last_discovery_run_time": 1473748313643,
+                        "last_discovery_status_message": "",
+                        "last_metering_run_time": 0,
+                        "link": {
+                            "href": "/compute/vcenters/urn:storageos:Vcenter:95a8ddc8-7479-481c-8e48-07295eec1127:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "itcldrctenmgt01 - Cloud vCenter - RC",
+                        "native_guid": "C619DAA9-0E49-4349-9A2F-569CE2BEB016",
+                        "next_discovery_run_time": 1473834702895,
+                        "next_metering_run_time": 0,
+                        "os_version": "5.5.0",
+                        "port_number": 443,
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "success_discovery_time": 1473748313643,
+                        "success_metering_time": 0,
+                        "tags": [],
+                        "tenant": {
+                            "id": "urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                            "link": {
+                                "href": "/tenants/urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                "rel": "self"
+                            }
+                        },
+                        "user_name": "PGE\\svcViPRAutomation",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        }
+                    }
+                }
+            },
+            "vipr-misc": {
+                "licenses": {
+                    "license_feature": {
+                        "expired_ind": "false",
+                        "issued_date": "03/06/2015",
+                        "license_id_indicator": "U",
+                        "licensed_ind": "true",
+                        "model": "ViPR_Controller",
+                        "notice": "ACTIVATED TO License Site Number: 132263969",
+                        "product": "FVKFVWGWNS2KJN",
+                        "serial": "FVKFVWGWNS2KJN",
+                        "site_id": "UNKNOWN",
+                        "storage_capacity": "164926744166400",
+                        "trial_license_ind": "false",
+                        "version": "1.0"
+                    },
+                    "license_text": "#############################################################\r\n# EMC License File\r\n# Activation Date:  Mar 06, 2015 11:47:03 PM\r\n# Activated By:  Kimberly Palumbo\r\n# Type:UNSERVED\r\n#############################################################\r\nINCREMENT ViPR_Controller EMCLM 1.0 permanent uncounted \\\r\n\tVENDOR_STRING=CAPACITY=150;CAPACITY_UNIT=TB;SWID=FVKFVWGWNS2KJN;PLC=VIPR; \\\r\n\tHOSTID=ANY dist_info=\"ACTIVATED TO 4303444 PACIFIC GAS AND \\\r\n\tELECTRIC 245 MARKET ST. MC:N11B SAN FRANCISCO CA US 94105\" \\\r\n\tISSUER=EMC ISSUED=06-Mar-2015 NOTICE=\"ACTIVATED TO License \\\r\n\tSite Number: 132263969\" SN=2430077 SIGN=\"008A 88A6 7E58 791B \\\r\n\t1B6D FA82 E428 A900 7640 A8A3 901A EB88 1747 467B CFB9\""
+                }
+            },
+            "vipr-project": {
+                "projects": {
+                    "64483cc2-ecbc-4b09-b3e4-43df721ff597": {
+                        "creation_time": 1429128986654,
+                        "global": true,
+                        "id": "urn:storageos:Project:64483cc2-ecbc-4b09-b3e4-43df721ff597:global",
+                        "inactive": false,
+                        "internal": false,
+                        "link": {
+                            "href": "/projects/urn:storageos:Project:64483cc2-ecbc-4b09-b3e4-43df721ff597:global",
+                            "rel": "self"
+                        },
+                        "name": "pge",
+                        "owner": "root",
+                        "remote": null,
+                        "tags": [],
+                        "tenant": {
+                            "id": "urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                            "link": {
+                                "href": "/tenants/urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                "rel": "self"
+                            }
+                        },
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        }
+                    }
+                }
+            },
+            "vipr-tenant": {
+                "tenants": {
+                    "70f84a12-6ce1-4b50-b616-06ac71c8f94f": {
+                        "creation_time": 1428451214523,
+                        "description": "Root Provider Tenant",
+                        "global": true,
+                        "id": "urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                        "inactive": false,
+                        "internal": false,
+                        "link": {
+                            "href": "/tenants/urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                            "rel": "self"
+                        },
+                        "name": "Provider Tenant",
+                        "remote": null,
+                        "tags": [],
+                        "user_mappings": [],
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        }
+                    }
+                }
+            },
+            "vipr-vdc": {
+                "network-systems": {
+                    "44ea0225-ab7f-4ce5-aae7-00eb289708b4": {
+                        "compatibility_status": "COMPATIBLE",
+                        "creation_time": 1429029650067,
+                        "global": false,
+                        "id": "urn:storageos:NetworkSystem:44ea0225-ab7f-4ce5-aae7-00eb289708b4:vdc1",
+                        "inactive": false,
+                        "internal": false,
+                        "ip_address": "172.24.125.21",
+                        "job_discovery_status": "COMPLETE",
+                        "job_metering_status": "CREATED",
+                        "last_discovery_run_time": 1473787904314,
+                        "last_discovery_status_message": "Discovery completed successfully for Network System : urn:storageos:NetworkSystem:44ea0225-ab7f-4ce5-aae7-00eb289708b4:vdc1",
+                        "last_metering_run_time": 0,
+                        "link": {
+                            "href": "/vdc/network-systems/urn:storageos:NetworkSystem:44ea0225-ab7f-4ce5-aae7-00eb289708b4:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "cssrciocvbmd9102 - Fabric B - RC",
+                        "native_guid": "MDS+172.24.125.21+22",
+                        "next_discovery_run_time": 1473791499966,
+                        "next_metering_run_time": 0,
+                        "port_number": 22,
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "smis_port_number": 22,
+                        "smis_provider_ip": "172.24.125.21",
+                        "smis_use_ssl": false,
+                        "smis_user_name": "admin",
+                        "success_discovery_time": 1473787904314,
+                        "success_metering_time": 0,
+                        "system_type": "mds",
+                        "tags": [],
+                        "uptime": "369 days, 0 hours, 17 minutes, 51 seconds",
+                        "user_name": "admin",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "version": "6.2(11b)"
+                    },
+                    "4f54d166-6715-4cae-90d6-7b77a6081d62": {
+                        "compatibility_status": "COMPATIBLE",
+                        "creation_time": 1429029598027,
+                        "global": false,
+                        "id": "urn:storageos:NetworkSystem:4f54d166-6715-4cae-90d6-7b77a6081d62:vdc1",
+                        "inactive": false,
+                        "internal": false,
+                        "ip_address": "172.24.125.20",
+                        "job_discovery_status": "COMPLETE",
+                        "job_metering_status": "CREATED",
+                        "last_discovery_run_time": 1473787905323,
+                        "last_discovery_status_message": "Discovery completed successfully for Network System : urn:storageos:NetworkSystem:4f54d166-6715-4cae-90d6-7b77a6081d62:vdc1",
+                        "last_metering_run_time": 0,
+                        "link": {
+                            "href": "/vdc/network-systems/urn:storageos:NetworkSystem:4f54d166-6715-4cae-90d6-7b77a6081d62:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "cssrciocvbmd9101 - Fabric A - RC",
+                        "native_guid": "MDS+172.24.125.20+22",
+                        "next_discovery_run_time": 1473791500121,
+                        "next_metering_run_time": 0,
+                        "port_number": 22,
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "smis_port_number": 22,
+                        "smis_provider_ip": "172.24.125.20",
+                        "smis_use_ssl": false,
+                        "smis_user_name": "admin",
+                        "success_discovery_time": 1473787905323,
+                        "success_metering_time": 0,
+                        "system_type": "mds",
+                        "tags": [],
+                        "uptime": "369 days, 0 hours, 28 minutes, 21 seconds",
+                        "user_name": "admin",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "version": "6.2(11b)"
+                    },
+                    "7814302b-d2eb-4136-849b-b9e4cc36744c": {
+                        "compatibility_status": "COMPATIBLE",
+                        "creation_time": 1429029765105,
+                        "global": false,
+                        "id": "urn:storageos:NetworkSystem:7814302b-d2eb-4136-849b-b9e4cc36744c:vdc1",
+                        "inactive": false,
+                        "internal": false,
+                        "ip_address": "172.24.124.21",
+                        "job_discovery_status": "COMPLETE",
+                        "job_metering_status": "CREATED",
+                        "last_discovery_run_time": 1473787907174,
+                        "last_discovery_status_message": "Discovery completed successfully for Network System : urn:storageos:NetworkSystem:7814302b-d2eb-4136-849b-b9e4cc36744c:vdc1",
+                        "last_metering_run_time": 0,
+                        "link": {
+                            "href": "/vdc/network-systems/urn:storageos:NetworkSystem:7814302b-d2eb-4136-849b-b9e4cc36744c:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "cssffiocaxvbmd9102 - Fabric B - FF",
+                        "native_guid": "MDS+172.24.124.21+22",
+                        "next_discovery_run_time": 1473791500265,
+                        "next_metering_run_time": 0,
+                        "port_number": 22,
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "smis_port_number": 22,
+                        "smis_provider_ip": "172.24.124.21",
+                        "smis_use_ssl": false,
+                        "smis_user_name": "admin",
+                        "success_discovery_time": 1473787907174,
+                        "success_metering_time": 0,
+                        "system_type": "mds",
+                        "tags": [],
+                        "uptime": "365 days, 0 hours, 25 minutes, 21 seconds",
+                        "user_name": "admin",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "version": "6.2(11b)"
+                    },
+                    "e7a33267-f274-4e80-86fa-f7eb818f5290": {
+                        "compatibility_status": "COMPATIBLE",
+                        "creation_time": 1429029728114,
+                        "global": false,
+                        "id": "urn:storageos:NetworkSystem:e7a33267-f274-4e80-86fa-f7eb818f5290:vdc1",
+                        "inactive": false,
+                        "internal": false,
+                        "ip_address": "172.24.124.20",
+                        "job_discovery_status": "COMPLETE",
+                        "job_metering_status": "CREATED",
+                        "last_discovery_run_time": 1473787908248,
+                        "last_discovery_status_message": "Discovery completed successfully for Network System : urn:storageos:NetworkSystem:e7a33267-f274-4e80-86fa-f7eb818f5290:vdc1",
+                        "last_metering_run_time": 0,
+                        "link": {
+                            "href": "/vdc/network-systems/urn:storageos:NetworkSystem:e7a33267-f274-4e80-86fa-f7eb818f5290:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "cssffiocaxvbmd9101 - Fabric A - FF",
+                        "native_guid": "MDS+172.24.124.20+22",
+                        "next_discovery_run_time": 1473791500385,
+                        "next_metering_run_time": 0,
+                        "port_number": 22,
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "smis_port_number": 22,
+                        "smis_provider_ip": "172.24.124.20",
+                        "smis_use_ssl": false,
+                        "smis_user_name": "admin",
+                        "success_discovery_time": 1473787908248,
+                        "success_metering_time": 0,
+                        "system_type": "mds",
+                        "tags": [],
+                        "uptime": "365 days, 0 hours, 50 minutes, 51 seconds",
+                        "user_name": "admin",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "version": "6.2(11b)"
+                    }
+                },
+                "smis-providers": {
+                    "f53bdd37-e2e5-406f-925e-6c86db4c13df": {
+                        "compatibility_status": "COMPATIBLE",
+                        "connection_status": "CONNECTED",
+                        "creation_time": 1428453814840,
+                        "description": "Windows_NT itcldfxemcsmi01 6.2.9200  x86_64 VM Guest OS (64bit Libraries)",
+                        "global": false,
+                        "id": "urn:storageos:StorageProvider:f53bdd37-e2e5-406f-925e-6c86db4c13df:vdc1",
+                        "inactive": false,
+                        "internal": false,
+                        "ip_address": "172.24.120.145",
+                        "job_scan_status": "COMPLETE",
+                        "last_scan_status_message": "Scan job completed successfully for SMISProvider: urn:storageos:StorageProvider:f53bdd37-e2e5-406f-925e-6c86db4c13df:vdc1",
+                        "last_scan_time": 1473789042863,
+                        "link": {
+                            "href": "/vdc/smis-providers/urn:storageos:StorageProvider:f53bdd37-e2e5-406f-925e-6c86db4c13df:vdc1",
+                            "rel": "self"
+                        },
+                        "manufacturer": "EMC Corp",
+                        "name": "itcldfxemcsmi01",
+                        "next_scan_time": 1473789642393,
+                        "port_number": 5989,
+                        "provider_id": "172.24.120.145-5989",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_systems": [
+                            {
+                                "id": "urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                                "link": {
+                                    "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                                    "rel": "self"
+                                }
+                            }
+                        ],
+                        "success_scan_time": 1473789042863,
+                        "tags": [],
+                        "use_ssl": true,
+                        "user_name": "admin",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "version_string": "V4.6.2.29"
+                    },
+                    "fe831645-7a72-4caa-bb19-d24824a62ca1": {
+                        "compatibility_status": "COMPATIBLE",
+                        "connection_status": "CONNECTED",
+                        "creation_time": 1428453709146,
+                        "description": "Windows_NT itcldrcemcsmi01 6.2.9200  x86_64 VM Guest OS (64bit Libraries)",
+                        "global": false,
+                        "id": "urn:storageos:StorageProvider:fe831645-7a72-4caa-bb19-d24824a62ca1:vdc1",
+                        "inactive": false,
+                        "internal": false,
+                        "ip_address": "172.24.120.178",
+                        "job_scan_status": "COMPLETE",
+                        "last_scan_status_message": "Scan job completed successfully for SMISProvider: urn:storageos:StorageProvider:fe831645-7a72-4caa-bb19-d24824a62ca1:vdc1",
+                        "last_scan_time": 1473789042929,
+                        "link": {
+                            "href": "/vdc/smis-providers/urn:storageos:StorageProvider:fe831645-7a72-4caa-bb19-d24824a62ca1:vdc1",
+                            "rel": "self"
+                        },
+                        "manufacturer": "EMC Corp",
+                        "name": "itcldrcemcsmi01",
+                        "next_scan_time": 1473789642517,
+                        "port_number": 5989,
+                        "provider_id": "172.24.120.178-5989",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_systems": [
+                            {
+                                "id": "urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                                "link": {
+                                    "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                                    "rel": "self"
+                                }
+                            }
+                        ],
+                        "success_scan_time": 1473789042929,
+                        "tags": [],
+                        "use_ssl": true,
+                        "user_name": "admin",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "version_string": "V4.6.2.29"
+                    }
+                },
+                "storage-providers": {
+                    "f53bdd37-e2e5-406f-925e-6c86db4c13df": {
+                        "compatibility_status": "COMPATIBLE",
+                        "connection_status": "CONNECTED",
+                        "creation_time": 1428453814840,
+                        "description": "Windows_NT itcldfxemcsmi01 6.2.9200  x86_64 VM Guest OS (64bit Libraries)",
+                        "global": false,
+                        "id": "urn:storageos:StorageProvider:f53bdd37-e2e5-406f-925e-6c86db4c13df:vdc1",
+                        "inactive": false,
+                        "interface": "smis",
+                        "internal": false,
+                        "ip_address": "172.24.120.145",
+                        "job_scan_status": "COMPLETE",
+                        "last_scan_status_message": "Scan job completed successfully for SMISProvider: urn:storageos:StorageProvider:f53bdd37-e2e5-406f-925e-6c86db4c13df:vdc1",
+                        "last_scan_time": 1473789042863,
+                        "link": {
+                            "href": "/vdc/storage-providers/urn:storageos:StorageProvider:f53bdd37-e2e5-406f-925e-6c86db4c13df:vdc1",
+                            "rel": "self"
+                        },
+                        "manufacturer": "EMC Corp",
+                        "name": "itcldfxemcsmi01",
+                        "next_scan_time": 1473789642393,
+                        "port_number": 5989,
+                        "provider_id": "172.24.120.145-5989",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_systems": [
+                            {
+                                "id": "urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                                "link": {
+                                    "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                                    "rel": "self"
+                                }
+                            }
+                        ],
+                        "success_scan_time": 1473789042863,
+                        "tags": [],
+                        "use_ssl": true,
+                        "user_name": "admin",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "version_string": "V4.6.2.29"
+                    },
+                    "fe831645-7a72-4caa-bb19-d24824a62ca1": {
+                        "compatibility_status": "COMPATIBLE",
+                        "connection_status": "CONNECTED",
+                        "creation_time": 1428453709146,
+                        "description": "Windows_NT itcldrcemcsmi01 6.2.9200  x86_64 VM Guest OS (64bit Libraries)",
+                        "global": false,
+                        "id": "urn:storageos:StorageProvider:fe831645-7a72-4caa-bb19-d24824a62ca1:vdc1",
+                        "inactive": false,
+                        "interface": "smis",
+                        "internal": false,
+                        "ip_address": "172.24.120.178",
+                        "job_scan_status": "COMPLETE",
+                        "last_scan_status_message": "Scan job completed successfully for SMISProvider: urn:storageos:StorageProvider:fe831645-7a72-4caa-bb19-d24824a62ca1:vdc1",
+                        "last_scan_time": 1473789042929,
+                        "link": {
+                            "href": "/vdc/storage-providers/urn:storageos:StorageProvider:fe831645-7a72-4caa-bb19-d24824a62ca1:vdc1",
+                            "rel": "self"
+                        },
+                        "manufacturer": "EMC Corp",
+                        "name": "itcldrcemcsmi01",
+                        "next_scan_time": 1473789642517,
+                        "port_number": 5989,
+                        "provider_id": "172.24.120.178-5989",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_systems": [
+                            {
+                                "id": "urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                                "link": {
+                                    "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                                    "rel": "self"
+                                }
+                            }
+                        ],
+                        "success_scan_time": 1473789042929,
+                        "tags": [],
+                        "use_ssl": true,
+                        "user_name": "admin",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "version_string": "V4.6.2.29"
+                    }
+                },
+                "storage-systems": {
+                    "10d14f9a-cc42-4286-becc-9a396bafee41.json": {
+                        "active_provider_uri": {
+                            "id": "urn:storageos:StorageProvider:fe831645-7a72-4caa-bb19-d24824a62ca1:vdc1",
+                            "link": {
+                                "href": "/vdc/smis-providers/urn:storageos:StorageProvider:fe831645-7a72-4caa-bb19-d24824a62ca1:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "associated_systems": [],
+                        "async_actions": [
+                            "CreateGroupReplica",
+                            "CreateElementReplica"
+                        ],
+                        "average_port_metrics": 3.9558595681043704,
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_systems": [],
+                        "creation_time": 1428533671249,
+                        "export_masks": [],
+                        "firmware_version": "05.33.009.5.155",
+                        "global": false,
+                        "id": "urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                        "inactive": false,
+                        "internal": false,
+                        "job_discovery_status": "COMPLETE",
+                        "job_metering_status": "COMPLETE",
+                        "last_discovery_run_time": 1473787924167,
+                        "last_discovery_status_message": "Unknown Status",
+                        "last_metering_run_time": 1473787875176,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                            "rel": "self"
+                        },
+                        "max_resources": -1,
+                        "model": "Rack Mounted VNX8000",
+                        "name": "CLARIION+APM00144937724",
+                        "native_guid": "CLARIION+APM00144937724",
+                        "next_discovery_run_time": 1473791499571,
+                        "next_metering_run_time": 1473791469561,
+                        "num_resources": 69,
+                        "protocols": [],
+                        "reachable": true,
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "secondary_ips": [],
+                        "serial_number": "APM00144937724",
+                        "smis_port_number": 5989,
+                        "smis_provider_ip": "172.24.120.178",
+                        "smis_providers": [
+                            {
+                                "id": "urn:storageos:StorageProvider:fe831645-7a72-4caa-bb19-d24824a62ca1:vdc1",
+                                "link": {
+                                    "href": "/vdc/smis-providers/urn:storageos:StorageProvider:fe831645-7a72-4caa-bb19-d24824a62ca1:vdc1",
+                                    "rel": "self"
+                                }
+                            }
+                        ],
+                        "smis_use_ssl": true,
+                        "smis_user_name": "admin",
+                        "success_discovery_time": 1473787924167,
+                        "success_metering_time": 1473787875176,
+                        "supported_provisioning_type": "THIN_AND_THICK",
+                        "supported_replication_types": [],
+                        "system_type": "vnxblock",
+                        "tags": [],
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        }
+                    },
+                    "94eff137-6f58-45d3-b6f9-cd12497edbb2.json": {
+                        "active_provider_uri": {
+                            "id": "urn:storageos:StorageProvider:f53bdd37-e2e5-406f-925e-6c86db4c13df:vdc1",
+                            "link": {
+                                "href": "/vdc/smis-providers/urn:storageos:StorageProvider:f53bdd37-e2e5-406f-925e-6c86db4c13df:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "associated_systems": [],
+                        "async_actions": [
+                            "CreateGroupReplica",
+                            "CreateElementReplica"
+                        ],
+                        "average_port_metrics": 4.8770837400713125,
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_systems": [],
+                        "creation_time": 1429028916933,
+                        "export_masks": [],
+                        "firmware_version": "05.33.009.5.155",
+                        "global": false,
+                        "id": "urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                        "inactive": false,
+                        "internal": false,
+                        "job_discovery_status": "COMPLETE",
+                        "job_metering_status": "COMPLETE",
+                        "last_discovery_run_time": 1473787907915,
+                        "last_discovery_status_message": "Unknown Status",
+                        "last_metering_run_time": 1473787874721,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                            "rel": "self"
+                        },
+                        "max_resources": -1,
+                        "model": "Rack Mounted VNX8000",
+                        "name": "CLARIION+APM00144937726",
+                        "native_guid": "CLARIION+APM00144937726",
+                        "next_discovery_run_time": 1473791499660,
+                        "next_metering_run_time": 1473791469695,
+                        "num_resources": 71,
+                        "protocols": [],
+                        "reachable": true,
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "secondary_ips": [],
+                        "serial_number": "APM00144937726",
+                        "smis_port_number": 5989,
+                        "smis_provider_ip": "172.24.120.145",
+                        "smis_providers": [
+                            {
+                                "id": "urn:storageos:StorageProvider:f53bdd37-e2e5-406f-925e-6c86db4c13df:vdc1",
+                                "link": {
+                                    "href": "/vdc/smis-providers/urn:storageos:StorageProvider:f53bdd37-e2e5-406f-925e-6c86db4c13df:vdc1",
+                                    "rel": "self"
+                                }
+                            }
+                        ],
+                        "smis_use_ssl": true,
+                        "smis_user_name": "admin",
+                        "success_discovery_time": 1473787907915,
+                        "success_metering_time": 1473787874721,
+                        "supported_provisioning_type": "THIN_AND_THICK",
+                        "supported_replication_types": [],
+                        "system_type": "vnxblock",
+                        "tags": [],
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        }
+                    }
+                },
+                "varrays": {
+                    "091eef95-c33a-4e09-9842-ed54658a790f": {
+                        "acl": []
+                    },
+                    "4687b6ca-3741-4bc1-9e65-c6a6c072dad2": {
+                        "acl": []
+                    },
+                    "7a35a458-a44e-4459-9247-8d55a59eab3e": {
+                        "acl": []
+                    },
+                    "b60c49fd-4bdc-4752-ae20-7895868a9f8a": {
+                        "acl": []
+                    }
+                },
+                "varrays-vpools": {
+                    "091eef95-c33a-4e09-9842-ed54658a790f": {
+                        "virtualpool": [
+                            {
+                                "id": "urn:storageos:VirtualPool:9c35787e-7b6e-4b80-a60b-fa352dbd67e8:vdc1",
+                                "link": {
+                                    "href": "/block/vpools/urn:storageos:VirtualPool:9c35787e-7b6e-4b80-a60b-fa352dbd67e8:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "vPool-VNX7729-FX-EHC-Lab",
+                                "vpool_type": "block"
+                            }
+                        ]
+                    },
+                    "4687b6ca-3741-4bc1-9e65-c6a6c072dad2": {
+                        "virtualpool": [
+                            {
+                                "id": "urn:storageos:VirtualPool:227c8f4b-086b-4ffa-8f5b-5a46c02b8816:vdc1",
+                                "link": {
+                                    "href": "/block/vpools/urn:storageos:VirtualPool:227c8f4b-086b-4ffa-8f5b-5a46c02b8816:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "vPool-VNX7724-RC-No-DR",
+                                "vpool_type": "block"
+                            },
+                            {
+                                "id": "urn:storageos:VirtualPool:54b5d751-24b1-48ef-82a9-525bde524ac5:vdc1",
+                                "link": {
+                                    "href": "/block/vpools/urn:storageos:VirtualPool:54b5d751-24b1-48ef-82a9-525bde524ac5:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "Tier2",
+                                "vpool_type": "block"
+                            },
+                            {
+                                "id": "urn:storageos:VirtualPool:a7744ffc-55b1-4d9f-90e0-8b8e53ba9126:vdc1",
+                                "link": {
+                                    "href": "/block/vpools/urn:storageos:VirtualPool:a7744ffc-55b1-4d9f-90e0-8b8e53ba9126:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "Tier1",
+                                "vpool_type": "block"
+                            }
+                        ]
+                    },
+                    "7a35a458-a44e-4459-9247-8d55a59eab3e": {
+                        "virtualpool": [
+                            {
+                                "id": "urn:storageos:VirtualPool:54b5d751-24b1-48ef-82a9-525bde524ac5:vdc1",
+                                "link": {
+                                    "href": "/block/vpools/urn:storageos:VirtualPool:54b5d751-24b1-48ef-82a9-525bde524ac5:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "Tier2",
+                                "vpool_type": "block"
+                            },
+                            {
+                                "id": "urn:storageos:VirtualPool:a7744ffc-55b1-4d9f-90e0-8b8e53ba9126:vdc1",
+                                "link": {
+                                    "href": "/block/vpools/urn:storageos:VirtualPool:a7744ffc-55b1-4d9f-90e0-8b8e53ba9126:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "Tier1",
+                                "vpool_type": "block"
+                            },
+                            {
+                                "id": "urn:storageos:VirtualPool:d37077f2-6cdd-4099-b881-87389f287bc8:vdc1",
+                                "link": {
+                                    "href": "/block/vpools/urn:storageos:VirtualPool:d37077f2-6cdd-4099-b881-87389f287bc8:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "vPool-VNX7726-FX-No-DR",
+                                "vpool_type": "block"
+                            },
+                            {
+                                "id": "urn:storageos:VirtualPool:e7f29cc1-6bdc-42d7-a495-17d43affed9c:vdc1",
+                                "link": {
+                                    "href": "/block/vpools/urn:storageos:VirtualPool:e7f29cc1-6bdc-42d7-a495-17d43affed9c:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "vPool-VNX7726-FX-DR-Target",
+                                "vpool_type": "block"
+                            }
+                        ]
+                    },
+                    "b60c49fd-4bdc-4752-ae20-7895868a9f8a": {
+                        "virtualpool": [
+                            {
+                                "id": "urn:storageos:VirtualPool:4409c996-c270-47bf-8f56-400431ec6fd8:vdc1",
+                                "link": {
+                                    "href": "/block/vpools/urn:storageos:VirtualPool:4409c996-c270-47bf-8f56-400431ec6fd8:vdc1",
+                                    "rel": "self"
+                                },
+                                "name": "vPool-VNX7724-RC-EHC-LAB",
+                                "vpool_type": "block"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

@@ -1,0 +1,14 @@
+name: nsx report
+reports:
+  nsx-appliance:
+    certificates:
+      - subjectCn
+      - issuerCn
+      - version
+      - signatureAlgo
+      - publicKeyAlgo
+      - publicKeyLength
+      - rsaPublicKeyExponent
+      - isValid
+      - isCa
+      - signature

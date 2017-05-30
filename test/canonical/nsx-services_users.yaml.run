@@ -1,0 +1,1518 @@
+http://localhost:5984/
+Welcome
+http://localhost:5984/svtdev
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: test/yaml/nsx-services_users.yaml
+Checking for collect existence
+http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
+http://localhost:5984/svtdev/_design/nsx-services/_view/users?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+{
+    "data": {
+        "nsx-1": {
+            "nsx-services": {
+                "svt_single": {},
+                "users": {
+                    "users1": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "vsphere.local\\administrator",
+                        "objectId": "userinfo-4",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "vsphere.local\\administrator",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users10": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "pge\\pkv2admin",
+                        "objectId": "userinfo-13",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "pge\\pkv2admin",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users11": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "pge\\r3lqadmin",
+                        "objectId": "userinfo-14",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "pge\\r3lqadmin",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users12": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "pge\\csh7admin",
+                        "objectId": "userinfo-15",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "pge\\csh7admin",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users13": {
+                        "accessControlEntry": {
+                            "resources": [
+                                {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "Global",
+                                    "objectId": "globalroot-0",
+                                    "objectTypeName": "GlobalRoot",
+                                    "revision": 1493,
+                                    "type": {
+                                        "name": "GlobalRoot"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            ],
+                            "role": "auditor"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\s3beadmin",
+                        "objectId": "userinfo-52",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\s3beadmin",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users14": {
+                        "accessControlEntry": {
+                            "resources": [
+                                {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "Global",
+                                    "objectId": "globalroot-0",
+                                    "objectTypeName": "GlobalRoot",
+                                    "revision": 1493,
+                                    "type": {
+                                        "name": "GlobalRoot"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            ],
+                            "role": "auditor"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\tjc1",
+                        "objectId": "userinfo-53",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\tjc1",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users15": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "pge\\m2jc",
+                        "objectId": "userinfo-29",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "pge\\m2jc",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users16": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "pge\\svccloudauto",
+                        "objectId": "userinfo-33",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "pge\\svccloudauto",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users17": {
+                        "accessControlEntry": {
+                            "resources": [
+                                {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "Global",
+                                    "objectId": "globalroot-0",
+                                    "objectTypeName": "GlobalRoot",
+                                    "revision": 1493,
+                                    "type": {
+                                        "name": "GlobalRoot"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            ],
+                            "role": "auditor"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\FAH5",
+                        "objectId": "userinfo-65",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\FAH5",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users18": {
+                        "accessControlEntry": {
+                            "resources": [
+                                {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "Global",
+                                    "objectId": "globalroot-0",
+                                    "objectTypeName": "GlobalRoot",
+                                    "revision": 1493,
+                                    "type": {
+                                        "name": "GlobalRoot"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            ],
+                            "role": "auditor"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": true,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "Firewall Reviewers",
+                        "objectId": "userinfo-68",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "Firewall Reviewers",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users19": {
+                        "accessControlEntry": {
+                            "resources": [
+                                {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "Global",
+                                    "objectId": "globalroot-0",
+                                    "objectTypeName": "GlobalRoot",
+                                    "revision": 1493,
+                                    "type": {
+                                        "name": "GlobalRoot"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            ],
+                            "role": "auditor"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\S3BE",
+                        "objectId": "userinfo-66",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\S3BE",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users2": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\mxjwadmin",
+                        "objectId": "userinfo-34",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\mxjwadmin",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users20": {
+                        "accessControlEntry": {
+                            "resources": [
+                                {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "Global",
+                                    "objectId": "globalroot-0",
+                                    "objectTypeName": "GlobalRoot",
+                                    "revision": 1493,
+                                    "type": {
+                                        "name": "GlobalRoot"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            ],
+                            "role": "auditor"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\agb5",
+                        "objectId": "userinfo-64",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\agb5",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users21": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\c1dbadmin",
+                        "objectId": "userinfo-61",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\c1dbadmin",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users22": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\t1wtadmin",
+                        "objectId": "userinfo-62",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\t1wtadmin",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users23": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "pge\\t1wtadmin",
+                        "objectId": "userinfo-63",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "pge\\t1wtadmin",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users24": {
+                        "accessControlEntry": {
+                            "resources": [
+                                {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "Global",
+                                    "objectId": "globalroot-0",
+                                    "objectTypeName": "GlobalRoot",
+                                    "revision": 1493,
+                                    "type": {
+                                        "name": "GlobalRoot"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            ],
+                            "role": "auditor"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\mxjw",
+                        "objectId": "userinfo-57",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\mxjw",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users25": {
+                        "accessControlEntry": {
+                            "resources": [
+                                {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "Global",
+                                    "objectId": "globalroot-0",
+                                    "objectTypeName": "GlobalRoot",
+                                    "revision": 1493,
+                                    "type": {
+                                        "name": "GlobalRoot"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            ],
+                            "role": "auditor"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\jfsv",
+                        "objectId": "userinfo-58",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\jfsv",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users26": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\jtpkadmin",
+                        "objectId": "userinfo-59",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\jtpkadmin",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users3": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "pge\\jtpkadmin",
+                        "objectId": "userinfo-60",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "pge\\jtpkadmin",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users4": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "pge\\mxjwadmin",
+                        "objectId": "userinfo-35",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "pge\\mxjwadmin",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users5": {
+                        "accessControlEntry": {
+                            "resources": [
+                                {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "Global",
+                                    "objectId": "globalroot-0",
+                                    "objectTypeName": "GlobalRoot",
+                                    "revision": 1493,
+                                    "type": {
+                                        "name": "GlobalRoot"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            ],
+                            "role": "auditor"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "PGE/redseal",
+                        "objectId": "userinfo-25",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "PGE/redseal",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users6": {
+                        "accessControlEntry": {
+                            "resources": [
+                                {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "Global",
+                                    "objectId": "globalroot-0",
+                                    "objectTypeName": "GlobalRoot",
+                                    "revision": 1493,
+                                    "type": {
+                                        "name": "GlobalRoot"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            ],
+                            "role": "auditor"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "PGE/JTPK",
+                        "objectId": "userinfo-26",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "PGE/JTPK",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users7": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": true,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "PGE\\AdminCloud",
+                        "objectId": "userinfo-18",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "PGE\\AdminCloud",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users8": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "super_user"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": true,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "admin",
+                        "objectId": "userinfo-3",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "admin",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "users9": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "pge\\c1kpadmin",
+                        "objectId": "userinfo-12",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "pge\\c1kpadmin",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    }
+                }
+            }
+        },
+        "nsx-2": {
+            "nsx-services": {
+                "svt_single": {},
+                "users": {
+                    "users1": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "vsphere.local\\administrator",
+                        "objectId": "userinfo-4",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "vsphere.local\\administrator",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users10": {
+                        "accessControlEntry": {
+                            "resources": [
+                                {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "Global",
+                                    "objectId": "globalroot-0",
+                                    "objectTypeName": "GlobalRoot",
+                                    "revision": 149,
+                                    "type": {
+                                        "name": "GlobalRoot"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            ],
+                            "role": "auditor"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "PGE/redseal",
+                        "objectId": "userinfo-19",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "PGE/redseal",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users11": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\c1dbadmin",
+                        "objectId": "userinfo-43",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\c1dbadmin",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users12": {
+                        "accessControlEntry": {
+                            "resources": [
+                                {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "Global",
+                                    "objectId": "globalroot-0",
+                                    "objectTypeName": "GlobalRoot",
+                                    "revision": 149,
+                                    "type": {
+                                        "name": "GlobalRoot"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            ],
+                            "role": "auditor"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\gsxd",
+                        "objectId": "userinfo-46",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\gsxd",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users13": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\jtpkadmin",
+                        "objectId": "userinfo-40",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\jtpkadmin",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users14": {
+                        "accessControlEntry": {
+                            "resources": [
+                                {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "Global",
+                                    "objectId": "globalroot-0",
+                                    "objectTypeName": "GlobalRoot",
+                                    "revision": 149,
+                                    "type": {
+                                        "name": "GlobalRoot"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            ],
+                            "role": "auditor"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\mxjw",
+                        "objectId": "userinfo-31",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\mxjw",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users15": {
+                        "accessControlEntry": {
+                            "resources": [
+                                {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "Global",
+                                    "objectId": "globalroot-0",
+                                    "objectTypeName": "GlobalRoot",
+                                    "revision": 149,
+                                    "type": {
+                                        "name": "GlobalRoot"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            ],
+                            "role": "auditor"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\agb5",
+                        "objectId": "userinfo-32",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\agb5",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users16": {
+                        "accessControlEntry": {
+                            "resources": [
+                                {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "Global",
+                                    "objectId": "globalroot-0",
+                                    "objectTypeName": "GlobalRoot",
+                                    "revision": 149,
+                                    "type": {
+                                        "name": "GlobalRoot"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            ],
+                            "role": "auditor"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\fah5",
+                        "objectId": "userinfo-36",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\fah5",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users17": {
+                        "accessControlEntry": {
+                            "resources": [
+                                {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "Global",
+                                    "objectId": "globalroot-0",
+                                    "objectTypeName": "GlobalRoot",
+                                    "revision": 149,
+                                    "type": {
+                                        "name": "GlobalRoot"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            ],
+                            "role": "auditor"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\tjc1",
+                        "objectId": "userinfo-38",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\tjc1",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users18": {
+                        "accessControlEntry": {
+                            "resources": [
+                                {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "Global",
+                                    "objectId": "globalroot-0",
+                                    "objectTypeName": "GlobalRoot",
+                                    "revision": 149,
+                                    "type": {
+                                        "name": "GlobalRoot"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            ],
+                            "role": "auditor"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\dlj2",
+                        "objectId": "userinfo-34",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\dlj2",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users19": {
+                        "accessControlEntry": {
+                            "resources": [
+                                {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "Global",
+                                    "objectId": "globalroot-0",
+                                    "objectTypeName": "GlobalRoot",
+                                    "revision": 149,
+                                    "type": {
+                                        "name": "GlobalRoot"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            ],
+                            "role": "auditor"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\d2w4",
+                        "objectId": "userinfo-35",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\d2w4",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users2": {
+                        "accessControlEntry": {
+                            "resources": [
+                                {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "Global",
+                                    "objectId": "globalroot-0",
+                                    "objectTypeName": "GlobalRoot",
+                                    "revision": 149,
+                                    "type": {
+                                        "name": "GlobalRoot"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            ],
+                            "role": "auditor"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\jfsv",
+                        "objectId": "userinfo-39",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\jfsv",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users20": {
+                        "accessControlEntry": {
+                            "resources": [
+                                {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "Global",
+                                    "objectId": "globalroot-0",
+                                    "objectTypeName": "GlobalRoot",
+                                    "revision": 149,
+                                    "type": {
+                                        "name": "GlobalRoot"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            ],
+                            "role": "auditor"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\s3be",
+                        "objectId": "userinfo-37",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\s3be",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users21": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "pge\\jtpkadmin",
+                        "objectId": "userinfo-41",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "pge\\jtpkadmin",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users22": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\t1wtadmin",
+                        "objectId": "userinfo-44",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\t1wtadmin",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users23": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "pge\\t1wtadmin",
+                        "objectId": "userinfo-45",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "pge\\t1wtadmin",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users24": {
+                        "accessControlEntry": {
+                            "resources": [
+                                {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "Global",
+                                    "objectId": "globalroot-0",
+                                    "objectTypeName": "GlobalRoot",
+                                    "revision": 149,
+                                    "type": {
+                                        "name": "GlobalRoot"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            ],
+                            "role": "auditor"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": true,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "vsphere.local\\Firewall Reviewers",
+                        "objectId": "userinfo-47",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "vsphere.local\\Firewall Reviewers",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users3": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "pge\\c1kpadmin",
+                        "objectId": "userinfo-30",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "pge\\c1kpadmin",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users4": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "PGE\\svcCloudAuto",
+                        "objectId": "userinfo-6",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "PGE\\svcCloudAuto",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users5": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\m6readmin",
+                        "objectId": "userinfo-20",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\m6readmin",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users6": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": true,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "NSXAdmins",
+                        "objectId": "userinfo-22",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "NSXAdmins",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users7": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "enterprise_admin"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": true,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "utility.pge.com\\AdminCloud",
+                        "objectId": "userinfo-26",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "utility.pge.com\\AdminCloud",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users8": {
+                        "accessControlEntry": {
+                            "resources": [],
+                            "role": "super_user"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": true,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "admin",
+                        "objectId": "userinfo-3",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "admin",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "users9": {
+                        "accessControlEntry": {
+                            "resources": [
+                                {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "Global",
+                                    "objectId": "globalroot-0",
+                                    "objectTypeName": "GlobalRoot",
+                                    "revision": 149,
+                                    "type": {
+                                        "name": "GlobalRoot"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            ],
+                            "role": "auditor"
+                        },
+                        "clientHandle": "",
+                        "enabled": true,
+                        "extendedAttributes": [],
+                        "hasGlobalObjectAccess": true,
+                        "isCli": false,
+                        "isEnabled": true,
+                        "isGroup": false,
+                        "isLocal": false,
+                        "local": false,
+                        "name": "PGE/jtpk",
+                        "objectId": "userinfo-18",
+                        "objectTypeName": "UserInfo",
+                        "revision": 0,
+                        "type": {
+                            "name": "UserInfo"
+                        },
+                        "userId": "PGE/jtpk",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

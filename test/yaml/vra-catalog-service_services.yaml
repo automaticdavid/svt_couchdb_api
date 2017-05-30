@@ -1,0 +1,5 @@
+name: vra report
+reports:
+  vra-catalog-service:
+    services:
+      - svt_all

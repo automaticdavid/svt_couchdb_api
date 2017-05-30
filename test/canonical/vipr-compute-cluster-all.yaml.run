@@ -1,0 +1,536 @@
+http://localhost:5984/
+Welcome
+http://localhost:5984/svtdev
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: test/yaml/vipr-compute-cluster-all.yaml
+Checking for collect existence
+http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
+http://localhost:5984/svtdev/_design/vipr-compute/_view/clusters?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+{
+    "data": {
+        "vipr-1": {
+            "vipr-compute": {
+                "clusters": {
+                    "0a1cabae-3ff5-4165-a2de-bbe34b6c5a07": {
+                        "cluster": {
+                            "_id": "d8715936b72b8e6305a989bd62e4927c",
+                            "_rev": "1-a1108c5a7f7638cc44d6d9c05ee39ded",
+                            "creation_time": 1429637513742,
+                            "global": false,
+                            "id": "urn:storageos:Cluster:0a1cabae-3ff5-4165-a2de-bbe34b6c5a07:vdc1",
+                            "inactive": false,
+                            "internal": false,
+                            "link": {
+                                "href": "/compute/clusters/urn:storageos:Cluster:0a1cabae-3ff5-4165-a2de-bbe34b6c5a07:vdc1",
+                                "rel": "self"
+                            },
+                            "name": "FX-Tenant-NonDR-Cluster01",
+                            "remote": false,
+                            "svt_client": "PGE",
+                            "svt_collect_date": "2016-09-13-10-35-57",
+                            "svt_source": "vipr-1",
+                            "svt_source_file": "vipr_compute-cluster_0a1cabae-3ff5-4165-a2de-bbe34b6c5a07.json",
+                            "tags": [],
+                            "tenant": {
+                                "id": "urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                "link": {
+                                    "href": "/tenants/urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                    "rel": "self"
+                                }
+                            },
+                            "vcenter_data_center": {
+                                "id": "urn:storageos:VcenterDataCenter:10462174-c304-464c-b567-51d70ca68e59:vdc1",
+                                "link": {
+                                    "href": "/compute/vcenter-data-centers/urn:storageos:VcenterDataCenter:10462174-c304-464c-b567-51d70ca68e59:vdc1",
+                                    "rel": "self"
+                                }
+                            },
+                            "vdc": {
+                                "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "link": {
+                                    "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                    "rel": "self"
+                                }
+                            }
+                        }
+                    },
+                    "1abc1813-46c9-46e6-a20a-ec2143ce9fcb": {
+                        "cluster": {
+                            "_id": "d8715936b72b8e6305a989bd62602129",
+                            "_rev": "1-f066dbd7441626992bb75d5cfa4faec8",
+                            "creation_time": 1429128814276,
+                            "global": false,
+                            "id": "urn:storageos:Cluster:1abc1813-46c9-46e6-a20a-ec2143ce9fcb:vdc1",
+                            "inactive": false,
+                            "internal": false,
+                            "link": {
+                                "href": "/compute/clusters/urn:storageos:Cluster:1abc1813-46c9-46e6-a20a-ec2143ce9fcb:vdc1",
+                                "rel": "self"
+                            },
+                            "name": "FX-Automation-Cluster01",
+                            "remote": false,
+                            "svt_client": "PGE",
+                            "svt_collect_date": "2016-09-13-10-35-57",
+                            "svt_source": "vipr-1",
+                            "svt_source_file": "vipr_compute-cluster_1abc1813-46c9-46e6-a20a-ec2143ce9fcb.json",
+                            "tags": [],
+                            "tenant": {
+                                "id": "urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                "link": {
+                                    "href": "/tenants/urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                    "rel": "self"
+                                }
+                            },
+                            "vcenter_data_center": {
+                                "id": "urn:storageos:VcenterDataCenter:10462174-c304-464c-b567-51d70ca68e59:vdc1",
+                                "link": {
+                                    "href": "/compute/vcenter-data-centers/urn:storageos:VcenterDataCenter:10462174-c304-464c-b567-51d70ca68e59:vdc1",
+                                    "rel": "self"
+                                }
+                            },
+                            "vdc": {
+                                "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "link": {
+                                    "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                    "rel": "self"
+                                }
+                            }
+                        }
+                    },
+                    "2147637c-2122-4655-b696-c4775d369a89": {
+                        "hosts": {
+                            "_id": "d8715936b72b8e6305a989bd625403ca",
+                            "_rev": "1-71ec2d4f57bd64aa49be7bd626e67547",
+                            "host": [
+                                {
+                                    "id": "urn:storageos:Host:158dde70-aa3b-4f5a-97af-9a094be251e7:vdc1",
+                                    "link": {
+                                        "href": "/compute/hosts/urn:storageos:Host:158dde70-aa3b-4f5a-97af-9a094be251e7:vdc1",
+                                        "rel": "self"
+                                    },
+                                    "name": "itvifxtenesx07.utility.pge.com"
+                                },
+                                {
+                                    "id": "urn:storageos:Host:ddca4a93-1fb9-4a9b-8eba-bd1e3c7023a9:vdc1",
+                                    "link": {
+                                        "href": "/compute/hosts/urn:storageos:Host:ddca4a93-1fb9-4a9b-8eba-bd1e3c7023a9:vdc1",
+                                        "rel": "self"
+                                    },
+                                    "name": "itvifxtenesx02.utility.pge.com"
+                                },
+                                {
+                                    "id": "urn:storageos:Host:a0777ba3-8bfc-4432-a9f5-fa5ee7745584:vdc1",
+                                    "link": {
+                                        "href": "/compute/hosts/urn:storageos:Host:a0777ba3-8bfc-4432-a9f5-fa5ee7745584:vdc1",
+                                        "rel": "self"
+                                    },
+                                    "name": "itvifxtenesx01.utility.pge.com"
+                                },
+                                {
+                                    "id": "urn:storageos:Host:b2c55fbc-2276-4a71-a20c-7464e6b1834d:vdc1",
+                                    "link": {
+                                        "href": "/compute/hosts/urn:storageos:Host:b2c55fbc-2276-4a71-a20c-7464e6b1834d:vdc1",
+                                        "rel": "self"
+                                    },
+                                    "name": "itvifxtenesx08.utility.pge.com"
+                                }
+                            ],
+                            "svt_client": "PGE",
+                            "svt_collect_date": "2016-09-13-10-35-57",
+                            "svt_source": "vipr-1",
+                            "svt_source_file": "vipr_compute-cluster-hosts_2147637c-2122-4655-b696-c4775d369a89.json"
+                        }
+                    },
+                    "3024a68a-f2d3-4b28-abb8-b803e6feab22": {
+                        "hosts": {
+                            "_id": "d8715936b72b8e6305a989bd627dbde8",
+                            "_rev": "1-7635e8e3567aaa6e45068fd33317cb2b",
+                            "host": [
+                                {
+                                    "id": "urn:storageos:Host:e7b7e9e1-f33d-4c28-b1d8-cfe5bdeaa40f:vdc1",
+                                    "link": {
+                                        "href": "/compute/hosts/urn:storageos:Host:e7b7e9e1-f33d-4c28-b1d8-cfe5bdeaa40f:vdc1",
+                                        "rel": "self"
+                                    },
+                                    "name": "itvircneiesx04.utility.pge.com"
+                                },
+                                {
+                                    "id": "urn:storageos:Host:35936ef9-eab1-456a-9d70-2e3f949f9c8d:vdc1",
+                                    "link": {
+                                        "href": "/compute/hosts/urn:storageos:Host:35936ef9-eab1-456a-9d70-2e3f949f9c8d:vdc1",
+                                        "rel": "self"
+                                    },
+                                    "name": "itvircneiesx03.utility.pge.com"
+                                },
+                                {
+                                    "id": "urn:storageos:Host:38fda2b2-8b81-4643-a79f-66bd7c02c2ee:vdc1",
+                                    "link": {
+                                        "href": "/compute/hosts/urn:storageos:Host:38fda2b2-8b81-4643-a79f-66bd7c02c2ee:vdc1",
+                                        "rel": "self"
+                                    },
+                                    "name": "itvircneiesx02.utility.pge.com"
+                                },
+                                {
+                                    "id": "urn:storageos:Host:bfc04287-f047-4d06-bad4-a6a94244fa62:vdc1",
+                                    "link": {
+                                        "href": "/compute/hosts/urn:storageos:Host:bfc04287-f047-4d06-bad4-a6a94244fa62:vdc1",
+                                        "rel": "self"
+                                    },
+                                    "name": "itvircneiesx01.utility.pge.com"
+                                }
+                            ],
+                            "svt_client": "PGE",
+                            "svt_collect_date": "2016-09-13-10-35-57",
+                            "svt_source": "vipr-1",
+                            "svt_source_file": "vipr_compute-cluster-hosts_3024a68a-f2d3-4b28-abb8-b803e6feab22.json"
+                        }
+                    },
+                    "433a214a-a45f-45da-96d4-781093fdbcbf": {
+                        "cluster": {
+                            "_id": "d8715936b72b8e6305a989bd62a47068",
+                            "_rev": "1-2d96e8ca4e0f2e801d9b75aaa357867b",
+                            "creation_time": 1429128658411,
+                            "global": false,
+                            "id": "urn:storageos:Cluster:433a214a-a45f-45da-96d4-781093fdbcbf:vdc1",
+                            "inactive": false,
+                            "internal": false,
+                            "link": {
+                                "href": "/compute/clusters/urn:storageos:Cluster:433a214a-a45f-45da-96d4-781093fdbcbf:vdc1",
+                                "rel": "self"
+                            },
+                            "name": "RC-Automation-Cluster01",
+                            "remote": false,
+                            "svt_client": "PGE",
+                            "svt_collect_date": "2016-09-13-10-35-57",
+                            "svt_source": "vipr-1",
+                            "svt_source_file": "vipr_compute-cluster_433a214a-a45f-45da-96d4-781093fdbcbf.json",
+                            "tags": [],
+                            "tenant": {
+                                "id": "urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                "link": {
+                                    "href": "/tenants/urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                    "rel": "self"
+                                }
+                            },
+                            "vcenter_data_center": {
+                                "id": "urn:storageos:VcenterDataCenter:256700d3-56c3-402f-9d8d-25771df6b8ff:vdc1",
+                                "link": {
+                                    "href": "/compute/vcenter-data-centers/urn:storageos:VcenterDataCenter:256700d3-56c3-402f-9d8d-25771df6b8ff:vdc1",
+                                    "rel": "self"
+                                }
+                            },
+                            "vdc": {
+                                "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "link": {
+                                    "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                    "rel": "self"
+                                }
+                            }
+                        }
+                    },
+                    "57d9cd3d-9f5b-437c-bd4d-7a66e5aceb7c": {
+                        "hosts": {
+                            "_id": "d8715936b72b8e6305a989bd628809c5",
+                            "_rev": "1-42535e45ae752b3db21800e7051ead8c",
+                            "host": [
+                                {
+                                    "id": "urn:storageos:Host:4edcfc68-716d-4499-b558-6771989382ad:vdc1",
+                                    "link": {
+                                        "href": "/compute/hosts/urn:storageos:Host:4edcfc68-716d-4499-b558-6771989382ad:vdc1",
+                                        "rel": "self"
+                                    },
+                                    "name": "itvifxlabesx03.utility.pge.com"
+                                },
+                                {
+                                    "id": "urn:storageos:Host:5eaf1f43-0249-4a21-8cb3-b30c057aa436:vdc1",
+                                    "link": {
+                                        "href": "/compute/hosts/urn:storageos:Host:5eaf1f43-0249-4a21-8cb3-b30c057aa436:vdc1",
+                                        "rel": "self"
+                                    },
+                                    "name": "itvifxlabesx01.utility.pge.com"
+                                },
+                                {
+                                    "id": "urn:storageos:Host:9a88ef5b-787b-4ef5-88ca-1e5337d73b81:vdc1",
+                                    "link": {
+                                        "href": "/compute/hosts/urn:storageos:Host:9a88ef5b-787b-4ef5-88ca-1e5337d73b81:vdc1",
+                                        "rel": "self"
+                                    },
+                                    "name": "itvifxlabesx02.utility.pge.com"
+                                }
+                            ],
+                            "svt_client": "PGE",
+                            "svt_collect_date": "2016-09-13-10-35-57",
+                            "svt_source": "vipr-1",
+                            "svt_source_file": "vipr_compute-cluster-hosts_57d9cd3d-9f5b-437c-bd4d-7a66e5aceb7c.json"
+                        }
+                    },
+                    "73af04d6-ffad-4def-808e-98358f0b50ce": {
+                        "cluster": {
+                            "_id": "d8715936b72b8e6305a989bd62a58e9f",
+                            "_rev": "1-96a6c49823a2cfbfb82950ce4cf3c649",
+                            "creation_time": 1429637513722,
+                            "global": false,
+                            "id": "urn:storageos:Cluster:73af04d6-ffad-4def-808e-98358f0b50ce:vdc1",
+                            "inactive": false,
+                            "internal": false,
+                            "link": {
+                                "href": "/compute/clusters/urn:storageos:Cluster:73af04d6-ffad-4def-808e-98358f0b50ce:vdc1",
+                                "rel": "self"
+                            },
+                            "name": "RC-Tenant-NonDR-Cluster01",
+                            "remote": false,
+                            "svt_client": "PGE",
+                            "svt_collect_date": "2016-09-13-10-35-57",
+                            "svt_source": "vipr-1",
+                            "svt_source_file": "vipr_compute-cluster_73af04d6-ffad-4def-808e-98358f0b50ce.json",
+                            "tags": [],
+                            "tenant": {
+                                "id": "urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                "link": {
+                                    "href": "/tenants/urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                    "rel": "self"
+                                }
+                            },
+                            "vcenter_data_center": {
+                                "id": "urn:storageos:VcenterDataCenter:256700d3-56c3-402f-9d8d-25771df6b8ff:vdc1",
+                                "link": {
+                                    "href": "/compute/vcenter-data-centers/urn:storageos:VcenterDataCenter:256700d3-56c3-402f-9d8d-25771df6b8ff:vdc1",
+                                    "rel": "self"
+                                }
+                            },
+                            "vdc": {
+                                "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "link": {
+                                    "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                    "rel": "self"
+                                }
+                            }
+                        }
+                    },
+                    "9e64bb04-3d6a-4895-a4b4-b2658647afba": {
+                        "cluster": {
+                            "_id": "d8715936b72b8e6305a989bd62eb3fd7",
+                            "_rev": "1-1be77e5e3444b5b48c86a219af451f27",
+                            "creation_time": 1467353738909,
+                            "global": false,
+                            "id": "urn:storageos:Cluster:9e64bb04-3d6a-4895-a4b4-b2658647afba:vdc1",
+                            "inactive": false,
+                            "internal": false,
+                            "link": {
+                                "href": "/compute/clusters/urn:storageos:Cluster:9e64bb04-3d6a-4895-a4b4-b2658647afba:vdc1",
+                                "rel": "self"
+                            },
+                            "name": "RC-VDI-Cluster01",
+                            "remote": false,
+                            "svt_client": "PGE",
+                            "svt_collect_date": "2016-09-13-10-35-57",
+                            "svt_source": "vipr-1",
+                            "svt_source_file": "vipr_compute-cluster_9e64bb04-3d6a-4895-a4b4-b2658647afba.json",
+                            "tags": [],
+                            "tenant": {
+                                "id": "urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                "link": {
+                                    "href": "/tenants/urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                    "rel": "self"
+                                }
+                            },
+                            "vcenter_data_center": {
+                                "id": "urn:storageos:VcenterDataCenter:256700d3-56c3-402f-9d8d-25771df6b8ff:vdc1",
+                                "link": {
+                                    "href": "/compute/vcenter-data-centers/urn:storageos:VcenterDataCenter:256700d3-56c3-402f-9d8d-25771df6b8ff:vdc1",
+                                    "rel": "self"
+                                }
+                            },
+                            "vdc": {
+                                "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "link": {
+                                    "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                    "rel": "self"
+                                }
+                            }
+                        }
+                    },
+                    "a4fd48dd-a44a-4b2b-a06f-330f93320077": {
+                        "cluster": {
+                            "_id": "d8715936b72b8e6305a989bd629f68b2",
+                            "_rev": "1-5b5152c6559178cdb7f85ab77be803d4",
+                            "creation_time": 1429637513694,
+                            "global": false,
+                            "id": "urn:storageos:Cluster:a4fd48dd-a44a-4b2b-a06f-330f93320077:vdc1",
+                            "inactive": false,
+                            "internal": false,
+                            "link": {
+                                "href": "/compute/clusters/urn:storageos:Cluster:a4fd48dd-a44a-4b2b-a06f-330f93320077:vdc1",
+                                "rel": "self"
+                            },
+                            "name": "RC-Tenant-DR-Cluster01",
+                            "remote": false,
+                            "svt_client": "PGE",
+                            "svt_collect_date": "2016-09-13-10-35-57",
+                            "svt_source": "vipr-1",
+                            "svt_source_file": "vipr_compute-cluster_a4fd48dd-a44a-4b2b-a06f-330f93320077.json",
+                            "tags": [],
+                            "tenant": {
+                                "id": "urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                "link": {
+                                    "href": "/tenants/urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                    "rel": "self"
+                                }
+                            },
+                            "vcenter_data_center": {
+                                "id": "urn:storageos:VcenterDataCenter:256700d3-56c3-402f-9d8d-25771df6b8ff:vdc1",
+                                "link": {
+                                    "href": "/compute/vcenter-data-centers/urn:storageos:VcenterDataCenter:256700d3-56c3-402f-9d8d-25771df6b8ff:vdc1",
+                                    "rel": "self"
+                                }
+                            },
+                            "vdc": {
+                                "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "link": {
+                                    "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                    "rel": "self"
+                                }
+                            }
+                        }
+                    },
+                    "b0ecb3ed-1103-4b54-bb49-3cbcd6c16142": {
+                        "cluster": {
+                            "_id": "d8715936b72b8e6305a989bd62aa45cd",
+                            "_rev": "1-2ff87044a3aeb798c8b1d69179b2c00e",
+                            "creation_time": 1467785785219,
+                            "global": false,
+                            "id": "urn:storageos:Cluster:b0ecb3ed-1103-4b54-bb49-3cbcd6c16142:vdc1",
+                            "inactive": false,
+                            "internal": false,
+                            "link": {
+                                "href": "/compute/clusters/urn:storageos:Cluster:b0ecb3ed-1103-4b54-bb49-3cbcd6c16142:vdc1",
+                                "rel": "self"
+                            },
+                            "name": "FX-VDI-Cluster01",
+                            "remote": false,
+                            "svt_client": "PGE",
+                            "svt_collect_date": "2016-09-13-10-35-57",
+                            "svt_source": "vipr-1",
+                            "svt_source_file": "vipr_compute-cluster_b0ecb3ed-1103-4b54-bb49-3cbcd6c16142.json",
+                            "tags": [],
+                            "tenant": {
+                                "id": "urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                "link": {
+                                    "href": "/tenants/urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                    "rel": "self"
+                                }
+                            },
+                            "vcenter_data_center": {
+                                "id": "urn:storageos:VcenterDataCenter:10462174-c304-464c-b567-51d70ca68e59:vdc1",
+                                "link": {
+                                    "href": "/compute/vcenter-data-centers/urn:storageos:VcenterDataCenter:10462174-c304-464c-b567-51d70ca68e59:vdc1",
+                                    "rel": "self"
+                                }
+                            },
+                            "vdc": {
+                                "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "link": {
+                                    "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                    "rel": "self"
+                                }
+                            }
+                        }
+                    },
+                    "b48c38bc-bca9-40a5-8204-efe377c34825": {
+                        "cluster": {
+                            "_id": "d8715936b72b8e6305a989bd625156f5",
+                            "_rev": "1-25b3ca49b805fb98bb324cfc9b1ada51",
+                            "creation_time": 1472278348610,
+                            "global": false,
+                            "id": "urn:storageos:Cluster:b48c38bc-bca9-40a5-8204-efe377c34825:vdc1",
+                            "inactive": false,
+                            "internal": false,
+                            "link": {
+                                "href": "/compute/clusters/urn:storageos:Cluster:b48c38bc-bca9-40a5-8204-efe377c34825:vdc1",
+                                "rel": "self"
+                            },
+                            "name": "Lab-NonDR-Cluster",
+                            "remote": false,
+                            "svt_client": "PGE",
+                            "svt_collect_date": "2016-09-13-10-35-57",
+                            "svt_source": "vipr-1",
+                            "svt_source_file": "vipr_compute-cluster_b48c38bc-bca9-40a5-8204-efe377c34825.json",
+                            "tags": [],
+                            "tenant": {
+                                "id": "urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                "link": {
+                                    "href": "/tenants/urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                    "rel": "self"
+                                }
+                            },
+                            "vcenter_data_center": {
+                                "id": "urn:storageos:VcenterDataCenter:bf4591f6-a708-4bdf-ab59-ebc32de64499:vdc1",
+                                "link": {
+                                    "href": "/compute/vcenter-data-centers/urn:storageos:VcenterDataCenter:bf4591f6-a708-4bdf-ab59-ebc32de64499:vdc1",
+                                    "rel": "self"
+                                }
+                            },
+                            "vdc": {
+                                "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "link": {
+                                    "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                    "rel": "self"
+                                }
+                            }
+                        }
+                    },
+                    "fd24a6c8-8c94-43b5-81e8-fa21c2ff7210": {
+                        "hosts": {
+                            "_id": "d8715936b72b8e6305a989bd627d79f6",
+                            "_rev": "1-23c99c2145abc04353ee408a47d05f65",
+                            "host": [
+                                {
+                                    "id": "urn:storageos:Host:7d2c718f-7cd2-435f-9fea-1e5c82d23cd2:vdc1",
+                                    "link": {
+                                        "href": "/compute/hosts/urn:storageos:Host:7d2c718f-7cd2-435f-9fea-1e5c82d23cd2:vdc1",
+                                        "rel": "self"
+                                    },
+                                    "name": "itvifxneiesx03.utility.pge.com"
+                                },
+                                {
+                                    "id": "urn:storageos:Host:4d0efbec-0ad4-4dd8-af23-abde7081ac31:vdc1",
+                                    "link": {
+                                        "href": "/compute/hosts/urn:storageos:Host:4d0efbec-0ad4-4dd8-af23-abde7081ac31:vdc1",
+                                        "rel": "self"
+                                    },
+                                    "name": "itvifxneiesx01.utility.pge.com"
+                                },
+                                {
+                                    "id": "urn:storageos:Host:d901d6db-ca57-4a37-ab5e-62ddde97365c:vdc1",
+                                    "link": {
+                                        "href": "/compute/hosts/urn:storageos:Host:d901d6db-ca57-4a37-ab5e-62ddde97365c:vdc1",
+                                        "rel": "self"
+                                    },
+                                    "name": "itvifxneiesx02.utility.pge.com"
+                                },
+                                {
+                                    "id": "urn:storageos:Host:0982cf17-548a-40f8-b93a-4483e789a8e5:vdc1",
+                                    "link": {
+                                        "href": "/compute/hosts/urn:storageos:Host:0982cf17-548a-40f8-b93a-4483e789a8e5:vdc1",
+                                        "rel": "self"
+                                    },
+                                    "name": "itvifxneiesx04.utility.pge.com"
+                                }
+                            ],
+                            "svt_client": "PGE",
+                            "svt_collect_date": "2016-09-13-10-35-57",
+                            "svt_source": "vipr-1",
+                            "svt_source_file": "vipr_compute-cluster-hosts_fd24a6c8-8c94-43b5-81e8-fa21c2ff7210.json"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

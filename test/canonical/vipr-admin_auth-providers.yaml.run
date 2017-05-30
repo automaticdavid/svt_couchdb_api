@@ -1,0 +1,62 @@
+http://localhost:5984/
+Welcome
+http://localhost:5984/svtdev
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: test/yaml/vipr-admin_auth-providers.yaml
+Checking for collect existence
+http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
+http://localhost:5984/svtdev/_design/vipr-admin/_view/auth-providers?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+{
+    "data": {
+        "vipr-1": {
+            "vipr-admin": {
+                "auth-providers": {
+                    "316a932b-0b3f-42a2-a79f-1702e274e27b": {
+                        "creation_time": 1429723066172,
+                        "disable": false,
+                        "domains": [
+                            "utility.pge.com",
+                            "pge.com"
+                        ],
+                        "global": true,
+                        "group_attribute": "CN",
+                        "group_member_attributes": [],
+                        "group_object_classes": [],
+                        "group_whitelist_values": [],
+                        "id": "urn:storageos:AuthnProvider:316a932b-0b3f-42a2-a79f-1702e274e27b:global",
+                        "inactive": false,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/admin/authnproviders/urn:storageos:AuthnProvider:316a932b-0b3f-42a2-a79f-1702e274e27b:global",
+                            "rel": "self"
+                        },
+                        "manager_dn": "CN=svcViPRADRead,OU=Service,OU=Accounts,DC=Utility,DC=pge,DC=com",
+                        "mode": "ad",
+                        "name": "Active Directory",
+                        "remote": null,
+                        "search_base": "DC=Utility,DC=pge,DC=com",
+                        "search_filter": "userPrincipalName=%u",
+                        "search_scope": "SUBTREE",
+                        "server_urls": [
+                            "ldap://utility.pge.com"
+                        ],
+                        "tags": [],
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

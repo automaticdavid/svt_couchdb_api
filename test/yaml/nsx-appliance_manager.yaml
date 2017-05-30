@@ -1,0 +1,10 @@
+name: nsx report
+reports:
+  nsx-appliance:
+    summary-system:
+      - hostName
+      - domainName
+      - ipv4Address
+      - versionInfo
+      - currentSystemDate
+      - uptime

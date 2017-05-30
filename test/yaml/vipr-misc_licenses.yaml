@@ -1,0 +1,6 @@
+name: Vipr Report
+reports:
+  vipr-misc:
+    licenses:
+      - license_text
+      - license_feature

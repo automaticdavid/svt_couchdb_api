@@ -1,0 +1,5 @@
+name: nsx report
+reports:
+  nsx-vdn:
+    scopes:
+      - svt_all

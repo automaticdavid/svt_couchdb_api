@@ -1,0 +1,3546 @@
+http://localhost:5984/
+Welcome
+http://localhost:5984/svtdev
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: test/yaml/nsx-vdn_virtualwires.yaml
+Checking for collect existence
+http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
+http://localhost:5984/svtdev/_design/nsx-vdn/_view/virtualwires?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+{
+    "data": {
+        "nsx-1": {
+            "nsx-vdn": {
+                "svt_single": {},
+                "virtualwires": {
+                    "vwire1": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-77",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Automation-vDS",
+                                    "objectId": "dvs-58",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 71,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-78",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-NEI-vDS",
+                                    "objectId": "dvs-55",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 135,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "Automation POD",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "RC-Automation-5000-10.31.253.0/24",
+                        "objectId": "virtualwire-1",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 8,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5000,
+                        "vdnScopeId": "vdnscope-1",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "vwire10": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-74767",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-VDI-vDS",
+                                    "objectId": "dvs-71918",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 40,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-592",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-vDS",
+                                    "objectId": "dvs-60",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 118,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-591",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-NEI-vDS",
+                                    "objectId": "dvs-55",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 135,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "RC-Development-10.31.16.0/23",
+                        "objectId": "virtualwire-38",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 8,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5017,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "vwire11": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-74768",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-VDI-vDS",
+                                    "objectId": "dvs-71918",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 40,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-594",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-vDS",
+                                    "objectId": "dvs-60",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 118,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-593",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-NEI-vDS",
+                                    "objectId": "dvs-55",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 135,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "RC-Development-10.31.18.0/23",
+                        "objectId": "virtualwire-39",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 9,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5018,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "vwire12": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-598",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-vDS",
+                                    "objectId": "dvs-60",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 118,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-597",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-NEI-vDS",
+                                    "objectId": "dvs-55",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 135,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-74755",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-VDI-vDS",
+                                    "objectId": "dvs-71918",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 40,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "RC-Sandbox-10.31.20.0/23",
+                        "objectId": "virtualwire-41",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 6,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5019,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "vwire13": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-600",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-vDS",
+                                    "objectId": "dvs-60",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 118,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-599",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-NEI-vDS",
+                                    "objectId": "dvs-55",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 135,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-74752",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-VDI-vDS",
+                                    "objectId": "dvs-71918",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 40,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "RC-Sandbox-10.31.22.0/23",
+                        "objectId": "virtualwire-42",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 6,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5020,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "vwire14": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-74757",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-VDI-vDS",
+                                    "objectId": "dvs-71918",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 40,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-618",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-NEI-vDS",
+                                    "objectId": "dvs-55",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 135,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-619",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-vDS",
+                                    "objectId": "dvs-60",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 118,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "RC-Development-10.31.140.0/23",
+                        "objectId": "virtualwire-50",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 7,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5021,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "vwire15": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-2223",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-NEI-vDS",
+                                    "objectId": "dvs-55",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 135,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-2224",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-vDS",
+                                    "objectId": "dvs-60",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 118,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-74760",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-VDI-vDS",
+                                    "objectId": "dvs-71918",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 40,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "RC-Production-VIP-10.31.24.0/23",
+                        "objectId": "virtualwire-55",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 6,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5001,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "vwire16": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-2225",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-NEI-vDS",
+                                    "objectId": "dvs-55",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 135,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-2226",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-vDS",
+                                    "objectId": "dvs-60",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 118,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-74762",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-VDI-vDS",
+                                    "objectId": "dvs-71918",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 40,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "RC-QA-VIP-10.31.26.0/23",
+                        "objectId": "virtualwire-56",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 6,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5026,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "vwire17": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-2227",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-NEI-vDS",
+                                    "objectId": "dvs-55",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 135,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-2228",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-vDS",
+                                    "objectId": "dvs-60",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 118,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-74761",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-VDI-vDS",
+                                    "objectId": "dvs-71918",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 40,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "RC-NonProd-VIP-10.31.28.0/23",
+                        "objectId": "virtualwire-57",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 5,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5027,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "vwire18": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-2234",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-vDS",
+                                    "objectId": "dvs-60",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 118,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-2233",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-NEI-vDS",
+                                    "objectId": "dvs-55",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 135,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-74754",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-VDI-vDS",
+                                    "objectId": "dvs-71918",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 40,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "RC-NonProd-DR-VIP-10.31.152.0/23",
+                        "objectId": "virtualwire-60",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 5,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5030,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "vwire19": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-8881",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-DR-Tenant-vDS",
+                                    "objectId": "dvs-8368",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 18,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-74751",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-VDI-vDS",
+                                    "objectId": "dvs-71918",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 40,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-8862",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-NEI-vDS",
+                                    "objectId": "dvs-55",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 135,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "RC-Production-DR-10.31.128.0/23",
+                        "objectId": "virtualwire-62",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 5,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5005,
+                        "vdnScopeId": "vdnscope-5",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "vwire2": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-74764",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-VDI-vDS",
+                                    "objectId": "dvs-71918",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 40,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-189",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-vDS",
+                                    "objectId": "dvs-60",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 118,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-188",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-NEI-vDS",
+                                    "objectId": "dvs-55",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 135,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "NOT REPLICATED TEST ONLY ",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "RC-REP_Network-Testing-Only",
+                        "objectId": "virtualwire-7",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 12,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5004,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "vwire20": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-74748",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-VDI-vDS",
+                                    "objectId": "dvs-71918",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 40,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-8863",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-NEI-vDS",
+                                    "objectId": "dvs-55",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 135,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-8879",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-DR-Tenant-vDS",
+                                    "objectId": "dvs-8368",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 18,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "RC-Production-DR-10.31.130.0/23",
+                        "objectId": "virtualwire-63",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 4,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5011,
+                        "vdnScopeId": "vdnscope-5",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "vwire3": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-74766",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-VDI-vDS",
+                                    "objectId": "dvs-71918",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 40,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-441",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-NEI-vDS",
+                                    "objectId": "dvs-55",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 135,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-442",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-vDS",
+                                    "objectId": "dvs-60",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 118,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "Connects Non Rep pod DLR to Enterprise ESG's",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "RC-Tenant Non Rep Pod-Network-LS",
+                        "objectId": "virtualwire-29",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 7,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5025,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "vwire4": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-572",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-vDS",
+                                    "objectId": "dvs-60",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 118,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-74756",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-VDI-vDS",
+                                    "objectId": "dvs-71918",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 40,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-571",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-NEI-vDS",
+                                    "objectId": "dvs-55",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 135,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "RC-Production-10.31.4.0/23",
+                        "objectId": "virtualwire-32",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 8,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5006,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "vwire5": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-74753",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-VDI-vDS",
+                                    "objectId": "dvs-71918",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 40,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-577",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-vDS",
+                                    "objectId": "dvs-60",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 118,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-576",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-NEI-vDS",
+                                    "objectId": "dvs-55",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 135,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "RC-Production-10.31.6.0/23",
+                        "objectId": "virtualwire-33",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 7,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5007,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "vwire6": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-74759",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-VDI-vDS",
+                                    "objectId": "dvs-71918",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 40,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-579",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-vDS",
+                                    "objectId": "dvs-60",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 118,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-578",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-NEI-vDS",
+                                    "objectId": "dvs-55",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 135,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "RC-QA-10.31.8.0/23",
+                        "objectId": "virtualwire-34",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 9,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5008,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "vwire7": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-74758",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-VDI-vDS",
+                                    "objectId": "dvs-71918",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 40,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-580",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-NEI-vDS",
+                                    "objectId": "dvs-55",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 135,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-581",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-vDS",
+                                    "objectId": "dvs-60",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 118,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "RC-QA-10.31.10.0/23",
+                        "objectId": "virtualwire-35",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 7,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5009,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "vwire8": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-583",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-vDS",
+                                    "objectId": "dvs-60",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 118,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-74769",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-VDI-vDS",
+                                    "objectId": "dvs-71918",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 40,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-582",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-NEI-vDS",
+                                    "objectId": "dvs-55",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 135,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "RC-Test-10.31.12.0/23",
+                        "objectId": "virtualwire-36",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 7,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5010,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "vwire9": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-584",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-NEI-vDS",
+                                    "objectId": "dvs-55",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 135,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-585",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-vDS",
+                                    "objectId": "dvs-60",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 118,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-74770",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "RC-Tenant-VDI-vDS",
+                                    "objectId": "dvs-71918",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 40,
+                                    "scope": {
+                                        "id": "datacenter-2",
+                                        "name": "RC-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "RC-Test-10.31.14.0/23",
+                        "objectId": "virtualwire-37",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 7,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5016,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    }
+                }
+            }
+        },
+        "nsx-2": {
+            "nsx-vdn": {
+                "svt_single": {},
+                "virtualwires": {
+                    "vwire1": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-155",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Automation-vDS",
+                                    "objectId": "dvs-56",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 7,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-156",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-NEI-vDS",
+                                    "objectId": "dvs-58",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 112,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "Automation-POD",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "FX-Automation-LS",
+                        "objectId": "virtualwire-1",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 4,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5000,
+                        "vdnScopeId": "vdnscope-1",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "vwire10": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-56139",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-VDI-vDS",
+                                    "objectId": "dvs-56118",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 34,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-741",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-NEI-vDS",
+                                    "objectId": "dvs-58",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 112,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-740",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-vDS",
+                                    "objectId": "dvs-121",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 93,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "FX-QA-VIP-10.30.26.0/23",
+                        "objectId": "virtualwire-47",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 4,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5026,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "vwire11": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-56141",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-VDI-vDS",
+                                    "objectId": "dvs-56118",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 34,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-742",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-vDS",
+                                    "objectId": "dvs-121",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 93,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-743",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-NEI-vDS",
+                                    "objectId": "dvs-58",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 112,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "FX-NonProd-VIP-10.30.28.0/23",
+                        "objectId": "virtualwire-48",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 4,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5027,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "vwire12": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-56133",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-VDI-vDS",
+                                    "objectId": "dvs-56118",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 34,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-4915",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-NEI-vDS",
+                                    "objectId": "dvs-58",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 112,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-4958",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-DR-Tenant-vDS",
+                                    "objectId": "dvs-4944",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 20,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "FX-Development-DR-10.31.142.0/23",
+                        "objectId": "virtualwire-49",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 5,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5016,
+                        "vdnScopeId": "vdnscope-5",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "vwire13": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-4916",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-NEI-vDS",
+                                    "objectId": "dvs-58",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 112,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-56125",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-VDI-vDS",
+                                    "objectId": "dvs-56118",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 34,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-4949",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-DR-Tenant-vDS",
+                                    "objectId": "dvs-4944",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 20,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "FX-Development-DR-10.31.144.0/23",
+                        "objectId": "virtualwire-50",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 5,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5017,
+                        "vdnScopeId": "vdnscope-5",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "vwire14": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-56123",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-VDI-vDS",
+                                    "objectId": "dvs-56118",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 34,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-4917",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-NEI-vDS",
+                                    "objectId": "dvs-58",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 112,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-4947",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-DR-Tenant-vDS",
+                                    "objectId": "dvs-4944",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 20,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "FX-NonProd-DR-VIP-10.31.152.0/23",
+                        "objectId": "virtualwire-51",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 5,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5024,
+                        "vdnScopeId": "vdnscope-5",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "vwire15": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-4918",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-NEI-vDS",
+                                    "objectId": "dvs-58",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 112,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-56127",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-VDI-vDS",
+                                    "objectId": "dvs-56118",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 34,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-4951",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-DR-Tenant-vDS",
+                                    "objectId": "dvs-4944",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 20,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "FX-Production-DR-10.31.128.0/23",
+                        "objectId": "virtualwire-52",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 5,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5005,
+                        "vdnScopeId": "vdnscope-5",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "vwire16": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-56126",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-VDI-vDS",
+                                    "objectId": "dvs-56118",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 34,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-4950",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-DR-Tenant-vDS",
+                                    "objectId": "dvs-4944",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 20,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-4928",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-NEI-vDS",
+                                    "objectId": "dvs-58",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 112,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "FX-Production-DR-VIP-10.31.148.0/23",
+                        "objectId": "virtualwire-53",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 5,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5022,
+                        "vdnScopeId": "vdnscope-5",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "vwire17": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-4953",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-DR-Tenant-vDS",
+                                    "objectId": "dvs-4944",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 20,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-4929",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-NEI-vDS",
+                                    "objectId": "dvs-58",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 112,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-56129",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-VDI-vDS",
+                                    "objectId": "dvs-56118",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 34,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "FX-QA-DR-10.31.134.0/23",
+                        "objectId": "virtualwire-54",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 5,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5008,
+                        "vdnScopeId": "vdnscope-5",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "vwire18": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-4952",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-DR-Tenant-vDS",
+                                    "objectId": "dvs-4944",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 20,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-56128",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-VDI-vDS",
+                                    "objectId": "dvs-56118",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 34,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-4930",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-NEI-vDS",
+                                    "objectId": "dvs-58",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 112,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "FX-QA-DR-10.31.132.0/23",
+                        "objectId": "virtualwire-55",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 5,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5007,
+                        "vdnScopeId": "vdnscope-5",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "vwire19": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-56132",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-VDI-vDS",
+                                    "objectId": "dvs-56118",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 34,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-4957",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-DR-Tenant-vDS",
+                                    "objectId": "dvs-4944",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 20,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-4931",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-NEI-vDS",
+                                    "objectId": "dvs-58",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 112,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "FX-QA-DR-VIP-10.31.150.0/23",
+                        "objectId": "virtualwire-56",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 5,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5023,
+                        "vdnScopeId": "vdnscope-5",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "vwire2": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-171",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-NEI-vDS",
+                                    "objectId": "dvs-58",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 112,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-56142",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-VDI-vDS",
+                                    "objectId": "dvs-56118",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 34,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-170",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-vDS",
+                                    "objectId": "dvs-121",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 93,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "Test only Not Replicated",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "FX-Test Network",
+                        "objectId": "virtualwire-6",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 8,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5004,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "vwire20": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-56131",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-VDI-vDS",
+                                    "objectId": "dvs-56118",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 34,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-4956",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-DR-Tenant-vDS",
+                                    "objectId": "dvs-4944",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 20,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-4933",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-NEI-vDS",
+                                    "objectId": "dvs-58",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 112,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "FX-Sandbox-DR-10.31.146.0/23",
+                        "objectId": "virtualwire-58",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 5,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5014,
+                        "vdnScopeId": "vdnscope-5",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "vwire3": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-359",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-vDS",
+                                    "objectId": "dvs-121",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 93,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-360",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-NEI-vDS",
+                                    "objectId": "dvs-58",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 112,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-56147",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-VDI-vDS",
+                                    "objectId": "dvs-56118",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 34,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "Connect Non Rep DLR to Enterprise ESG's",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "FX-Non RepTransit-Network",
+                        "objectId": "virtualwire-28",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 5,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5010,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "vwire4": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-56137",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-VDI-vDS",
+                                    "objectId": "dvs-56118",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 34,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-469",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-NEI-vDS",
+                                    "objectId": "dvs-58",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 112,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-468",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-vDS",
+                                    "objectId": "dvs-121",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 93,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "FX-Development-10.30.16.0/23",
+                        "objectId": "virtualwire-34",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 4,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5019,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "vwire5": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-471",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-NEI-vDS",
+                                    "objectId": "dvs-58",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 112,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-56136",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-VDI-vDS",
+                                    "objectId": "dvs-56118",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 34,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-470",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-vDS",
+                                    "objectId": "dvs-121",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 93,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "FX-Production-10.30.4.0/23",
+                        "objectId": "virtualwire-35",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 4,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5003,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "vwire6": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-472",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-vDS",
+                                    "objectId": "dvs-121",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 93,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-56143",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-VDI-vDS",
+                                    "objectId": "dvs-56118",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 34,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-473",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-NEI-vDS",
+                                    "objectId": "dvs-58",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 112,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "FX-QA-10.30.8.0/23",
+                        "objectId": "virtualwire-36",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 4,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5011,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "vwire7": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-56144",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-VDI-vDS",
+                                    "objectId": "dvs-56118",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 34,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-475",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-NEI-vDS",
+                                    "objectId": "dvs-58",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 112,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-474",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-vDS",
+                                    "objectId": "dvs-121",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 93,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "FX-Sandbox-10.30.20.0/23",
+                        "objectId": "virtualwire-37",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 4,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5012,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "vwire8": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-56140",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-VDI-vDS",
+                                    "objectId": "dvs-56118",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 34,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-477",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-NEI-vDS",
+                                    "objectId": "dvs-58",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 112,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-476",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-vDS",
+                                    "objectId": "dvs-121",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 93,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "FX-Test-10.30.12.0/23",
+                        "objectId": "virtualwire-38",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 4,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5020,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "vwire9": {
+                        "backing": [
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-738",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-vDS",
+                                    "objectId": "dvs-121",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 93,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-56138",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-Tenant-VDI-vDS",
+                                    "objectId": "dvs-56118",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 34,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            },
+                            {
+                                "backingType": "portgroup",
+                                "backingValue": "dvportgroup-739",
+                                "mtu": 1600,
+                                "promiscuousMode": false,
+                                "switchObj": {
+                                    "clientHandle": "",
+                                    "extendedAttributes": [],
+                                    "name": "FX-NEI-vDS",
+                                    "objectId": "dvs-58",
+                                    "objectTypeName": "VmwareDistributedVirtualSwitch",
+                                    "revision": 112,
+                                    "scope": {
+                                        "id": "datacenter-21",
+                                        "name": "FX-Tenant-Datacenter01",
+                                        "objectTypeName": "Datacenter"
+                                    },
+                                    "type": {
+                                        "name": "VmwareDistributedVirtualSwitch"
+                                    },
+                                    "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                }
+                            }
+                        ],
+                        "clientHandle": "",
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "",
+                        "extendedAttributes": [],
+                        "guestVlanAllowed": false,
+                        "name": "FX-Production-VIP-10.30.24.0/23",
+                        "objectId": "virtualwire-46",
+                        "objectTypeName": "VirtualWire",
+                        "revision": 5,
+                        "tenantId": "virtual wire tenant",
+                        "type": {
+                            "name": "VirtualWire"
+                        },
+                        "vdnId": 5025,
+                        "vdnScopeId": "vdnscope-3",
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

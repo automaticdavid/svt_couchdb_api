@@ -1,0 +1,5 @@
+name: vra report
+reports:
+  vra-component-registry:
+    api-plugins:
+      - svt_all

@@ -1,0 +1,7 @@
+name: Vro Report
+reports:
+  vro-misc:
+    plugins:
+      - infoText
+      - displayName
+      - version

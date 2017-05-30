@@ -1,0 +1,200 @@
+http://localhost:5984/
+Welcome
+http://localhost:5984/svtdev
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: test/yaml/vipr-compute_vcenters.yaml
+Checking for collect existence
+http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
+http://localhost:5984/svtdev/_design/vipr-compute/_view/vcenters?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+{
+    "data": {
+        "vipr-1": {
+            "vipr-compute": {
+                "vcenters": {
+                    "0ec0d70d-8da8-4b27-a121-3417298c4cee": {
+                        "compatibility_status": "COMPATIBLE",
+                        "creation_time": 1443906175521,
+                        "global": false,
+                        "id": "urn:storageos:Vcenter:0ec0d70d-8da8-4b27-a121-3417298c4cee:vdc1",
+                        "inactive": false,
+                        "internal": false,
+                        "ip_address": "xitcldrctnmgt01.lab.pge.com",
+                        "job_discovery_status": "COMPLETE",
+                        "job_metering_status": "CREATED",
+                        "last_discovery_run_time": 1473748305705,
+                        "last_discovery_status_message": "",
+                        "last_metering_run_time": 0,
+                        "link": {
+                            "href": "/compute/vcenters/urn:storageos:Vcenter:0ec0d70d-8da8-4b27-a121-3417298c4cee:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "Lab - RC vCenter",
+                        "native_guid": "648C5F3A-2729-4123-87B9-8D336B0E237D",
+                        "next_discovery_run_time": 1473834702772,
+                        "next_metering_run_time": 0,
+                        "os_version": "5.5.0",
+                        "port_number": 443,
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "success_discovery_time": 1473748305705,
+                        "success_metering_time": 0,
+                        "tags": [],
+                        "tenant": {
+                            "id": "urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                            "link": {
+                                "href": "/tenants/urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                "rel": "self"
+                            }
+                        },
+                        "user_name": "administrator@vsphere.local",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        }
+                    },
+                    "209058c4-559d-40b3-85c7-dc12624b5d07": {
+                        "compatibility_status": "COMPATIBLE",
+                        "creation_time": 1472278393084,
+                        "global": false,
+                        "id": "urn:storageos:Vcenter:209058c4-559d-40b3-85c7-dc12624b5d07:vdc1",
+                        "inactive": false,
+                        "internal": false,
+                        "ip_address": "xitcldfxtnmgt01.lab.pge.com",
+                        "job_discovery_status": "COMPLETE",
+                        "job_metering_status": "CREATED",
+                        "last_discovery_run_time": 1473748306059,
+                        "last_discovery_status_message": "",
+                        "last_metering_run_time": 0,
+                        "link": {
+                            "href": "/compute/vcenters/urn:storageos:Vcenter:209058c4-559d-40b3-85c7-dc12624b5d07:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "Lab - FX vCenter",
+                        "native_guid": "D0D17562-A63C-4245-A752-ED8B23647E13",
+                        "next_discovery_run_time": 1473834702810,
+                        "next_metering_run_time": 0,
+                        "os_version": "5.5.0",
+                        "port_number": 443,
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "success_discovery_time": 1473748306059,
+                        "success_metering_time": 0,
+                        "tags": [],
+                        "tenant": {
+                            "id": "urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                            "link": {
+                                "href": "/tenants/urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                "rel": "self"
+                            }
+                        },
+                        "user_name": "administrator@vsphere.local",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        }
+                    },
+                    "787b1b9d-3747-439d-a061-8a2dc6acb02a": {
+                        "compatibility_status": "COMPATIBLE",
+                        "creation_time": 1429128813328,
+                        "global": false,
+                        "id": "urn:storageos:Vcenter:787b1b9d-3747-439d-a061-8a2dc6acb02a:vdc1",
+                        "inactive": false,
+                        "internal": false,
+                        "ip_address": "172.24.120.141",
+                        "job_discovery_status": "COMPLETE",
+                        "job_metering_status": "CREATED",
+                        "last_discovery_run_time": 1473748314889,
+                        "last_discovery_status_message": "",
+                        "last_metering_run_time": 0,
+                        "link": {
+                            "href": "/compute/vcenters/urn:storageos:Vcenter:787b1b9d-3747-439d-a061-8a2dc6acb02a:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "itcldfxtenmgt01 - Cloud vCenter - FF",
+                        "native_guid": "DD2D95F7-4E5B-411C-967F-56CE390B78EF",
+                        "next_discovery_run_time": 1473834702854,
+                        "next_metering_run_time": 0,
+                        "os_version": "5.5.0",
+                        "port_number": 443,
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "success_discovery_time": 1473748314889,
+                        "success_metering_time": 0,
+                        "tags": [],
+                        "tenant": {
+                            "id": "urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                            "link": {
+                                "href": "/tenants/urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                "rel": "self"
+                            }
+                        },
+                        "user_name": "PGE\\svcViPRAutomation",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        }
+                    },
+                    "95a8ddc8-7479-481c-8e48-07295eec1127": {
+                        "compatibility_status": "COMPATIBLE",
+                        "creation_time": 1429128657585,
+                        "global": false,
+                        "id": "urn:storageos:Vcenter:95a8ddc8-7479-481c-8e48-07295eec1127:vdc1",
+                        "inactive": false,
+                        "internal": false,
+                        "ip_address": "172.24.120.174",
+                        "job_discovery_status": "COMPLETE",
+                        "job_metering_status": "CREATED",
+                        "last_discovery_run_time": 1473748313643,
+                        "last_discovery_status_message": "",
+                        "last_metering_run_time": 0,
+                        "link": {
+                            "href": "/compute/vcenters/urn:storageos:Vcenter:95a8ddc8-7479-481c-8e48-07295eec1127:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "itcldrctenmgt01 - Cloud vCenter - RC",
+                        "native_guid": "C619DAA9-0E49-4349-9A2F-569CE2BEB016",
+                        "next_discovery_run_time": 1473834702895,
+                        "next_metering_run_time": 0,
+                        "os_version": "5.5.0",
+                        "port_number": 443,
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "success_discovery_time": 1473748313643,
+                        "success_metering_time": 0,
+                        "tags": [],
+                        "tenant": {
+                            "id": "urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                            "link": {
+                                "href": "/tenants/urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                "rel": "self"
+                            }
+                        },
+                        "user_name": "PGE\\svcViPRAutomation",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

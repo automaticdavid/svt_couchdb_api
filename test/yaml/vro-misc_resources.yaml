@@ -1,0 +1,5 @@
+name: Vro Report
+reports:
+  vro-misc:
+    resources:
+      - svt_all

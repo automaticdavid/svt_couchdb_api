@@ -1,0 +1,5 @@
+name: nsx report
+reports:
+  nsx-vdn:
+    controllers:
+      - svt_all

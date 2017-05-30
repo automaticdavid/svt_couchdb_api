@@ -1,0 +1,90 @@
+http://localhost:5984/
+Welcome
+http://localhost:5984/svtdev
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: test/yaml/vipr-vdc_networks.yaml
+Checking for collect existence
+http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
+http://localhost:5984/svtdev/_design/vipr-vdc/_view/networks?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+{
+    "data": {
+        "vipr-1": {
+            "vipr-vdc": {
+                "networks": {
+                    "network": [
+                        {
+                            "id": "urn:storageos:Network:3d7a2a24-dd46-43c6-9aef-72c160c1f273:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:3d7a2a24-dd46-43c6-9aef-72c160c1f273:vdc1",
+                                "rel": "self"
+                            },
+                            "name": "VSAN_10"
+                        },
+                        {
+                            "id": "urn:storageos:Network:a29d7f83-5e1f-4ce6-9d08-53153a1d4eda:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:a29d7f83-5e1f-4ce6-9d08-53153a1d4eda:vdc1",
+                                "rel": "self"
+                            },
+                            "name": "VSAN_1(2)"
+                        },
+                        {
+                            "id": "urn:storageos:Network:dba7a9f0-a9d5-4dcc-aa10-4b13c480f201:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:dba7a9f0-a9d5-4dcc-aa10-4b13c480f201:vdc1",
+                                "rel": "self"
+                            },
+                            "name": "VSAN_11(1)"
+                        },
+                        {
+                            "id": "urn:storageos:Network:3958309f-427b-44ad-a75c-42eb34b664d4:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:3958309f-427b-44ad-a75c-42eb34b664d4:vdc1",
+                                "rel": "self"
+                            },
+                            "name": "VSAN_10(1)"
+                        },
+                        {
+                            "id": "urn:storageos:Network:f9d15170-f7ec-4d82-af9d-067d3e93308c:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:f9d15170-f7ec-4d82-af9d-067d3e93308c:vdc1",
+                                "rel": "self"
+                            },
+                            "name": "VSAN_1(3)"
+                        },
+                        {
+                            "id": "urn:storageos:Network:a84ec90a-4bd6-464c-b4d5-69447f2c29bc:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:a84ec90a-4bd6-464c-b4d5-69447f2c29bc:vdc1",
+                                "rel": "self"
+                            },
+                            "name": "VSAN_11"
+                        },
+                        {
+                            "id": "urn:storageos:Network:3d4bd87f-9bc6-4b5f-baeb-84113921342a:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:3d4bd87f-9bc6-4b5f-baeb-84113921342a:vdc1",
+                                "rel": "self"
+                            },
+                            "name": "VSAN_1"
+                        },
+                        {
+                            "id": "urn:storageos:Network:7065b40c-2edc-4758-ba1d-98b5ee011a8a:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:7065b40c-2edc-4758-ba1d-98b5ee011a8a:vdc1",
+                                "rel": "self"
+                            },
+                            "name": "VSAN_1(1)"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

@@ -1,0 +1,1984 @@
+http://localhost:5984/
+Welcome
+http://localhost:5984/svtdev
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: test/yaml/vipr-vdc_storage-ports.yaml
+Checking for collect existence
+http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
+http://localhost:5984/svtdev/_design/vipr-vdc/_view/storage-ports?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+{
+    "data": {
+        "vipr-1": {
+            "vipr-vdc": {
+                "storage-ports": {
+                    "06e1a46a-ee47-4903-bda3-aa08f8ca22b7": {
+                        "adapter_name": "SP_A",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 4.059560736913927,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 7.334693806279738,
+                        "creation_time": 1429028918011,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:06e1a46a-ee47-4903-bda3-aa08f8ca22b7:vdc1",
+                        "inactive": false,
+                        "initiator_load": 4,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1/storage-ports/urn:storageos:StoragePort:06e1a46a-ee47-4903-bda3-aa08f8ca22b7:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937726+PORT+50:06:01:65:36:60:29:19",
+                        "native_guid": "CLARIION+APM00144937726+PORT+50:06:01:65:36:60:29:19",
+                        "network": {
+                            "id": "urn:storageos:Network:dba7a9f0-a9d5-4dcc-aa10-4b13c480f201:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:dba7a9f0-a9d5-4dcc-aa10-4b13c480f201:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_A",
+                        "port_name": "SP_A:5",
+                        "port_network_id": "50:06:01:65:36:60:29:19",
+                        "port_percent_busy": 0.7844276675481157,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 184
+                    },
+                    "0c2d2c7a-ceb5-495d-a447-d924097f67cb": {
+                        "adapter_name": "SP_B",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 4.440392071457305,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 8.880383873797815,
+                        "creation_time": 1429028918108,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:0c2d2c7a-ceb5-495d-a447-d924097f67cb:vdc1",
+                        "inactive": false,
+                        "initiator_load": 2,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1/storage-ports/urn:storageos:StoragePort:0c2d2c7a-ceb5-495d-a447-d924097f67cb:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937726+PORT+50:06:01:6E:36:60:29:19",
+                        "native_guid": "CLARIION+APM00144937726+PORT+50:06:01:6E:36:60:29:19",
+                        "network": {
+                            "id": "urn:storageos:Network:3958309f-427b-44ad-a75c-42eb34b664d4:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:3958309f-427b-44ad-a75c-42eb34b664d4:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_B",
+                        "port_name": "SP_B:6",
+                        "port_network_id": "50:06:01:6E:36:60:29:19",
+                        "port_percent_busy": 0.0004002691167946218,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 22
+                    },
+                    "1cab0283-685f-46c0-97dc-8b3c7c361ea7": {
+                        "adapter_name": "SP_A",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 3.667346903139869,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 7.334693806279738,
+                        "creation_time": 1429028918011,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:1cab0283-685f-46c0-97dc-8b3c7c361ea7:vdc1",
+                        "inactive": false,
+                        "initiator_load": 0,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1/storage-ports/urn:storageos:StoragePort:1cab0283-685f-46c0-97dc-8b3c7c361ea7:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937726+PORT+50:06:01:67:36:60:29:19",
+                        "native_guid": "CLARIION+APM00144937726+PORT+50:06:01:67:36:60:29:19",
+                        "network": {
+                            "id": "urn:storageos:Network:dba7a9f0-a9d5-4dcc-aa10-4b13c480f201:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:dba7a9f0-a9d5-4dcc-aa10-4b13c480f201:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_A",
+                        "port_name": "SP_A:7",
+                        "port_network_id": "50:06:01:67:36:60:29:19",
+                        "port_percent_busy": 0,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 0
+                    },
+                    "1d082e62-d23c-41b9-918f-14c606b049e3": {
+                        "adapter_name": "SP_A",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 3.425118875728367,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 6.509010335857967,
+                        "creation_time": 1428533671996,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:1d082e62-d23c-41b9-918f-14c606b049e3:vdc1",
+                        "inactive": false,
+                        "initiator_load": 0,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1/storage-ports/urn:storageos:StoragePort:1d082e62-d23c-41b9-918f-14c606b049e3:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937724+PORT+50:06:01:66:36:60:28:F9",
+                        "native_guid": "CLARIION+APM00144937724+PORT+50:06:01:66:36:60:28:F9",
+                        "network": {
+                            "id": "urn:storageos:Network:3d7a2a24-dd46-43c6-9aef-72c160c1f273:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:3d7a2a24-dd46-43c6-9aef-72c160c1f273:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_A",
+                        "port_name": "SP_A:6",
+                        "port_network_id": "50:06:01:66:36:60:28:F9",
+                        "port_percent_busy": 0.3412274155987665,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 0
+                    },
+                    "23e4a577-765c-4032-b6d3-9e888bf7d5f9": {
+                        "adapter_name": "SP_B",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 4.440191936898907,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 8.880383873797815,
+                        "creation_time": 1429028918108,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:23e4a577-765c-4032-b6d3-9e888bf7d5f9:vdc1",
+                        "inactive": false,
+                        "initiator_load": 0,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1/storage-ports/urn:storageos:StoragePort:23e4a577-765c-4032-b6d3-9e888bf7d5f9:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937726+PORT+50:06:01:6F:36:60:29:19",
+                        "native_guid": "CLARIION+APM00144937726+PORT+50:06:01:6F:36:60:29:19",
+                        "network": {
+                            "id": "urn:storageos:Network:dba7a9f0-a9d5-4dcc-aa10-4b13c480f201:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:dba7a9f0-a9d5-4dcc-aa10-4b13c480f201:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_B",
+                        "port_name": "SP_B:7",
+                        "port_network_id": "50:06:01:6F:36:60:29:19",
+                        "port_percent_busy": 0,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 0
+                    },
+                    "318a62d4-9579-4ec1-a905-954c66160a87": {
+                        "adapter_name": "SP_A",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 3.2545051679289836,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 6.509010335857967,
+                        "creation_time": 1428533671996,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:318a62d4-9579-4ec1-a905-954c66160a87:vdc1",
+                        "inactive": false,
+                        "initiator_load": 0,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1/storage-ports/urn:storageos:StoragePort:318a62d4-9579-4ec1-a905-954c66160a87:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937724+PORT+50:06:01:67:36:60:28:F9",
+                        "native_guid": "CLARIION+APM00144937724+PORT+50:06:01:67:36:60:28:F9",
+                        "network": {
+                            "id": "urn:storageos:Network:a84ec90a-4bd6-464c-b4d5-69447f2c29bc:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:a84ec90a-4bd6-464c-b4d5-69447f2c29bc:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_A",
+                        "port_name": "SP_A:7",
+                        "port_network_id": "50:06:01:67:36:60:28:F9",
+                        "port_percent_busy": 0,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 0
+                    },
+                    "3fd6565d-e70a-4b5d-86e4-70f8e391e415": {
+                        "adapter_name": "SP_A",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 3.972033158956642,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:b60c49fd-4bdc-4752-ae20-7895868a9f8a:vdc1",
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 6.509010335857967,
+                        "creation_time": 1428533671996,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:3fd6565d-e70a-4b5d-86e4-70f8e391e415:vdc1",
+                        "inactive": false,
+                        "initiator_load": 14,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1/storage-ports/urn:storageos:StoragePort:3fd6565d-e70a-4b5d-86e4-70f8e391e415:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937724+PORT+50:06:01:64:36:60:28:F9",
+                        "native_guid": "CLARIION+APM00144937724+PORT+50:06:01:64:36:60:28:F9",
+                        "network": {
+                            "id": "urn:storageos:Network:3d7a2a24-dd46-43c6-9aef-72c160c1f273:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:3d7a2a24-dd46-43c6-9aef-72c160c1f273:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_A",
+                        "port_name": "SP_A:4",
+                        "port_network_id": "50:06:01:64:36:60:28:F9",
+                        "port_percent_busy": 1.4350559820553177,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:b60c49fd-4bdc-4752-ae20-7895868a9f8a:vdc1",
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 308
+                    },
+                    "40e2ceb6-f725-4ebd-9452-1c16e51dc78f": {
+                        "adapter_name": "SP_A",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 3.6676856884184366,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 7.334693806279738,
+                        "creation_time": 1429028918011,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:40e2ceb6-f725-4ebd-9452-1c16e51dc78f:vdc1",
+                        "inactive": false,
+                        "initiator_load": 2,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1/storage-ports/urn:storageos:StoragePort:40e2ceb6-f725-4ebd-9452-1c16e51dc78f:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937726+PORT+50:06:01:63:36:60:29:19",
+                        "native_guid": "CLARIION+APM00144937726+PORT+50:06:01:63:36:60:29:19",
+                        "network": {
+                            "id": "urn:storageos:Network:dba7a9f0-a9d5-4dcc-aa10-4b13c480f201:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:dba7a9f0-a9d5-4dcc-aa10-4b13c480f201:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_A",
+                        "port_name": "SP_A:3",
+                        "port_network_id": "50:06:01:63:36:60:29:19",
+                        "port_percent_busy": 0.0006775705571350358,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 22
+                    },
+                    "53c9b89e-0a29-4d54-8196-52cef41a9751": {
+                        "adapter_name": "SP_B",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 5.285699142164501,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 8.880383873797815,
+                        "creation_time": 1429028918108,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:53c9b89e-0a29-4d54-8196-52cef41a9751:vdc1",
+                        "inactive": false,
+                        "initiator_load": 4,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1/storage-ports/urn:storageos:StoragePort:53c9b89e-0a29-4d54-8196-52cef41a9751:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937726+PORT+50:06:01:6D:36:60:29:19",
+                        "native_guid": "CLARIION+APM00144937726+PORT+50:06:01:6D:36:60:29:19",
+                        "network": {
+                            "id": "urn:storageos:Network:dba7a9f0-a9d5-4dcc-aa10-4b13c480f201:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:dba7a9f0-a9d5-4dcc-aa10-4b13c480f201:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_B",
+                        "port_name": "SP_B:5",
+                        "port_network_id": "50:06:01:6D:36:60:29:19",
+                        "port_percent_busy": 1.6910144105311864,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 184
+                    },
+                    "583a4d35-4f6b-4e7e-a546-5963ef86e503": {
+                        "adapter_name": "SP_A",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 3.727816595368263,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 6.509010335857967,
+                        "creation_time": 1428533671996,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:583a4d35-4f6b-4e7e-a546-5963ef86e503:vdc1",
+                        "inactive": false,
+                        "initiator_load": 4,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1/storage-ports/urn:storageos:StoragePort:583a4d35-4f6b-4e7e-a546-5963ef86e503:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937724+PORT+50:06:01:62:36:60:28:F9",
+                        "native_guid": "CLARIION+APM00144937724+PORT+50:06:01:62:36:60:28:F9",
+                        "network": {
+                            "id": "urn:storageos:Network:3d7a2a24-dd46-43c6-9aef-72c160c1f273:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:3d7a2a24-dd46-43c6-9aef-72c160c1f273:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_A",
+                        "port_name": "SP_A:2",
+                        "port_network_id": "50:06:01:62:36:60:28:F9",
+                        "port_percent_busy": 0.9466228548785587,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 180
+                    },
+                    "596e49be-218f-45d4-9d64-d4fb82d8966c": {
+                        "adapter_name": "SP_A",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 4.057254901647596,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:b60c49fd-4bdc-4752-ae20-7895868a9f8a:vdc1",
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 6.509010335857967,
+                        "creation_time": 1428533671996,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:596e49be-218f-45d4-9d64-d4fb82d8966c:vdc1",
+                        "inactive": false,
+                        "initiator_load": 14,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1/storage-ports/urn:storageos:StoragePort:596e49be-218f-45d4-9d64-d4fb82d8966c:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937724+PORT+50:06:01:61:36:60:28:F9",
+                        "native_guid": "CLARIION+APM00144937724+PORT+50:06:01:61:36:60:28:F9",
+                        "network": {
+                            "id": "urn:storageos:Network:a84ec90a-4bd6-464c-b4d5-69447f2c29bc:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:a84ec90a-4bd6-464c-b4d5-69447f2c29bc:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_A",
+                        "port_name": "SP_A:1",
+                        "port_network_id": "50:06:01:61:36:60:28:F9",
+                        "port_percent_busy": 1.605499467437225,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:b60c49fd-4bdc-4752-ae20-7895868a9f8a:vdc1",
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 308
+                    },
+                    "5a0491cf-cc75-460f-82ff-707536e06da8": {
+                        "adapter_name": "SP_A",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 3.667346903139869,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 7.334693806279738,
+                        "creation_time": 1429028918011,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:5a0491cf-cc75-460f-82ff-707536e06da8:vdc1",
+                        "inactive": false,
+                        "initiator_load": 0,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1/storage-ports/urn:storageos:StoragePort:5a0491cf-cc75-460f-82ff-707536e06da8:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937726+PORT+50:06:01:60:36:60:29:19",
+                        "native_guid": "CLARIION+APM00144937726+PORT+50:06:01:60:36:60:29:19",
+                        "network": {
+                            "id": "urn:storageos:Network:3958309f-427b-44ad-a75c-42eb34b664d4:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:3958309f-427b-44ad-a75c-42eb34b664d4:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_A",
+                        "port_name": "SP_A:0",
+                        "port_network_id": "50:06:01:60:36:60:29:19",
+                        "port_percent_busy": 0,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 0
+                    },
+                    "5d0fae2d-1744-4073-a837-fcec28d31e83": {
+                        "adapter_name": "SP_A",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 7.236099443006545,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 7.334693806279738,
+                        "creation_time": 1429028918011,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:5d0fae2d-1744-4073-a837-fcec28d31e83:vdc1",
+                        "inactive": false,
+                        "initiator_load": 12,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1/storage-ports/urn:storageos:StoragePort:5d0fae2d-1744-4073-a837-fcec28d31e83:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937726+PORT+50:06:01:61:36:60:29:19",
+                        "native_guid": "CLARIION+APM00144937726+PORT+50:06:01:61:36:60:29:19",
+                        "network": {
+                            "id": "urn:storageos:Network:dba7a9f0-a9d5-4dcc-aa10-4b13c480f201:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:dba7a9f0-a9d5-4dcc-aa10-4b13c480f201:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_A",
+                        "port_name": "SP_A:1",
+                        "port_network_id": "50:06:01:61:36:60:29:19",
+                        "port_percent_busy": 7.1375050797333515,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 313
+                    },
+                    "5f896dcf-84d4-4610-84e5-f322120310d5": {
+                        "adapter_name": "SP_A",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 3.3963304546110646,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 6.509010335857967,
+                        "creation_time": 1428533671996,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:5f896dcf-84d4-4610-84e5-f322120310d5:vdc1",
+                        "inactive": false,
+                        "initiator_load": 0,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1/storage-ports/urn:storageos:StoragePort:5f896dcf-84d4-4610-84e5-f322120310d5:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937724+PORT+50:06:01:63:36:60:28:F9",
+                        "native_guid": "CLARIION+APM00144937724+PORT+50:06:01:63:36:60:28:F9",
+                        "network": {
+                            "id": "urn:storageos:Network:a84ec90a-4bd6-464c-b4d5-69447f2c29bc:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:a84ec90a-4bd6-464c-b4d5-69447f2c29bc:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_A",
+                        "port_name": "SP_A:3",
+                        "port_network_id": "50:06:01:63:36:60:28:F9",
+                        "port_percent_busy": 0.2836505733641622,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 0
+                    },
+                    "5fc17042-75df-4261-8efb-5b373edca011": {
+                        "adapter_name": "SP_B",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 3.6899820598340325,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 7.379964119668065,
+                        "creation_time": 1428533672100,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:5fc17042-75df-4261-8efb-5b373edca011:vdc1",
+                        "inactive": false,
+                        "initiator_load": 0,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1/storage-ports/urn:storageos:StoragePort:5fc17042-75df-4261-8efb-5b373edca011:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937724+PORT+50:06:01:68:36:60:28:F9",
+                        "native_guid": "CLARIION+APM00144937724+PORT+50:06:01:68:36:60:28:F9",
+                        "network": {
+                            "id": "urn:storageos:Network:3d7a2a24-dd46-43c6-9aef-72c160c1f273:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:3d7a2a24-dd46-43c6-9aef-72c160c1f273:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_B",
+                        "port_name": "SP_B:0",
+                        "port_network_id": "50:06:01:68:36:60:28:F9",
+                        "port_percent_busy": 0,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 0
+                    },
+                    "67ff93c7-52d6-4d66-ad23-2c71b0aa6206": {
+                        "adapter_name": "SP_A",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 3.7028677079983856,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 6.509010335857967,
+                        "creation_time": 1428533671996,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:67ff93c7-52d6-4d66-ad23-2c71b0aa6206:vdc1",
+                        "inactive": false,
+                        "initiator_load": 4,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1/storage-ports/urn:storageos:StoragePort:67ff93c7-52d6-4d66-ad23-2c71b0aa6206:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937724+PORT+50:06:01:65:36:60:28:F9",
+                        "native_guid": "CLARIION+APM00144937724+PORT+50:06:01:65:36:60:28:F9",
+                        "network": {
+                            "id": "urn:storageos:Network:a84ec90a-4bd6-464c-b4d5-69447f2c29bc:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:a84ec90a-4bd6-464c-b4d5-69447f2c29bc:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_A",
+                        "port_name": "SP_A:5",
+                        "port_network_id": "50:06:01:65:36:60:28:F9",
+                        "port_percent_busy": 0.8967250801388037,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 180
+                    },
+                    "7a36f872-7839-48c7-9293-8ff296f85f4f": {
+                        "adapter_name": "SP_A",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 3.66766930294144,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 7.334693806279738,
+                        "creation_time": 1429028918011,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:7a36f872-7839-48c7-9293-8ff296f85f4f:vdc1",
+                        "inactive": false,
+                        "initiator_load": 2,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1/storage-ports/urn:storageos:StoragePort:7a36f872-7839-48c7-9293-8ff296f85f4f:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937726+PORT+50:06:01:66:36:60:29:19",
+                        "native_guid": "CLARIION+APM00144937726+PORT+50:06:01:66:36:60:29:19",
+                        "network": {
+                            "id": "urn:storageos:Network:3958309f-427b-44ad-a75c-42eb34b664d4:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:3958309f-427b-44ad-a75c-42eb34b664d4:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_A",
+                        "port_name": "SP_A:6",
+                        "port_network_id": "50:06:01:66:36:60:29:19",
+                        "port_percent_busy": 0.0006447996031423984,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 22
+                    },
+                    "7ec7084b-7d31-494f-936a-231b1acf4e06": {
+                        "adapter_name": "SP_A",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 3.2545051679289836,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 6.509010335857967,
+                        "creation_time": 1428533671996,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:7ec7084b-7d31-494f-936a-231b1acf4e06:vdc1",
+                        "inactive": false,
+                        "initiator_load": 0,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1/storage-ports/urn:storageos:StoragePort:7ec7084b-7d31-494f-936a-231b1acf4e06:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937724+PORT+50:06:01:60:36:60:28:F9",
+                        "native_guid": "CLARIION+APM00144937724+PORT+50:06:01:60:36:60:28:F9",
+                        "network": {
+                            "id": "urn:storageos:Network:3d7a2a24-dd46-43c6-9aef-72c160c1f273:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:3d7a2a24-dd46-43c6-9aef-72c160c1f273:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_A",
+                        "port_name": "SP_A:0",
+                        "port_network_id": "50:06:01:60:36:60:28:F9",
+                        "port_percent_busy": 0,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 0
+                    },
+                    "92e66e59-f746-42dc-8cd4-6367819de8c7": {
+                        "adapter_name": "SP_B",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 4.857940495940823,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:b60c49fd-4bdc-4752-ae20-7895868a9f8a:vdc1",
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 7.379964119668065,
+                        "creation_time": 1428533672100,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:92e66e59-f746-42dc-8cd4-6367819de8c7:vdc1",
+                        "inactive": false,
+                        "initiator_load": 14,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1/storage-ports/urn:storageos:StoragePort:92e66e59-f746-42dc-8cd4-6367819de8c7:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937724+PORT+50:06:01:69:36:60:28:F9",
+                        "native_guid": "CLARIION+APM00144937724+PORT+50:06:01:69:36:60:28:F9",
+                        "network": {
+                            "id": "urn:storageos:Network:a84ec90a-4bd6-464c-b4d5-69447f2c29bc:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:a84ec90a-4bd6-464c-b4d5-69447f2c29bc:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_B",
+                        "port_name": "SP_B:1",
+                        "port_network_id": "50:06:01:69:36:60:28:F9",
+                        "port_percent_busy": 2.3359168722135806,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:b60c49fd-4bdc-4752-ae20-7895868a9f8a:vdc1",
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 308
+                    },
+                    "9f48bc50-bc11-4872-a603-047064a43bf9": {
+                        "adapter_name": "SP_B",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 3.82884482593931,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 7.379964119668065,
+                        "creation_time": 1428533672100,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:9f48bc50-bc11-4872-a603-047064a43bf9:vdc1",
+                        "inactive": false,
+                        "initiator_load": 0,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1/storage-ports/urn:storageos:StoragePort:9f48bc50-bc11-4872-a603-047064a43bf9:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937724+PORT+50:06:01:6B:36:60:28:F9",
+                        "native_guid": "CLARIION+APM00144937724+PORT+50:06:01:6B:36:60:28:F9",
+                        "network": {
+                            "id": "urn:storageos:Network:a84ec90a-4bd6-464c-b4d5-69447f2c29bc:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:a84ec90a-4bd6-464c-b4d5-69447f2c29bc:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_B",
+                        "port_name": "SP_B:3",
+                        "port_network_id": "50:06:01:6B:36:60:28:F9",
+                        "port_percent_busy": 0.2777255322105552,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 0
+                    },
+                    "a3044471-8e0b-411b-aad7-e20f30503fbd": {
+                        "adapter_name": "SP_B",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 3.6899820598340325,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 7.379964119668065,
+                        "creation_time": 1428533672100,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:a3044471-8e0b-411b-aad7-e20f30503fbd:vdc1",
+                        "inactive": false,
+                        "initiator_load": 0,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1/storage-ports/urn:storageos:StoragePort:a3044471-8e0b-411b-aad7-e20f30503fbd:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937724+PORT+50:06:01:6F:36:60:28:F9",
+                        "native_guid": "CLARIION+APM00144937724+PORT+50:06:01:6F:36:60:28:F9",
+                        "network": {
+                            "id": "urn:storageos:Network:a84ec90a-4bd6-464c-b4d5-69447f2c29bc:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:a84ec90a-4bd6-464c-b4d5-69447f2c29bc:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_B",
+                        "port_name": "SP_B:7",
+                        "port_network_id": "50:06:01:6F:36:60:28:F9",
+                        "port_percent_busy": 0,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 0
+                    },
+                    "acf74953-8bd7-41bb-bf79-bba062316bf0": {
+                        "adapter_name": "SP_B",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 3.8738133050917583,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 7.379964119668065,
+                        "creation_time": 1428533672100,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:acf74953-8bd7-41bb-bf79-bba062316bf0:vdc1",
+                        "inactive": false,
+                        "initiator_load": 0,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1/storage-ports/urn:storageos:StoragePort:acf74953-8bd7-41bb-bf79-bba062316bf0:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937724+PORT+50:06:01:6E:36:60:28:F9",
+                        "native_guid": "CLARIION+APM00144937724+PORT+50:06:01:6E:36:60:28:F9",
+                        "network": {
+                            "id": "urn:storageos:Network:3d7a2a24-dd46-43c6-9aef-72c160c1f273:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:3d7a2a24-dd46-43c6-9aef-72c160c1f273:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_B",
+                        "port_name": "SP_B:6",
+                        "port_network_id": "50:06:01:6E:36:60:28:F9",
+                        "port_percent_busy": 0.3676624905154515,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 0
+                    },
+                    "c9da0cf8-d09a-4a58-9cad-2da6a1c73570": {
+                        "adapter_name": "SP_A",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 4.035063825072855,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 7.334693806279738,
+                        "creation_time": 1429028918011,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:c9da0cf8-d09a-4a58-9cad-2da6a1c73570:vdc1",
+                        "inactive": false,
+                        "initiator_load": 4,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1/storage-ports/urn:storageos:StoragePort:c9da0cf8-d09a-4a58-9cad-2da6a1c73570:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937726+PORT+50:06:01:62:36:60:29:19",
+                        "native_guid": "CLARIION+APM00144937726+PORT+50:06:01:62:36:60:29:19",
+                        "network": {
+                            "id": "urn:storageos:Network:3958309f-427b-44ad-a75c-42eb34b664d4:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:3958309f-427b-44ad-a75c-42eb34b664d4:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_A",
+                        "port_name": "SP_A:2",
+                        "port_network_id": "50:06:01:62:36:60:29:19",
+                        "port_percent_busy": 0.7354338438659729,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 184
+                    },
+                    "c9eae28a-6b62-4b51-aa81-732bf7bf8245": {
+                        "adapter_name": "SP_B",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 4.440394784394713,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 8.880383873797815,
+                        "creation_time": 1429028918108,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:c9eae28a-6b62-4b51-aa81-732bf7bf8245:vdc1",
+                        "inactive": false,
+                        "initiator_load": 3,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1/storage-ports/urn:storageos:StoragePort:c9eae28a-6b62-4b51-aa81-732bf7bf8245:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937726+PORT+50:06:01:6B:36:60:29:19",
+                        "native_guid": "CLARIION+APM00144937726+PORT+50:06:01:6B:36:60:29:19",
+                        "network": {
+                            "id": "urn:storageos:Network:dba7a9f0-a9d5-4dcc-aa10-4b13c480f201:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:dba7a9f0-a9d5-4dcc-aa10-4b13c480f201:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_B",
+                        "port_name": "SP_B:3",
+                        "port_network_id": "50:06:01:6B:36:60:29:19",
+                        "port_percent_busy": 0.00040569499161205913,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 26
+                    },
+                    "ce104921-a07a-4ead-a5aa-eed005ca75cf": {
+                        "adapter_name": "SP_B",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 4.9854603056980356,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:b60c49fd-4bdc-4752-ae20-7895868a9f8a:vdc1",
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 7.379964119668065,
+                        "creation_time": 1428533672100,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:ce104921-a07a-4ead-a5aa-eed005ca75cf:vdc1",
+                        "inactive": false,
+                        "initiator_load": 14,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1/storage-ports/urn:storageos:StoragePort:ce104921-a07a-4ead-a5aa-eed005ca75cf:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937724+PORT+50:06:01:6C:36:60:28:F9",
+                        "native_guid": "CLARIION+APM00144937724+PORT+50:06:01:6C:36:60:28:F9",
+                        "network": {
+                            "id": "urn:storageos:Network:3d7a2a24-dd46-43c6-9aef-72c160c1f273:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:3d7a2a24-dd46-43c6-9aef-72c160c1f273:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_B",
+                        "port_name": "SP_B:4",
+                        "port_network_id": "50:06:01:6C:36:60:28:F9",
+                        "port_percent_busy": 2.590956491728006,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:b60c49fd-4bdc-4752-ae20-7895868a9f8a:vdc1",
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 308
+                    },
+                    "d5a9be72-e34d-451b-b21a-60f292f7090b": {
+                        "adapter_name": "SP_B",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 6.48860532505728,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 8.880383873797815,
+                        "creation_time": 1429028918108,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:d5a9be72-e34d-451b-b21a-60f292f7090b:vdc1",
+                        "inactive": false,
+                        "initiator_load": 12,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1/storage-ports/urn:storageos:StoragePort:d5a9be72-e34d-451b-b21a-60f292f7090b:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937726+PORT+50:06:01:6C:36:60:29:19",
+                        "native_guid": "CLARIION+APM00144937726+PORT+50:06:01:6C:36:60:29:19",
+                        "network": {
+                            "id": "urn:storageos:Network:3958309f-427b-44ad-a75c-42eb34b664d4:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:3958309f-427b-44ad-a75c-42eb34b664d4:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_B",
+                        "port_name": "SP_B:4",
+                        "port_network_id": "50:06:01:6C:36:60:29:19",
+                        "port_percent_busy": 4.096826776316745,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 313
+                    },
+                    "d84912ed-c313-4423-98ab-36b8bf0903d8": {
+                        "adapter_name": "SP_B",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 4.775020671685649,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 7.379964119668065,
+                        "creation_time": 1428533672100,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:d84912ed-c313-4423-98ab-36b8bf0903d8:vdc1",
+                        "inactive": false,
+                        "initiator_load": 4,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1/storage-ports/urn:storageos:StoragePort:d84912ed-c313-4423-98ab-36b8bf0903d8:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937724+PORT+50:06:01:6A:36:60:28:F9",
+                        "native_guid": "CLARIION+APM00144937724+PORT+50:06:01:6A:36:60:28:F9",
+                        "network": {
+                            "id": "urn:storageos:Network:3d7a2a24-dd46-43c6-9aef-72c160c1f273:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:3d7a2a24-dd46-43c6-9aef-72c160c1f273:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_B",
+                        "port_name": "SP_B:2",
+                        "port_network_id": "50:06:01:6A:36:60:28:F9",
+                        "port_percent_busy": 2.1700772237032337,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 180
+                    },
+                    "f00e629e-00cb-4f18-851b-8a4b23f12856": {
+                        "adapter_name": "SP_B",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 4.440191936898907,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 8.880383873797815,
+                        "creation_time": 1429028918108,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:f00e629e-00cb-4f18-851b-8a4b23f12856:vdc1",
+                        "inactive": false,
+                        "initiator_load": 0,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1/storage-ports/urn:storageos:StoragePort:f00e629e-00cb-4f18-851b-8a4b23f12856:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937726+PORT+50:06:01:68:36:60:29:19",
+                        "native_guid": "CLARIION+APM00144937726+PORT+50:06:01:68:36:60:29:19",
+                        "network": {
+                            "id": "urn:storageos:Network:3958309f-427b-44ad-a75c-42eb34b664d4:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:3958309f-427b-44ad-a75c-42eb34b664d4:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_B",
+                        "port_name": "SP_B:0",
+                        "port_network_id": "50:06:01:68:36:60:29:19",
+                        "port_percent_busy": 0,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 0
+                    },
+                    "f3e07aa5-e367-4205-ac3c-697c88206a0f": {
+                        "adapter_name": "SP_B",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 4.802277335478004,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 7.379964119668065,
+                        "creation_time": 1428533672100,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:f3e07aa5-e367-4205-ac3c-697c88206a0f:vdc1",
+                        "inactive": false,
+                        "initiator_load": 4,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1/storage-ports/urn:storageos:StoragePort:f3e07aa5-e367-4205-ac3c-697c88206a0f:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937724+PORT+50:06:01:6D:36:60:28:F9",
+                        "native_guid": "CLARIION+APM00144937724+PORT+50:06:01:6D:36:60:28:F9",
+                        "network": {
+                            "id": "urn:storageos:Network:a84ec90a-4bd6-464c-b4d5-69447f2c29bc:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:a84ec90a-4bd6-464c-b4d5-69447f2c29bc:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_B",
+                        "port_name": "SP_B:5",
+                        "port_network_id": "50:06:01:6D:36:60:28:F9",
+                        "port_percent_busy": 2.2245905512879425,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:4687b6ca-3741-4bc1-9e65-c6a6c072dad2:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 180
+                    },
+                    "f44c3be3-d63c-4fb5-a73c-013cd25a836f": {
+                        "adapter_name": "SP_A",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 7.195582780779125,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 7.334693806279738,
+                        "creation_time": 1429028918011,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:f44c3be3-d63c-4fb5-a73c-013cd25a836f:vdc1",
+                        "inactive": false,
+                        "initiator_load": 13,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1/storage-ports/urn:storageos:StoragePort:f44c3be3-d63c-4fb5-a73c-013cd25a836f:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937726+PORT+50:06:01:64:36:60:29:19",
+                        "native_guid": "CLARIION+APM00144937726+PORT+50:06:01:64:36:60:29:19",
+                        "network": {
+                            "id": "urn:storageos:Network:3958309f-427b-44ad-a75c-42eb34b664d4:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:3958309f-427b-44ad-a75c-42eb34b664d4:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_A",
+                        "port_name": "SP_A:4",
+                        "port_network_id": "50:06:01:64:36:60:29:19",
+                        "port_percent_busy": 7.056471755278512,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 317
+                    },
+                    "f8a738db-a3aa-404a-88bd-25af091b24eb": {
+                        "adapter_name": "SP_B",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 6.006398540901175,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 8.880383873797815,
+                        "creation_time": 1429028918108,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:f8a738db-a3aa-404a-88bd-25af091b24eb:vdc1",
+                        "inactive": false,
+                        "initiator_load": 12,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1/storage-ports/urn:storageos:StoragePort:f8a738db-a3aa-404a-88bd-25af091b24eb:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937726+PORT+50:06:01:69:36:60:29:19",
+                        "native_guid": "CLARIION+APM00144937726+PORT+50:06:01:69:36:60:29:19",
+                        "network": {
+                            "id": "urn:storageos:Network:dba7a9f0-a9d5-4dcc-aa10-4b13c480f201:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:dba7a9f0-a9d5-4dcc-aa10-4b13c480f201:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_B",
+                        "port_name": "SP_B:1",
+                        "port_network_id": "50:06:01:69:36:60:29:19",
+                        "port_percent_busy": 3.132413208004537,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 313
+                    },
+                    "fbbc86b4-3662-4bfe-b4e3-cc4d100ffdad": {
+                        "adapter_name": "SP_B",
+                        "allocation_disqualified": false,
+                        "allocation_metric": 5.2951105199561415,
+                        "assigned_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "compatibility_status": "COMPATIBLE",
+                        "connected_varrays": [],
+                        "cpu_percent_busy": 8.880383873797815,
+                        "creation_time": 1429028918108,
+                        "discovery_status": "VISIBLE",
+                        "global": false,
+                        "id": "urn:storageos:StoragePort:fbbc86b4-3662-4bfe-b4e3-cc4d100ffdad:vdc1",
+                        "inactive": false,
+                        "initiator_load": 4,
+                        "internal": false,
+                        "link": {
+                            "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1/storage-ports/urn:storageos:StoragePort:fbbc86b4-3662-4bfe-b4e3-cc4d100ffdad:vdc1",
+                            "rel": "self"
+                        },
+                        "name": "CLARIION+APM00144937726+PORT+50:06:01:6A:36:60:29:19",
+                        "native_guid": "CLARIION+APM00144937726+PORT+50:06:01:6A:36:60:29:19",
+                        "network": {
+                            "id": "urn:storageos:Network:3958309f-427b-44ad-a75c-42eb34b664d4:vdc1",
+                            "link": {
+                                "href": "/vdc/networks/urn:storageos:Network:3958309f-427b-44ad-a75c-42eb34b664d4:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "operational_status": "OK",
+                        "port_group": "SP_B",
+                        "port_name": "SP_B:2",
+                        "port_network_id": "50:06:01:6A:36:60:29:19",
+                        "port_percent_busy": 1.7098371661144687,
+                        "port_speed_gbps": 8,
+                        "port_type": "frontend",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_system": {
+                            "id": "urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                            "link": {
+                                "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "tagged_varrays": [
+                            "urn:storageos:VirtualArray:091eef95-c33a-4e09-9842-ed54658a790f:vdc1",
+                            "urn:storageos:VirtualArray:7a35a458-a44e-4459-9247-8d55a59eab3e:vdc1"
+                        ],
+                        "tags": [],
+                        "transport_type": "FC",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "volume_load": 184
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

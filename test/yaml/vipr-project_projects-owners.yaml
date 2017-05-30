@@ -1,0 +1,5 @@
+name: Vipr Report
+reports:
+  vipr-project:
+    projects-owners:
+      - svt_all

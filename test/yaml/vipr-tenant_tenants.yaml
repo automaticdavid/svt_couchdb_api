@@ -1,0 +1,6 @@
+name: Vipr Report
+reports:
+  vipr-tenant:
+    tenants:
+      - name
+      - description

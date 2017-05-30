@@ -1,0 +1,1376 @@
+http://localhost:5984/
+Welcome
+http://localhost:5984/svtdev
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: test/yaml/vro-misc_configurations.yaml
+Checking for collect existence
+http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
+http://localhost:5984/svtdev/_design/vro-misc/_view/configurations?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+{
+    "data": {
+        "vro-1": {
+            "vro-misc": {
+                "configurations": {
+                    "configuration1": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "06e0290b-b91e-4a93-b298-e9e3867b83fe"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/06e0290b-b91e-4a93-b298-e9e3867b83fe/",
+                        "rel": "configuration"
+                    },
+                    "configuration10": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "1c17ba2d-cff2-4196-ad6e-eaf1e88b64d3"
+                            },
+                            {
+                                "name": "name",
+                                "value": "VMwareSRM"
+                            },
+                            {
+                                "name": "description",
+                                "value": "Disaster Recovery configuration file with SOAP and SQL Server endpoint/access configuration values."
+                            },
+                            {
+                                "name": "version",
+                                "value": "3.1.0"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/1c17ba2d-cff2-4196-ad6e-eaf1e88b64d3/",
+                        "rel": "configuration"
+                    },
+                    "configuration11": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "1e47506f-ab5c-4470-bacb-95c5bb6f737f"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/1e47506f-ab5c-4470-bacb-95c5bb6f737f/",
+                        "rel": "configuration"
+                    },
+                    "configuration12": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "20017688-9e5f-46fb-82f1-dd3b2a333f78"
+                            },
+                            {
+                                "name": "name",
+                                "value": "RC_RHEL_NonDR_OTC"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.0"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/20017688-9e5f-46fb-82f1-dd3b2a333f78/",
+                        "rel": "configuration"
+                    },
+                    "configuration13": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "24dcb766-f3da-4dd4-a98e-8c95ede464e4"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.2"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/24dcb766-f3da-4dd4-a98e-8c95ede464e4/",
+                        "rel": "configuration"
+                    },
+                    "configuration14": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "25477982-8c6f-45af-85b3-5afff3280460"
+                            },
+                            {
+                                "name": "name",
+                                "value": "VMwareNSX"
+                            },
+                            {
+                                "name": "description"
+                            },
+                            {
+                                "name": "version",
+                                "value": "3.1.0"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/25477982-8c6f-45af-85b3-5afff3280460/",
+                        "rel": "configuration"
+                    },
+                    "configuration15": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "29856fc6-f890-4a78-a170-6061b4493496"
+                            },
+                            {
+                                "name": "name",
+                                "value": "DPARestHostConfig"
+                            },
+                            {
+                                "name": "description",
+                                "value": "Enter DPA Host Configurations. Some of the values are not prompted for user input and have been configured with default values."
+                            },
+                            {
+                                "name": "version",
+                                "value": "3.1.0"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/29856fc6-f890-4a78-a170-6061b4493496/",
+                        "rel": "configuration"
+                    },
+                    "configuration16": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "2D8080808080808080808080808080808C808080012233687034703cc9494706e"
+                            },
+                            {
+                                "name": "name",
+                                "value": "BatchObject"
+                            },
+                            {
+                                "name": "description"
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.1.0"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/2D8080808080808080808080808080808C808080012233687034703cc9494706e/",
+                        "rel": "configuration"
+                    },
+                    "configuration17": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "2f97d177-5bbb-423a-8844-a7f0593fd413"
+                            },
+                            {
+                                "name": "name",
+                                "value": "AvamarConfigurations"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "3.1.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/2f97d177-5bbb-423a-8844-a7f0593fd413/",
+                        "rel": "configuration"
+                    },
+                    "configuration18": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "35fb40d7-6d9a-4904-b64f-352a9a499350"
+                            },
+                            {
+                                "name": "name",
+                                "value": "DPA"
+                            },
+                            {
+                                "name": "description",
+                                "value": "DPA Configurations for reporting. Default values have been populated."
+                            },
+                            {
+                                "name": "version",
+                                "value": "3.1.0"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/35fb40d7-6d9a-4904-b64f-352a9a499350/",
+                        "rel": "configuration"
+                    },
+                    "configuration19": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "3b3a3144-df9e-440f-bc17-4c4015d0f870"
+                            },
+                            {
+                                "name": "name",
+                                "value": "SCCMInstall"
+                            },
+                            {
+                                "name": "description"
+                            },
+                            {
+                                "name": "version"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/3b3a3144-df9e-440f-bc17-4c4015d0f870/",
+                        "rel": "configuration"
+                    },
+                    "configuration2": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "0d95b33c-deff-4bb6-bac6-37443ccacbb2"
+                            },
+                            {
+                                "name": "name",
+                                "value": "viprStorage"
+                            },
+                            {
+                                "name": "description"
+                            },
+                            {
+                                "name": "version",
+                                "value": "3.1.0"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/0d95b33c-deff-4bb6-bac6-37443ccacbb2/",
+                        "rel": "configuration"
+                    },
+                    "configuration20": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "3e1b0986-59b0-4121-94f9-e1ee552104c7"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.2"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/3e1b0986-59b0-4121-94f9-e1ee552104c7/",
+                        "rel": "configuration"
+                    },
+                    "configuration21": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "3fdf2fea-5799-455e-8bdf-3311d7fa7b15"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/3fdf2fea-5799-455e-8bdf-3311d7fa7b15/",
+                        "rel": "configuration"
+                    },
+                    "configuration22": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "411887ad-1081-40e4-aed8-d0e2612aa6d2"
+                            },
+                            {
+                                "name": "name",
+                                "value": "extensibility"
+                            },
+                            {
+                                "name": "description"
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.0"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/411887ad-1081-40e4-aed8-d0e2612aa6d2/",
+                        "rel": "configuration"
+                    },
+                    "configuration23": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "468170ef-cc7c-4416-9c8b-f397e96fdaca"
+                            },
+                            {
+                                "name": "name",
+                                "value": "IAASHostConfig"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "3.1.0"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/468170ef-cc7c-4416-9c8b-f397e96fdaca/",
+                        "rel": "configuration"
+                    },
+                    "configuration24": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "4e35e32d-87e4-4002-86c7-27c58c4ec7a6"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/4e35e32d-87e4-4002-86c7-27c58c4ec7a6/",
+                        "rel": "configuration"
+                    },
+                    "configuration25": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "5be085c0-421b-4a3e-a452-1840fd1caf08"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.2"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/5be085c0-421b-4a3e-a452-1840fd1caf08/",
+                        "rel": "configuration"
+                    },
+                    "configuration26": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "5d51f0a2-9efa-4f1a-8c07-a112d40bafda"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/5d51f0a2-9efa-4f1a-8c07-a112d40bafda/",
+                        "rel": "configuration"
+                    },
+                    "configuration27": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "6e82e431-0cfb-4a3f-84f3-66871824479d"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/6e82e431-0cfb-4a3f-84f3-66871824479d/",
+                        "rel": "configuration"
+                    },
+                    "configuration28": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "6f27c14c-2f2f-477e-b91b-e7154ab8262b"
+                            },
+                            {
+                                "name": "name",
+                                "value": "Configuration"
+                            },
+                            {
+                                "name": "description"
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.0"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/6f27c14c-2f2f-477e-b91b-e7154ab8262b/",
+                        "rel": "configuration"
+                    },
+                    "configuration29": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "7c2bfdee-2fdb-4a78-a17e-fb15cf971f68"
+                            },
+                            {
+                                "name": "name",
+                                "value": "object properties accessors"
+                            },
+                            {
+                                "name": "description",
+                                "value": "Contains the accessors / slectors properties for plug-in generator objects"
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/7c2bfdee-2fdb-4a78-a17e-fb15cf971f68/",
+                        "rel": "configuration"
+                    },
+                    "configuration3": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "10cdca8e-4b07-459c-9853-60cf2a396253"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/10cdca8e-4b07-459c-9853-60cf2a396253/",
+                        "rel": "configuration"
+                    },
+                    "configuration30": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "80a885fd-4e5d-431f-ba6c-bdd65919bd8c"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/80a885fd-4e5d-431f-ba6c-bdd65919bd8c/",
+                        "rel": "configuration"
+                    },
+                    "configuration31": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "83506e15-7ab0-4271-90d7-a38b75f0ee5d"
+                            },
+                            {
+                                "name": "name",
+                                "value": "DRvCenter"
+                            },
+                            {
+                                "name": "description",
+                                "value": "vCenter Protected (SiteA) and Recovery (SiteB) username and passwords.  The FQDNs are in Foundation vCenter config."
+                            },
+                            {
+                                "name": "version",
+                                "value": "3.1.0"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/83506e15-7ab0-4271-90d7-a38b75f0ee5d/",
+                        "rel": "configuration"
+                    },
+                    "configuration32": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "866a719c-b9c6-400e-98fa-394fedcca4e5"
+                            },
+                            {
+                                "name": "name",
+                                "value": "actions"
+                            },
+                            {
+                                "name": "description",
+                                "value": "Contains for each object type the specific actions to convert JSON to dynamictype object or to execute a query"
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/866a719c-b9c6-400e-98fa-394fedcca4e5/",
+                        "rel": "configuration"
+                    },
+                    "configuration33": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "86e55a3e-73f6-428b-b21f-a69ac280281c"
+                            },
+                            {
+                                "name": "name",
+                                "value": "vCAC Environment Configuration"
+                            },
+                            {
+                                "name": "description",
+                                "value": "Configuration data for vCAC systems"
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.0"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/86e55a3e-73f6-428b-b21f-a69ac280281c/",
+                        "rel": "configuration"
+                    },
+                    "configuration34": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "8ba644c4-9a48-4cb2-b7d8-8dfe88fa2885"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/8ba644c4-9a48-4cb2-b7d8-8dfe88fa2885/",
+                        "rel": "configuration"
+                    },
+                    "configuration35": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "8d32d53b-36d5-421f-9117-40c75d97b0bc"
+                            },
+                            {
+                                "name": "name",
+                                "value": "cache"
+                            },
+                            {
+                                "name": "description",
+                                "value": "Contains cache timeout for plug-in generator objects"
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/8d32d53b-36d5-421f-9117-40c75d97b0bc/",
+                        "rel": "configuration"
+                    },
+                    "configuration36": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "98808080808080808080808080808080E480808001231146624761b79546544c2"
+                            },
+                            {
+                                "name": "name",
+                                "value": "BatchAction"
+                            },
+                            {
+                                "name": "description"
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.1.0"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/98808080808080808080808080808080E480808001231146624761b79546544c2/",
+                        "rel": "configuration"
+                    },
+                    "configuration37": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "9a8ab047-99e7-4747-afe4-b4591fd5fa94"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.2"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/9a8ab047-99e7-4747-afe4-b4591fd5fa94/",
+                        "rel": "configuration"
+                    },
+                    "configuration38": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "a01de237-ddc4-457e-91b2-db4d8235b89f"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.2"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/a01de237-ddc4-457e-91b2-db4d8235b89f/",
+                        "rel": "configuration"
+                    },
+                    "configuration39": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "a3308a19-b95e-45fa-9126-1b3d52572963"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/a3308a19-b95e-45fa-9126-1b3d52572963/",
+                        "rel": "configuration"
+                    },
+                    "configuration4": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "114f639f-57db-408a-b6ce-de4345d003c2"
+                            },
+                            {
+                                "name": "name",
+                                "value": "vCSDK"
+                            },
+                            {
+                                "name": "description",
+                                "value": "vCenter SDK Connection String"
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/114f639f-57db-408a-b6ce-de4345d003c2/",
+                        "rel": "configuration"
+                    },
+                    "configuration40": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "a36afbc1-adbd-4678-9e17-db9bf8eafff8"
+                            },
+                            {
+                                "name": "name",
+                                "value": "vRAStorageTierPolicy"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/a36afbc1-adbd-4678-9e17-db9bf8eafff8/",
+                        "rel": "configuration"
+                    },
+                    "configuration41": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "ac2b0212-273a-4c59-9530-35d565b7ef9f"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.2"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/ac2b0212-273a-4c59-9530-35d565b7ef9f/",
+                        "rel": "configuration"
+                    },
+                    "configuration42": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "af4eb214-e431-40d7-bd66-38bd1c8d9341"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/af4eb214-e431-40d7-bd66-38bd1c8d9341/",
+                        "rel": "configuration"
+                    },
+                    "configuration43": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "b12d0a63-efb2-4680-b551-b973f7198b21"
+                            },
+                            {
+                                "name": "name",
+                                "value": "ActiveDirectory"
+                            },
+                            {
+                                "name": "description"
+                            },
+                            {
+                                "name": "version",
+                                "value": "3.1.0"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/b12d0a63-efb2-4680-b551-b973f7198b21/",
+                        "rel": "configuration"
+                    },
+                    "configuration44": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "b4218850-4cad-4624-b11e-57cf1c98c5c1"
+                            },
+                            {
+                                "name": "name",
+                                "value": "vCenterClusterAvamarMapping"
+                            },
+                            {
+                                "name": "description",
+                                "value": "Configuration file to store the  Compute Cluster to Avamar Instance/Pair and Avamar proxy mapping."
+                            },
+                            {
+                                "name": "version",
+                                "value": "3.1.2"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/b4218850-4cad-4624-b11e-57cf1c98c5c1/",
+                        "rel": "configuration"
+                    },
+                    "configuration45": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "b5ef4efb-9470-4570-9ff5-831d4e6e2cc0"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.2"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/b5ef4efb-9470-4570-9ff5-831d4e6e2cc0/",
+                        "rel": "configuration"
+                    },
+                    "configuration46": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "bb4a74f4-f389-4bf8-837d-7fd3cc3e5480"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.2"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/bb4a74f4-f389-4bf8-837d-7fd3cc3e5480/",
+                        "rel": "configuration"
+                    },
+                    "configuration47": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "c30bfbd8-822a-4b78-9de6-f9755052158b"
+                            },
+                            {
+                                "name": "name",
+                                "value": "vROHostConfig"
+                            },
+                            {
+                                "name": "description"
+                            },
+                            {
+                                "name": "version",
+                                "value": "3.1.0"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/c30bfbd8-822a-4b78-9de6-f9755052158b/",
+                        "rel": "configuration"
+                    },
+                    "configuration48": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "c36e5d42-4b8c-4eb0-b615-2bcf28caa518"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/c36e5d42-4b8c-4eb0-b615-2bcf28caa518/",
+                        "rel": "configuration"
+                    },
+                    "configuration49": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "c370a3e2-d368-4ee5-bdfa-9c560537f4ce"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.2"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/c370a3e2-d368-4ee5-bdfa-9c560537f4ce/",
+                        "rel": "configuration"
+                    },
+                    "configuration5": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "17af386d-a1c8-4146-a0ac-b29093b61a21"
+                            },
+                            {
+                                "name": "name",
+                                "value": "vRAPPServices"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/17af386d-a1c8-4146-a0ac-b29093b61a21/",
+                        "rel": "configuration"
+                    },
+                    "configuration50": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "c70f93f0-0247-4cd9-b35e-cf36e4caff44"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/c70f93f0-0247-4cd9-b35e-cf36e4caff44/",
+                        "rel": "configuration"
+                    },
+                    "configuration51": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "c9c1f297-3e44-44a9-8bea-05ffcbdade93"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.2"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/c9c1f297-3e44-44a9-8bea-05ffcbdade93/",
+                        "rel": "configuration"
+                    },
+                    "configuration52": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "ca2c5cd2-c239-4f15-b279-8404e01afff5"
+                            },
+                            {
+                                "name": "name",
+                                "value": "folders labels"
+                            },
+                            {
+                                "name": "description",
+                                "value": "Contains labels for plug-in generator folder objects"
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/ca2c5cd2-c239-4f15-b279-8404e01afff5/",
+                        "rel": "configuration"
+                    },
+                    "configuration53": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "d76d3342-5e88-4a3a-956f-9b67a4632df5"
+                            },
+                            {
+                                "name": "name",
+                                "value": "VCACHostConfig"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "3.1.0"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/d76d3342-5e88-4a3a-956f-9b67a4632df5/",
+                        "rel": "configuration"
+                    },
+                    "configuration54": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "db232165-0e54-4640-9841-c8dee663c38d"
+                            },
+                            {
+                                "name": "name",
+                                "value": "smcRest"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.0"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/db232165-0e54-4640-9841-c8dee663c38d/",
+                        "rel": "configuration"
+                    },
+                    "configuration55": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "e2201900-5230-4b97-82fd-e6cad1ce3bc1"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/e2201900-5230-4b97-82fd-e6cad1ce3bc1/",
+                        "rel": "configuration"
+                    },
+                    "configuration56": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "e66c16a2-58e9-4585-a1cb-4248a767eefb"
+                            },
+                            {
+                                "name": "name",
+                                "value": "FirewallMessages"
+                            },
+                            {
+                                "name": "description"
+                            },
+                            {
+                                "name": "version"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/e66c16a2-58e9-4585-a1cb-4248a767eefb/",
+                        "rel": "configuration"
+                    },
+                    "configuration57": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "ed4a6a0d-789b-4a15-9ea1-6cb5532da65d"
+                            },
+                            {
+                                "name": "name",
+                                "value": "CachableObjects"
+                            },
+                            {
+                                "name": "description",
+                                "value": "List of cachable objects"
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.2"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/ed4a6a0d-789b-4a15-9ea1-6cb5532da65d/",
+                        "rel": "configuration"
+                    },
+                    "configuration58": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "f15f35d0-992e-4621-bd01-8dc2aed1f180"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/f15f35d0-992e-4621-bd01-8dc2aed1f180/",
+                        "rel": "configuration"
+                    },
+                    "configuration59": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "f33653b7-19f6-482f-8464-59c1760d68b4"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/f33653b7-19f6-482f-8464-59c1760d68b4/",
+                        "rel": "configuration"
+                    },
+                    "configuration6": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "1941bdd6-0a39-42ab-923c-c5a1595dc2fd"
+                            },
+                            {
+                                "name": "name",
+                                "value": "VIP_NSX_Info"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/1941bdd6-0a39-42ab-923c-c5a1595dc2fd/",
+                        "rel": "configuration"
+                    },
+                    "configuration60": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "f8737dae-3c9d-44e5-a625-271314432707"
+                            },
+                            {
+                                "name": "name",
+                                "value": "email"
+                            },
+                            {
+                                "name": "description"
+                            },
+                            {
+                                "name": "version",
+                                "value": "3.1.0"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/f8737dae-3c9d-44e5-a625-271314432707/",
+                        "rel": "configuration"
+                    },
+                    "configuration61": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "f991d5d7-cdf1-454d-be06-3c8fd22c4b83"
+                            },
+                            {
+                                "name": "name",
+                                "value": "RC_RHEL_DR_OTC"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.0"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/f991d5d7-cdf1-454d-be06-3c8fd22c4b83/",
+                        "rel": "configuration"
+                    },
+                    "configuration62": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "ffc06445-6d09-4f06-852c-a86eb376da93"
+                            },
+                            {
+                                "name": "name",
+                                "value": "vCenter"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "3.1.0"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/ffc06445-6d09-4f06-852c-a86eb376da93/",
+                        "rel": "configuration"
+                    },
+                    "configuration7": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "198506c7-f063-4cc8-b5c6-faf4b53eeb71"
+                            },
+                            {
+                                "name": "name",
+                                "value": "REST operations"
+                            },
+                            {
+                                "name": "description",
+                                "value": "Contains the HTTP operation properties for plug-in generator objects"
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/198506c7-f063-4cc8-b5c6-faf4b53eeb71/",
+                        "rel": "configuration"
+                    },
+                    "configuration8": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "1a019986-40c1-463a-8193-a1aefc434ff1"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/1a019986-40c1-463a-8193-a1aefc434ff1/",
+                        "rel": "configuration"
+                    },
+                    "configuration9": {
+                        "attributes": [
+                            {
+                                "name": "id",
+                                "value": "1ae5adfe-29d1-4327-8e75-820e019a3a3a"
+                            },
+                            {
+                                "name": "name",
+                                "value": "networkSetup"
+                            },
+                            {
+                                "name": "description",
+                                "value": ""
+                            },
+                            {
+                                "name": "version",
+                                "value": "0.0.1"
+                            }
+                        ],
+                        "href": "https://itcldrcorcapl01.utility.pge.com:8281/vco/api/configurations/1ae5adfe-29d1-4327-8e75-820e019a3a3a/",
+                        "rel": "configuration"
+                    }
+                },
+                "svt_single": {}
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

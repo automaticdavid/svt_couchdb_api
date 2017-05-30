@@ -1,0 +1,732 @@
+http://localhost:5984/
+Welcome
+http://localhost:5984/svtdev
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: test/yaml/vipr-config_properties.yaml
+Checking for collect existence
+http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
+http://localhost:5984/svtdev/_design/vipr-config/_view/properties?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+{
+    "data": {
+        "vipr-1": {
+            "vipr-config": {
+                "properties": {
+                    "properties": {
+                        "entry": [
+                            {
+                                "key": "backup_external_location_password",
+                                "value": ""
+                            },
+                            {
+                                "key": "backup_external_location_url",
+                                "value": ""
+                            },
+                            {
+                                "key": "backup_external_location_username",
+                                "value": ""
+                            },
+                            {
+                                "key": "backup_max_used_disk_percentage",
+                                "value": "30"
+                            },
+                            {
+                                "key": "backup_scheduler_copies_to_keep",
+                                "value": "5"
+                            },
+                            {
+                                "key": "backup_scheduler_enable",
+                                "value": "true"
+                            },
+                            {
+                                "key": "backup_scheduler_interval",
+                                "value": "1day"
+                            },
+                            {
+                                "key": "backup_scheduler_time",
+                                "value": "100"
+                            },
+                            {
+                                "key": "backup_threshold_disk_percentage",
+                                "value": "80"
+                            },
+                            {
+                                "key": "certificate_version",
+                                "value": "0"
+                            },
+                            {
+                                "key": "compute_aix_version",
+                                "value": "6.1.0"
+                            },
+                            {
+                                "key": "compute_aixvio_version",
+                                "value": "2.0.0"
+                            },
+                            {
+                                "key": "compute_redhat_linux_version",
+                                "value": "5.9"
+                            },
+                            {
+                                "key": "compute_suse_linux_version",
+                                "value": "11"
+                            },
+                            {
+                                "key": "compute_vmware_esx_version",
+                                "value": "5.0"
+                            },
+                            {
+                                "key": "compute_vmware_vcenter_version",
+                                "value": "5.0"
+                            },
+                            {
+                                "key": "compute_windows_version",
+                                "value": "6.0.6002"
+                            },
+                            {
+                                "key": "config_version",
+                                "value": "1462603509630"
+                            },
+                            {
+                                "key": "controller_array_consistency_group_lock_timeout",
+                                "value": "7200"
+                            },
+                            {
+                                "key": "controller_brocade_firmware_version",
+                                "value": "11.2.1"
+                            },
+                            {
+                                "key": "controller_compute_discovery_interval",
+                                "value": "3600"
+                            },
+                            {
+                                "key": "controller_compute_discovery_refresh_interval",
+                                "value": "60"
+                            },
+                            {
+                                "key": "controller_cs_discovery_interval",
+                                "value": "86400"
+                            },
+                            {
+                                "key": "controller_cs_discovery_refresh_interval",
+                                "value": "60"
+                            },
+                            {
+                                "key": "controller_datadomain_firmware_version",
+                                "value": "5.5.0.0"
+                            },
+                            {
+                                "key": "controller_ddmc_firmware_version",
+                                "value": "1.2.1.0"
+                            },
+                            {
+                                "key": "controller_discovery_core_pool_size",
+                                "value": "3"
+                            },
+                            {
+                                "key": "controller_discovery_interval",
+                                "value": "3600"
+                            },
+                            {
+                                "key": "controller_discovery_refresh_interval",
+                                "value": "600"
+                            },
+                            {
+                                "key": "controller_enable_autodiscovery",
+                                "value": "true"
+                            },
+                            {
+                                "key": "controller_enable_autoscan",
+                                "value": "true"
+                            },
+                            {
+                                "key": "controller_enable_metering",
+                                "value": "true"
+                            },
+                            {
+                                "key": "controller_enable_monitoring",
+                                "value": "true"
+                            },
+                            {
+                                "key": "controller_export_group_ops_lock_timeout",
+                                "value": "7200"
+                            },
+                            {
+                                "key": "controller_hicommand_provider_version",
+                                "value": "7.4"
+                            },
+                            {
+                                "key": "controller_ibmxiv_firmware_version",
+                                "value": "10.2.4"
+                            },
+                            {
+                                "key": "controller_ibmxiv_provider_version",
+                                "value": "10.2.4.0"
+                            },
+                            {
+                                "key": "controller_isilon_firmware_version",
+                                "value": "7.0.2.0"
+                            },
+                            {
+                                "key": "controller_max_pool_utilization_percentage",
+                                "value": "75"
+                            },
+                            {
+                                "key": "controller_max_thin_pool_subscription_percentage",
+                                "value": "300"
+                            },
+                            {
+                                "key": "controller_mds_communication_timeout",
+                                "value": "300"
+                            },
+                            {
+                                "key": "controller_mds_firmware_version",
+                                "value": "5.0(1a)"
+                            },
+                            {
+                                "key": "controller_metering_interval",
+                                "value": "3600"
+                            },
+                            {
+                                "key": "controller_metering_refresh_interval",
+                                "value": "720"
+                            },
+                            {
+                                "key": "controller_netapp_firmware_version",
+                                "value": "8.1.1"
+                            },
+                            {
+                                "key": "controller_netappc_firmware_version",
+                                "value": "8.2.2"
+                            },
+                            {
+                                "key": "controller_ns_brocade_discovery_by_fabric_association",
+                                "value": "true"
+                            },
+                            {
+                                "key": "controller_ns_discovery_interval",
+                                "value": "3600"
+                            },
+                            {
+                                "key": "controller_ns_discovery_refresh_interval",
+                                "value": "60"
+                            },
+                            {
+                                "key": "controller_ns_zone_refresh_always",
+                                "value": "true"
+                            },
+                            {
+                                "key": "controller_rp_consistency_group_lock_timeout",
+                                "value": "7200"
+                            },
+                            {
+                                "key": "controller_rp_export_lock_timeout",
+                                "value": "7200"
+                            },
+                            {
+                                "key": "controller_rp_firmware_version",
+                                "value": "4.0"
+                            },
+                            {
+                                "key": "controller_rp_vplex_consistency_group_lock_timeout",
+                                "value": "7200"
+                            },
+                            {
+                                "key": "controller_scaleio_firmware_version",
+                                "value": "1.21.0.20"
+                            },
+                            {
+                                "key": "controller_scan_interval",
+                                "value": "600"
+                            },
+                            {
+                                "key": "controller_scan_refresh_interval",
+                                "value": "60"
+                            },
+                            {
+                                "key": "controller_smis_provider_version",
+                                "value": "4.6.1.1"
+                            },
+                            {
+                                "key": "controller_srdf_provisioning_lock_timeout",
+                                "value": "300"
+                            },
+                            {
+                                "key": "controller_ucs_firmware_version",
+                                "value": "2.0"
+                            },
+                            {
+                                "key": "controller_vmax_firmware_version",
+                                "value": "5876.221"
+                            },
+                            {
+                                "key": "controller_vnxblock_firmware_version",
+                                "value": "05.32"
+                            },
+                            {
+                                "key": "controller_vnxfile_firmware_version",
+                                "value": "7.1.71"
+                            },
+                            {
+                                "key": "controller_vplex_api_lib_lock_timeout",
+                                "value": "1200"
+                            },
+                            {
+                                "key": "controller_vplex_backend_export_lock_timeout",
+                                "value": "3600"
+                            },
+                            {
+                                "key": "controller_vplex_firmware_version",
+                                "value": "5.2"
+                            },
+                            {
+                                "key": "controller_xtremio_firmware_version",
+                                "value": "2.4.0.20"
+                            },
+                            {
+                                "key": "image_server_address",
+                                "value": ""
+                            },
+                            {
+                                "key": "image_server_encpassword",
+                                "value": ""
+                            },
+                            {
+                                "key": "image_server_http_port",
+                                "value": "44491"
+                            },
+                            {
+                                "key": "image_server_image_directory",
+                                "value": "images/"
+                            },
+                            {
+                                "key": "image_server_image_import_timeout",
+                                "value": "1800"
+                            },
+                            {
+                                "key": "image_server_job_polling_interval",
+                                "value": "60"
+                            },
+                            {
+                                "key": "image_server_os_install_timeout",
+                                "value": "3600"
+                            },
+                            {
+                                "key": "image_server_os_network_ip",
+                                "value": ""
+                            },
+                            {
+                                "key": "image_server_ssh_port",
+                                "value": "22"
+                            },
+                            {
+                                "key": "image_server_ssh_timeout",
+                                "value": "20"
+                            },
+                            {
+                                "key": "image_server_tftpboot_directory",
+                                "value": "/opt/tftpboot/"
+                            },
+                            {
+                                "key": "image_server_username",
+                                "value": "root"
+                            },
+                            {
+                                "key": "internal_api_key_algo",
+                                "value": "sha-1"
+                            },
+                            {
+                                "key": "network_1_ipaddr",
+                                "value": "10.31.253.32"
+                            },
+                            {
+                                "key": "network_1_ipaddr6",
+                                "value": "::0"
+                            },
+                            {
+                                "key": "network_2_ipaddr",
+                                "value": "10.31.253.33"
+                            },
+                            {
+                                "key": "network_2_ipaddr6",
+                                "value": "::0"
+                            },
+                            {
+                                "key": "network_3_ipaddr",
+                                "value": "10.31.253.34"
+                            },
+                            {
+                                "key": "network_3_ipaddr6",
+                                "value": "::0"
+                            },
+                            {
+                                "key": "network_gateway",
+                                "value": "10.31.253.1"
+                            },
+                            {
+                                "key": "network_gateway6",
+                                "value": "::0"
+                            },
+                            {
+                                "key": "network_nameservers",
+                                "value": "10.1.1.1,172.24.14.44"
+                            },
+                            {
+                                "key": "network_netmask",
+                                "value": "255.255.255.0"
+                            },
+                            {
+                                "key": "network_ntpservers",
+                                "value": "172.24.13.44,172.24.14.44"
+                            },
+                            {
+                                "key": "network_prefix_length",
+                                "value": "64"
+                            },
+                            {
+                                "key": "network_vip",
+                                "value": "10.31.253.31"
+                            },
+                            {
+                                "key": "network_vip6",
+                                "value": "::0"
+                            },
+                            {
+                                "key": "node_count",
+                                "value": "3"
+                            },
+                            {
+                                "key": "node_id",
+                                "value": "vipr3"
+                            },
+                            {
+                                "key": "password_change_interval",
+                                "value": "60"
+                            },
+                            {
+                                "key": "password_changed_character",
+                                "value": "2"
+                            },
+                            {
+                                "key": "password_expire_days",
+                                "value": "0"
+                            },
+                            {
+                                "key": "password_history_rule",
+                                "value": "3"
+                            },
+                            {
+                                "key": "password_lowercase_alphabet",
+                                "value": "1"
+                            },
+                            {
+                                "key": "password_min_length",
+                                "value": "8"
+                            },
+                            {
+                                "key": "password_numeric_character",
+                                "value": "1"
+                            },
+                            {
+                                "key": "password_repeating_character",
+                                "value": "3"
+                            },
+                            {
+                                "key": "password_special_character",
+                                "value": "1"
+                            },
+                            {
+                                "key": "password_uppercase_alphabet",
+                                "value": "1"
+                            },
+                            {
+                                "key": "root_id_dsa",
+                                "value": "********"
+                            },
+                            {
+                                "key": "root_id_ecdsa",
+                                "value": "********"
+                            },
+                            {
+                                "key": "root_id_rsa",
+                                "value": "********"
+                            },
+                            {
+                                "key": "ssh_config_version",
+                                "value": "1442509786374"
+                            },
+                            {
+                                "key": "ssh_host_dsa_key",
+                                "value": "********"
+                            },
+                            {
+                                "key": "ssh_host_ecdsa_key",
+                                "value": "********"
+                            },
+                            {
+                                "key": "ssh_host_rsa_key",
+                                "value": "********"
+                            },
+                            {
+                                "key": "storageos_id_dsa",
+                                "value": "********"
+                            },
+                            {
+                                "key": "storageos_id_ecdsa",
+                                "value": "********"
+                            },
+                            {
+                                "key": "storageos_id_rsa",
+                                "value": "********"
+                            },
+                            {
+                                "key": "svcuser_id_dsa",
+                                "value": "********"
+                            },
+                            {
+                                "key": "svcuser_id_ecdsa",
+                                "value": "********"
+                            },
+                            {
+                                "key": "svcuser_id_rsa",
+                                "value": "********"
+                            },
+                            {
+                                "key": "system_connectemc_encrypt",
+                                "value": "yes"
+                            },
+                            {
+                                "key": "system_connectemc_ftps_fepfolder",
+                                "value": "Default"
+                            },
+                            {
+                                "key": "system_connectemc_ftps_hostname",
+                                "value": "corpusfep3.emc.com"
+                            },
+                            {
+                                "key": "system_connectemc_ftps_password",
+                                "value": "Default"
+                            },
+                            {
+                                "key": "system_connectemc_ftps_port",
+                                "value": "990"
+                            },
+                            {
+                                "key": "system_connectemc_ftps_username",
+                                "value": "Default"
+                            },
+                            {
+                                "key": "system_connectemc_smtp_authtype",
+                                "value": "None"
+                            },
+                            {
+                                "key": "system_connectemc_smtp_emcto",
+                                "value": "emailalert@emc.com"
+                            },
+                            {
+                                "key": "system_connectemc_smtp_enabletls",
+                                "value": "no"
+                            },
+                            {
+                                "key": "system_connectemc_smtp_enabletlscert",
+                                "value": "no"
+                            },
+                            {
+                                "key": "system_connectemc_smtp_from",
+                                "value": "mxjw@pge.com"
+                            },
+                            {
+                                "key": "system_connectemc_smtp_password",
+                                "value": ""
+                            },
+                            {
+                                "key": "system_connectemc_smtp_port",
+                                "value": "0"
+                            },
+                            {
+                                "key": "system_connectemc_smtp_server",
+                                "value": "10.244.8.21"
+                            },
+                            {
+                                "key": "system_connectemc_smtp_to",
+                                "value": ""
+                            },
+                            {
+                                "key": "system_connectemc_smtp_username",
+                                "value": ""
+                            },
+                            {
+                                "key": "system_connectemc_transport",
+                                "value": "None"
+                            },
+                            {
+                                "key": "system_enable_firewall",
+                                "value": "yes"
+                            },
+                            {
+                                "key": "system_login_banner",
+                                "value": "You are accessing ViPR. By using this system you consent to the owning organization's terms and conditions."
+                            },
+                            {
+                                "key": "system_permit_root_console",
+                                "value": "no"
+                            },
+                            {
+                                "key": "system_permit_root_ssh",
+                                "value": "yes"
+                            },
+                            {
+                                "key": "system_proxyuser_encpassword",
+                                "value": "Adww55vcw2vfmdmqHOuMn8k="
+                            },
+                            {
+                                "key": "system_root_authorizedkeys2",
+                                "value": ""
+                            },
+                            {
+                                "key": "system_root_encpassword",
+                                "value": "$6$LV6ZWvph3YkLLecg$sD.OW3mVM0hQ6NfLMA8/wMWhKZWmRzNvli6N3kHzXUir1NvoVChxDqs8h/mI6CqVRBzyz/5Tm1e/UqTrc2ZzX1"
+                            },
+                            {
+                                "key": "system_root_expiry_date",
+                                "value": ""
+                            },
+                            {
+                                "key": "system_svcuser_authorizedkeys2",
+                                "value": ""
+                            },
+                            {
+                                "key": "system_svcuser_encpassword",
+                                "value": "$6$f3UHiR8Ik5DByrRl$ekqbuQ2ZoKzo9TB6PB0N0SZLrs0jLGF09c5T4fyVSPybGtw7AxbC1ZoCegC4tfuGkkxHfSaWLKuu0kITnA.BV1"
+                            },
+                            {
+                                "key": "system_svcuser_expiry_date",
+                                "value": ""
+                            },
+                            {
+                                "key": "system_sysmonitor_encpassword",
+                                "value": "$6$8nxN4.Wx6BAnwdO4$JXz7euWm3MAcvDqCJ8NcDIRFDbeymR0Z0aEzxVT9E3ykHycnm0ljOYVYr1aJoGr5A1XCgqvZCWA99ADkw5AOf0"
+                            },
+                            {
+                                "key": "system_update_check_frequency_hours",
+                                "value": "24"
+                            },
+                            {
+                                "key": "system_update_password",
+                                "value": "AQJoakVmJYsOi1MjV3zmkdQ="
+                            },
+                            {
+                                "key": "system_update_proxy",
+                                "value": ""
+                            },
+                            {
+                                "key": "system_update_repo",
+                                "value": "https://colu.emc.com/soap/rpc"
+                            },
+                            {
+                                "key": "system_update_username",
+                                "value": "johnsm1"
+                            },
+                            {
+                                "key": "task_clean_interval",
+                                "value": "60"
+                            },
+                            {
+                                "key": "task_ttl",
+                                "value": "10080"
+                            },
+                            {
+                                "key": "vasa_base_url",
+                                "value": ""
+                            },
+                            {
+                                "key": "vcenter_das_admissionControlPolicy_hostFailureLevel_failoverLevel",
+                                "value": "3"
+                            },
+                            {
+                                "key": "vcenter_das_admissionControlPolicy_policy",
+                                "value": "resourcePercentage"
+                            },
+                            {
+                                "key": "vcenter_das_admissionControlPolicy_resourcePercentage_cpuPercentage",
+                                "value": "25"
+                            },
+                            {
+                                "key": "vcenter_das_admissionControlPolicy_resourcePercentage_memoryPercentage",
+                                "value": "75"
+                            },
+                            {
+                                "key": "vcenter_das_admissionControl_enabled",
+                                "value": "true"
+                            },
+                            {
+                                "key": "vcenter_das_enabled",
+                                "value": "true"
+                            },
+                            {
+                                "key": "vcenter_das_hostMonitoring_enabled",
+                                "value": "true"
+                            },
+                            {
+                                "key": "vcenter_das_vmSettings_isolationResponse",
+                                "value": "powerOff"
+                            },
+                            {
+                                "key": "vcenter_das_vmSettings_restartPriority",
+                                "value": "high"
+                            },
+                            {
+                                "key": "vcenter_das_vmSettings_vmMonitoring_monitoring",
+                                "value": "vmAndAppMonitoring"
+                            },
+                            {
+                                "key": "vcenter_das_vmSettings_vmMonitoring_sensitivity",
+                                "value": "medium"
+                            },
+                            {
+                                "key": "vcenter_drs_automationLevel",
+                                "value": "fullyAutomated"
+                            },
+                            {
+                                "key": "vcenter_drs_dpm_dpmThreshold",
+                                "value": "3"
+                            },
+                            {
+                                "key": "vcenter_drs_dpm_enabled",
+                                "value": "true"
+                            },
+                            {
+                                "key": "vcenter_drs_dpm_powerManagement",
+                                "value": "automated"
+                            },
+                            {
+                                "key": "vcenter_drs_enabled",
+                                "value": "true"
+                            },
+                            {
+                                "key": "vcenter_drs_migrationThreshold",
+                                "value": "3"
+                            },
+                            {
+                                "key": "vcenter_host_operation_timeout",
+                                "value": "450"
+                            },
+                            {
+                                "key": "vcenter_operation_timeout",
+                                "value": "150"
+                            },
+                            {
+                                "key": "vcenter_swapfile_policy",
+                                "value": "vmDirectory"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

@@ -1,0 +1,5 @@
+name: nsx report
+reports:
+  nsx-securitygroup:
+    security-groups:
+      - svt_all

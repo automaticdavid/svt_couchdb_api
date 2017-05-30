@@ -1,0 +1,572 @@
+http://localhost:5984/
+Welcome
+http://localhost:5984/svtdev
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: test/yaml/nsx-vdn_scopes.yaml
+Checking for collect existence
+http://localhost:5984/svtdev/_design/admin/_view/isnewcollect?reduce=true&startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]&group_level=2
+http://localhost:5984/svtdev/_design/nsx-vdn/_view/scopes?startkey=["2016-09-13-10-35-57", "PGE"]&endkey=["2016-09-13-10-35-57", "PGE", {}]
+{
+    "data": {
+        "nsx-1": {
+            "nsx-vdn": {
+                "scopes": {
+                    "scopes1": {
+                        "clientHandle": "",
+                        "clusters": {
+                            "clusters": [
+                                {
+                                    "cluster": {
+                                        "clientHandle": "",
+                                        "extendedAttributes": [],
+                                        "name": "RC-Automation-Cluster01",
+                                        "objectId": "domain-c24",
+                                        "objectTypeName": "ClusterComputeResource",
+                                        "revision": 84,
+                                        "scope": {
+                                            "id": "datacenter-2",
+                                            "name": "RC-Tenant-Datacenter01",
+                                            "objectTypeName": "Datacenter"
+                                        },
+                                        "type": {
+                                            "name": "ClusterComputeResource"
+                                        },
+                                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                    }
+                                },
+                                {
+                                    "cluster": {
+                                        "clientHandle": "",
+                                        "extendedAttributes": [],
+                                        "name": "RC-NEI-Cluster01",
+                                        "objectId": "domain-c46",
+                                        "objectTypeName": "ClusterComputeResource",
+                                        "revision": 148,
+                                        "scope": {
+                                            "id": "datacenter-2",
+                                            "name": "RC-Tenant-Datacenter01",
+                                            "objectTypeName": "Datacenter"
+                                        },
+                                        "type": {
+                                            "name": "ClusterComputeResource"
+                                        },
+                                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                    }
+                                }
+                            ]
+                        },
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "Automation Pod Network",
+                        "extendedAttributes": [],
+                        "id": "vdnscope-1",
+                        "name": "RC-Auto-Transport-Zone",
+                        "objectId": "vdnscope-1",
+                        "objectTypeName": "VdnScope",
+                        "revision": 1,
+                        "type": {
+                            "name": "VdnScope"
+                        },
+                        "virtualWireCount": 2,
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "scopes2": {
+                        "clientHandle": "",
+                        "clusters": {
+                            "clusters": [
+                                {
+                                    "cluster": {
+                                        "clientHandle": "",
+                                        "extendedAttributes": [],
+                                        "name": "RC-VDI-Cluster01",
+                                        "objectId": "domain-c70129",
+                                        "objectTypeName": "ClusterComputeResource",
+                                        "revision": 48,
+                                        "scope": {
+                                            "id": "datacenter-2",
+                                            "name": "RC-Tenant-Datacenter01",
+                                            "objectTypeName": "Datacenter"
+                                        },
+                                        "type": {
+                                            "name": "ClusterComputeResource"
+                                        },
+                                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                    }
+                                },
+                                {
+                                    "cluster": {
+                                        "clientHandle": "",
+                                        "extendedAttributes": [],
+                                        "name": "RC-NEI-Cluster01",
+                                        "objectId": "domain-c46",
+                                        "objectTypeName": "ClusterComputeResource",
+                                        "revision": 148,
+                                        "scope": {
+                                            "id": "datacenter-2",
+                                            "name": "RC-Tenant-Datacenter01",
+                                            "objectTypeName": "Datacenter"
+                                        },
+                                        "type": {
+                                            "name": "ClusterComputeResource"
+                                        },
+                                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                    }
+                                },
+                                {
+                                    "cluster": {
+                                        "clientHandle": "",
+                                        "extendedAttributes": [],
+                                        "name": "RC-Tenant-NonDR-Cluster01",
+                                        "objectId": "domain-c7",
+                                        "objectTypeName": "ClusterComputeResource",
+                                        "revision": 161,
+                                        "scope": {
+                                            "id": "datacenter-2",
+                                            "name": "RC-Tenant-Datacenter01",
+                                            "objectTypeName": "Datacenter"
+                                        },
+                                        "type": {
+                                            "name": "ClusterComputeResource"
+                                        },
+                                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                    }
+                                }
+                            ]
+                        },
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "NON-DR Networks",
+                        "extendedAttributes": [],
+                        "id": "vdnscope-3",
+                        "name": "RC-Tenant-Transport-Zone",
+                        "objectId": "vdnscope-3",
+                        "objectTypeName": "VdnScope",
+                        "revision": 12,
+                        "type": {
+                            "name": "VdnScope"
+                        },
+                        "virtualWireCount": 19,
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "scopes3": {
+                        "clientHandle": "",
+                        "clusters": {
+                            "clusters": [
+                                {
+                                    "cluster": {
+                                        "clientHandle": "",
+                                        "extendedAttributes": [],
+                                        "name": "RC-VDI-Cluster01",
+                                        "objectId": "domain-c70129",
+                                        "objectTypeName": "ClusterComputeResource",
+                                        "revision": 48,
+                                        "scope": {
+                                            "id": "datacenter-2",
+                                            "name": "RC-Tenant-Datacenter01",
+                                            "objectTypeName": "Datacenter"
+                                        },
+                                        "type": {
+                                            "name": "ClusterComputeResource"
+                                        },
+                                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                    }
+                                },
+                                {
+                                    "cluster": {
+                                        "clientHandle": "",
+                                        "extendedAttributes": [],
+                                        "name": "RC-NEI-Cluster01",
+                                        "objectId": "domain-c46",
+                                        "objectTypeName": "ClusterComputeResource",
+                                        "revision": 148,
+                                        "scope": {
+                                            "id": "datacenter-2",
+                                            "name": "RC-Tenant-Datacenter01",
+                                            "objectTypeName": "Datacenter"
+                                        },
+                                        "type": {
+                                            "name": "ClusterComputeResource"
+                                        },
+                                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                    }
+                                }
+                            ]
+                        },
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "VDI Pod Network",
+                        "extendedAttributes": [],
+                        "id": "vdnscope-6",
+                        "name": "RC-VDI-Tenant-Transport-Zone",
+                        "objectId": "vdnscope-6",
+                        "objectTypeName": "VdnScope",
+                        "revision": 2,
+                        "type": {
+                            "name": "VdnScope"
+                        },
+                        "virtualWireCount": 3,
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    },
+                    "scopes4": {
+                        "clientHandle": "",
+                        "clusters": {
+                            "clusters": [
+                                {
+                                    "cluster": {
+                                        "clientHandle": "",
+                                        "extendedAttributes": [],
+                                        "name": "RC-VDI-Cluster01",
+                                        "objectId": "domain-c70129",
+                                        "objectTypeName": "ClusterComputeResource",
+                                        "revision": 48,
+                                        "scope": {
+                                            "id": "datacenter-2",
+                                            "name": "RC-Tenant-Datacenter01",
+                                            "objectTypeName": "Datacenter"
+                                        },
+                                        "type": {
+                                            "name": "ClusterComputeResource"
+                                        },
+                                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                    }
+                                },
+                                {
+                                    "cluster": {
+                                        "clientHandle": "",
+                                        "extendedAttributes": [],
+                                        "name": "RC-NEI-Cluster01",
+                                        "objectId": "domain-c46",
+                                        "objectTypeName": "ClusterComputeResource",
+                                        "revision": 148,
+                                        "scope": {
+                                            "id": "datacenter-2",
+                                            "name": "RC-Tenant-Datacenter01",
+                                            "objectTypeName": "Datacenter"
+                                        },
+                                        "type": {
+                                            "name": "ClusterComputeResource"
+                                        },
+                                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                    }
+                                },
+                                {
+                                    "cluster": {
+                                        "clientHandle": "",
+                                        "extendedAttributes": [],
+                                        "name": "RC-Tenant-DR-Cluster01",
+                                        "objectId": "domain-c241",
+                                        "objectTypeName": "ClusterComputeResource",
+                                        "revision": 139,
+                                        "scope": {
+                                            "id": "datacenter-2",
+                                            "name": "RC-Tenant-Datacenter01",
+                                            "objectTypeName": "Datacenter"
+                                        },
+                                        "type": {
+                                            "name": "ClusterComputeResource"
+                                        },
+                                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                                    }
+                                }
+                            ]
+                        },
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "DR Replicated Networks",
+                        "extendedAttributes": [],
+                        "id": "vdnscope-5",
+                        "name": "RC-DR-Tenant-Transport-Zone",
+                        "objectId": "vdnscope-5",
+                        "objectTypeName": "VdnScope",
+                        "revision": 2,
+                        "type": {
+                            "name": "VdnScope"
+                        },
+                        "virtualWireCount": 12,
+                        "vsmUuid": "421E8E23-972E-82FB-C17D-21E5E95A81D7"
+                    }
+                },
+                "svt_single": {}
+            }
+        },
+        "nsx-2": {
+            "nsx-vdn": {
+                "scopes": {
+                    "scopes1": {
+                        "clientHandle": "",
+                        "clusters": {
+                            "clusters": [
+                                {
+                                    "cluster": {
+                                        "clientHandle": "",
+                                        "extendedAttributes": [],
+                                        "name": "FX-VDI-Cluster01",
+                                        "objectId": "domain-c53682",
+                                        "objectTypeName": "ClusterComputeResource",
+                                        "revision": 40,
+                                        "scope": {
+                                            "id": "datacenter-21",
+                                            "name": "FX-Tenant-Datacenter01",
+                                            "objectTypeName": "Datacenter"
+                                        },
+                                        "type": {
+                                            "name": "ClusterComputeResource"
+                                        },
+                                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                    }
+                                },
+                                {
+                                    "cluster": {
+                                        "clientHandle": "",
+                                        "extendedAttributes": [],
+                                        "name": "FX-Tenant-DR-Cluster01",
+                                        "objectId": "domain-c280",
+                                        "objectTypeName": "ClusterComputeResource",
+                                        "revision": 111,
+                                        "scope": {
+                                            "id": "datacenter-21",
+                                            "name": "FX-Tenant-Datacenter01",
+                                            "objectTypeName": "Datacenter"
+                                        },
+                                        "type": {
+                                            "name": "ClusterComputeResource"
+                                        },
+                                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                    }
+                                },
+                                {
+                                    "cluster": {
+                                        "clientHandle": "",
+                                        "extendedAttributes": [],
+                                        "name": "FX-NEI-Cluster01",
+                                        "objectId": "domain-c28",
+                                        "objectTypeName": "ClusterComputeResource",
+                                        "revision": 117,
+                                        "scope": {
+                                            "id": "datacenter-21",
+                                            "name": "FX-Tenant-Datacenter01",
+                                            "objectTypeName": "Datacenter"
+                                        },
+                                        "type": {
+                                            "name": "ClusterComputeResource"
+                                        },
+                                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                    }
+                                }
+                            ]
+                        },
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "DR Replicated Networks",
+                        "extendedAttributes": [],
+                        "id": "vdnscope-5",
+                        "name": "FX-DR-Tenant-Transport-Zone",
+                        "objectId": "vdnscope-5",
+                        "objectTypeName": "VdnScope",
+                        "revision": 2,
+                        "type": {
+                            "name": "VdnScope"
+                        },
+                        "virtualWireCount": 13,
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "scopes2": {
+                        "clientHandle": "",
+                        "clusters": {
+                            "clusters": [
+                                {
+                                    "cluster": {
+                                        "clientHandle": "",
+                                        "extendedAttributes": [],
+                                        "name": "FX-VDI-Cluster01",
+                                        "objectId": "domain-c53682",
+                                        "objectTypeName": "ClusterComputeResource",
+                                        "revision": 40,
+                                        "scope": {
+                                            "id": "datacenter-21",
+                                            "name": "FX-Tenant-Datacenter01",
+                                            "objectTypeName": "Datacenter"
+                                        },
+                                        "type": {
+                                            "name": "ClusterComputeResource"
+                                        },
+                                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                    }
+                                },
+                                {
+                                    "cluster": {
+                                        "clientHandle": "",
+                                        "extendedAttributes": [],
+                                        "name": "FX-Tenant-NonDR-Cluster01",
+                                        "objectId": "domain-c30",
+                                        "objectTypeName": "ClusterComputeResource",
+                                        "revision": 121,
+                                        "scope": {
+                                            "id": "datacenter-21",
+                                            "name": "FX-Tenant-Datacenter01",
+                                            "objectTypeName": "Datacenter"
+                                        },
+                                        "type": {
+                                            "name": "ClusterComputeResource"
+                                        },
+                                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                    }
+                                },
+                                {
+                                    "cluster": {
+                                        "clientHandle": "",
+                                        "extendedAttributes": [],
+                                        "name": "FX-NEI-Cluster01",
+                                        "objectId": "domain-c28",
+                                        "objectTypeName": "ClusterComputeResource",
+                                        "revision": 117,
+                                        "scope": {
+                                            "id": "datacenter-21",
+                                            "name": "FX-Tenant-Datacenter01",
+                                            "objectTypeName": "Datacenter"
+                                        },
+                                        "type": {
+                                            "name": "ClusterComputeResource"
+                                        },
+                                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                    }
+                                }
+                            ]
+                        },
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "NON-DR Replicated Networks",
+                        "extendedAttributes": [],
+                        "id": "vdnscope-3",
+                        "name": "FX-Tenant-Transport-Zone",
+                        "objectId": "vdnscope-3",
+                        "objectTypeName": "VdnScope",
+                        "revision": 8,
+                        "type": {
+                            "name": "VdnScope"
+                        },
+                        "virtualWireCount": 12,
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "scopes3": {
+                        "clientHandle": "",
+                        "clusters": {
+                            "clusters": [
+                                {
+                                    "cluster": {
+                                        "clientHandle": "",
+                                        "extendedAttributes": [],
+                                        "name": "FX-VDI-Cluster01",
+                                        "objectId": "domain-c53682",
+                                        "objectTypeName": "ClusterComputeResource",
+                                        "revision": 40,
+                                        "scope": {
+                                            "id": "datacenter-21",
+                                            "name": "FX-Tenant-Datacenter01",
+                                            "objectTypeName": "Datacenter"
+                                        },
+                                        "type": {
+                                            "name": "ClusterComputeResource"
+                                        },
+                                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                    }
+                                },
+                                {
+                                    "cluster": {
+                                        "clientHandle": "",
+                                        "extendedAttributes": [],
+                                        "name": "FX-NEI-Cluster01",
+                                        "objectId": "domain-c28",
+                                        "objectTypeName": "ClusterComputeResource",
+                                        "revision": 117,
+                                        "scope": {
+                                            "id": "datacenter-21",
+                                            "name": "FX-Tenant-Datacenter01",
+                                            "objectTypeName": "Datacenter"
+                                        },
+                                        "type": {
+                                            "name": "ClusterComputeResource"
+                                        },
+                                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                    }
+                                }
+                            ]
+                        },
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "VDI Pod Network",
+                        "extendedAttributes": [],
+                        "id": "vdnscope-6",
+                        "name": "FX-VDI-Transport Zone",
+                        "objectId": "vdnscope-6",
+                        "objectTypeName": "VdnScope",
+                        "revision": 1,
+                        "type": {
+                            "name": "VdnScope"
+                        },
+                        "virtualWireCount": 3,
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    },
+                    "scopes4": {
+                        "clientHandle": "",
+                        "clusters": {
+                            "clusters": [
+                                {
+                                    "cluster": {
+                                        "clientHandle": "",
+                                        "extendedAttributes": [],
+                                        "name": "FX-Automation-Cluster01",
+                                        "objectId": "domain-c26",
+                                        "objectTypeName": "ClusterComputeResource",
+                                        "revision": 25,
+                                        "scope": {
+                                            "id": "datacenter-21",
+                                            "name": "FX-Tenant-Datacenter01",
+                                            "objectTypeName": "Datacenter"
+                                        },
+                                        "type": {
+                                            "name": "ClusterComputeResource"
+                                        },
+                                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                    }
+                                },
+                                {
+                                    "cluster": {
+                                        "clientHandle": "",
+                                        "extendedAttributes": [],
+                                        "name": "FX-NEI-Cluster01",
+                                        "objectId": "domain-c28",
+                                        "objectTypeName": "ClusterComputeResource",
+                                        "revision": 117,
+                                        "scope": {
+                                            "id": "datacenter-21",
+                                            "name": "FX-Tenant-Datacenter01",
+                                            "objectTypeName": "Datacenter"
+                                        },
+                                        "type": {
+                                            "name": "ClusterComputeResource"
+                                        },
+                                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                                    }
+                                }
+                            ]
+                        },
+                        "controlPlaneMode": "UNICAST_MODE",
+                        "description": "Automation Pod Network",
+                        "extendedAttributes": [],
+                        "id": "vdnscope-1",
+                        "name": "FX-Auto-Transport-Zone",
+                        "objectId": "vdnscope-1",
+                        "objectTypeName": "VdnScope",
+                        "revision": 3,
+                        "type": {
+                            "name": "VdnScope"
+                        },
+                        "virtualWireCount": 2,
+                        "vsmUuid": "423D33C2-07ED-16FC-54FD-99F86CE5740D"
+                    }
+                },
+                "svt_single": {}
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}
