@@ -16,7 +16,7 @@ do
 	then
    		echo "ERROR in $f"
 	else
-		echo "PASS for $f"
+		echo "SUCCESS for $f"
 	fi
 done 
 rm test/run/*.run

@@ -112,7 +112,7 @@ except Errors.svtError as e:
 						action: func
 					}
 				},
-				"language":"nodejs"
+				"language":"javascript"
 			}
 		# Compose the json around the list function
 		elif action == 'list' :
@@ -121,7 +121,7 @@ except Errors.svtError as e:
 				"lists": {
 					name: func
 				},
-				"language":"nodejs"
+				"language":"javascript"
 			}
 		# Unkown action
 		else:
