@@ -26,7 +26,7 @@ settings = cfg.config.NORMAL_SETTINGS
 def main(settings, collect, client):
 
     res = Wrapper().generator(settings, collect, client, yamldef)
-    print(json.dumps(json.loads(res), indent=4, sort_keys=True))
+    print(json.dumps(res, indent=4, sort_keys=True))
 
 
 if __name__ == '__main__':

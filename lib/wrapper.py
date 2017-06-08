@@ -194,10 +194,8 @@ class Wrapper:
 
         # Dump the hash into a json string
         if not res:
-            s = json.dumps({'svt_no_data': 'svt_no_data'})
-        else:
-            s = json.dumps(res)
-        return(s)
+            res = {'svt_no_data': 'svt_no_data'}
+        return(res)
 
     # List all clients and collects from the Couch
     def lister(self, settings):
