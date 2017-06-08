@@ -1,0 +1,49 @@
+Welcome
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: yamldefs/vipr-project_projects-owners.yaml
+Checking for collect existence
+{
+    "data": {
+        "vipr-1": {
+            "vipr-project": {
+                "projects-owners": {
+                    "64483cc2-ecbc-4b09-b3e4-43df721ff597": {
+                        "creation_time": 1429128986654,
+                        "global": true,
+                        "id": "urn:storageos:Project:64483cc2-ecbc-4b09-b3e4-43df721ff597:global",
+                        "inactive": false,
+                        "internal": false,
+                        "link": {
+                            "href": "/projects/urn:storageos:Project:64483cc2-ecbc-4b09-b3e4-43df721ff597:global",
+                            "rel": "self"
+                        },
+                        "name": "pge",
+                        "owner": "root",
+                        "remote": null,
+                        "tags": [],
+                        "tenant": {
+                            "id": "urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                            "link": {
+                                "href": "/tenants/urn:storageos:TenantOrg:70f84a12-6ce1-4b50-b616-06ac71c8f94f:global",
+                                "rel": "self"
+                            }
+                        },
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

@@ -1,0 +1,6 @@
+name: Vro Report
+reports:
+  vro-server:
+    authentications:
+      - mode
+      - url

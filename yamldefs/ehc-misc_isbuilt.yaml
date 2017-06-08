@@ -1,0 +1,31 @@
+name: My Second SVT Report
+reports:
+  nsx-appliance:
+    summary-system:
+      - versionInfo
+  rpa-system:
+    version:
+      - version
+      - versionInformation
+    settings:
+      - clustersSettings
+  rpa-misc:
+    rpas-state:
+      - innerSet
+  vro-misc:
+    about:
+      - version
+  vipr-vdc:
+    storage-systems:
+      - firmware_version
+      - model
+      - serial_number
+  vipr-tenant:
+    tenants:
+      - svt_all
+  vipr-project:
+    projects:
+      - svt_all
+  vipr-config:
+    properties:
+      - svt_all

@@ -1,0 +1,172 @@
+Welcome
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: yamldefs/allcomponents.yaml
+Checking for collect existence
+{
+    "data": {
+        "nsx-1": {
+            "nsx-appliance": {
+                "components": {
+                    "NSX": {
+                        "componentGroup": "NSXGRP",
+                        "componentId": "NSX",
+                        "description": "NSX Manager",
+                        "enabled": true,
+                        "name": "NSX Manager",
+                        "showTechSupportLogs": true,
+                        "status": "RUNNING",
+                        "usedBy": [],
+                        "uses": [
+                            "VPOSTGRES",
+                            "RABBITMQ"
+                        ],
+                        "versionInfo": {
+                            "buildNumber": "3102213",
+                            "majorVersion": "6",
+                            "minorVersion": "1",
+                            "patchVersion": "5"
+                        }
+                    },
+                    "NSXAPIMGMT": {
+                        "componentGroup": "NSXAPIGRP",
+                        "componentId": "NSXAPIMGMT",
+                        "description": "NSX API Manager",
+                        "enabled": true,
+                        "name": "NSX API Manager Service",
+                        "showTechSupportLogs": true,
+                        "status": "STOPPED",
+                        "usedBy": [],
+                        "uses": null,
+                        "versionInfo": null
+                    },
+                    "RABBITMQ": {
+                        "componentGroup": "COMMON",
+                        "componentId": "RABBITMQ",
+                        "description": "RabbitMQ - Messaging service",
+                        "enabled": true,
+                        "name": "RabbitMQ",
+                        "showTechSupportLogs": false,
+                        "status": "RUNNING",
+                        "usedBy": [
+                            "NSX"
+                        ],
+                        "uses": null,
+                        "versionInfo": null
+                    },
+                    "SSH": {
+                        "componentGroup": "SYSTEM",
+                        "componentId": "SSH",
+                        "description": "Secure Shell",
+                        "enabled": true,
+                        "name": "SSH Service",
+                        "showTechSupportLogs": false,
+                        "status": "RUNNING",
+                        "usedBy": [],
+                        "uses": null,
+                        "versionInfo": null
+                    },
+                    "VPOSTGRES": {
+                        "componentGroup": "COMMON",
+                        "componentId": "VPOSTGRES",
+                        "description": "vPostgres - Database service",
+                        "enabled": true,
+                        "name": "vPostgres",
+                        "showTechSupportLogs": false,
+                        "status": "RUNNING",
+                        "usedBy": [
+                            "NSX"
+                        ],
+                        "uses": null,
+                        "versionInfo": null
+                    }
+                },
+                "svt_single": {}
+            }
+        },
+        "nsx-2": {
+            "nsx-appliance": {
+                "components": {
+                    "NSX": {
+                        "componentGroup": "NSXGRP",
+                        "componentId": "NSX",
+                        "description": "NSX Manager",
+                        "enabled": true,
+                        "name": "NSX Manager",
+                        "showTechSupportLogs": true,
+                        "status": "RUNNING",
+                        "usedBy": [],
+                        "uses": [
+                            "VPOSTGRES",
+                            "RABBITMQ"
+                        ],
+                        "versionInfo": {
+                            "buildNumber": "3102213",
+                            "majorVersion": "6",
+                            "minorVersion": "1",
+                            "patchVersion": "5"
+                        }
+                    },
+                    "NSXAPIMGMT": {
+                        "componentGroup": "NSXAPIGRP",
+                        "componentId": "NSXAPIMGMT",
+                        "description": "NSX API Manager",
+                        "enabled": true,
+                        "name": "NSX API Manager Service",
+                        "showTechSupportLogs": true,
+                        "status": "STOPPED",
+                        "usedBy": [],
+                        "uses": null,
+                        "versionInfo": null
+                    },
+                    "RABBITMQ": {
+                        "componentGroup": "COMMON",
+                        "componentId": "RABBITMQ",
+                        "description": "RabbitMQ - Messaging service",
+                        "enabled": true,
+                        "name": "RabbitMQ",
+                        "showTechSupportLogs": false,
+                        "status": "RUNNING",
+                        "usedBy": [
+                            "NSX"
+                        ],
+                        "uses": null,
+                        "versionInfo": null
+                    },
+                    "SSH": {
+                        "componentGroup": "SYSTEM",
+                        "componentId": "SSH",
+                        "description": "Secure Shell",
+                        "enabled": true,
+                        "name": "SSH Service",
+                        "showTechSupportLogs": false,
+                        "status": "RUNNING",
+                        "usedBy": [],
+                        "uses": null,
+                        "versionInfo": null
+                    },
+                    "VPOSTGRES": {
+                        "componentGroup": "COMMON",
+                        "componentId": "VPOSTGRES",
+                        "description": "vPostgres - Database service",
+                        "enabled": true,
+                        "name": "vPostgres",
+                        "showTechSupportLogs": false,
+                        "status": "RUNNING",
+                        "usedBy": [
+                            "NSX"
+                        ],
+                        "uses": null,
+                        "versionInfo": null
+                    }
+                },
+                "svt_single": {}
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

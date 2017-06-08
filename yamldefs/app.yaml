@@ -1,0 +1,13 @@
+reports:
+  nsx-appliance:
+    timesettings:
+      - ntpServer
+      - datetime
+      - timezone
+    network:
+      - hostName
+      - dns
+      - networkIPv4AddressDto
+    manager:
+      - cpuInfoDto
+      - versionInfo

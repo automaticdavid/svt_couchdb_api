@@ -1,0 +1,16 @@
+name: My Second SVT Report
+reports:
+  nsx-edge:
+    vnics:
+        - index 
+        - name 
+        - addressGroups 
+        - isConnected
+        - label      
+        - fenceParameters 
+        - enableSendRedirects 
+        - portgroupName      
+
+
+
+

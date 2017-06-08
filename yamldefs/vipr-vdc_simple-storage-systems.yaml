@@ -1,0 +1,8 @@
+name: My Second SVT Report
+reports:
+  vipr-vdc:
+    storage-systems:
+      - name
+      - model
+
+

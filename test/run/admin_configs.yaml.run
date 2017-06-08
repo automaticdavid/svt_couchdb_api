@@ -1,0 +1,86 @@
+Welcome
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: yamldefs/admin_configs.yaml
+Checking for collect existence
+{
+    "data": {
+        "data": {
+            "admin": {
+                "configs": {
+                    "nsx-1": {
+                        "address": "itcldrcnsxmgt01.utility.pge.com",
+                        "type": "nsx"
+                    },
+                    "nsx-2": {
+                        "address": "itcldfxnsxmgt01.utility.pge.com",
+                        "type": "nsx"
+                    },
+                    "protect-1": {
+                        "scheme": "dr",
+                        "type": "protection"
+                    },
+                    "rpa-1": {
+                        "address": "rcrpcluster01.comp.pge.com",
+                        "type": "rpa"
+                    },
+                    "rpa-2": {
+                        "address": "ffrpcluster01.comp.pge.com",
+                        "type": "rpa"
+                    },
+                    "site-1": {
+                        "type": "site"
+                    },
+                    "site-2": {
+                        "type": "site"
+                    },
+                    "solution": {
+                        "type": "ehc",
+                        "version": 3.1
+                    },
+                    "vcenter-1": {
+                        "address": "itcldrctenmgt01.utility.pge.com",
+                        "endpoints": [
+                            "vra-1",
+                            "vro-1",
+                            "nsx-1",
+                            "vipr-1",
+                            "rpa-1"
+                        ],
+                        "protection": "protect-1",
+                        "site": "site-1",
+                        "type": "vcenter"
+                    },
+                    "vcenter-2": {
+                        "address": "itcldfxtenmgt01.utility.pge.com",
+                        "endpoints": [
+                            "nsx-2",
+                            "rpa-2"
+                        ],
+                        "protection": "protect-1",
+                        "site": "site-2",
+                        "type": "vcenter"
+                    },
+                    "vipr-1": {
+                        "address": "itcldrcvprcls01.utility.pge.com",
+                        "type": "vipr"
+                    },
+                    "vra-1": {
+                        "address": "itcldrcautapl01.utility.pge.com",
+                        "tenant": "pge",
+                        "type": "vra"
+                    },
+                    "vro-1": {
+                        "address": "itcldrcorcapl01.utility.pge.com",
+                        "type": "vro"
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

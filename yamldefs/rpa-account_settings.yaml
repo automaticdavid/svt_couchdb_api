@@ -1,0 +1,5 @@
+name: My Second SVT Report
+reports:
+  rpa-account:
+    settings:
+      - svt_all

@@ -1,0 +1,5 @@
+reports:
+  vipr-vdc:
+    network-systems:
+      - svt_all
+

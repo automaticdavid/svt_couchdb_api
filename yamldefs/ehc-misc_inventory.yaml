@@ -1,0 +1,66 @@
+name: SVT Report
+reports:
+  nsx-appliance:
+    summary-system:
+      - versionInfo
+  ppa-misc:
+    version:
+      - svt_all
+  rpa-system:
+    version:
+      - version
+      - versionInformation
+    settings:
+      - clustersSettings
+  rpa-misc:
+    rpas-state:
+      - innerSet
+  rp4vm-system:
+    version:
+      - version
+      - versionInformation
+    settings:
+      - clustersSettings
+  rp4vm-misc:
+    rpas-state:
+      - innerSet
+  vro-misc:
+    about:
+      - version
+    plugins:
+      - buildNumber
+      - moduleName
+      - version
+    packages:
+      - attributes
+  vipr-vdc:
+    storage-systems:
+      - firmware_version
+      - model
+      - serial_number
+      - native_guid
+    network-systems:
+      - svt_all
+    smis-providers:
+      - svt_all
+  vipr-tenant:
+    tenants:
+      - svt_all
+  vipr-project:
+    projects:
+      - svt_all
+  vcenter-misc:
+    about:
+      - svt_all
+    hosts:
+      - svt_all
+  vra-identity:
+    about:
+      - svt_all
+  vrops-suite:
+    api-versions:
+      - svt_all
+  log-api:
+    versions:
+      - svt_all
+

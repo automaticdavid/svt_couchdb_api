@@ -1,0 +1,6 @@
+name: Vipr Report
+reports:
+  vipr-admin:
+    auth-providers:
+      - svt_all
+

@@ -1,0 +1,307 @@
+Welcome
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: yamldefs/vro-misc_users.yaml
+Checking for collect existence
+{
+    "data": {
+        "vro-1": {
+            "vro-misc": {
+                "users": {
+                    "member-groups": [
+                        {
+                            "cn": "Domain Users",
+                            "dn": "Utility.pge.com\\Domain Users",
+                            "info": "Domain Users"
+                        },
+                        {
+                            "cn": "vSphere.Mgt.View",
+                            "dn": "Utility.pge.com\\vSphere.Mgt.View",
+                            "info": "vSphere.Mgt.View"
+                        },
+                        {
+                            "cn": "CloudSVCAllPARequestors",
+                            "dn": "Utility.pge.com\\CloudSVCAllPARequestors",
+                            "info": "CloudSVCAllPARequestors"
+                        },
+                        {
+                            "cn": "vSphere.Com.View",
+                            "dn": "Utility.pge.com\\vSphere.Com.View",
+                            "info": "vSphere.Com.View"
+                        },
+                        {
+                            "cn": "vSphere.Edg.View",
+                            "dn": "Utility.pge.com\\vSphere.Edg.View",
+                            "info": "vSphere.Edg.View"
+                        },
+                        {
+                            "cn": "SPM Report Viewer",
+                            "dn": "Utility.pge.com\\SPM Report Viewer",
+                            "info": "SPM Report Viewer"
+                        },
+                        {
+                            "cn": "TokenManagement",
+                            "dn": "Utility.pge.com\\TokenManagement",
+                            "info": "TokenManagement"
+                        },
+                        {
+                            "cn": "AdminCloud",
+                            "dn": "Utility.pge.com\\AdminCloud",
+                            "info": "AdminCloud"
+                        },
+                        {
+                            "cn": "DMS Report Viewer",
+                            "dn": "Utility.pge.com\\DMS Report Viewer",
+                            "info": "DMS Report Viewer"
+                        },
+                        {
+                            "cn": "ADPSOAdministratorsOU",
+                            "dn": "Utility.pge.com\\ADPSOAdministratorsOU",
+                            "info": "ADPSOAdministratorsOU"
+                        },
+                        {
+                            "cn": "vSphere.Fld.Users",
+                            "dn": "Utility.pge.com\\vSphere.Fld.Users",
+                            "info": "vSphere.Fld.Users"
+                        },
+                        {
+                            "cn": "vSphere.CIS.Users",
+                            "dn": "Utility.pge.com\\vSphere.CIS.Users",
+                            "info": "vSphere.CIS.Users"
+                        },
+                        {
+                            "cn": "GPE - DEV - PGE IE - IT Support Certificate Bypass",
+                            "dn": "Utility.pge.com\\GPE - DEV - PGE IE - IT Support Certificate Bypass",
+                            "info": "GPE - DEV - PGE IE - IT Support Certificate Bypass"
+                        },
+                        {
+                            "cn": "vSphere.PFX.View",
+                            "dn": "Utility.pge.com\\vSphere.PFX.View",
+                            "info": "vSphere.PFX.View"
+                        },
+                        {
+                            "cn": "C&TS",
+                            "dn": "Utility.pge.com\\C&TS",
+                            "info": "C&TS"
+                        },
+                        {
+                            "cn": "EasyPowerUsersGroup",
+                            "dn": "Utility.pge.com\\EasyPowerUsersGroup",
+                            "info": "EasyPowerUsersGroup"
+                        },
+                        {
+                            "cn": "MobileConnectTempAdmin",
+                            "dn": "Utility.pge.com\\MobileConnectTempAdmin",
+                            "info": "MobileConnectTempAdmin"
+                        },
+                        {
+                            "cn": "ConfigMgr Reports",
+                            "dn": "Utility.pge.com\\ConfigMgr Reports",
+                            "info": "ConfigMgr Reports"
+                        },
+                        {
+                            "cn": "vSphere.CIS.View",
+                            "dn": "Utility.pge.com\\vSphere.CIS.View",
+                            "info": "vSphere.CIS.View"
+                        },
+                        {
+                            "cn": "APP MobileOutage ALL Users",
+                            "dn": "Utility.pge.com\\APP MobileOutage ALL Users",
+                            "info": "APP MobileOutage ALL Users"
+                        },
+                        {
+                            "cn": "CloudSVCAllSVAdmins",
+                            "dn": "Utility.pge.com\\CloudSVCAllSVAdmins",
+                            "info": "CloudSVCAllSVAdmins"
+                        },
+                        {
+                            "cn": "Commercial Card Team",
+                            "dn": "Utility.pge.com\\Commercial Card Team",
+                            "info": "Commercial Card Team"
+                        },
+                        {
+                            "cn": "AdminGuestNetopUsers",
+                            "dn": "Utility.pge.com\\AdminGuestNetopUsers",
+                            "info": "AdminGuestNetopUsers"
+                        },
+                        {
+                            "cn": "vSphere.Edg.Users",
+                            "dn": "Utility.pge.com\\vSphere.Edg.Users",
+                            "info": "vSphere.Edg.Users"
+                        },
+                        {
+                            "cn": "AppDataMatrix RO",
+                            "dn": "Utility.pge.com\\AppDataMatrix RO",
+                            "info": "AppDataMatrix RO"
+                        },
+                        {
+                            "cn": "CLD-ITDCO-PowerUsers",
+                            "dn": "Utility.pge.com\\CLD-ITDCO-PowerUsers",
+                            "info": "CLD-ITDCO-PowerUsers"
+                        },
+                        {
+                            "cn": "vSphere.Com.Users",
+                            "dn": "Utility.pge.com\\vSphere.Com.Users",
+                            "info": "vSphere.Com.Users"
+                        },
+                        {
+                            "cn": "SharePoint2013Standard",
+                            "dn": "Utility.pge.com\\SharePoint2013Standard",
+                            "info": "SharePoint2013Standard"
+                        },
+                        {
+                            "cn": "CTS IIO GO",
+                            "dn": "Utility.pge.com\\CTS IIO GO",
+                            "info": "CTS IIO GO"
+                        },
+                        {
+                            "cn": "vSphere.Fld.View",
+                            "dn": "Utility.pge.com\\vSphere.Fld.View",
+                            "info": "vSphere.Fld.View"
+                        },
+                        {
+                            "cn": "IT Software Deployment Netop Guest Utility",
+                            "dn": "Utility.pge.com\\IT Software Deployment Netop Guest Utility",
+                            "info": "IT Software Deployment Netop Guest Utility"
+                        },
+                        {
+                            "cn": "DCPP-Citrix Testers",
+                            "dn": "Utility.pge.com\\DCPP-Citrix Testers",
+                            "info": "DCPP-Citrix Testers"
+                        },
+                        {
+                            "cn": "Network DeltaX - R",
+                            "dn": "Utility.pge.com\\Network DeltaX - R",
+                            "info": "Network DeltaX - R"
+                        },
+                        {
+                            "cn": "vSphere.Mgt.Users",
+                            "dn": "Utility.pge.com\\vSphere.Mgt.Users",
+                            "info": "vSphere.Mgt.Users"
+                        },
+                        {
+                            "cn": "ESSOLM Users",
+                            "dn": "Utility.pge.com\\ESSOLM Users",
+                            "info": "ESSOLM Users"
+                        },
+                        {
+                            "cn": "GenlCnsl Law",
+                            "dn": "Utility.pge.com\\GenlCnsl Law",
+                            "info": "GenlCnsl Law"
+                        },
+                        {
+                            "cn": "CTS IIO TSC Frontline",
+                            "dn": "Utility.pge.com\\CTS IIO TSC Frontline",
+                            "info": "CTS IIO TSC Frontline"
+                        },
+                        {
+                            "cn": "Test Citrix Admin - TSC",
+                            "dn": "Utility.pge.com\\Test Citrix Admin - TSC",
+                            "info": "Test Citrix Admin - TSC"
+                        },
+                        {
+                            "cn": "ESSOPG Users",
+                            "dn": "Utility.pge.com\\ESSOPG Users",
+                            "info": "ESSOPG Users"
+                        },
+                        {
+                            "cn": "ESSOPR Users",
+                            "dn": "Utility.pge.com\\ESSOPR Users",
+                            "info": "ESSOPR Users"
+                        },
+                        {
+                            "cn": "IT I&O DCO CS COD Infrastructure Services Operations Admin",
+                            "dn": "Utility.pge.com\\IT I&O DCO CS COD Infrastructure Services Operations Admin",
+                            "info": "IT I&O DCO CS COD Infrastructure Services Operations Admin"
+                        },
+                        {
+                            "cn": "AdminAll",
+                            "dn": "Utility.pge.com\\AdminAll",
+                            "info": "AdminAll"
+                        },
+                        {
+                            "cn": "AdminADCloudSvrDeploy",
+                            "dn": "Utility.pge.com\\AdminADCloudSvrDeploy",
+                            "info": "AdminADCloudSvrDeploy"
+                        },
+                        {
+                            "cn": "vSphere.Pfx.Users",
+                            "dn": "Utility.pge.com\\vSphere.Pfx.Users",
+                            "info": "vSphere.Pfx.Users"
+                        },
+                        {
+                            "cn": "genlcnsl law worldox",
+                            "dn": "Utility.pge.com\\genlcnsl law worldox",
+                            "info": "genlcnsl law worldox"
+                        },
+                        {
+                            "cn": "AdminCldOrch",
+                            "dn": "Utility.pge.com\\AdminCldOrch",
+                            "info": "AdminCldOrch"
+                        },
+                        {
+                            "cn": "Sacramento06",
+                            "dn": "Utility.pge.com\\Sacramento06",
+                            "info": "Sacramento06"
+                        },
+                        {
+                            "cn": "DEL-GPOAdminAll-Read",
+                            "dn": "Utility.pge.com\\DEL-GPOAdminAll-Read",
+                            "info": "DEL-GPOAdminAll-Read"
+                        },
+                        {
+                            "cn": "CTS Access2000 Lic",
+                            "dn": "Utility.pge.com\\CTS Access2000 Lic",
+                            "info": "CTS Access2000 Lic"
+                        },
+                        {
+                            "cn": "EDGIS_WEB_VIEW_PROD",
+                            "dn": "Utility.pge.com\\EDGIS_WEB_VIEW_PROD",
+                            "info": "EDGIS_WEB_VIEW_PROD"
+                        },
+                        {
+                            "cn": "AdminTSCExchangeSupport",
+                            "dn": "Utility.pge.com\\AdminTSCExchangeSupport",
+                            "info": "AdminTSCExchangeSupport"
+                        },
+                        {
+                            "cn": "Apr-PROD-Cloud-F5-Audit",
+                            "dn": "Utility.pge.com\\Apr-PROD-Cloud-F5-Audit",
+                            "info": "Apr-PROD-Cloud-F5-Audit"
+                        },
+                        {
+                            "cn": "MobileConnectSupport",
+                            "dn": "Utility.pge.com\\MobileConnectSupport",
+                            "info": "MobileConnectSupport"
+                        },
+                        {
+                            "cn": "USSD Call Out - R",
+                            "dn": "Utility.pge.com\\USSD Call Out - R",
+                            "info": "USSD Call Out - R"
+                        },
+                        {
+                            "cn": "ODN Access Local",
+                            "dn": "Utility.pge.com\\ODN Access Local",
+                            "info": "ODN Access Local"
+                        },
+                        {
+                            "cn": "MS Office 2010 Server",
+                            "dn": "Utility.pge.com\\MS Office 2010 Server",
+                            "info": "MS Office 2010 Server"
+                        },
+                        {
+                            "cn": "Everyone",
+                            "dn": "vsphere.local\\Everyone",
+                            "info": "Everyone"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

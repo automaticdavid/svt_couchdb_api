@@ -1,0 +1,9 @@
+Welcome
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: yamldefs/xio-misc_ssds.yaml
+Checking for collect existence
+{
+    "svt_no_data": "svt_no_data"
+}

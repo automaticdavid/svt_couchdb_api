@@ -1,0 +1,34 @@
+name: VIPR RULES
+reports:
+  vipr-vdc:
+    varrays:
+      - svt_all
+    varrays-vpools:
+      - svt_all
+    network-systems:
+      - svt_all
+    storage-systems:
+      - svt_all
+    smis-providers:
+      - svt_all
+    storage-providers:
+      - svt_all
+  vipr-tenant:
+    tenants:
+      - svt_all
+  vipr-project:
+    projects:
+      - svt_all
+  vipr-misc:
+    licenses:
+      - svt_all
+  vipr-compute:
+    initiators:
+      - global
+      - creation_time
+  vipr-admin:
+    auth-providers:
+      - svt_all
+  vipr-compute:
+    vcenters:
+      - svt_all

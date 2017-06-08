@@ -1,0 +1,35 @@
+Welcome
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: yamldefs/vipr-misc_licenses.yaml
+Checking for collect existence
+{
+    "data": {
+        "vipr-1": {
+            "vipr-misc": {
+                "licenses": {
+                    "license_feature": {
+                        "expired_ind": "false",
+                        "issued_date": "03/06/2015",
+                        "license_id_indicator": "U",
+                        "licensed_ind": "true",
+                        "model": "ViPR_Controller",
+                        "notice": "ACTIVATED TO License Site Number: 132263969",
+                        "product": "FVKFVWGWNS2KJN",
+                        "serial": "FVKFVWGWNS2KJN",
+                        "site_id": "UNKNOWN",
+                        "storage_capacity": "164926744166400",
+                        "trial_license_ind": "false",
+                        "version": "1.0"
+                    },
+                    "license_text": "#############################################################\r\n# EMC License File\r\n# Activation Date:  Mar 06, 2015 11:47:03 PM\r\n# Activated By:  Kimberly Palumbo\r\n# Type:UNSERVED\r\n#############################################################\r\nINCREMENT ViPR_Controller EMCLM 1.0 permanent uncounted \\\r\n\tVENDOR_STRING=CAPACITY=150;CAPACITY_UNIT=TB;SWID=FVKFVWGWNS2KJN;PLC=VIPR; \\\r\n\tHOSTID=ANY dist_info=\"ACTIVATED TO 4303444 PACIFIC GAS AND \\\r\n\tELECTRIC 245 MARKET ST. MC:N11B SAN FRANCISCO CA US 94105\" \\\r\n\tISSUER=EMC ISSUED=06-Mar-2015 NOTICE=\"ACTIVATED TO License \\\r\n\tSite Number: 132263969\" SN=2430077 SIGN=\"008A 88A6 7E58 791B \\\r\n\t1B6D FA82 E428 A900 7640 A8A3 901A EB88 1747 467B CFB9\""
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

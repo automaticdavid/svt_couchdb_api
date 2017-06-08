@@ -1,0 +1,5 @@
+name: My Second SVT Report
+reports:
+  xio-misc:
+    initiators-UCS1:
+      - svt_all

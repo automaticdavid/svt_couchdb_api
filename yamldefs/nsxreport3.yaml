@@ -1,0 +1,11 @@
+name: Edges and ViPR report 
+reports:
+  nsx-edge:
+    appliances:
+      - hostName
+      - memoryReservation 
+      - hostId
+      - configuredDataStore
+      - deployAppliances
+      - applianceSize
+

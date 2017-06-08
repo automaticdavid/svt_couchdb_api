@@ -1,0 +1,2817 @@
+Welcome
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: yamldefs/vnics2.yaml
+Checking for collect existence
+{
+    "data": {
+        "nsx-1": {
+            "nsx-edge": {
+                "edge-19": {
+                    "vnics": {
+                        "vNic_0": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.0.2",
+                                        "subnetMask": "255.255.255.240",
+                                        "subnetPrefixLength": "28"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 0,
+                            "isConnected": true,
+                            "label": "vNic_0",
+                            "name": "RC 301_External_Uplink",
+                            "portgroupName": "RC_NEI_301_External_Access"
+                        },
+                        "vNic_1": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 1,
+                            "isConnected": false,
+                            "label": "vNic_1",
+                            "name": "vnic1",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.0.19",
+                                        "subnetMask": "255.255.255.240",
+                                        "subnetPrefixLength": "28"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 2,
+                            "isConnected": true,
+                            "label": "vNic_2",
+                            "name": "RCIOC_303_Uplink",
+                            "portgroupName": "RC_NEI_303_External_Access"
+                        },
+                        "vNic_3": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.1.1",
+                                        "subnetMask": "255.255.255.224",
+                                        "subnetPrefixLength": "27"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 3,
+                            "isConnected": true,
+                            "label": "vNic_3",
+                            "name": "ESG-Transit-Zone",
+                            "portgroupName": "RC-Tenant Non Rep Pod-Network-LS"
+                        },
+                        "vNic_4": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.1.33",
+                                        "subnetMask": "255.255.255.224",
+                                        "subnetPrefixLength": "27"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 4,
+                            "isConnected": true,
+                            "label": "vNic_4",
+                            "name": "RC Rep Transit Switch",
+                            "portgroupName": "RC-Tenant Rep Pod-Network-LS"
+                        },
+                        "vNic_5": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.1.65",
+                                        "subnetMask": "255.255.255.240",
+                                        "subnetPrefixLength": "28"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 5,
+                            "isConnected": true,
+                            "label": "vNic_5",
+                            "name": "RC-Automation-Transit",
+                            "portgroupName": "RC-Automation-Transit-LS"
+                        },
+                        "vNic_6": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.1.81",
+                                        "subnetMask": "255.255.255.240",
+                                        "subnetPrefixLength": "28"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 6,
+                            "isConnected": true,
+                            "label": "vNic_6",
+                            "name": "RC-VDI-Transit",
+                            "portgroupName": "RC-VDI-Transit LS"
+                        },
+                        "vNic_7": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 7,
+                            "isConnected": false,
+                            "label": "vNic_7",
+                            "name": "vnic7",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_8": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 8,
+                            "isConnected": false,
+                            "label": "vNic_8",
+                            "name": "vnic8",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_9": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 9,
+                            "isConnected": false,
+                            "label": "vNic_9",
+                            "name": "vnic9",
+                            "portgroupName": "svt_no_data"
+                        }
+                    }
+                },
+                "edge-20": {
+                    "vnics": {
+                        "vNic_0": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 0,
+                            "isConnected": false,
+                            "label": "vNic_0",
+                            "name": "vnic0",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_1": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 1,
+                            "isConnected": false,
+                            "label": "vNic_1",
+                            "name": "vnic1",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 2,
+                            "isConnected": false,
+                            "label": "vNic_2",
+                            "name": "vnic2",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_3": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "1.1.1.1",
+                                        "subnetMask": "255.255.255.0",
+                                        "subnetPrefixLength": "24"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 3,
+                            "isConnected": true,
+                            "label": "vNic_3",
+                            "name": "vnic3",
+                            "portgroupName": "RC-QA-10.31.10.0/23"
+                        },
+                        "vNic_4": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 4,
+                            "isConnected": false,
+                            "label": "vNic_4",
+                            "name": "vnic4",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_5": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 5,
+                            "isConnected": false,
+                            "label": "vNic_5",
+                            "name": "vnic5",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_6": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 6,
+                            "isConnected": false,
+                            "label": "vNic_6",
+                            "name": "vnic6",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_7": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 7,
+                            "isConnected": false,
+                            "label": "vNic_7",
+                            "name": "vnic7",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_8": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 8,
+                            "isConnected": false,
+                            "label": "vNic_8",
+                            "name": "vnic8",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_9": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 9,
+                            "isConnected": false,
+                            "label": "vNic_9",
+                            "name": "vnic9",
+                            "portgroupName": "svt_no_data"
+                        }
+                    }
+                },
+                "edge-21": {
+                    "vnics": {
+                        "vNic_0": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.24.11",
+                                        "secondaryAddresses": {
+                                            "ipAddress": [
+                                                "10.31.24.103",
+                                                "10.31.24.102",
+                                                "10.31.24.34",
+                                                "10.31.24.20",
+                                                "10.31.24.222",
+                                                "10.31.24.12",
+                                                "10.31.24.22",
+                                                "10.31.24.18",
+                                                "10.31.24.17",
+                                                "10.31.24.27"
+                                            ],
+                                            "type": "secondary_addresses"
+                                        },
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": false,
+                            "fenceParameters": [],
+                            "index": 0,
+                            "isConnected": true,
+                            "label": "vNic_0",
+                            "name": "RC-Prod-LB1",
+                            "portgroupName": "RC-Production-VIP-10.31.24.0/23"
+                        },
+                        "vNic_1": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 1,
+                            "isConnected": false,
+                            "label": "vNic_1",
+                            "name": "vnic1",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 2,
+                            "isConnected": false,
+                            "label": "vNic_2",
+                            "name": "vnic2",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_3": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 3,
+                            "isConnected": false,
+                            "label": "vNic_3",
+                            "name": "vnic3",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_4": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 4,
+                            "isConnected": false,
+                            "label": "vNic_4",
+                            "name": "vnic4",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_5": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 5,
+                            "isConnected": false,
+                            "label": "vNic_5",
+                            "name": "vnic5",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_6": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 6,
+                            "isConnected": false,
+                            "label": "vNic_6",
+                            "name": "vnic6",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_7": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 7,
+                            "isConnected": false,
+                            "label": "vNic_7",
+                            "name": "vnic7",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_8": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 8,
+                            "isConnected": false,
+                            "label": "vNic_8",
+                            "name": "vnic8",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_9": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 9,
+                            "isConnected": false,
+                            "label": "vNic_9",
+                            "name": "vnic9",
+                            "portgroupName": "svt_no_data"
+                        }
+                    }
+                },
+                "edge-28": {
+                    "vnics": {
+                        "vNic_0": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.10.10.10",
+                                        "subnetMask": "255.255.255.0",
+                                        "subnetPrefixLength": "24"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 0,
+                            "isConnected": true,
+                            "label": "vNic_0",
+                            "name": "vnic0",
+                            "portgroupName": "RC-QA-DR-10.31.134.0/23"
+                        },
+                        "vNic_1": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 1,
+                            "isConnected": false,
+                            "label": "vNic_1",
+                            "name": "vnic1",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "1.1.1.1",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 2,
+                            "isConnected": true,
+                            "label": "vNic_2",
+                            "name": "vnic2",
+                            "portgroupName": "RC-Test-DR-10.31.138.0/23"
+                        },
+                        "vNic_3": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 3,
+                            "isConnected": false,
+                            "label": "vNic_3",
+                            "name": "vnic3",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_4": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 4,
+                            "isConnected": false,
+                            "label": "vNic_4",
+                            "name": "vnic4",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_5": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 5,
+                            "isConnected": false,
+                            "label": "vNic_5",
+                            "name": "vnic5",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_6": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 6,
+                            "isConnected": false,
+                            "label": "vNic_6",
+                            "name": "vnic6",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_7": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 7,
+                            "isConnected": false,
+                            "label": "vNic_7",
+                            "name": "vnic7",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_8": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 8,
+                            "isConnected": false,
+                            "label": "vNic_8",
+                            "name": "vnic8",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_9": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 9,
+                            "isConnected": false,
+                            "label": "vNic_9",
+                            "name": "vnic9",
+                            "portgroupName": "svt_no_data"
+                        }
+                    }
+                },
+                "edge-29": {
+                    "vnics": {
+                        "vNic_0": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.152.11",
+                                        "secondaryAddresses": {
+                                            "ipAddress": [
+                                                "10.31.152.100"
+                                            ],
+                                            "type": "secondary_addresses"
+                                        },
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": false,
+                            "fenceParameters": [],
+                            "index": 0,
+                            "isConnected": true,
+                            "label": "vNic_0",
+                            "name": "RC Non Prod DR LB1",
+                            "portgroupName": "RC-NonProd-DR-VIP-10.31.152.0/23"
+                        },
+                        "vNic_1": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 1,
+                            "isConnected": false,
+                            "label": "vNic_1",
+                            "name": "vnic1",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 2,
+                            "isConnected": false,
+                            "label": "vNic_2",
+                            "name": "vnic2",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_3": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 3,
+                            "isConnected": false,
+                            "label": "vNic_3",
+                            "name": "vnic3",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_4": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 4,
+                            "isConnected": false,
+                            "label": "vNic_4",
+                            "name": "vnic4",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_5": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 5,
+                            "isConnected": false,
+                            "label": "vNic_5",
+                            "name": "vnic5",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_6": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 6,
+                            "isConnected": false,
+                            "label": "vNic_6",
+                            "name": "vnic6",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_7": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 7,
+                            "isConnected": false,
+                            "label": "vNic_7",
+                            "name": "vnic7",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_8": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 8,
+                            "isConnected": false,
+                            "label": "vNic_8",
+                            "name": "vnic8",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_9": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 9,
+                            "isConnected": false,
+                            "label": "vNic_9",
+                            "name": "vnic9",
+                            "portgroupName": "svt_no_data"
+                        }
+                    }
+                },
+                "edge-30": {
+                    "vnics": {
+                        "vNic_0": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.0.18",
+                                        "subnetMask": "255.255.255.240",
+                                        "subnetPrefixLength": "28"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": false,
+                            "fenceParameters": [],
+                            "index": 0,
+                            "isConnected": true,
+                            "label": "vNic_0",
+                            "name": "Vlan303-Uplink",
+                            "portgroupName": "RC_NEI_303_External_Access"
+                        },
+                        "vNic_1": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.1.5",
+                                        "subnetMask": "255.255.255.224",
+                                        "subnetPrefixLength": "27"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 1,
+                            "isConnected": true,
+                            "label": "vNic_1",
+                            "name": "ESG Transit Zone",
+                            "portgroupName": "RC-Tenant Non Rep Pod-Network-LS"
+                        },
+                        "vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.0.3",
+                                        "subnetMask": "255.255.255.240",
+                                        "subnetPrefixLength": "28"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 2,
+                            "isConnected": true,
+                            "label": "vNic_2",
+                            "name": "RC_Vlan301_Uplink",
+                            "portgroupName": "RC_NEI_301_External_Access"
+                        },
+                        "vNic_3": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.1.37",
+                                        "subnetMask": "255.255.255.224",
+                                        "subnetPrefixLength": "27"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 3,
+                            "isConnected": true,
+                            "label": "vNic_3",
+                            "name": "RC-Rep Transit Switch",
+                            "portgroupName": "RC-Tenant Rep Pod-Network-LS"
+                        },
+                        "vNic_4": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.1.67",
+                                        "subnetMask": "255.255.255.240",
+                                        "subnetPrefixLength": "28"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 4,
+                            "isConnected": true,
+                            "label": "vNic_4",
+                            "name": "RC-Automation-Transit",
+                            "portgroupName": "RC-Automation-Transit-LS"
+                        },
+                        "vNic_5": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.1.82",
+                                        "subnetMask": "255.255.255.240",
+                                        "subnetPrefixLength": "28"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 5,
+                            "isConnected": true,
+                            "label": "vNic_5",
+                            "name": "RC-VDI-Transit",
+                            "portgroupName": "RC-VDI-Transit LS"
+                        },
+                        "vNic_6": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 6,
+                            "isConnected": false,
+                            "label": "vNic_6",
+                            "name": "vnic6",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_7": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 7,
+                            "isConnected": false,
+                            "label": "vNic_7",
+                            "name": "vnic7",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_8": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 8,
+                            "isConnected": false,
+                            "label": "vNic_8",
+                            "name": "vnic8",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_9": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 9,
+                            "isConnected": false,
+                            "label": "vNic_9",
+                            "name": "vnic9",
+                            "portgroupName": "svt_no_data"
+                        }
+                    }
+                },
+                "edge-32": {
+                    "vnics": {
+                        "vNic_0": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.28.25",
+                                        "secondaryAddresses": {
+                                            "ipAddress": [
+                                                "10.31.28.89",
+                                                "10.31.28.81",
+                                                "10.31.28.82",
+                                                "10.31.28.83",
+                                                "10.31.28.75",
+                                                "10.31.28.66",
+                                                "10.31.28.74",
+                                                "10.31.28.65",
+                                                "10.31.28.64",
+                                                "10.31.28.76",
+                                                "10.31.28.63",
+                                                "10.31.28.71",
+                                                "10.31.28.62",
+                                                "10.31.28.70",
+                                                "10.31.28.61",
+                                                "10.31.28.55",
+                                                "10.31.28.73",
+                                                "10.31.28.60",
+                                                "10.31.28.72",
+                                                "10.31.28.57",
+                                                "10.31.28.56",
+                                                "10.31.28.59",
+                                                "10.31.28.58",
+                                                "10.31.28.69",
+                                                "10.31.28.68",
+                                                "10.31.28.67"
+                                            ],
+                                            "type": "secondary_addresses"
+                                        },
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": false,
+                            "fenceParameters": [],
+                            "index": 0,
+                            "isConnected": true,
+                            "label": "vNic_0",
+                            "name": "RC-NonProd-VIP",
+                            "portgroupName": "RC-NonProd-VIP-10.31.28.0/23"
+                        },
+                        "vNic_1": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 1,
+                            "isConnected": false,
+                            "label": "vNic_1",
+                            "name": "vnic1",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 2,
+                            "isConnected": false,
+                            "label": "vNic_2",
+                            "name": "vnic2",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_3": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 3,
+                            "isConnected": false,
+                            "label": "vNic_3",
+                            "name": "vnic3",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_4": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 4,
+                            "isConnected": false,
+                            "label": "vNic_4",
+                            "name": "vnic4",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_5": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 5,
+                            "isConnected": false,
+                            "label": "vNic_5",
+                            "name": "vnic5",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_6": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 6,
+                            "isConnected": false,
+                            "label": "vNic_6",
+                            "name": "vnic6",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_7": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 7,
+                            "isConnected": false,
+                            "label": "vNic_7",
+                            "name": "vnic7",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_8": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 8,
+                            "isConnected": false,
+                            "label": "vNic_8",
+                            "name": "vnic8",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_9": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 9,
+                            "isConnected": false,
+                            "label": "vNic_9",
+                            "name": "vnic9",
+                            "portgroupName": "svt_no_data"
+                        }
+                    }
+                },
+                "edge-33": {
+                    "vnics": {
+                        "vNic_0": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.26.11",
+                                        "secondaryAddresses": {
+                                            "ipAddress": [
+                                                "10.31.26.31",
+                                                "10.31.26.12",
+                                                "10.31.26.30",
+                                                "10.31.26.16",
+                                                "10.31.26.17",
+                                                "10.31.26.38",
+                                                "10.31.26.37",
+                                                "10.31.26.36",
+                                                "10.31.26.35",
+                                                "10.31.26.34",
+                                                "10.31.26.33",
+                                                "10.31.26.32",
+                                                "10.31.26.19",
+                                                "10.31.26.18",
+                                                "10.31.26.20",
+                                                "10.31.26.40",
+                                                "10.31.26.103",
+                                                "10.31.26.42",
+                                                "10.31.26.41",
+                                                "10.31.26.44",
+                                                "10.31.26.26",
+                                                "10.31.26.43",
+                                                "10.31.26.25",
+                                                "10.31.26.28",
+                                                "10.31.26.46",
+                                                "10.31.26.27",
+                                                "10.31.26.45",
+                                                "10.31.26.22",
+                                                "10.31.26.21",
+                                                "10.31.26.24",
+                                                "10.31.26.23",
+                                                "10.31.26.29"
+                                            ],
+                                            "type": "secondary_addresses"
+                                        },
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": false,
+                            "fenceParameters": [],
+                            "index": 0,
+                            "isConnected": true,
+                            "label": "vNic_0",
+                            "name": "RC-QA-VIP",
+                            "portgroupName": "RC-QA-VIP-10.31.26.0/23"
+                        },
+                        "vNic_1": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 1,
+                            "isConnected": false,
+                            "label": "vNic_1",
+                            "name": "vnic1",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 2,
+                            "isConnected": false,
+                            "label": "vNic_2",
+                            "name": "vnic2",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_3": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 3,
+                            "isConnected": false,
+                            "label": "vNic_3",
+                            "name": "vnic3",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_4": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 4,
+                            "isConnected": false,
+                            "label": "vNic_4",
+                            "name": "vnic4",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_5": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 5,
+                            "isConnected": false,
+                            "label": "vNic_5",
+                            "name": "vnic5",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_6": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 6,
+                            "isConnected": false,
+                            "label": "vNic_6",
+                            "name": "vnic6",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_7": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 7,
+                            "isConnected": false,
+                            "label": "vNic_7",
+                            "name": "vnic7",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_8": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 8,
+                            "isConnected": false,
+                            "label": "vNic_8",
+                            "name": "vnic8",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_9": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 9,
+                            "isConnected": false,
+                            "label": "vNic_9",
+                            "name": "vnic9",
+                            "portgroupName": "svt_no_data"
+                        }
+                    }
+                },
+                "edge-36": {
+                    "vnics": {
+                        "vNic_0": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.148.11",
+                                        "secondaryAddresses": {
+                                            "ipAddress": [
+                                                "10.31.148.21",
+                                                "10.31.148.20",
+                                                "10.31.148.22",
+                                                "10.31.148.17",
+                                                "10.31.148.18",
+                                                "10.31.148.19"
+                                            ],
+                                            "type": "secondary_addresses"
+                                        },
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": false,
+                            "fenceParameters": [],
+                            "index": 0,
+                            "isConnected": true,
+                            "label": "vNic_0",
+                            "name": "RC-Production-DR-VIP",
+                            "portgroupName": "RC-Production-DR-VIP-10.31.148.0/23"
+                        },
+                        "vNic_1": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 1,
+                            "isConnected": false,
+                            "label": "vNic_1",
+                            "name": "vnic1",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 2,
+                            "isConnected": false,
+                            "label": "vNic_2",
+                            "name": "vnic2",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_3": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 3,
+                            "isConnected": false,
+                            "label": "vNic_3",
+                            "name": "vnic3",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_4": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 4,
+                            "isConnected": false,
+                            "label": "vNic_4",
+                            "name": "vnic4",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_5": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 5,
+                            "isConnected": false,
+                            "label": "vNic_5",
+                            "name": "vnic5",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_6": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 6,
+                            "isConnected": false,
+                            "label": "vNic_6",
+                            "name": "vnic6",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_7": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 7,
+                            "isConnected": false,
+                            "label": "vNic_7",
+                            "name": "vnic7",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_8": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 8,
+                            "isConnected": false,
+                            "label": "vNic_8",
+                            "name": "vnic8",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_9": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 9,
+                            "isConnected": false,
+                            "label": "vNic_9",
+                            "name": "vnic9",
+                            "portgroupName": "svt_no_data"
+                        }
+                    }
+                },
+                "edge-9": {
+                    "vnics": {
+                        "vNic_0": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.253.13",
+                                        "secondaryAddresses": {
+                                            "ipAddress": [
+                                                "10.31.253.16",
+                                                "10.31.253.36",
+                                                "10.31.253.25"
+                                            ],
+                                            "type": "secondary_addresses"
+                                        },
+                                        "subnetMask": "255.255.255.0",
+                                        "subnetPrefixLength": "24"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": false,
+                            "fenceParameters": [],
+                            "index": 0,
+                            "isConnected": true,
+                            "label": "vNic_0",
+                            "name": "VIP IPs",
+                            "portgroupName": "RC-Automation-5000-10.31.253.0/24"
+                        },
+                        "vNic_1": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 1,
+                            "isConnected": false,
+                            "label": "vNic_1",
+                            "name": "vnic1",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 2,
+                            "isConnected": false,
+                            "label": "vNic_2",
+                            "name": "vnic2",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_3": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 3,
+                            "isConnected": false,
+                            "label": "vNic_3",
+                            "name": "vnic3",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_4": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 4,
+                            "isConnected": false,
+                            "label": "vNic_4",
+                            "name": "vnic4",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_5": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 5,
+                            "isConnected": false,
+                            "label": "vNic_5",
+                            "name": "vnic5",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_6": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 6,
+                            "isConnected": false,
+                            "label": "vNic_6",
+                            "name": "vnic6",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_7": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 7,
+                            "isConnected": false,
+                            "label": "vNic_7",
+                            "name": "vnic7",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_8": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 8,
+                            "isConnected": false,
+                            "label": "vNic_8",
+                            "name": "vnic8",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_9": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 9,
+                            "isConnected": false,
+                            "label": "vNic_9",
+                            "name": "vnic9",
+                            "portgroupName": "svt_no_data"
+                        }
+                    }
+                }
+            }
+        },
+        "nsx-2": {
+            "nsx-edge": {
+                "edge-10": {
+                    "vnics": {
+                        "vNic_0": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.0.2",
+                                        "subnetMask": "255.255.255.240",
+                                        "subnetPrefixLength": "28"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 0,
+                            "isConnected": true,
+                            "label": "vNic_0",
+                            "name": "FX_300_External_Uplink",
+                            "portgroupName": "FX_NEI_300_External_Access"
+                        },
+                        "vNic_1": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.0.19",
+                                        "subnetMask": "255.255.255.240",
+                                        "subnetPrefixLength": "28"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 1,
+                            "isConnected": true,
+                            "label": "vNic_1",
+                            "name": "FX_302_External_Uplink",
+                            "portgroupName": "FX_NEI_302_External_Access"
+                        },
+                        "vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.1.33",
+                                        "subnetMask": "255.255.255.224",
+                                        "subnetPrefixLength": "27"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 2,
+                            "isConnected": true,
+                            "label": "vNic_2",
+                            "name": "FX-ESG-Transit #2",
+                            "portgroupName": "FX-Rep Transit-Network"
+                        },
+                        "vNic_3": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.1.1",
+                                        "subnetMask": "255.255.255.224",
+                                        "subnetPrefixLength": "27"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": false,
+                            "fenceParameters": [],
+                            "index": 3,
+                            "isConnected": true,
+                            "label": "vNic_3",
+                            "name": "FX-ESG-Transit-Zone",
+                            "portgroupName": "FX-Non RepTransit-Network"
+                        },
+                        "vNic_4": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.1.65",
+                                        "subnetMask": "255.255.255.240",
+                                        "subnetPrefixLength": "28"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 4,
+                            "isConnected": true,
+                            "label": "vNic_4",
+                            "name": "FX-Automation-Transit",
+                            "portgroupName": "FX-Automation-Transit-Network"
+                        },
+                        "vNic_5": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.1.81",
+                                        "subnetMask": "255.255.255.240",
+                                        "subnetPrefixLength": "28"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 5,
+                            "isConnected": true,
+                            "label": "vNic_5",
+                            "name": "FX-VDI-Transit",
+                            "portgroupName": "FX-VDI-Transit-Network"
+                        },
+                        "vNic_6": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 6,
+                            "isConnected": false,
+                            "label": "vNic_6",
+                            "name": "vnic6",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_7": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 7,
+                            "isConnected": false,
+                            "label": "vNic_7",
+                            "name": "vnic7",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_8": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 8,
+                            "isConnected": false,
+                            "label": "vNic_8",
+                            "name": "vnic8",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_9": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 9,
+                            "isConnected": false,
+                            "label": "vNic_9",
+                            "name": "vnic9",
+                            "portgroupName": "svt_no_data"
+                        }
+                    }
+                },
+                "edge-15": {
+                    "vnics": {
+                        "vNic_0": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.253.13",
+                                        "secondaryAddresses": {
+                                            "ipAddress": [
+                                                "10.31.253.16",
+                                                "10.31.253.36",
+                                                "10.31.253.25"
+                                            ],
+                                            "type": "secondary_addresses"
+                                        },
+                                        "subnetMask": "255.255.255.0",
+                                        "subnetPrefixLength": "24"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": false,
+                            "fenceParameters": [],
+                            "index": 0,
+                            "isConnected": true,
+                            "label": "vNic_0",
+                            "name": "VIP IP's",
+                            "portgroupName": "FX-Automation-LS"
+                        },
+                        "vNic_1": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 1,
+                            "isConnected": false,
+                            "label": "vNic_1",
+                            "name": "vnic1",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 2,
+                            "isConnected": false,
+                            "label": "vNic_2",
+                            "name": "vnic2",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_3": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 3,
+                            "isConnected": false,
+                            "label": "vNic_3",
+                            "name": "vnic3",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_4": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 4,
+                            "isConnected": false,
+                            "label": "vNic_4",
+                            "name": "vnic4",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_5": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 5,
+                            "isConnected": false,
+                            "label": "vNic_5",
+                            "name": "vnic5",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_6": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 6,
+                            "isConnected": false,
+                            "label": "vNic_6",
+                            "name": "vnic6",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_7": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 7,
+                            "isConnected": false,
+                            "label": "vNic_7",
+                            "name": "vnic7",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_8": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 8,
+                            "isConnected": false,
+                            "label": "vNic_8",
+                            "name": "vnic8",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_9": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 9,
+                            "isConnected": false,
+                            "label": "vNic_9",
+                            "name": "vnic9",
+                            "portgroupName": "svt_no_data"
+                        }
+                    }
+                },
+                "edge-27": {
+                    "vnics": {
+                        "vNic_0": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.24.11",
+                                        "secondaryAddresses": {
+                                            "ipAddress": [
+                                                "10.30.24.22",
+                                                "10.30.24.102",
+                                                "10.30.24.103",
+                                                "10.30.24.16"
+                                            ],
+                                            "type": "secondary_addresses"
+                                        },
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": false,
+                            "fenceParameters": [],
+                            "index": 0,
+                            "isConnected": true,
+                            "label": "vNic_0",
+                            "name": "FX Prod Network LB1",
+                            "portgroupName": "FX-Production-VIP-10.30.24.0/23"
+                        },
+                        "vNic_1": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 1,
+                            "isConnected": false,
+                            "label": "vNic_1",
+                            "name": "vnic1",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 2,
+                            "isConnected": false,
+                            "label": "vNic_2",
+                            "name": "vnic2",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_3": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 3,
+                            "isConnected": false,
+                            "label": "vNic_3",
+                            "name": "vnic3",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_4": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 4,
+                            "isConnected": false,
+                            "label": "vNic_4",
+                            "name": "vnic4",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_5": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 5,
+                            "isConnected": false,
+                            "label": "vNic_5",
+                            "name": "vnic5",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_6": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 6,
+                            "isConnected": false,
+                            "label": "vNic_6",
+                            "name": "vnic6",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_7": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 7,
+                            "isConnected": false,
+                            "label": "vNic_7",
+                            "name": "vnic7",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_8": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 8,
+                            "isConnected": false,
+                            "label": "vNic_8",
+                            "name": "vnic8",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_9": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 9,
+                            "isConnected": false,
+                            "label": "vNic_9",
+                            "name": "vnic9",
+                            "portgroupName": "svt_no_data"
+                        }
+                    }
+                },
+                "edge-28": {
+                    "vnics": {
+                        "vNic_0": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.26.11",
+                                        "secondaryAddresses": {
+                                            "ipAddress": [
+                                                "10.30.26.31",
+                                                "10.30.26.32",
+                                                "10.30.26.20",
+                                                "10.30.26.30",
+                                                "10.30.26.26",
+                                                "10.30.26.27",
+                                                "10.30.26.37",
+                                                "10.30.26.28",
+                                                "10.30.26.29",
+                                                "10.30.26.35",
+                                                "10.30.26.22",
+                                                "10.30.26.17",
+                                                "10.30.26.23",
+                                                "10.30.26.36",
+                                                "10.30.26.18",
+                                                "10.30.26.24",
+                                                "10.30.26.33",
+                                                "10.30.26.42",
+                                                "10.30.26.25",
+                                                "10.30.26.34",
+                                                "10.30.26.16",
+                                                "10.30.26.102",
+                                                "10.30.26.19",
+                                                "10.30.26.103"
+                                            ],
+                                            "type": "secondary_addresses"
+                                        },
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": false,
+                            "fenceParameters": [],
+                            "index": 0,
+                            "isConnected": true,
+                            "label": "vNic_0",
+                            "name": "FX QA LB1",
+                            "portgroupName": "FX-QA-VIP-10.30.26.0/23"
+                        },
+                        "vNic_1": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 1,
+                            "isConnected": false,
+                            "label": "vNic_1",
+                            "name": "vnic1",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 2,
+                            "isConnected": false,
+                            "label": "vNic_2",
+                            "name": "vnic2",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_3": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 3,
+                            "isConnected": false,
+                            "label": "vNic_3",
+                            "name": "vnic3",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_4": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 4,
+                            "isConnected": false,
+                            "label": "vNic_4",
+                            "name": "vnic4",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_5": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 5,
+                            "isConnected": false,
+                            "label": "vNic_5",
+                            "name": "vnic5",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_6": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 6,
+                            "isConnected": false,
+                            "label": "vNic_6",
+                            "name": "vnic6",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_7": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 7,
+                            "isConnected": false,
+                            "label": "vNic_7",
+                            "name": "vnic7",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_8": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 8,
+                            "isConnected": false,
+                            "label": "vNic_8",
+                            "name": "vnic8",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_9": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 9,
+                            "isConnected": false,
+                            "label": "vNic_9",
+                            "name": "vnic9",
+                            "portgroupName": "svt_no_data"
+                        }
+                    }
+                },
+                "edge-31": {
+                    "vnics": {
+                        "vNic_0": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.28.11",
+                                        "secondaryAddresses": {
+                                            "ipAddress": [
+                                                "10.30.28.199",
+                                                "10.30.28.109",
+                                                "10.30.28.48",
+                                                "10.30.28.29",
+                                                "10.30.28.28",
+                                                "10.30.28.27",
+                                                "10.30.28.26",
+                                                "10.30.28.25",
+                                                "10.30.28.108",
+                                                "10.30.28.24",
+                                                "10.30.28.41",
+                                                "10.30.28.23",
+                                                "10.30.28.40",
+                                                "10.30.28.22",
+                                                "10.30.28.21",
+                                                "10.30.28.20",
+                                                "10.30.28.42",
+                                                "10.30.28.19",
+                                                "10.30.28.18",
+                                                "10.30.28.39",
+                                                "10.30.28.36",
+                                                "10.30.28.35",
+                                                "10.30.28.38",
+                                                "10.30.28.37",
+                                                "10.30.28.32",
+                                                "10.30.28.31",
+                                                "10.30.28.34",
+                                                "10.30.28.33",
+                                                "10.30.28.30"
+                                            ],
+                                            "type": "secondary_addresses"
+                                        },
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": false,
+                            "fenceParameters": [],
+                            "index": 0,
+                            "isConnected": true,
+                            "label": "vNic_0",
+                            "name": "FX Non Prod LB1",
+                            "portgroupName": "FX-NonProd-VIP-10.30.28.0/23"
+                        },
+                        "vNic_1": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 1,
+                            "isConnected": false,
+                            "label": "vNic_1",
+                            "name": "vnic1",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 2,
+                            "isConnected": false,
+                            "label": "vNic_2",
+                            "name": "vnic2",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_3": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 3,
+                            "isConnected": false,
+                            "label": "vNic_3",
+                            "name": "vnic3",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_4": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 4,
+                            "isConnected": false,
+                            "label": "vNic_4",
+                            "name": "vnic4",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_5": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 5,
+                            "isConnected": false,
+                            "label": "vNic_5",
+                            "name": "vnic5",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_6": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 6,
+                            "isConnected": false,
+                            "label": "vNic_6",
+                            "name": "vnic6",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_7": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 7,
+                            "isConnected": false,
+                            "label": "vNic_7",
+                            "name": "vnic7",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_8": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 8,
+                            "isConnected": false,
+                            "label": "vNic_8",
+                            "name": "vnic8",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_9": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 9,
+                            "isConnected": false,
+                            "label": "vNic_9",
+                            "name": "vnic9",
+                            "portgroupName": "svt_no_data"
+                        }
+                    }
+                },
+                "edge-32": {
+                    "vnics": {
+                        "vNic_0": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.152.11",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 0,
+                            "isConnected": true,
+                            "label": "vNic_0",
+                            "name": "FX-NonProd-DR-VIP",
+                            "portgroupName": "FX-NonProd-DR-VIP-10.31.152.0/23"
+                        },
+                        "vNic_1": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 1,
+                            "isConnected": false,
+                            "label": "vNic_1",
+                            "name": "vnic1",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 2,
+                            "isConnected": false,
+                            "label": "vNic_2",
+                            "name": "vnic2",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_3": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 3,
+                            "isConnected": false,
+                            "label": "vNic_3",
+                            "name": "vnic3",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_4": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 4,
+                            "isConnected": false,
+                            "label": "vNic_4",
+                            "name": "vnic4",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_5": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 5,
+                            "isConnected": false,
+                            "label": "vNic_5",
+                            "name": "vnic5",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_6": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 6,
+                            "isConnected": false,
+                            "label": "vNic_6",
+                            "name": "vnic6",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_7": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 7,
+                            "isConnected": false,
+                            "label": "vNic_7",
+                            "name": "vnic7",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_8": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 8,
+                            "isConnected": false,
+                            "label": "vNic_8",
+                            "name": "vnic8",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_9": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 9,
+                            "isConnected": false,
+                            "label": "vNic_9",
+                            "name": "vnic9",
+                            "portgroupName": "svt_no_data"
+                        }
+                    }
+                },
+                "edge-33": {
+                    "vnics": {
+                        "vNic_0": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.150.11",
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 0,
+                            "isConnected": true,
+                            "label": "vNic_0",
+                            "name": "FX-QA-DR-VIP",
+                            "portgroupName": "FX-QA-DR-VIP-10.31.150.0/23"
+                        },
+                        "vNic_1": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 1,
+                            "isConnected": false,
+                            "label": "vNic_1",
+                            "name": "vnic1",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 2,
+                            "isConnected": false,
+                            "label": "vNic_2",
+                            "name": "vnic2",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_3": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 3,
+                            "isConnected": false,
+                            "label": "vNic_3",
+                            "name": "vnic3",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_4": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 4,
+                            "isConnected": false,
+                            "label": "vNic_4",
+                            "name": "vnic4",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_5": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 5,
+                            "isConnected": false,
+                            "label": "vNic_5",
+                            "name": "vnic5",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_6": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 6,
+                            "isConnected": false,
+                            "label": "vNic_6",
+                            "name": "vnic6",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_7": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 7,
+                            "isConnected": false,
+                            "label": "vNic_7",
+                            "name": "vnic7",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_8": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 8,
+                            "isConnected": false,
+                            "label": "vNic_8",
+                            "name": "vnic8",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_9": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 9,
+                            "isConnected": false,
+                            "label": "vNic_9",
+                            "name": "vnic9",
+                            "portgroupName": "svt_no_data"
+                        }
+                    }
+                },
+                "edge-36": {
+                    "vnics": {
+                        "vNic_0": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.0.18",
+                                        "subnetMask": "255.255.255.240",
+                                        "subnetPrefixLength": "28"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": false,
+                            "fenceParameters": [],
+                            "index": 0,
+                            "isConnected": true,
+                            "label": "vNic_0",
+                            "name": "Vlan302-Uplink",
+                            "portgroupName": "FX_NEI_302_External_Access"
+                        },
+                        "vNic_1": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.1.5",
+                                        "subnetMask": "255.255.255.224",
+                                        "subnetPrefixLength": "27"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 1,
+                            "isConnected": true,
+                            "label": "vNic_1",
+                            "name": "FX Transit Network",
+                            "portgroupName": "FX-Non RepTransit-Network"
+                        },
+                        "vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.0.3",
+                                        "subnetMask": "255.255.255.240",
+                                        "subnetPrefixLength": "28"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 2,
+                            "isConnected": true,
+                            "label": "vNic_2",
+                            "name": "FX_Vlan_300_Uplink",
+                            "portgroupName": "FX_NEI_300_External_Access"
+                        },
+                        "vNic_3": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.1.37",
+                                        "subnetMask": "255.255.255.224",
+                                        "subnetPrefixLength": "27"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 3,
+                            "isConnected": true,
+                            "label": "vNic_3",
+                            "name": "Fx-Enterprise-#2",
+                            "portgroupName": "FX-Rep Transit-Network"
+                        },
+                        "vNic_4": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.1.67",
+                                        "subnetMask": "255.255.255.240",
+                                        "subnetPrefixLength": "28"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 4,
+                            "isConnected": true,
+                            "label": "vNic_4",
+                            "name": "FX-Automation-Transit-LS",
+                            "portgroupName": "FX-Automation-Transit-Network"
+                        },
+                        "vNic_5": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.30.1.82",
+                                        "subnetMask": "255.255.255.240",
+                                        "subnetPrefixLength": "28"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 5,
+                            "isConnected": true,
+                            "label": "vNic_5",
+                            "name": "FX-VDI-Transit",
+                            "portgroupName": "FX-VDI-Transit-Network"
+                        },
+                        "vNic_6": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 6,
+                            "isConnected": false,
+                            "label": "vNic_6",
+                            "name": "vnic6",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_7": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 7,
+                            "isConnected": false,
+                            "label": "vNic_7",
+                            "name": "vnic7",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_8": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 8,
+                            "isConnected": false,
+                            "label": "vNic_8",
+                            "name": "vnic8",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_9": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 9,
+                            "isConnected": false,
+                            "label": "vNic_9",
+                            "name": "vnic9",
+                            "portgroupName": "svt_no_data"
+                        }
+                    }
+                },
+                "edge-38": {
+                    "vnics": {
+                        "vNic_0": {
+                            "addressGroups": {
+                                "addressGroups": [
+                                    {
+                                        "primaryAddress": "10.31.148.11",
+                                        "secondaryAddresses": {
+                                            "ipAddress": [
+                                                "10.31.148.21",
+                                                "10.31.148.20",
+                                                "10.31.148.22",
+                                                "10.31.148.17",
+                                                "10.31.148.18",
+                                                "10.31.148.19"
+                                            ],
+                                            "type": "secondary_addresses"
+                                        },
+                                        "subnetMask": "255.255.254.0",
+                                        "subnetPrefixLength": "23"
+                                    }
+                                ]
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 0,
+                            "isConnected": true,
+                            "label": "vNic_0",
+                            "name": "RC-Production-DR-VIP",
+                            "portgroupName": "FX-Production-DR-VIP-10.31.148.0/23"
+                        },
+                        "vNic_1": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 1,
+                            "isConnected": false,
+                            "label": "vNic_1",
+                            "name": "vnic1",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_2": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 2,
+                            "isConnected": false,
+                            "label": "vNic_2",
+                            "name": "vnic2",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_3": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 3,
+                            "isConnected": false,
+                            "label": "vNic_3",
+                            "name": "vnic3",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_4": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 4,
+                            "isConnected": false,
+                            "label": "vNic_4",
+                            "name": "vnic4",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_5": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 5,
+                            "isConnected": false,
+                            "label": "vNic_5",
+                            "name": "vnic5",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_6": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 6,
+                            "isConnected": false,
+                            "label": "vNic_6",
+                            "name": "vnic6",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_7": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 7,
+                            "isConnected": false,
+                            "label": "vNic_7",
+                            "name": "vnic7",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_8": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 8,
+                            "isConnected": false,
+                            "label": "vNic_8",
+                            "name": "vnic8",
+                            "portgroupName": "svt_no_data"
+                        },
+                        "vNic_9": {
+                            "addressGroups": {
+                                "addressGroups": []
+                            },
+                            "enableSendRedirects": true,
+                            "fenceParameters": [],
+                            "index": 9,
+                            "isConnected": false,
+                            "label": "vNic_9",
+                            "name": "vnic9",
+                            "portgroupName": "svt_no_data"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

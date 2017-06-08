@@ -1,0 +1,9 @@
+name: My Second SVT Report
+reports:
+  nsx:
+      appliance-management:
+        - svt_all
+
+
+
+

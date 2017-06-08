@@ -1,0 +1,160 @@
+Welcome
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: yamldefs/vro-misc_plugins.yaml
+Checking for collect existence
+{
+    "data": {
+        "vro-1": {
+            "vro-misc": {
+                "plugins": {
+                    "plugin1": {
+                        "displayName": "Common enumerated types",
+                        "infoText": "No installation required",
+                        "version": "5.5.1"
+                    },
+                    "plugin10": {
+                        "displayName": "Net",
+                        "infoText": "No installation required",
+                        "version": "5.5.1"
+                    },
+                    "plugin11": {
+                        "displayName": "SOAP",
+                        "infoText": "Installation OK",
+                        "version": "1.0.3"
+                    },
+                    "plugin12": {
+                        "displayName": "EMC ViPR Plugin",
+                        "infoText": "Installation OK",
+                        "version": "2.3.0.0"
+                    },
+                    "plugin13": {
+                        "displayName": "Dynamic Types",
+                        "infoText": "Installation OK",
+                        "version": "1.0.0"
+                    },
+                    "plugin14": {
+                        "displayName": "SQL Plug-in",
+                        "infoText": "Installation OK",
+                        "version": "1.1.1"
+                    },
+                    "plugin15": {
+                        "displayName": "Mail",
+                        "infoText": "Installation OK",
+                        "version": "5.5.1"
+                    },
+                    "plugin16": {
+                        "displayName": "NSX",
+                        "infoText": "Installation OK",
+                        "version": "1.0.1"
+                    },
+                    "plugin17": {
+                        "displayName": "Puppet",
+                        "infoText": "Installation OK",
+                        "version": "1.0.0"
+                    },
+                    "plugin18": {
+                        "displayName": "vCO Configuration",
+                        "infoText": "Installation OK",
+                        "version": "5.5.2"
+                    },
+                    "plugin19": {
+                        "displayName": "AMQP",
+                        "infoText": "Installation OK",
+                        "version": "1.0.3"
+                    },
+                    "plugin2": {
+                        "displayName": "XML",
+                        "infoText": "Installation OK",
+                        "version": "5.5.1"
+                    },
+                    "plugin20": {
+                        "displayName": "Infoblox IPAM",
+                        "infoText": "Installation OK",
+                        "version": "3.0.2"
+                    },
+                    "plugin21": {
+                        "displayName": "SRM",
+                        "infoText": "Installation OK",
+                        "version": "5.8.0"
+                    },
+                    "plugin22": {
+                        "displayName": "SNMP",
+                        "infoText": "Installation OK",
+                        "version": "1.0.2"
+                    },
+                    "plugin23": {
+                        "displayName": "vCO Multi-Node",
+                        "infoText": "Installation OK",
+                        "version": "5.5.2"
+                    },
+                    "plugin24": {
+                        "displayName": "F5 Networks",
+                        "infoText": "Installation OK",
+                        "version": "2.0.1"
+                    },
+                    "plugin25": {
+                        "displayName": "vCAC Infrastructure Administration",
+                        "infoText": "Installation OK",
+                        "version": "6.1.0"
+                    },
+                    "plugin26": {
+                        "displayName": "UCS Manager Plugin",
+                        "infoText": "Installation OK",
+                        "version": "1.0.1"
+                    },
+                    "plugin27": {
+                        "displayName": "SSH",
+                        "infoText": "Installation OK",
+                        "version": "2.0.0"
+                    },
+                    "plugin28": {
+                        "displayName": "vCenter Server",
+                        "infoText": "Installation OK",
+                        "version": "5.5.2"
+                    },
+                    "plugin3": {
+                        "displayName": "Workflow documentation",
+                        "infoText": "Installation OK",
+                        "version": "5.5.1"
+                    },
+                    "plugin4": {
+                        "displayName": "vCO Library",
+                        "infoText": "Installation OK",
+                        "version": "5.5.1"
+                    },
+                    "plugin5": {
+                        "displayName": "vCO WebOperator",
+                        "infoText": "Installation OK",
+                        "version": "2.2.1"
+                    },
+                    "plugin6": {
+                        "displayName": "PowerShell",
+                        "infoText": "Installation OK",
+                        "version": "1.0.6"
+                    },
+                    "plugin7": {
+                        "displayName": "HTTP-REST",
+                        "infoText": "Installation OK",
+                        "version": "1.0.3"
+                    },
+                    "plugin8": {
+                        "displayName": "Active Directory",
+                        "infoText": "Installation OK",
+                        "version": "2.0.5"
+                    },
+                    "plugin9": {
+                        "displayName": "vCloud Automation Center",
+                        "infoText": "Installation OK",
+                        "version": "6.1.0"
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

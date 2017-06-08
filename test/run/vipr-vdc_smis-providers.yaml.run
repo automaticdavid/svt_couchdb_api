@@ -1,0 +1,112 @@
+Welcome
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: yamldefs/vipr-vdc_smis-providers.yaml
+Checking for collect existence
+{
+    "data": {
+        "vipr-1": {
+            "vipr-vdc": {
+                "smis-providers": {
+                    "f53bdd37-e2e5-406f-925e-6c86db4c13df": {
+                        "compatibility_status": "COMPATIBLE",
+                        "connection_status": "CONNECTED",
+                        "creation_time": 1428453814840,
+                        "description": "Windows_NT itcldfxemcsmi01 6.2.9200  x86_64 VM Guest OS (64bit Libraries)",
+                        "global": false,
+                        "id": "urn:storageos:StorageProvider:f53bdd37-e2e5-406f-925e-6c86db4c13df:vdc1",
+                        "inactive": false,
+                        "internal": false,
+                        "ip_address": "172.24.120.145",
+                        "job_scan_status": "COMPLETE",
+                        "last_scan_status_message": "Scan job completed successfully for SMISProvider: urn:storageos:StorageProvider:f53bdd37-e2e5-406f-925e-6c86db4c13df:vdc1",
+                        "last_scan_time": 1473789042863,
+                        "link": {
+                            "href": "/vdc/smis-providers/urn:storageos:StorageProvider:f53bdd37-e2e5-406f-925e-6c86db4c13df:vdc1",
+                            "rel": "self"
+                        },
+                        "manufacturer": "EMC Corp",
+                        "name": "itcldfxemcsmi01",
+                        "next_scan_time": 1473789642393,
+                        "port_number": 5989,
+                        "provider_id": "172.24.120.145-5989",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_systems": [
+                            {
+                                "id": "urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                                "link": {
+                                    "href": "/vdc/storage-systems/urn:storageos:StorageSystem:94eff137-6f58-45d3-b6f9-cd12497edbb2:vdc1",
+                                    "rel": "self"
+                                }
+                            }
+                        ],
+                        "success_scan_time": 1473789042863,
+                        "tags": [],
+                        "use_ssl": true,
+                        "user_name": "admin",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "version_string": "V4.6.2.29"
+                    },
+                    "fe831645-7a72-4caa-bb19-d24824a62ca1": {
+                        "compatibility_status": "COMPATIBLE",
+                        "connection_status": "CONNECTED",
+                        "creation_time": 1428453709146,
+                        "description": "Windows_NT itcldrcemcsmi01 6.2.9200  x86_64 VM Guest OS (64bit Libraries)",
+                        "global": false,
+                        "id": "urn:storageos:StorageProvider:fe831645-7a72-4caa-bb19-d24824a62ca1:vdc1",
+                        "inactive": false,
+                        "internal": false,
+                        "ip_address": "172.24.120.178",
+                        "job_scan_status": "COMPLETE",
+                        "last_scan_status_message": "Scan job completed successfully for SMISProvider: urn:storageos:StorageProvider:fe831645-7a72-4caa-bb19-d24824a62ca1:vdc1",
+                        "last_scan_time": 1473789042929,
+                        "link": {
+                            "href": "/vdc/smis-providers/urn:storageos:StorageProvider:fe831645-7a72-4caa-bb19-d24824a62ca1:vdc1",
+                            "rel": "self"
+                        },
+                        "manufacturer": "EMC Corp",
+                        "name": "itcldrcemcsmi01",
+                        "next_scan_time": 1473789642517,
+                        "port_number": 5989,
+                        "provider_id": "172.24.120.178-5989",
+                        "registration_status": "REGISTERED",
+                        "remote": false,
+                        "storage_systems": [
+                            {
+                                "id": "urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                                "link": {
+                                    "href": "/vdc/storage-systems/urn:storageos:StorageSystem:10d14f9a-cc42-4286-becc-9a396bafee41:vdc1",
+                                    "rel": "self"
+                                }
+                            }
+                        ],
+                        "success_scan_time": 1473789042929,
+                        "tags": [],
+                        "use_ssl": true,
+                        "user_name": "admin",
+                        "vdc": {
+                            "id": "urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                            "link": {
+                                "href": "/vdc/urn:storageos:VirtualDataCenter:d103d756-584f-4b27-9339-301997423b1e:vdc1",
+                                "rel": "self"
+                            }
+                        },
+                        "version_string": "V4.6.2.29"
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

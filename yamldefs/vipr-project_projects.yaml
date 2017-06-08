@@ -1,0 +1,6 @@
+name: Vipr Report
+reports:
+  vipr-project:
+    projects:
+      - name
+      - owner

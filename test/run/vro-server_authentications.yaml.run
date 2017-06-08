@@ -1,0 +1,22 @@
+Welcome
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: yamldefs/vro-server_authentications.yaml
+Checking for collect existence
+{
+    "data": {
+        "vro-1": {
+            "vro-server": {
+                "authentications": {
+                    "mode": "sso",
+                    "url": "https://itcldrctensso01.utility.pge.com:7444/sts/STSService/vsphere.local"
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

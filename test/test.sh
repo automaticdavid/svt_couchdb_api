@@ -1,5 +1,6 @@
+rm test/run/*.run
 declare -A errors 
-for y in test/yaml/*.yaml
+for y in yamldefs/*.yaml
 do 
 	echo $y  
 	python utils/generator.py -s PGE -c 2016-09-13-10-35-57 -y $y > test/run/$(basename $y).run
@@ -10,8 +11,8 @@ done
 for f in test/canonical/*.run
 do
 # echo "$(basename $f)"
-	diff $f test/canonical/$(basename $f) 2>&1 > /dev/null
- 	# diff $f test/run/$(basename $f) 
+	# diff $f test/canonical/$(basename $f) 2>&1 > /dev/null
+ 	diff $f test/run/$(basename $f) 
 	if [ $? != 0 ] || [[ ${errors[$(basename $f .run)]} ]]
 	then
    		echo "ERROR in $f"

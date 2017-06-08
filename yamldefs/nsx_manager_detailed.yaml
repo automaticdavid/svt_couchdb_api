@@ -1,0 +1,25 @@
+name: My Second SVT Report
+reports:
+  nsx-appliance:
+    manager:
+      - hostName
+      - domainName
+      - ipv4Address
+      - applianceName
+      - uptime
+      - versionInfo
+      - currentSystemDate
+      - cpuInfoDto
+      - memInfoDto
+      - storageInfoDto
+    components:
+      - svt_all
+    timesettings:
+      - svt_all
+  nsx-services:
+    ssoconfig:
+      - svt_all
+    vcconfig:
+      - svt_all
+    vcconfig-status:
+      - svt_all

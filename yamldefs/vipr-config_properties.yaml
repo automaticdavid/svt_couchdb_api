@@ -1,0 +1,6 @@
+name: vipr report
+reports:
+  vipr-config:
+    properties:
+      - svt_all
+

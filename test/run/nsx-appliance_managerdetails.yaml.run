@@ -1,0 +1,294 @@
+Welcome
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: yamldefs/nsx-appliance_managerdetails.yaml
+Checking for collect existence
+{
+    "data": {
+        "nsx-1": {
+            "nsx-appliance": {
+                "components": {
+                    "NSX": {
+                        "componentGroup": "NSXGRP",
+                        "componentId": "NSX",
+                        "description": "NSX Manager",
+                        "enabled": true,
+                        "name": "NSX Manager",
+                        "showTechSupportLogs": true,
+                        "status": "RUNNING",
+                        "usedBy": [],
+                        "uses": [
+                            "VPOSTGRES",
+                            "RABBITMQ"
+                        ],
+                        "versionInfo": {
+                            "buildNumber": "3102213",
+                            "majorVersion": "6",
+                            "minorVersion": "1",
+                            "patchVersion": "5"
+                        }
+                    },
+                    "NSXAPIMGMT": {
+                        "componentGroup": "NSXAPIGRP",
+                        "componentId": "NSXAPIMGMT",
+                        "description": "NSX API Manager",
+                        "enabled": true,
+                        "name": "NSX API Manager Service",
+                        "showTechSupportLogs": true,
+                        "status": "STOPPED",
+                        "usedBy": [],
+                        "uses": null,
+                        "versionInfo": null
+                    },
+                    "RABBITMQ": {
+                        "componentGroup": "COMMON",
+                        "componentId": "RABBITMQ",
+                        "description": "RabbitMQ - Messaging service",
+                        "enabled": true,
+                        "name": "RabbitMQ",
+                        "showTechSupportLogs": false,
+                        "status": "RUNNING",
+                        "usedBy": [
+                            "NSX"
+                        ],
+                        "uses": null,
+                        "versionInfo": null
+                    },
+                    "SSH": {
+                        "componentGroup": "SYSTEM",
+                        "componentId": "SSH",
+                        "description": "Secure Shell",
+                        "enabled": true,
+                        "name": "SSH Service",
+                        "showTechSupportLogs": false,
+                        "status": "RUNNING",
+                        "usedBy": [],
+                        "uses": null,
+                        "versionInfo": null
+                    },
+                    "VPOSTGRES": {
+                        "componentGroup": "COMMON",
+                        "componentId": "VPOSTGRES",
+                        "description": "vPostgres - Database service",
+                        "enabled": true,
+                        "name": "vPostgres",
+                        "showTechSupportLogs": false,
+                        "status": "RUNNING",
+                        "usedBy": [
+                            "NSX"
+                        ],
+                        "uses": null,
+                        "versionInfo": null
+                    }
+                },
+                "summary-system": {
+                    "applianceName": "vShield Virtual Appliance Management",
+                    "cpuInfoDto": {
+                        "capacity": "2900 MHZ",
+                        "freeCapacity": "2096 MHZ",
+                        "totalNoOfCPUs": 4,
+                        "usedCapacity": "804 MHZ",
+                        "usedPercentage": 28
+                    },
+                    "currentSystemDate": "Tuesday, 13 September 2016 05:39:48 PM UTC",
+                    "domainName": "utility.pge.com",
+                    "hostName": "itcldrcnsxmgt01",
+                    "ipv4Address": "172.24.120.179",
+                    "memInfoDto": {
+                        "freeMemory": "105 MB",
+                        "totalMemory": "11996 MB",
+                        "usedMemory": "11890 MB",
+                        "usedPercentage": 99
+                    },
+                    "storageInfoDto": {
+                        "freeStorage": "44G",
+                        "totalStorage": "71G",
+                        "usedPercentage": 38,
+                        "usedStorage": "27G"
+                    },
+                    "uptime": "266 days, 14 hours, 10 minutes",
+                    "versionInfo": {
+                        "buildNumber": "3102213",
+                        "majorVersion": "6",
+                        "minorVersion": "1",
+                        "patchVersion": "5"
+                    }
+                },
+                "svt_single": {},
+                "timesettings": {
+                    "datetime": "09/13/2016 17:39:48",
+                    "ntpServer": [
+                        "172.24.13.44",
+                        "172.24.14.44"
+                    ],
+                    "timezone": "UTC"
+                }
+            },
+            "nsx-services": {
+                "ssoconfig": {
+                    "ssoAdminUsername": "administrator@vsphere.local",
+                    "ssoLookupServiceUrl": "https://172.24.120.174:7444/lookupservice/sdk",
+                    "vsmSolutionName": "VSM_SOLUTION_2a3425b9-0da0-4ada-ba7b-ad741ae1030a"
+                },
+                "vcconfig": {
+                    "assignRoleToUser": false,
+                    "certificateThumbprint": "FC:59:95:15:A1:A3:E7:BB:8F:2A:9C:49:00:2E:12:59:8D:13:FA:23",
+                    "connected": true,
+                    "inventoryLastSyncTime": 1473788314147,
+                    "ipAddress": "172.24.120.174",
+                    "userName": "administrator@vsphere.local",
+                    "vcInventoryLastUpdateTime": 1473788314147
+                },
+                "vcconfig-status": {
+                    "connected": true,
+                    "inventoryLastSyncTime": 1473788314147
+                }
+            }
+        },
+        "nsx-2": {
+            "nsx-appliance": {
+                "components": {
+                    "NSX": {
+                        "componentGroup": "NSXGRP",
+                        "componentId": "NSX",
+                        "description": "NSX Manager",
+                        "enabled": true,
+                        "name": "NSX Manager",
+                        "showTechSupportLogs": true,
+                        "status": "RUNNING",
+                        "usedBy": [],
+                        "uses": [
+                            "VPOSTGRES",
+                            "RABBITMQ"
+                        ],
+                        "versionInfo": {
+                            "buildNumber": "3102213",
+                            "majorVersion": "6",
+                            "minorVersion": "1",
+                            "patchVersion": "5"
+                        }
+                    },
+                    "NSXAPIMGMT": {
+                        "componentGroup": "NSXAPIGRP",
+                        "componentId": "NSXAPIMGMT",
+                        "description": "NSX API Manager",
+                        "enabled": true,
+                        "name": "NSX API Manager Service",
+                        "showTechSupportLogs": true,
+                        "status": "STOPPED",
+                        "usedBy": [],
+                        "uses": null,
+                        "versionInfo": null
+                    },
+                    "RABBITMQ": {
+                        "componentGroup": "COMMON",
+                        "componentId": "RABBITMQ",
+                        "description": "RabbitMQ - Messaging service",
+                        "enabled": true,
+                        "name": "RabbitMQ",
+                        "showTechSupportLogs": false,
+                        "status": "RUNNING",
+                        "usedBy": [
+                            "NSX"
+                        ],
+                        "uses": null,
+                        "versionInfo": null
+                    },
+                    "SSH": {
+                        "componentGroup": "SYSTEM",
+                        "componentId": "SSH",
+                        "description": "Secure Shell",
+                        "enabled": true,
+                        "name": "SSH Service",
+                        "showTechSupportLogs": false,
+                        "status": "RUNNING",
+                        "usedBy": [],
+                        "uses": null,
+                        "versionInfo": null
+                    },
+                    "VPOSTGRES": {
+                        "componentGroup": "COMMON",
+                        "componentId": "VPOSTGRES",
+                        "description": "vPostgres - Database service",
+                        "enabled": true,
+                        "name": "vPostgres",
+                        "showTechSupportLogs": false,
+                        "status": "RUNNING",
+                        "usedBy": [
+                            "NSX"
+                        ],
+                        "uses": null,
+                        "versionInfo": null
+                    }
+                },
+                "summary-system": {
+                    "applianceName": "vShield Virtual Appliance Management",
+                    "cpuInfoDto": {
+                        "capacity": "2900 MHZ",
+                        "freeCapacity": "2844 MHZ",
+                        "totalNoOfCPUs": 4,
+                        "usedCapacity": "56 MHZ",
+                        "usedPercentage": 2
+                    },
+                    "currentSystemDate": "Tuesday, 13 September 2016 05:42:41 PM UTC",
+                    "domainName": "utility.pge.com",
+                    "hostName": "itcldfxnsxmgt01",
+                    "ipv4Address": "172.24.120.146",
+                    "memInfoDto": {
+                        "freeMemory": "5034 MB",
+                        "totalMemory": "11996 MB",
+                        "usedMemory": "6961 MB",
+                        "usedPercentage": 58
+                    },
+                    "storageInfoDto": {
+                        "freeStorage": "48G",
+                        "totalStorage": "71G",
+                        "usedPercentage": 32,
+                        "usedStorage": "23G"
+                    },
+                    "uptime": "1 day, 21 hours, 22 minutes",
+                    "versionInfo": {
+                        "buildNumber": "3102213",
+                        "majorVersion": "6",
+                        "minorVersion": "1",
+                        "patchVersion": "5"
+                    }
+                },
+                "svt_single": {},
+                "timesettings": {
+                    "datetime": "09/13/2016 17:42:41",
+                    "ntpServer": [
+                        "172.24.14.44",
+                        "172.24.13.44"
+                    ],
+                    "timezone": "UTC"
+                }
+            },
+            "nsx-services": {
+                "ssoconfig": {
+                    "ssoAdminUsername": "administrator@vsphere.local",
+                    "ssoLookupServiceUrl": "https://172.24.120.141:7444/lookupservice/sdk",
+                    "vsmSolutionName": "VSM_SOLUTION_11ae8d2f-c806-483b-b83f-7c1253cfa9db"
+                },
+                "vcconfig": {
+                    "assignRoleToUser": false,
+                    "certificateThumbprint": "60:66:59:25:E0:BF:5B:05:74:75:A6:1A:ED:A3:5C:6E:39:D5:74:EC",
+                    "connected": true,
+                    "inventoryLastSyncTime": 1473788159469,
+                    "ipAddress": "172.24.120.141",
+                    "userName": "administrator@vsphere.local",
+                    "vcInventoryLastUpdateTime": 1473788159469
+                },
+                "vcconfig-status": {
+                    "connected": true,
+                    "inventoryLastSyncTime": 1473788159469
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

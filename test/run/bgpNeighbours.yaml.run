@@ -1,0 +1,157 @@
+Welcome
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: yamldefs/bgpNeighbours.yaml
+Checking for collect existence
+{
+    "data": {
+        "nsx-1": {
+            "nsx-edge": {
+                "edge-19": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-20": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-21": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-28": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-29": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-30": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-32": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-33": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-36": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-37": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-38": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-6": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-7": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-9": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                }
+            }
+        },
+        "nsx-2": {
+            "nsx-edge": {
+                "edge-10": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-12": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-15": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-27": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-28": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-31": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-32": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-33": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-36": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-38": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-39": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-40": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                },
+                "edge-8": {
+                    "bgpNeighbours": {
+                        "forwardingAddress": {}
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

@@ -1,0 +1,48 @@
+Welcome
+Action: Generate
+Collect: 2016-09-13-10-35-57
+Client: PGE
+YAML: yamldefs/manager.yaml
+Checking for collect existence
+{
+    "data": {
+        "nsx-1": {
+            "nsx-appliance": {
+                "manager": {
+                    "currentSystemDate": "Tuesday, 13 September 2016 05:39:48 PM UTC",
+                    "dnsName": "svt_no_data",
+                    "hostName": "itcldrcnsxmgt01",
+                    "ipv4Address": "172.24.120.179",
+                    "uptime": "266 days, 14 hours, 10 minutes",
+                    "versionInfo": {
+                        "buildNumber": "3102213",
+                        "majorVersion": "6",
+                        "minorVersion": "1",
+                        "patchVersion": "5"
+                    }
+                }
+            }
+        },
+        "nsx-2": {
+            "nsx-appliance": {
+                "manager": {
+                    "currentSystemDate": "Tuesday, 13 September 2016 05:42:41 PM UTC",
+                    "dnsName": "svt_no_data",
+                    "hostName": "itcldfxnsxmgt01",
+                    "ipv4Address": "172.24.120.146",
+                    "uptime": "1 day, 21 hours, 22 minutes",
+                    "versionInfo": {
+                        "buildNumber": "3102213",
+                        "majorVersion": "6",
+                        "minorVersion": "1",
+                        "patchVersion": "5"
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "svt_client": "PGE",
+        "svt_collect": "2016-09-13-10-35-57"
+    }
+}

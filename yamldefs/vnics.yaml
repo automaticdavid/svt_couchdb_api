@@ -1,0 +1,14 @@
+name: My Second SVT Report
+reports:
+  nsx-edge:
+    vnics:
+      - label
+      - addressGroups
+      - type
+      - mtu
+      - enableProxyArp
+
+
+
+
+

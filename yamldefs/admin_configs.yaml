@@ -1,0 +1,5 @@
+name: My Second SVT Report
+reports:
+  admin:
+    configs:
+      - svt_all
