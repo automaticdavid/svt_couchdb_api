@@ -54,11 +54,11 @@ class Wrapper:
 
         # Parsed arguments
         print('Action: Load')
-        print('File: ' + f)
+        print('File: ' + f.filename)
         print('Client: ' + client)
 
         # Extract collect from zip filename
-        fullname = os.path.basename(f)
+        fullname = os.path.basename(f.filename)
         name = os.path.splitext(fullname)[0]
         collect = name.replace('output_svt_', '')
 
@@ -168,9 +168,12 @@ class Wrapper:
             endkey = [collect, client, {}]
             c = couch.getView(view, selector, startkey, endkey)
             r = Utils().cleanKeys(c)
+            print("C")
+            print(c)
 
             # Loop over the markers
             for marker in markers:
+                print("YOOY", marker)
                 # Save the Caller
                 caller = [client, collect, view, selector, marker]
                 # Deal with the catch all special marker
@@ -180,12 +183,14 @@ class Wrapper:
                         r,
                         object_hook=hook)
                 else:
+                    print("YYY")
                     hook = Svt(
                         selector=selector,
                         marker=marker).hook_marker
                     j = json.loads(
                         r,
                         object_hook=hook)
+                    print(j)
                 # Special ViPR call
                 if 'vipr' in view:
                     pass
