@@ -52,7 +52,7 @@ class HTTPApi:
             }
             url = self.protocol + '://' + self.host + ':' + self.port + uri
             logger.debug('GET : %s', url)
-            print(url)
+            # print(url)
             r = requests.get(
                 url, headers=headers,
                 verify=self.verify,
@@ -91,7 +91,7 @@ class HTTPApi:
     def delete(self, uri, cookie, params=None, data=None):
         try:
             headers = {
-                'Accept':'application/json',
+                'Accept': 'application/json',
                 'X-CouchDB-WWW-Authenticate': 'Cookie',
                 'Content-Type': 'application/x-www-form-urlencoded'
             }

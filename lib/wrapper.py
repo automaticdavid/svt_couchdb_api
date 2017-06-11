@@ -168,12 +168,9 @@ class Wrapper:
             endkey = [collect, client, {}]
             c = couch.getView(view, selector, startkey, endkey)
             r = Utils().cleanKeys(c)
-            print("C")
-            print(c)
 
             # Loop over the markers
             for marker in markers:
-                print("YOOY", marker)
                 # Save the Caller
                 caller = [client, collect, view, selector, marker]
                 # Deal with the catch all special marker
@@ -183,14 +180,12 @@ class Wrapper:
                         r,
                         object_hook=hook)
                 else:
-                    print("YYY")
                     hook = Svt(
                         selector=selector,
                         marker=marker).hook_marker
                     j = json.loads(
                         r,
                         object_hook=hook)
-                    print(j)
                 # Special ViPR call
                 if 'vipr' in view:
                     pass

@@ -115,7 +115,6 @@ class Couch:
             url += '?startkey=' + json.dumps(startkey)
         if endkey:
             url += '&endkey=' + json.dumps(endkey)
-        print(url)
         j = self.couch.get(url, self.cookie)
         return(json.dumps(j))
 

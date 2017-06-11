@@ -38,6 +38,7 @@ class Utils:
         return(r)
 
     # Decorate collected JSONs
+    # Gets passed a werkzeug FileStorage object
     def decorator(self, f, client):
         result = {}
         # Extract collect from zip filename
@@ -51,13 +52,12 @@ class Utils:
             content = row[1]
             if name.endswith('.json') and content:
                 # extract information from path
-                print(name)
                 path = name.split('/')
                 source = path[1]
                 filename = path[2]
                 info = {
                     'svt_source_file': filename,
-                    'svt_client_source': source,
+                    'svt_source': source,
                     'svt_collect_date': collect,
                     'svt_client': client
                     }
