@@ -1,8 +1,0 @@
-name: Edges and ViPR report 
-reports:
-  nsx-edge:
-    vnics: 
-      - label
-      - addressGroups
-      - type
-

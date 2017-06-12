@@ -1,9 +1,0 @@
-name: My First SVT Report
-reports:
-  nsx:
-    securitygroups:
-        - description
-        - revision
-        - dynamicMemberDefinition
-        - name
-        - vnicNodes

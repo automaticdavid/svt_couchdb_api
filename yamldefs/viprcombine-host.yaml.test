@@ -1,4 +1,0 @@
-reports:
-    vipr-block:
-        clusters-combine:
-              - host

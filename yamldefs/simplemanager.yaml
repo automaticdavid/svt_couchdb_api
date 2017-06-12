@@ -1,8 +1,0 @@
-name: My Second SVT Report
-reports:
-  nsx-appliance:
-    manager:
-        - ipv6Address
-
-
-

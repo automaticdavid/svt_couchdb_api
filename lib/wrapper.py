@@ -19,7 +19,7 @@ from lib.svt import Svt
 import cfg.config
 
 __author__ = "David CLAUVEL"
-__version__ = "0.1"
+__version__ = "1.1"
 __status__ = "Concept Code"
 
 # Module level logger
@@ -27,6 +27,7 @@ logger = logging.getLogger(__name__)
 
 # Import module globals
 settings = cfg.config.NORMAL_SETTINGS
+yamldefs = cfg.config.YAML_DEFS
 
 
 class Wrapper:
@@ -101,7 +102,7 @@ class Wrapper:
         try:
             data = json.dumps(bulk)
             couch.postBulk(data)
-            return({'svt_upload': 'OK'})
+            return({'svt_upload': 'OK', 'client': client, 'date': collect})
         except:
             print("Error with bulk loader")
             raise
@@ -308,3 +309,18 @@ class Wrapper:
         except:
             print("Error with bulk delete")
             raise
+
+    # List all the available yamldefs in a friendly format
+    def reportlister(self):
+        res = {}
+        for yamldef in os.listdir(yamldefs):
+            try:
+                ddoc, yamlname = yamldef.split("_")
+                view = os.path.splitext(yamlname)[0]
+                if ddoc in res:
+                    res[ddoc].append(view)
+                else:
+                    res[ddoc] = [view]
+            except:
+                pass
+        return res

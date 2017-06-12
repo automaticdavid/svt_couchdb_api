@@ -1,5 +1,0 @@
-reports:
-    vipr-block:
-        clusters:
-              - name
-              - vcenter_data_center

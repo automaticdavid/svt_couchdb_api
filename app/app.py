@@ -45,34 +45,34 @@ upload_parser.add_argument('client', required=True)
 
 
 m_upload = ns.model('M_upload', {
-    'client': fields.String(description='Name of the client', example='Test1'),
+    'client': fields.String(description='Name of the client', example='test4'),
     'file': fields.String(
         description='File name',
         example='/home/zen/work/output_svt_2016-09-12-11-45-45.zip')
     })
 
 m_delete = ns.model('M_delete', {
-    'client': fields.String(description='Name of the client', example='Test1'),
+    'client': fields.String(description='Name of the client', example='test1'),
     'date': fields.String(
         description='Date of Collect',
-        example='2016-09-12-11-45-45')
+        example='2016-09-12-11-45-77')
     })
 
 m_generate = ns.model('M_generate', {
-    'client': fields.String(description='Name of the client', example='Test1'),
+    'client': fields.String(description='Name of the client', example='test1'),
     'date': fields.String(
         description='Date of Collect',
-        example='2016-09-12-11-45-45'),
+        example='2016-09-12-11-45-77'),
     'yamldef': fields.String(
         description='Type of report',
         example='/home/zen/work/vro-plugins.yaml'),
     })
 
-m_extract = ns.model('M_generate', {
-    'client': fields.String(description='Name of the client', example='Test1'),
+m_extract = ns.model('M_Extract', {
+    'client': fields.String(description='Name of the client', example='test1'),
     'date': fields.String(
         description='Date of Collect',
-        example='2016-09-12-11-45-45'),
+        example='2016-09-12-11-45-77'),
     })
 
 
@@ -88,15 +88,15 @@ def handleError(error):
 ''' Routes '''
 
 
-@ns.route('/list', methods=['GET'])
-class list(Resource):
+@ns.route('/list-collects', methods=['GET'])
+class ListCollects(Resource):
     def get(self):
         res = Wrapper().lister(settings)
         return res
 
 
 @ns.route('/upload', methods=['POST'])
-class upload(Resource):
+class Upload(Resource):
 
     # @ns.expect(m_upload)
     @ns.expect(upload_parser)
@@ -109,7 +109,7 @@ class upload(Resource):
 
 
 @ns.route('/delete', methods=['POST'])
-class delete(Resource):
+class Delete(Resource):
 
     @ns.expect(m_delete)
     def post(self):
@@ -119,8 +119,8 @@ class delete(Resource):
         return res
 
 
-@ns.route('/generate', methods=['POST'])
-class generate(Resource):
+@ns.route('/generate-from-yaml', methods=['POST'])
+class Generate(Resource):
 
     @ns.expect(m_generate)
     def post(self):
@@ -131,9 +131,9 @@ class generate(Resource):
         return res
 
 
-@ns.route('/extract/<string:ddoc>/<string:view>', methods=['POST'])
+@ns.route('/report/<string:ddoc>/<string:view>', methods=['POST'])
 @ns.doc(params={'ddoc': 'Name of the ddoc', 'view': 'Name of the View'})
-class extract(Resource):
+class Report(Resource):
 
     @ns.expect(m_extract)
     def post(self, ddoc, view):
@@ -142,6 +142,14 @@ class extract(Resource):
         date = request.json['date']
         client = request.json['client']
         res = Wrapper().generator(settings, date, client, yamldef)
+        return res
+
+
+@ns.route('/list-reports', methods=['GET'])
+class ListReports(Resource):
+
+    def get(self):
+        res = Wrapper().reportlister()
         return res
 
 

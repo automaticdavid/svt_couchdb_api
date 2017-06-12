@@ -1,6 +1,0 @@
-name: My First SVT Report
-reports:
-  nsx-edge:
-    bgp:
-        - svt_all
-

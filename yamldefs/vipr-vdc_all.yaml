@@ -1,9 +1,0 @@
-name: My Second SVT Report
-reports:
-  vipr-vdc:
-    storage-systems:
-      - svt_all
-    network-systems:
-      - svt_all
-
-
