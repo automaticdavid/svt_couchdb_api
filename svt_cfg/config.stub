@@ -1,0 +1,19 @@
+#####################################################
+# Configuration file for admin of the SVT DB        #
+# Needed to query & update normal documents         #
+# All entries are mandatory                         #
+#####################################################
+
+[COUCHDB]
+host = couchdb
+protocol = http
+port = 5984
+username = $SVT_DB_ADMIN
+password = $SVT_DB_ADMIN_PASSWORD
+path = ~/
+logdir = /tmp
+tempdir = /tmp
+timeout = 600
+debug = True
+db = svt
+verify = False

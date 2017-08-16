@@ -35,7 +35,5 @@ Thumbs.db
 old/
 
 # Envs
-cfg/config.cfg
-cfg/admin.cfg
 *.cfg
-utils/rebuilder.sh
+svt_utils/build/utils/rebuilder.sh

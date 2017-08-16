@@ -1,0 +1,19 @@
+#####################################################
+# Configuration file for Couchdb Global Admi        #
+# Needed to update DDOCS                            #
+# All entries are mandatory                         #
+#####################################################
+
+[COUCHDB]
+host = couchdb
+protocol = http
+port = 5984
+username = $COUCH_ADMIN
+password = $COUCH_ADMIN_PASSWORD
+path = ~/
+logdir = /tmp
+tempdir = /tmp
+timeout = 600
+debug = True
+db = svt
+verify = False

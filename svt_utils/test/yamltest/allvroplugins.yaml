@@ -1,0 +1,7 @@
+name: My First SVT Report
+reports:
+  vro:
+    plugins:
+      - svt_all
+
+

@@ -1,0 +1,9 @@
+name: My First SVT Report
+reports:
+  nsx-edge:
+    bgp:
+        - enabled
+        - ospf
+        - routingGlobalConfig
+        - version
+

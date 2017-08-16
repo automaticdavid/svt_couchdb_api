@@ -1,0 +1,28 @@
+name: Edges and ViPR report 
+reports:
+  nsx-edge:
+    loadbalancer:
+      - monitor
+      - version
+    vnics: 
+      - label
+      - addressGroups
+      - type
+      - enableSendRedirects 
+      - portgroupName
+    appliances:
+      - hostName
+      - memoryReservation 
+      - hostId
+      - configuredDataStore
+      - deployAppliances
+      - applianceSize
+  nsx-appliance:
+    manager:
+      - hostName 
+      - dnsName
+      - ipv4Address
+      - versionInfo
+      - currentSystemDate
+      - uptime
+

@@ -1,0 +1,12 @@
+name: My First SVT Report
+reports:
+  nsx:
+    securitygroups:
+        - objectId
+        - dynamicMemberDefinition 
+        - type 
+        - extendedAttributes
+        - vnicNodes
+        - description
+        - revision
+

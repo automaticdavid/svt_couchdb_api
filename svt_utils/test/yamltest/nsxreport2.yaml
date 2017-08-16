@@ -1,0 +1,11 @@
+name: Edges and ViPR report 
+reports:
+  nsx-edge:
+    loadbalancer:
+      - monitor
+      - version
+    vnics: 
+      - label
+      - addressGroups
+      - type
+

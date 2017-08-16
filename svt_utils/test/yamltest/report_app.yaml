@@ -1,0 +1,13 @@
+name: My Second SVT Report
+reports:
+  nsx-edge:
+    appliances:
+      - hostName
+      - memoryReservation 
+      - hostId
+      - configuredDataStore
+
+
+
+
+

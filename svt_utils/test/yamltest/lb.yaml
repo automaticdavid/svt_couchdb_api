@@ -1,0 +1,6 @@
+reports:
+  nsx-edge:
+    loadbalancer:
+      - monitor
+      - version
+      - tenant

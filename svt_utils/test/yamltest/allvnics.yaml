@@ -1,0 +1,10 @@
+name: My Second SVT Report
+reports:
+  nsx-edge:
+    vnics:
+      - svt_all
+
+
+
+
+

@@ -1,0 +1,9 @@
+name: My First SVT Report
+reports:
+  vro:
+    plugins:
+       - infoText
+       - buildNumber
+       - hasValidation
+       - url 
+

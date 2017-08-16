@@ -1,0 +1,4 @@
+configparser==3.5.0
+PyYAML==3.12
+requests==2.11.1
+simplejson==3.9.0

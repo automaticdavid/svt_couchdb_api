@@ -1,0 +1,8 @@
+name: My First SVT Report
+reports:
+  nsx:
+    securitygroups:
+        - description
+        - members
+        - name
+        - ipNodes
