@@ -1,4 +1,4 @@
-FROM klaemo/couchdb:latest
+FROM svt/couchdb_base
 ARG SERVICE_NAME
 ARG SERVICE_VERSION
 ENV SERVICE_NAME $SERVICE_NAME

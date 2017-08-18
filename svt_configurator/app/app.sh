@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash -ex
 
 # TODO: secrets
 IP="couchdb:5984"
